@@ -40,6 +40,7 @@ export default defineI18nConfig(() => ({
         privacyPolicy: 'Privacy Policy',
         designCredits: 'UI Design credits:',
         viewOriginalDesign: 'View Original Design Template',
+        checkOutPortfolio: 'Check out my portfolio',
       },
     },
     pt: {
@@ -82,6 +83,7 @@ export default defineI18nConfig(() => ({
         privacyPolicy: 'Política de Privacidade',
         designCredits: 'Créditos do design:',
         viewOriginalDesign: 'Ver Template Original',
+        checkOutPortfolio: 'Veja meu portfólio',
       },
     },
   },

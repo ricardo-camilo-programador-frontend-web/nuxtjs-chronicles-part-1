@@ -121,6 +121,22 @@ watch(analyticsEnabled, (newValue) => {
 
                   <div class="space-y-4">
                     <NuxtLink
+                      :to="$env.PORTFOLIO_URL"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center justify-center gap-2 p-3 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100 relative  mx-auto"
+                    >
+                      <img
+                        src="@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp"
+                        alt="Heart circle"
+                        class="w-8 h-8 mr-2"
+                      />
+                      <span class="font-medium text-gray-700">
+                        {{ t('introWarning.checkOutPortfolio') }}
+                      </span>
+                    </NuxtLink>
+
+                    <NuxtLink
                       :to="`https://www.linkedin.com/in/${$env.LINKEDIN_USERNAME}`"
                       target="_blank"
                       rel="noopener noreferrer"

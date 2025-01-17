@@ -20,4 +20,5 @@ export interface Env {
   WORKANA_USERNAME: string
   TWITTER_USERNAME: string
   GOOGLE_SITE_VERIFICATION: string
+  PORTFOLIO_URL: string
 }
