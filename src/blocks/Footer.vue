@@ -77,7 +77,7 @@ const paymentMethods: Array<PaymentMethod> = [
 
 <template>
   <footer class="w-full py-12 overflow-hidden bg-gray-100 border-t min-w-screen grud">
-    <div class="container w-full px-4 mx-auto">
+    <div class="container w-full px-4  max-w-7xl mx-auto">
       <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-4">
         <div class="space-y-4">
           <div
