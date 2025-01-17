@@ -5,8 +5,10 @@ declare global {
 }
 
 export function useGTM() {
+  const { $env } = useNuxtApp()
+
   const enableGTM = () => {
-    const gtmId = envConfig.GTM_ID
+    const gtmId = $env.GTM_ID
 
     if (typeof window !== 'undefined' && gtmId) {
       window.dataLayer = window.dataLayer || []

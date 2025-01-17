@@ -24,6 +24,7 @@ useHead({
       :figma-original-design="$env.FIGMA_ORIGINAL_DESIGN"
     />
 
+    <ClientOnly>
     <noscript>
       <iframe
         :src="`https://www.googletagmanager.com/ns.html?id=${$env.GTM_ID}`"
@@ -31,6 +32,7 @@ useHead({
         width="0"
         style="display:none;visibility:hidden"
       />
-    </noscript>
+      </noscript>
+    </ClientOnly>
   </div>
 </template>
