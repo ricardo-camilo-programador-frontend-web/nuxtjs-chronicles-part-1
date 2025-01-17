@@ -3,6 +3,7 @@ interface Props {
   customClass?: string
 }
 
+const { $env } = useNuxtApp()
 defineProps<Props>()
 </script>
 
@@ -33,7 +34,7 @@ defineProps<Props>()
 
       <div class="flex items-center gap-2 group">
         <NuxtLink
-          to="mailto:contato@example.com"
+          :to="`mailto:${$env.EMAIL}`"
           class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
           aria-label="Enviar email"
         >
@@ -43,14 +44,14 @@ defineProps<Props>()
             aria-label="Email icon"
           />
           <span class="text-sm text-gray-800 group-hover:text-orange-500">
-            contato@example.com
+            {{ $env.EMAIL }}
           </span>
         </NuxtLink>
       </div>
 
       <div class="flex items-center gap-2">
         <NuxtLink
-          to="https://www.google.com/maps/search/?api=1&query=Rua+Exemplo+123+São+Paulo+SP"
+          to="https://www.google.com/maps/search/?api=1&query=Fatec+Jaú+SP"
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
@@ -62,7 +63,7 @@ defineProps<Props>()
             aria-label="Location icon"
           />
           <span class="text-sm text-gray-800 group-hover:text-orange-500">
-            Rua Exemplo, 123 - São Paulo, SP
+            Fatec Jaú, SP
           </span>
         </NuxtLink>
       </div>
