@@ -7,14 +7,14 @@ useHead({
 </script>
 
 <template>
-  <div class="relative grid min-w-screen bg-gray-50">
+  <div class="relative grid min-w-screen min-h-screen bg-gray-50">
     <Header />
 
-    <main class="relative grid min-w-full">
+    <main class="relative grid min-w-full min-h-screen">
       <slot />
     </main>
 
-    <Footer class="-mt-[18rem]" />
+    <Footer />
 
     <IntroWarning
       :project-title="$env.PROJECT_TITLE"
