@@ -36,6 +36,7 @@ export default defineNuxtConfig({
       'composables',
       'static',
       'types',
+      'layouts',
     ],
   },
 
