@@ -5,5 +5,5 @@ definePageMeta({
 </script>
 
 <template>
-  <Button label="About page" />
+  <Button class="bg-red-500 w-max mx-auto h-max my-auto" label="About page" />
 </template>

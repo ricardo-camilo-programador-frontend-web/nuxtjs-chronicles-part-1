@@ -4,7 +4,15 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   srcDir: 'src',
 
-  modules: ['nuxt-headlessui', '@nuxtjs/i18n'],
+  css: [
+    '~/assets/css/main.css',
+  ],
+
+  modules: [
+    'nuxt-headlessui',
+    '@nuxtjs/i18n',
+    '@nuxtjs/tailwindcss',
+  ],
 
   i18n: {
     locales: [
