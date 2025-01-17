@@ -2,7 +2,7 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  srcDir: 'src',
+  srcDir: 'src/',
 
   css: [
     '~/assets/css/main.css',
