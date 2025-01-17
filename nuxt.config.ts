@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    '@nuxt/icon',
     'nuxt-headlessui',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
@@ -22,6 +23,18 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     defaultLocale: 'en',
     vueI18n: './src/configs/i18n.config.ts'
+  },
+
+  icon: {
+    serverBundle: {
+      collections: [
+        'mdi',
+        'circle-flags',
+        'ph',
+        'simple-icons',
+        'cib',
+      ]
+    }
   },
 
   imports: {
@@ -39,6 +52,40 @@ export default defineNuxtConfig({
       'layouts',
       'pages',
     ],
+  },
+
+  nitro: {
+    preset: 'netlify',
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/en',
+        '/pt',
+        '/en/about',
+        '/pt/about',
+        '/en/blog',
+        '/pt/blog',
+        '/en/best-sellers',
+        '/pt/best-sellers',
+        '/en/careers',
+        '/pt/careers',
+        '/en/contact',
+        '/pt/contact',
+        '/en/discount',
+        '/pt/discount',
+        '/en/faq',
+        '/pt/faq',
+        '/en/privacy-policy',
+        '/pt/privacy-policy',
+        '/en/gift-cards',
+        '/pt/gift-cards',
+        '/en/shop',
+        '/pt/shop',
+        '/en/products',
+        '/pt/products'
+      ]
+    }
   },
 
   components: {
