@@ -1,0 +1,7 @@
+"Savana Pet Shop é uma loja virtual dedicada a venda de produtos para pets"
+
+Site: https://savana-nuxtjs-chronicles-part-1.netlify.app/en
+Instagram: https://www.instagram.com/ricardo.camilo.dev/
+Community: https://comunidade.savana.com/
+LinkedIn: https://www.linkedin.com/in/ricardo-camilo-programador-frontend-web-developer
+Facebook: https://www.facebook.com/profile.php?id=100095292221332

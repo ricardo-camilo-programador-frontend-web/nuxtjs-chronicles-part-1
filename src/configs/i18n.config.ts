@@ -1,0 +1,88 @@
+export default defineI18nConfig(() => ({
+  messages: {
+    en: {
+      hero: {
+        category: 'Pet Shop',
+        title: 'A pet store with everything you need',
+        description: 'Sociis blandit et pellentesque aliquet at quisque tortor lacinia nullam. Mattis aenean scelerisque dui libero',
+        cta: 'Shop Now',
+      },
+      footer: {
+        description: 'Sed viverra eget fames sit varius. Pellentesque mattis libero viverra dictumst ornaresed justo convallis vitae',
+        company: 'Company',
+        links: {
+          about: 'About Us',
+          blog: 'Blog',
+          giftCards: 'Gift cards',
+          careers: 'Careers',
+        },
+        usefulLinks: 'Useful Links',
+        useful: {
+          newProducts: 'New products',
+          bestSellers: 'Best sellers',
+          discount: 'Discount',
+          faq: 'F.A.Q',
+        },
+        store: 'Store',
+        storeInfo: {
+          address1: '8592 Fairground St.',
+          address2: 'Tallahassee, FL 32303',
+          phone: '+775 378-6348',
+        },
+        copyright: '© Copyright Savana {year}. Design by {designer}',
+      },
+      introWarning: {
+        welcome: 'Study Project - Savana Pet Shop',
+        description: 'This is a study project built to demonstrate modern web development skills. The pet shop theme is used as a practical example.',
+        connectLinkedIn: 'Connect with the developer on LinkedIn',
+        checkGitHub: 'View project source code on GitHub',
+        allowAnalytics: 'Enable analytics cookies',
+        privacyPolicy: 'Privacy Policy',
+        designCredits: 'UI Design credits:',
+        viewOriginalDesign: 'View Original Design Template',
+      },
+    },
+    pt: {
+      hero: {
+        category: 'Pet Shop',
+        title: 'Uma loja pet com tudo que você precisa',
+        description: 'Produtos de qualidade e atendimento especializado para o seu animal de estimação. Encontre tudo o que precisa em um só lugar.',
+        cta: 'Comprar Agora',
+      },
+      footer: {
+        description: 'Encontre tudo que você precisa para seu pet em um só lugar. Qualidade e confiança para cuidar do seu melhor amigo.',
+        company: 'Empresa',
+        links: {
+          about: 'Sobre Nós',
+          blog: 'Blog',
+          giftCards: 'Vale Presente',
+          careers: 'Carreiras',
+        },
+        usefulLinks: 'Links Úteis',
+        useful: {
+          newProducts: 'Novos produtos',
+          bestSellers: 'Mais vendidos',
+          discount: 'Promoções',
+          faq: 'Dúvidas Frequentes',
+        },
+        store: 'Loja',
+        storeInfo: {
+          address1: 'Rua Exemplo, 123',
+          address2: 'São Paulo, SP 01234-567',
+          phone: '+55 11 1234-5678',
+        },
+        copyright: '© Copyright Savana {year}. Design por {designer}',
+      },
+      introWarning: {
+        welcome: 'Projeto de Estudos - Savana Pet Shop',
+        description: 'Este é um projeto de estudos desenvolvido para demonstrar habilidades em desenvolvimento web moderno. O tema pet shop é usado como exemplo prático.',
+        connectLinkedIn: 'Conecte-se com o desenvolvedor no LinkedIn',
+        checkGitHub: 'Ver código fonte no GitHub',
+        allowAnalytics: 'Ativar cookies de análise',
+        privacyPolicy: 'Política de Privacidade',
+        designCredits: 'Créditos do design:',
+        viewOriginalDesign: 'Ver Template Original',
+      },
+    },
+  },
+}))
