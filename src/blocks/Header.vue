@@ -81,11 +81,11 @@ const headerClasses = computed(() => {
       </div>
 
       <div class="container relative hidden md:flex items-center justify-center w-full mx-auto">
-        Menu Items
+        Menu Items(SOON)
       </div>
 
       <div class="container relative hidden md:flex items-center justify-center w-full mx-auto">
-        SHORTCUTS
+        SHORTCUTS(SOON)
       </div>
     </div>
 
