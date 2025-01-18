@@ -24,8 +24,11 @@ const localePath = useLocalePath();
       aria-hidden="true"
     />
 
-    <div
-      class="absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full bg-orange-400"
+    <img
+      src="@/assets/images/background-gradient-orange-mini.webp"
+      alt="Background gradient orange mini"
+      class="absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full"
+      aria-hidden="true"
     />
 
     <div class="max-w-[96vw] md:max-w-full mx-auto">
