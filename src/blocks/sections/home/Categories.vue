@@ -34,20 +34,24 @@ const categories = ref([
 
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full min-h-screen md:min-h-[44rem] lg:max-h-[38rem] h-full py-8 md:py-16 lg:py-24 md:overflow-hidden md:max-w-full min-w-screen mx-auto pt-[10rem] md:pt-0"
+    class=" py-8"
   >
-    <div class="mx-auto">
-      <div class="flex w-full justify-between items-center">
-        <h2 class="text-2xl font-bold text-center mb-6">
+    <div
+      class="mx-auto flex flex-col w-full justify-center items-center max-w-[70rem]"
+    >
+      <div class="grid grid-cols-2 gap-4 w-full">
+        <h2 class="text-2xl font-bold text-center mb-6 mr-auto">
           Browse by category
         </h2>
 
-        <div>
+        <div class="ml-auto">
           <Button label="See All Categories" />
         </div>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 justify-center overflow-x-auto gap-4 overflow-y-hidden">
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 justify-center overflow-x-auto gap-4 overflow-y-hidden"
+      >
         <CategorieCard
           v-for="(category, index) in categories"
           :key="index"
