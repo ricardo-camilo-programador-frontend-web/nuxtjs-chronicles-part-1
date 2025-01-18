@@ -23,9 +23,9 @@ const products = [
 </script>
 
 <template>
-  <div class="container mx-auto my-8 max-w-[95vw]">
+  <div class="mx-auto my-8 max-w-[95vw]">
     <div
-      class="flex flex-wrap justify-center md:justify-between items-center gap-4 w-full mb-8 md:mb-1"
+      class="flex flex-wrap justify-center md:justify-between items-center gap-4 w-full mb-8 md:mb-1 mx-auto max-w-[70rem]"
     >
       <h2
         class="text-2xl font-bold text-center md:mb-6 mr-auto w-full md:w-auto"
@@ -34,11 +34,14 @@ const products = [
       </h2>
 
       <div class="ml-auto w-full md:w-auto flex justify-center md:justify-end">
-        <Button label="See All Products" />
+        <Button
+          label="See All Products"
+          id="featured-products-button"
+        />
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="flex w-full flex-wrap md:flex-nowrap justify-center gap-4 max-w-[70rem] mx-auto">
       <FeatureCard
         v-for="(product, index) in products"
         :key="index"
