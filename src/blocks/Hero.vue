@@ -12,14 +12,14 @@ const localePath = useLocalePath();
   >
     <img
       src="@/assets/images/background-gradient-orange.webp"
-      alt=""
+      alt="Background gradient orange"
       class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full opacity-50 md:opacity-100 mt-32 object-cover"
       aria-hidden="true"
     />
 
     <img
       src="@/assets/images/background-gradient-orange-mini.webp"
-      alt=""
+      alt="Background gradient orange mini"
       class="absolute left-[10%] md:left-[20%] mr-auto -top-14 h-[100px] w-[100px] md:h-[200px] md:w-[200px] rounded-full rotate-180"
       aria-hidden="true"
     />
