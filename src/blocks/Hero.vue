@@ -47,9 +47,9 @@ const localePath = useLocalePath()
         </div>
 
         <img
-          src="@/assets/images/svg/bird-silhouette.svg"
+          src="@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp"
           alt=""
-          class="absolute left-[30%] md:left-[38%] top-8 md:top-12 w-20 md:w-32 opacity-20"
+          class="absolute left-[30%] md:left-[38%] top-[7rem] md:top-24 w-20 md:w-32"
           aria-hidden="true"
         >
 
