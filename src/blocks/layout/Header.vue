@@ -13,7 +13,7 @@ const headerClasses = computed(() => {
 
 <template>
   <header
-    class=" top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-full mx-auto"
+    class=" top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-screen mx-auto"
   >
     <div class="container relative  hidden md:flex items-center justify-around w-full h-10 mx-auto">
       <div class="flex items-center gap-2 group">
@@ -73,7 +73,7 @@ const headerClasses = computed(() => {
     </div>
 
     <div
-      class="container fixed grid grid-cols-3 p-4 mx-auto mt-[6rem] bg-white rounded-full shadow-lg"
+      class="w-screen fixed grid grid-cols-3 p-4 mx-auto mt-[6rem] bg-white rounded-full shadow-lg"
       :class="[headerClasses]"
     >
       <div class="container relative left-0 flex w-auto mr-auto">
