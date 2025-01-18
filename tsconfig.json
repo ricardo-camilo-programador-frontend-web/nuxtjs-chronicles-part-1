@@ -4,7 +4,7 @@
   "include": [
     "*.d.ts",
     "./nuxt.d.ts",
-    "env.d.ts",
+    "src/types/d.ts/env.d.ts",
     ".nuxt/nuxt.d.ts",
     "**/*",
     "**/*.ts",
