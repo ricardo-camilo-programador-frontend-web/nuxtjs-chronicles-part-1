@@ -53,6 +53,7 @@ export default defineNuxtConfig({
     preset: 'netlify',
     prerender: {
       crawlLinks: true,
+      failOnError: false,
       routes: [
         '/',
         '/en',
