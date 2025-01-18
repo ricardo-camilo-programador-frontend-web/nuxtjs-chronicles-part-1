@@ -12,6 +12,8 @@ interface Props {
   ripple?: boolean
 }
 
+const { t } = useI18n()
+
 const props = withDefaults(defineProps<Props>(), {
   type: 'button',
   ripple: true,
@@ -22,7 +24,7 @@ const buttonText = ref(props.label)
 
 function handleWithButtonText() {
   return props.disabled
-    ? 'Carregando...'
+    ? t('loading')
     : props.actionText || props.label || ''
 }
 

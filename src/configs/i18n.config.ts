@@ -42,6 +42,7 @@ export default defineI18nConfig(() => ({
         viewOriginalDesign: 'View Original Design Template',
         checkOutPortfolio: 'Check out my portfolio',
       },
+      loading: 'Loading...',
     },
     pt: {
       hero: {
@@ -86,5 +87,6 @@ export default defineI18nConfig(() => ({
         checkOutPortfolio: 'Veja meu portfólio',
       },
     },
+    loading: 'Carregando...',
   },
 }))
