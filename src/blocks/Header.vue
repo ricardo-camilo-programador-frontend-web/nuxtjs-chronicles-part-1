@@ -10,9 +10,9 @@ defineProps<Props>()
 <template>
   <header
     :class="customClass"
-    class=" top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center"
+    class=" top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-full mx-auto"
   >
-    <div class="container relative flex items-center justify-around w-full h-10 mx-auto">
+    <div class="container relative  hidden md:flex items-center justify-around w-full h-10 mx-auto">
       <div class="flex items-center gap-2 group">
         <NuxtLink
           to="https://wa.me/5511999999999"
@@ -76,16 +76,20 @@ defineProps<Props>()
         <Logo />
       </div>
 
-      <div class="container relative flex items-center justify-center w-full mx-auto">
+      <div class="container relative hidden md:flex items-center justify-center w-full mx-auto">
         Menu Items
       </div>
 
-      <div class="container relative flex items-center justify-center w-full mx-auto">
+      <div class="container relative hidden md:flex items-center justify-center w-full mx-auto">
         SHORTCUTS
       </div>
     </div>
 
-    <div class="fixed top-0 right-0 flex items-center gap-2">
+    <div
+      class="
+        fixed bottom-1 right-1 flex items-center gap-2
+      "
+    >
       <LangSwitcher />
     </div>
   </header>
