@@ -7,7 +7,7 @@ const localePath = useLocalePath()
 
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full min-h-screen md:min-h-[30rem] lg:max-h-[38rem] h-full py-8 md:py-16 lg:py-24 md:overflow-hidden md:max-w-full min-w-screen mx-auto"
+    class="relative flex flex-col items-center justify-center w-full min-h-screen md:min-h-[47rem] lg:max-h-[38rem] h-full py-8 md:py-16 lg:py-24 md:overflow-hidden md:max-w-full min-w-screen mx-auto"
     aria-labelledby="hero-heading"
   >
     <div class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full bg-orange-500 opacity-50 md:opacity-100" />
