@@ -38,24 +38,8 @@ function handleClick() {
   }, messageTime)
 }
 
-onMounted(() => {
-  const buttonID = props.id
-  const timeoutTimer = 1000
-
-  if (!buttonID) {
-    return
-  }
-
-  setTimeout(() => {
-    const button = document.getElementById(buttonID)
-
-    if (button && props.ripple) {
-      button.addEventListener('click', (event) => {
-        rippleEffect(event, buttonID)
-      })
-    }
-  }, timeoutTimer)
-})
+const initializeRippleEffect = useRippleEffect(props.id)
+initializeRippleEffect()
 </script>
 
 <template>
