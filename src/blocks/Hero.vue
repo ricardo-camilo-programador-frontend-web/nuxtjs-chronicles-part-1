@@ -39,7 +39,7 @@ const localePath = useLocalePath()
 
           <NuxtLink
             :to="localePath({ path: '/shop' })"
-            class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-auto text-center"
+            class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-max text-center"
             aria-label="Browse our shop collection"
           >
             {{ t('hero.cta') }}
