@@ -2,7 +2,6 @@
 interface Props {
   src: string
   alt: string
-  class: string
   width: number
   height: number
   ariaHidden?: boolean
@@ -21,7 +20,6 @@ withDefaults(defineProps<Props>(), {
   <img
     :src="src"
     :alt="alt"
-    :class="class"
     :title="title"
     :aria-hidden="ariaHidden"
     :loading="loading"
