@@ -55,7 +55,6 @@ export default defineNuxtConfig({
       crawlLinks: true,
       failOnError: false,
       routes: [
-        '/',
         '/en',
         '/pt',
         '/en/about',
@@ -79,7 +78,19 @@ export default defineNuxtConfig({
         '/en/shop',
         '/pt/shop',
         '/en/products',
-        '/pt/products'
+        '/pt/products',
+        '/',
+        '/about',
+        '/blog',
+        '/best-sellers',
+        '/careers',
+        '/contact',
+        '/discount',
+        '/faq',
+        '/gift-cards',
+        '/privacy-policy',
+        '/shop',
+        '/products',
       ]
     }
   },
