@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
   ],
 
-  modules: ['@nuxt/icon', 'nuxt-headlessui', '@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@nuxt/image'],
+  modules: ['@nuxt/icon', 'nuxt-headlessui', '@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
 
   i18n: {
     locales: [
