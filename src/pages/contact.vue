@@ -5,5 +5,9 @@ definePageMeta({
 </script>
 
 <template>
-  <Button label="Contact me" id="contact-page-button" />
+  <main class="flex flex-col flex-wrap h-full mx-auto min-w-max min-h-[94vh] w-full items-center relative">
+    <HeroContact />
+    <FormContact />
+    <Map />
+  </main>
 </template>
