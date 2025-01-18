@@ -3,11 +3,6 @@ const localePath = useLocalePath()
 const { t } = useI18n()
 const { $env } = useNuxtApp()
 
-interface FooterLink {
-  path: string
-  translationKey: string
-}
-
 const companyLinks: Array<FooterLink> = [
   { path: '/about', translationKey: 'footer.links.about' },
   { path: '/blog', translationKey: 'footer.links.blog' },
@@ -21,18 +16,6 @@ const usefulLinks: Array<FooterLink> = [
   { path: '/discount', translationKey: 'footer.useful.discount' },
   { path: '/faq', translationKey: 'footer.useful.faq' },
 ]
-
-interface SocialLink {
-  platform: string
-  icon: string
-  url: string
-  ariaLabel: string
-}
-
-interface PaymentMethod {
-  icon: string
-  ariaLabel: string
-}
 
 const socialLinks: Array<SocialLink> = [
   {
