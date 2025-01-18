@@ -1,61 +1,6 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { t } = useI18n()
-const { $env } = useNuxtApp()
-
-const companyLinks: Array<FooterLink> = [
-  { path: '/about', translationKey: 'footer.links.about' },
-  { path: '/blog', translationKey: 'footer.links.blog' },
-  { path: '/gift-cards', translationKey: 'footer.links.giftCards' },
-  { path: '/careers', translationKey: 'footer.links.careers' },
-]
-
-const usefulLinks: Array<FooterLink> = [
-  { path: '/products', translationKey: 'footer.useful.newProducts' },
-  { path: '/best-sellers', translationKey: 'footer.useful.bestSellers' },
-  { path: '/discount', translationKey: 'footer.useful.discount' },
-  { path: '/faq', translationKey: 'footer.useful.faq' },
-]
-
-const socialLinks: Array<SocialLink> = [
-  {
-    platform: 'facebook',
-    icon: 'mdi:facebook',
-    url: `https://www.facebook.com/profile.php?id=${$env.FACEBOOK_ID}`,
-    ariaLabel: 'Facebook icon',
-  },
-  {
-    platform: 'instagram',
-    icon: 'mdi:instagram',
-    url: `https://www.instagram.com/${$env.INSTAGRAM_USERNAME}`,
-    ariaLabel: 'Instagram icon',
-  },
-  {
-    platform: 'twitter',
-    icon: 'mdi:twitter',
-    url: `https://x.com/${$env.X_USERNAME}`,
-    ariaLabel: 'Twitter icon',
-  },
-  {
-    platform: 'youtube',
-    icon: 'mdi:youtube',
-    url: `https://www.youtube.com/${$env.YOUTUBE_USERNAME}`,
-    ariaLabel: 'YouTube icon',
-  },
-  {
-    platform: 'linkedin',
-    icon: 'mdi:linkedin',
-    url: `https://www.linkedin.com/in/${$env.LINKEDIN_USERNAME}`,
-    ariaLabel: 'LinkedIn icon',
-  },
-]
-
-const paymentMethods: Array<PaymentMethod> = [
-  { icon: 'simple-icons:visa', ariaLabel: 'Visa' },
-  { icon: 'cib:american-express', ariaLabel: 'American Express' },
-  { icon: 'simple-icons:mastercard', ariaLabel: 'Mastercard' },
-  { icon: 'mdi:paypal', ariaLabel: 'PayPal' },
-]
 </script>
 
 <template>
