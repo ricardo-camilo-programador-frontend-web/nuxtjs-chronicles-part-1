@@ -34,17 +34,17 @@ const categories = ref([
 
 <template>
   <section
-    class=" py-8"
+    class="py-8 max-w-[95vw] mx-auto"
   >
     <div
       class="mx-auto flex flex-col w-full justify-center items-center max-w-[70rem]"
     >
-      <div class="grid grid-cols-2 gap-4 w-full">
-        <h2 class="text-2xl font-bold text-center mb-6 mr-auto">
+      <div class="flex flex-wrap justify-center md:justify-between items-center gap-4 w-full mb-8 md:mb-1">
+        <h2 class="text-2xl font-bold text-center md:mb-6 mr-auto w-full md:w-auto">
           Browse by category
         </h2>
 
-        <div class="ml-auto">
+        <div class="ml-auto w-full md:w-auto flex justify-center md:justify-end">
           <Button label="See All Categories" />
         </div>
       </div>
