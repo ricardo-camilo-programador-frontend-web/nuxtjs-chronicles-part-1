@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
+import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
+import greenWingedMacaw from '@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp'
+import celineSayuriTagami from '@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp'
+import charlesdeluvio from '@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp'
+import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
@@ -11,7 +18,7 @@ const localePath = useLocalePath();
     aria-labelledby="hero-heading"
   >
     <Image
-      src="@/assets/images/background-gradient-orange.webp"
+      :src="backgroundGradientOrange"
       alt="Background gradient orange"
       class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full opacity-50 md:opacity-100 mt-32 object-cover"
       width="400"
@@ -20,7 +27,7 @@ const localePath = useLocalePath();
     />
 
     <Image
-      src="@/assets/images/background-gradient-orange-mini.webp"
+      :src="backgroundGradientOrangeMini"
       alt="Background gradient orange mini"
       class="absolute left-[10%] md:left-[20%] mr-auto -top-14 h-[100px] w-[100px] md:h-[200px] md:w-[200px] rounded-full rotate-180"
       title="Background gradient orange mini"
@@ -30,7 +37,7 @@ const localePath = useLocalePath();
     />
 
     <Image
-      src="@/assets/images/background-gradient-orange-mini.webp"
+      :src="backgroundGradientOrangeMini"
       alt="Background gradient orange mini"
       class="absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full"
       title="Background gradient orange mini"
@@ -69,10 +76,13 @@ const localePath = useLocalePath();
           </NuxtLink>
         </div>
 
-        <img
-          src="@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp"
+        <Image
+          :src="greenWingedMacaw"
           alt=""
           class="absolute left-[30%] md:left-[38%] top-[7rem] md:top-24 w-20 md:w-32 scale-150"
+          width="20"
+          height="20"
+          loading="eager"
           aria-hidden="true"
         />
 
@@ -82,24 +92,30 @@ const localePath = useLocalePath();
           <div
             class="mt-auto bottom-0 h-full w-full flex items-center justify-center md:-right-24 relative"
           >
-            <img
-              src="@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp"
+            <Image
+              :src="celineSayuriTagami"
               alt="Happy dog with its owner"
               class="object-cover w-[25rem] -bottom-4 md:bottom-0 -mr-16 absolute z-[3]"
+              width="25"
+              height="25"
               loading="eager"
             />
 
             <div class="flex items-center justify-center bottom-0 mt-auto">
-              <img
-                src="@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp"
+              <Image
+                :src="charlesdeluvio"
                 alt="Happy dog with its owner"
                 class="object-cover w-[18rem] mt-auto bottom-0 z-[4] -ml-[4rem] md:-ml-16"
+                width="18"
+                height="18"
                 loading="eager"
               />
-              <img
-                src="@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp"
+              <Image
+                :src="katherineMcadoo"
                 alt="Happy dog with its owner"
                 class="object-cover w-[7rem] md:-mr-12 mt-auto bottom-0 z-[4]"
+                width="7"
+                height="7"
                 loading="eager"
               />
             </div>
