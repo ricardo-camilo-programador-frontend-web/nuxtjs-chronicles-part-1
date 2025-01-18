@@ -1,15 +1,18 @@
 <script setup lang="ts">
-interface Props {
-  customClass?: string
-}
-
 const { $env } = useNuxtApp()
-defineProps<Props>()
+const { isScrollingDown, isScrolled } = useScroll()
+
+const headerClasses = computed(() => {
+  return {
+    'translate-y-[-70%] rounded-none': isScrollingDown.value,
+    'bg-white shadow-lg': isScrolled.value,
+    'transition-transform duration-300 ease-in-out': true
+  }
+})
 </script>
 
 <template>
   <header
-    :class="customClass"
     class=" top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-full mx-auto"
   >
     <div class="container relative  hidden md:flex items-center justify-around w-full h-10 mx-auto">
@@ -71,6 +74,7 @@ defineProps<Props>()
 
     <div
       class="container fixed grid grid-cols-3 p-4 mx-auto mt-[6rem] bg-white rounded-full shadow-lg"
+      :class="[headerClasses]"
     >
       <div class="container relative left-0 flex w-auto mr-auto">
         <Logo />
