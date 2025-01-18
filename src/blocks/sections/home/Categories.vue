@@ -45,7 +45,10 @@ const categories = ref([
         </h2>
 
         <div class="ml-auto w-full md:w-auto flex justify-center md:justify-end">
-          <Button label="See All Categories" />
+          <Button
+            label="See All Categories"
+            id="see-all-categories-button"
+          />
         </div>
       </div>
 
