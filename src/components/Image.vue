@@ -17,7 +17,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <NuxtImg
+  <img
     :src="src"
     :alt="alt"
     :title="title"
