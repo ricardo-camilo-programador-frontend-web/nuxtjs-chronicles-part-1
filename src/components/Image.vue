@@ -2,8 +2,8 @@
 interface Props {
   src: string
   alt: string
-  width: number
-  height: number
+  width: number | string
+  height: number | string
   ariaHidden?: boolean
   title?: string
   loading?: 'eager' | 'lazy'

@@ -10,24 +10,32 @@ const localePath = useLocalePath();
     class="relative flex flex-col items-center justify-center w-full min-h-screen md:min-h-[44rem] lg:max-h-[38rem] h-full py-8 md:py-16 lg:py-24 md:overflow-hidden md:max-w-full min-w-screen mx-auto pt-[10rem] md:pt-0"
     aria-labelledby="hero-heading"
   >
-    <img
+    <Image
       src="@/assets/images/background-gradient-orange.webp"
       alt="Background gradient orange"
       class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full opacity-50 md:opacity-100 mt-32 object-cover"
+      width="400"
+      height="400"
       aria-hidden="true"
     />
 
-    <img
+    <Image
       src="@/assets/images/background-gradient-orange-mini.webp"
       alt="Background gradient orange mini"
       class="absolute left-[10%] md:left-[20%] mr-auto -top-14 h-[100px] w-[100px] md:h-[200px] md:w-[200px] rounded-full rotate-180"
+      title="Background gradient orange mini"
+      width="100"
+      height="100"
       aria-hidden="true"
     />
 
-    <img
+    <Image
       src="@/assets/images/background-gradient-orange-mini.webp"
       alt="Background gradient orange mini"
       class="absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full"
+      title="Background gradient orange mini"
+      width="75"
+      height="75"
       aria-hidden="true"
     />
 
