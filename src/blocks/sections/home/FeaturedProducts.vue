@@ -24,12 +24,20 @@ const products = [
 
 <template>
   <div class="container mx-auto my-8">
-    <Button
-      class="w-max mx-auto h-max my-auto"
-      label="Featured Products"
-      id="featured-products-button"
-    />
-    <h2 class="text-2xl font-bold text-center my-4">Featured Products</h2>
+    <div
+      class="flex flex-wrap justify-center md:justify-between items-center gap-4 w-full mb-8 md:mb-1"
+    >
+      <h2
+        class="text-2xl font-bold text-center md:mb-6 mr-auto w-full md:w-auto"
+      >
+        Featured Products
+      </h2>
+
+      <div class="ml-auto w-full md:w-auto flex justify-center md:justify-end">
+        <Button label="See All Products" />
+      </div>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <FeatureCard
         v-for="(product, index) in products"
