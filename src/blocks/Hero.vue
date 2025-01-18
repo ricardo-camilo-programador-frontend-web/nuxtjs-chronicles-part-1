@@ -7,7 +7,7 @@ const localePath = useLocalePath()
 
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full min-h-screen md:min-h-[44rem] lg:max-h-[38rem] h-full py-8 md:py-16 lg:py-24 md:overflow-hidden md:max-w-full min-w-screen mx-auto"
+    class="relative flex flex-col items-center justify-center w-full min-h-screen md:min-h-[44rem] lg:max-h-[38rem] h-full py-8 md:py-16 lg:py-24 md:overflow-hidden md:max-w-full min-w-screen mx-auto pt-[10rem] md:pt-0"
     aria-labelledby="hero-heading"
   >
     <div class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full bg-orange-500 opacity-50 md:opacity-100" />
@@ -49,17 +49,34 @@ const localePath = useLocalePath()
         <img
           src="@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp"
           alt=""
-          class="absolute left-[30%] md:left-[38%] top-[7rem] md:top-24 w-20 md:w-32"
+          class="absolute left-[30%] md:left-[38%] top-[7rem] md:top-24 w-20 md:w-32 scale-150"
           aria-hidden="true"
         >
 
-        <div class="absolute right-0 bottom-0 mr-auto mt-auto h-[20rem] w-[20rem] md:h-[25rem] md:w-[25rem] lg:h-[30rem] lg:w-[30rem] rounded-full">
-          <img
-            src="@/assets/images/hero-dog.webp"
-            alt="Happy dog with its owner"
-            class="object-cover w-full h-full mt-auto"
-            loading="eager"
-          >
+        <div class="md:absolute right-0 md:bottom-0 md:right-0 md:mt-auto h-[20rem] w-[20rem] md:h-[40rem] md:w-[40rem] px-4 md:px-0 ml-4 -bottom-8">
+          <div class="mt-auto bottom-0 h-full w-full flex items-center justify-center md:-right-24 relative">
+            <img
+              src="@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp"
+              alt="Happy dog with its owner"
+              class="object-cover w-[25rem] -bottom-4 md:bottom-0 -mr-16 absolute z-[3]"
+              loading="eager"
+            >
+
+            <div class="flex items-center justify-center bottom-0 mt-auto">
+              <img
+                src="@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp"
+                alt="Happy dog with its owner"
+                class="object-cover w-[18rem] mt-auto bottom-0 z-[4] -ml-[4rem] md:-ml-16"
+                loading="eager"
+              >
+              <img
+                src="@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp"
+                alt="Happy dog with its owner"
+                class="object-cover w-[7rem]  md:-mr-12 mt-auto bottom-0 z-[4]"
+                loading="eager"
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
