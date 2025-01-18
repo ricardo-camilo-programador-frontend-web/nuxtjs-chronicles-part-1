@@ -23,7 +23,7 @@ const products = [
 </script>
 
 <template>
-  <div class="container mx-auto my-8">
+  <div class="container mx-auto my-8 max-w-[95vw]">
     <div
       class="flex flex-wrap justify-center md:justify-between items-center gap-4 w-full mb-8 md:mb-1"
     >
