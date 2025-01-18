@@ -39,7 +39,7 @@ const localePath = useLocalePath();
     <Image
       :src="backgroundGradientOrangeMini"
       alt="Background gradient orange mini"
-      class="absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full"
+      class="hidden md:block absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full"
       title="Background gradient orange mini"
       width="75"
       height="75"
