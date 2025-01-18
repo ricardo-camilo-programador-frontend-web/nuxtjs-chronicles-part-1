@@ -37,12 +37,14 @@ const props = defineProps<Props>();
         </p>
       </div>
 
-      <Button
-        :id="`category-button-${title}`"
-        class="mt-2 hover:underline mb-auto -top-2 absolute -right-2 bg-white rounded-full text-6xl h-4 w-4 flex items-center justify-center text-orange-500"
-        aria-label="View more products in {{ title }}"
-        label="→"
-      />
+      <div class="flex items-center justify-center bg-white rounded-full w-10 h-10 relative overflow-hidden -mt-4 -mr-3">
+        <Button
+          :id="`category-button-${title}`"
+          icon="mdi:arrow-right"
+          iconStyle="text-orange-500 text-7xl scale-150"
+          aria-label="View more products in {{ title }}"
+        />
+      </div>
     </div>
   </div>
 </template>
