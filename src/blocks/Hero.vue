@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
-import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
-import greenWingedMacaw from '@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp'
-import celineSayuriTagami from '@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp'
-import charlesdeluvio from '@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp'
-import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import backgroundGradientOrange from "@/assets/images/background-gradient-orange.webp";
+import backgroundGradientOrangeMini from "@/assets/images/background-gradient-orange-mini.webp";
+import greenWingedMacaw from "@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp";
+import celineSayuriTagami from "@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp";
+import charlesdeluvio from "@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp";
+import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
 
 import { useI18n } from "vue-i18n";
 
@@ -23,7 +23,7 @@ const localePath = useLocalePath();
       class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full opacity-50 md:opacity-100 mt-32 object-cover"
       width="400"
       height="400"
-      aria-hidden="true"
+      :aria-hidden="true"
     />
 
     <Image
@@ -33,7 +33,7 @@ const localePath = useLocalePath();
       title="Background gradient orange mini"
       width="100"
       height="100"
-      aria-hidden="true"
+      :aria-hidden="true"
     />
 
     <Image
@@ -43,7 +43,7 @@ const localePath = useLocalePath();
       title="Background gradient orange mini"
       width="75"
       height="75"
-      aria-hidden="true"
+      :aria-hidden="true"
     />
 
     <div class="max-w-[96vw] md:max-w-full mx-auto">
@@ -83,7 +83,7 @@ const localePath = useLocalePath();
           width="20"
           height="20"
           loading="eager"
-          aria-hidden="true"
+          :aria-hidden="true"
         />
 
         <div
