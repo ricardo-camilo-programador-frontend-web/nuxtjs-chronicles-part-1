@@ -5,5 +5,5 @@ definePageMeta({
 </script>
 
 <template>
-  <Button label="Discount page" />
+  <Button label="Discount page" id="discount-page-button" />
 </template>

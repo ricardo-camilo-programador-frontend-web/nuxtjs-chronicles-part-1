@@ -5,5 +5,5 @@ definePageMeta({
 </script>
 
 <template>
-  <Button label="Privacy Policy" />
+  <Button label="Privacy Policy" id="privacy-policy-page-button" />
 </template>

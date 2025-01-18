@@ -5,5 +5,5 @@ definePageMeta({
 </script>
 
 <template>
-  <Button label="Faq page" />
+  <Button label="Faq page" id="faq-page-button" />
 </template>
