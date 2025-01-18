@@ -8,6 +8,7 @@ interface Props {
   disabled?: boolean
   title?: string
   icon?: string
+  iconStyle?: string
   ripple?: boolean
 }
 
@@ -49,13 +50,12 @@ initializeRippleEffect()
     :type="type"
     :disabled="disabled"
     :title="title"
-    class="rounded-md font-bold text-xs tracking-widest p-4 ease-in-out duration-1350 items-center !transition-all hover:(bg-gray-300) disabled:opacity-25"
-    @click="handleClick"
+    class="rounded-md font-bold text-xs tracking-widest p-4 ease-in-out duration-1350 !transition-all hover:bg-gray-300 disabled:opacity-25 flex items-center justify-center"
   >
     <Icon
       v-if="icon"
       :name="icon"
-      :class="icon"
+      :class="iconStyle"
       class="transition-all"
     />
     <span
