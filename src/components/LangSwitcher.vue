@@ -30,9 +30,9 @@ const currentFlag = computed(() => {
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-2 border bg-gradient-to-r from-black/20 via-black/50 to-black/20 rounded-full px-2 text-white backdrop-blur-sm">
     <span
-      class="flex items-center justify-center text-lg"
+      class="flex items-center justify-center md:text-2xl"
       aria-hidden="true"
     >
       <Icon :name="currentFlag" />
