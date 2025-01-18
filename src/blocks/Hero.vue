@@ -17,8 +17,11 @@ const localePath = useLocalePath();
       aria-hidden="true"
     />
 
-    <div
-      class="absolute left-[10%] md:left-[20%] mr-auto -top-14 h-[100px] w-[100px] md:h-[200px] md:w-[200px] rounded-full bg-orange-400"
+    <img
+      src="@/assets/images/background-gradient-orange-mini.webp"
+      alt=""
+      class="absolute left-[10%] md:left-[20%] mr-auto -top-14 h-[100px] w-[100px] md:h-[200px] md:w-[200px] rounded-full rotate-180"
+      aria-hidden="true"
     />
 
     <div
