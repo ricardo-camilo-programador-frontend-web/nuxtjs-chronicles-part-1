@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { generateId } from '@/utils/generateId'
-import { rippleEffect } from '@/utils/rippleEffect'
-import { onMounted, ref } from 'vue'
-
 interface Props {
+  id?: string
   type?: 'button' | 'submit' | 'reset'
   label?: string
   labelStyle?: string
@@ -16,14 +13,11 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   type: 'button',
+  ripple: true,
+  id: '',
 })
 
 const buttonText = ref(props.label)
-const buttonId = ref(generateId())
-
-const setButtonId = (id: string) => {
-  buttonId.value = id
-}
 
 function handleWithButtonText() {
   return props.disabled
@@ -45,19 +39,28 @@ function handleClick() {
 }
 
 onMounted(() => {
-  setButtonId(buttonId.value)
+  const buttonID = props.id
+  const timeoutTimer = 1000
 
-  const button = document.getElementById(buttonId.value)
-  if (button && props.ripple) {
-    button.addEventListener('click', (event) => {
-      rippleEffect(event, buttonId.value)
-    })
+  if (!buttonID) {
+    return
   }
+
+  setTimeout(() => {
+    const button = document.getElementById(buttonID)
+
+    if (button && props.ripple) {
+      button.addEventListener('click', (event) => {
+        rippleEffect(event, buttonID)
+      })
+    }
+  }, timeoutTimer)
 })
 </script>
 
 <template>
   <button
+    :id="id"
     :class="ripple ? 'relative overflow-hidden' : ''"
     :type="type"
     :disabled="disabled"
