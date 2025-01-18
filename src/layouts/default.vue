@@ -7,10 +7,10 @@ useHead({
 </script>
 
 <template>
-  <div class="relative grid min-w-screen min-h-screen bg-gray-50">
+  <div class="relative flex flex-col max-w-screen md:min-w-screen md:min-h-screen bg-gray-50 overflow-hidden md:overflow-visible">
     <Header />
 
-    <main class="relative grid min-w-full min-h-screen">
+    <main class="relative flex flex-col md:min-w-full min-h-screen px-2">
       <slot />
     </main>
 
