@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import InfoBlock from '~/blocks/sections/AboutUs/InfoBlock.vue';
+
 definePageMeta({
   layout: 'default',
 })
@@ -7,5 +9,12 @@ definePageMeta({
 <template>
   <main class="flex flex-col flex-wrap h-full mx-auto min-w-max min-h-[94vh] w-full items-center relative">
     <Hero />
+    <Categories />
+    <FeaturedProducts />
+    <InfoBlock />
+    <Logos />
+    <BestSellingProducts />
+    <ShopByPet />
+    <NewsAndBlog />
   </main>
 </template>
