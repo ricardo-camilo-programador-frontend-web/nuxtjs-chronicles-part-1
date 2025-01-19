@@ -5,4 +5,5 @@ export interface Product {
   price: number;
   currency: CurrencyType;
   altText: string;
+  isFavorite?: boolean;
 }
