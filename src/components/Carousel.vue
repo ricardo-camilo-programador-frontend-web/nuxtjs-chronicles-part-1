@@ -7,9 +7,18 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 export interface Props {
   items: Array<any>
+  slidesPerView?: number
+  loop?: boolean
+  pagination?: boolean
+  navigation?: boolean
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  loop: true,
+  pagination: false,
+  navigation: false,
+  slidesPerView: 1,
+})
 
 const modules = [Pagination, Navigation]
 
@@ -45,10 +54,10 @@ const breakpoints = {
 
 <template>
   <Swiper
-    :slides-per-view="1"
-    :loop="true"
-    :navigation="false"
-    :pagination="false"
+    :slides-per-view="props.slidesPerView"
+    :loop="props.loop"
+    :navigation="props.navigation"
+    :pagination="props.pagination"
     :breakpoints="breakpoints"
     :modules="modules"
     class="w-ful relative flex h-auto flex-col items-start sm:max-w-[900px]"
