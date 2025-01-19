@@ -8,7 +8,7 @@ const { t } = useI18n();
 
 <template>
   <section
-    class="relative flex md:flex-row flex-col w-full min-h-[600px] py-8 md:py-16 overflow-hidden max-w-[95vw] mx-auto"
+    class="py-8 max-w-[95vw] mx-auto flex flex-col md:flex-row justify-center items-center md:justify-between md:gap-24"
     aria-labelledby="info-block-heading"
   >
     <div
