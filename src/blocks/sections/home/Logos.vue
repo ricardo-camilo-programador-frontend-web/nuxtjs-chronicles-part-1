@@ -1,8 +1,76 @@
-<template>
-  <Button
-    class="w-max mx-auto h-max my-auto"
-    label="Logos"
-    id="logos-button"
-  />
-</template>
+<script setup lang="ts">
+interface LogoItem {
+  id: string;
+  name: string;
+  imagePath: string;
+  altText: string;
+}
 
+const { t } = useI18n();
+
+const logos: LogoItem[] = [
+  {
+    id: 'logo1',
+    name: t('logos.petCare'),
+    imagePath: '/images/logos/pet-care.svg',
+    altText: t('logos.petCareAltText')
+  },
+  {
+    id: 'logo2',
+    name: t('logos.petHouse'),
+    imagePath: '/images/logos/pet-house.svg',
+    altText: t('logos.petHouseAltText')
+  },
+  {
+    id: 'logo3',
+    name: t('logos.pawLove'),
+    imagePath: '/images/logos/paw-love.svg',
+    altText: t('logos.pawLoveAltText')
+  },
+  {
+    id: 'logo4',
+    name: t('logos.petServices'),
+    imagePath: '/images/logos/pet-services.svg',
+    altText: t('logos.petServicesAltText')
+  },
+  {
+    id: 'logo5',
+    name: t('logos.petCareHeart'),
+    imagePath: '/images/logos/pet-care-heart.svg',
+    altText: t('logos.petCareHeartAltText')
+  },
+];
+</script>
+
+<template>
+  <section
+    aria-label="Partner Logos"
+    class="w-full py-12 px-4"
+  >
+    <div class="max-w-7xl mx-auto">
+      <ul
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center"
+        role="list"
+      >
+        <li
+          v-for="logo in logos"
+          :key="logo.id"
+          class="w-full max-w-[200px] transition-transform hover:scale-105"
+        >
+          <Image
+            :src="logo.imagePath"
+            :alt="logo.altText"
+            :title="logo.name"
+            width="200"
+            height="200"
+            class="w-full h-auto object-contain"
+            loading="lazy"
+          />
+          <p class="text-center text-orange-500 mt-2 font-medium">
+            {{ logo.name }}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</template>

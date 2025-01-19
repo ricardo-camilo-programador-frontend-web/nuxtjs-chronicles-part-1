@@ -68,6 +68,18 @@ export default defineI18nConfig(() => ({
           count: 'products',
         }
       },
+      logos: {
+        petCare: 'Pet Care',
+        petHouse: 'Pet House',
+        pawLove: 'Paw Love',
+        petServices: 'Pet Services',
+        petCareHeart: 'Pet Care Heart',
+        petCareAltText: 'Pet Care Logo with Dog Icon',
+        petHouseAltText: 'Pet House Logo with House Icon',
+        pawLoveAltText: 'Paw Love Logo with Heart and Paw Print',
+        petServicesAltText: 'Pet Services Logo with Dog Silhouette',
+        petCareHeartAltText: 'Pet Care Heart Logo with Heart Shape',
+      }
     },
     pt: {
       hero: {
@@ -136,7 +148,20 @@ export default defineI18nConfig(() => ({
           },
           count: 'produtos'
         }
+      },
+      logos: {
+        petCare: 'Pet Care',
+        petHouse: 'Pet House',
+        pawLove: 'Paw Love',
+        petServices: 'Pet Services',
+        petCareHeart: 'Pet Care Heart',
+        petCareAltText: 'Pet Care Logo com Icone de Cachorro',
+        petHouseAltText: 'Pet House Logo com Icone de Casa',
+        pawLoveAltText: 'Paw Love Logo com Coração e Símbolo de Pata',
+        petServicesAltText: 'Pet Services Logo com Silhueta de Cachorro',
+        petCareHeartAltText: 'Pet Care Heart Logo com Forma de Coração',
       }
     },
   },
 }))
+
