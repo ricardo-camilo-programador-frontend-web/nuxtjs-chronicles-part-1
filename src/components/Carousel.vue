@@ -5,25 +5,30 @@ import 'swiper/css/navigation'
 import { Navigation, Pagination } from 'swiper/modules'
 
 interface CarouselProps {
+  uniqueId?: string
   slidesPerView?: number
   spaceBetween?: number
   loop?: boolean
   pagination?: boolean
-  navigation?: boolean
 }
 
 const props = withDefaults(defineProps<CarouselProps>(), {
+  uniqueId: 'swiper',
   slidesPerView: 6,
   spaceBetween: 24,
   loop: true,
-  navigation: false,
   pagination: false,
 })
 
 const modules = [Pagination, Navigation]
 
+const navigation = {
+  nextEl: `#${props.uniqueId}-button-next`,
+  prevEl: `#${props.uniqueId}-button-prev`,
+}
+
 const pagination = {
-  el: '.swiper-pagination',
+  el: `#${props.uniqueId}-pagination`,
   clickable: true,
   renderBullet() {
     return '<span class="swiper-pagination-bullet"></span>'
@@ -40,6 +45,7 @@ const breakpoints = {
 
 <template>
   <Swiper
+    :id="props.uniqueId"
     :slides-per-view="slidesPerView"
     :loop="loop"
     :navigation="navigation"
@@ -51,16 +57,17 @@ const breakpoints = {
     <slot />
 
     <div
+      :id="`${props.uniqueId}-button-prev`"
       class="absolute right-2 -top-12 flex items-center justify-end gap-2 -translate-y-1/2"
     >
       <Button
-        id="`shop-by-pet-prev-button`"
+        :id="`${props.uniqueId}-button-prev`"
         icon="i-heroicons-chevron-left"
         class="p-2 !rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
       />
 
       <Button
-        id="shop-by-pet-next-button"
+        :id="`${props.uniqueId}-button-next`"
         icon="i-heroicons-chevron-right"
         class="p-2 !rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
       />
