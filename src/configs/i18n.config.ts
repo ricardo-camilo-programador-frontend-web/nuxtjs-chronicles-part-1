@@ -82,6 +82,7 @@ export default defineI18nConfig(() => ({
         petCareHeartAltText: 'Pet Care Heart Logo with Heart Shape',
       },
       products: {
+        featuredTitle: 'Featured Products',
         premiumDogFood: 'Premium Dog Food',
         premiumCatFood: 'Premium Cat Food',
         premiumDogFoodAltText: 'Premium Dog Food',
@@ -171,6 +172,7 @@ export default defineI18nConfig(() => ({
         petCareHeartAltText: 'Pet Care Heart Logo com Forma de Coração',
       },
       products: {
+        featuredTitle: 'Produtos em Destaque',
         premiumDogFood: 'Alimento Premium para Cachorro',
         premiumCatFood: 'Alimento Premium para Gato',
         premiumDogFoodAltText: 'Alimento Premium para Cachorro',
