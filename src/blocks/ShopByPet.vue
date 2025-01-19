@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SwiperSlide } from "swiper/vue";
 import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
 
 interface PetCategory {
@@ -59,44 +60,33 @@ const petCategories = ref<PetCategory[]>([
       <h2 id="shop-by-pet-title" class="text-2xl font-bold">
         {{ t("shopByPet.title") }}
       </h2>
-
-      <div class="flex gap-2">
-        <Button
-          v-for="direction in ['prev', 'next']"
-          :key="direction"
-          :aria-label="t(`shopByPet.${direction}Slide`)"
-          :id="`shop-by-pet-${direction}-button`"
-          :icon="direction === 'prev' ? 'i-heroicons-chevron-left' : 'i-heroicons-chevron-right'"
-          class="p-2 !rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-        />
-      </div>
     </div>
 
-    <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4"
-      role="list"
-    >
-      <button
+    <Carousel>
+      <SwiperSlide
         v-for="pet in petCategories"
         :key="pet.id"
-        :aria-label="t('shopByPet.shopFor', { pet: pet.name })"
-        class="group flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500"
-        role="listitem"
+        class="!h-auto"
       >
-        <div
-          class="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-orange-100 transition-colors"
+        <button
+          :aria-label="t('shopByPet.shopFor', { pet: pet.name })"
+          class="group flex w-full flex-col items-center gap-3 rounded-lg p-4 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
-          <Image
-            :src="pet.icon"
-            :alt="pet.altText"
-            class="w-12 h-12 object-contain scale-150"
-            loading="lazy"
-            width="100"
-            height="100"
-          />
-        </div>
-        <span class="text-sm font-medium">{{ pet.name }}</span>
-      </button>
-    </div>
+          <div
+            class="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-orange-100"
+          >
+            <Image
+              :src="pet.icon"
+              :alt="pet.altText"
+              :width="80"
+              :height="80"
+              class="h-12 w-12 object-contain"
+              loading="lazy"
+            />
+          </div>
+          <span class="text-sm font-medium">{{ pet.name }}</span>
+        </button>
+      </SwiperSlide>
+    </Carousel>
   </section>
 </template>
