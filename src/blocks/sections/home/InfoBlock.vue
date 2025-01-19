@@ -1,8 +1,65 @@
-<template>
-  <Button
-    class="w-max mx-auto h-max my-auto"
-    label="Info Block"
-    id="info-block-button"
-  />
-</template>
+<script setup lang="ts">
+import catsSilhouette from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
+import backgroundGradientOrange from "@/assets/images/background-gradient-orange.webp";
 
+// If using i18n for translations
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+</script>
+
+<template>
+  <section
+    class="relative flex md:flex-row flex-col w-full min-h-[600px] py-8 md:py-16 overflow-hidden max-w-[95vw] mx-auto"
+    aria-labelledby="info-block-heading"
+  >
+    <div
+      class="relative z-10 my-auto flex flex-col justify-center items-center h-[600px] w-full "
+    >
+      <Image
+        :src="backgroundGradientOrange"
+        alt=""
+        class="absolute inset-0 h-[600px] min-w-[17rem] w-[120rem] rounded-full opacity-90 z-[1] object-cover -ml6"
+        width="600"
+        height="600"
+        :aria-hidden="true"
+      />
+
+      <Image
+        :src="catsSilhouette"
+        alt="Cat silhouettes"
+        class="w-full max-w-[18.75rem] mx-auto z-[2] object-cover"
+        width="300"
+        height="300"
+      />
+    </div>
+
+    <div class="mx-auto px-4 w-full flex flex-col justify-center items-center">
+      <div
+        class="flex flex-col lg:flex-row justify-between w-full gap-8 items-center"
+      >
+        <div class="relative z-10 max-w-xl">
+          <span class="inline-block mb-3 text-base font-medium text-orange-500">
+            Pet Shop
+          </span>
+
+          <h2
+            id="info-block-heading"
+            class="mb-4 text-4xl lg:text-5xl font-bold tracking-tight text-gray-900"
+          >
+            The smarter way to shop for your pet
+          </h2>
+
+          <p class="mb-6 text-lg text-gray-600">
+            Discover a new, efficient way to meet all your pet's needs with our curated selection of high-quality products. From nutritious food options to fun toys, everything is designed to ensure your pet's happiness and health.
+          </p>
+
+          <Button
+            class="px-8 py-3 text-base font-medium text-white bg-black rounded-md hover:bg-orange-500 transition-colors"
+            label="Learn More"
+            id="info-block-button"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
