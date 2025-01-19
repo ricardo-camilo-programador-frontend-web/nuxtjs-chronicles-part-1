@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import InfoBlock from '~/blocks/sections/AboutUs/InfoBlock.vue';
-
 definePageMeta({
   layout: 'default',
 })
