@@ -99,6 +99,18 @@ export default defineI18nConfig(() => ({
       bestSellingProducts: {
         title: 'Best Selling Products',
         seeAll: 'See All Products',
+      },
+      shopByPet: {
+        title: 'Shop by Pet',
+        seeAll: 'See All Products',
+      },
+      pets: {
+        cat: 'Cat',
+        hamster: 'Hamster',
+        dog: 'Dog',
+        turtle: 'Turtle',
+        rabbit: 'Rabbit',
+        parrot: 'Parrot',
       }
     },
     pt: {
@@ -206,6 +218,18 @@ export default defineI18nConfig(() => ({
       bestSellingProducts: {
         title: 'Produtos Mais Vendidos',
         seeAll: 'Ver Todos os Produtos',
+      },
+      shopByPet: {
+        title: 'Loja por Pet',
+        seeAll: 'Ver Todos os Produtos',
+      },
+      pets: {
+        cat: 'Gato',
+        hamster: 'Hamster',
+        dog: 'Cachorro',
+        turtle: 'Tartaruga',
+        rabbit: 'Coelho',
+        parrot: 'Papagaio',
       }
     },
   },
