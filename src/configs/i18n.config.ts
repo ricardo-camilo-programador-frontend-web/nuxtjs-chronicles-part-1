@@ -36,6 +36,7 @@ export default defineI18nConfig(() => ({
           phone: '+775 378-6348',
         },
         copyright: '© Copyright Savana {year}. Design by {designer}',
+        buyMeACoffee: 'Buy me a coffee',
       },
       introWarning: {
         welcome: 'Study Project - Savana Pet Shop',
@@ -124,6 +125,7 @@ export default defineI18nConfig(() => ({
           phone: '+55 11 1234-5678',
         },
         copyright: '© Copyright Savana {year}. Design por {designer}',
+        buyMeACoffee: 'Apoie o desenvolvedor',
       },
       introWarning: {
         welcome: 'Projeto de Estudos - Savana Pet Shop',

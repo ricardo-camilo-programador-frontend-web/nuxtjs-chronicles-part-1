@@ -7,8 +7,7 @@ export default defineNuxtPlugin(() => {
     provide: {
       env: {
         ...config.public,
-        ANALYZE: config.public.ANALYZE === 'true'
-      } as Env
-    }
+      } as Env,
+    },
   }
 })

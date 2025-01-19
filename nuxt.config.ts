@@ -124,7 +124,6 @@ export default defineNuxtConfig({
       GTM_ID: process.env.NUXT_PUBLIC_GTM_ID,
       INSTAGRAM_USERNAME: process.env.NUXT_PUBLIC_INSTAGRAM_USERNAME,
       SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'https://savana-nuxtjs-chronicles-part-1.netlify.app',
-      ANALYZE: process.env.ANALYZE,
       GITHUB_USERNAME: process.env.NUXT_PUBLIC_GITHUB_USERNAME,
       LINKEDIN_USERNAME: process.env.NUXT_PUBLIC_LINKEDIN_USERNAME,
       X_USERNAME: process.env.NUXT_PUBLIC_X_USERNAME,
@@ -132,6 +131,7 @@ export default defineNuxtConfig({
       TWITTER_USERNAME: process.env.NUXT_PUBLIC_TWITTER_USERNAME,
       GOOGLE_SITE_VERIFICATION: process.env.NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
       PORTFOLIO_URL: process.env.NUXT_PUBLIC_PORTFOLIO_URL,
+      BUYMEACOFFEE_USERNAME: process.env.NUXT_PUBLIC_BUYMEACOFFEE_USERNAME,
     },
   },
 

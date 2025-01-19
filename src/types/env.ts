@@ -13,7 +13,6 @@ export interface Env {
   GTM_ID: string
   INSTAGRAM_USERNAME: string
   SITE_URL: string
-  ANALYZE: boolean
   GITHUB_USERNAME: string
   LINKEDIN_USERNAME: string
   X_USERNAME: string
@@ -21,4 +20,5 @@ export interface Env {
   TWITTER_USERNAME: string
   GOOGLE_SITE_VERIFICATION: string
   PORTFOLIO_URL: string
+  BUYMEACOFFEE_USERNAME: string
 }

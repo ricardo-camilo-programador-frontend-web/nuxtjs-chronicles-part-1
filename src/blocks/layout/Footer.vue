@@ -96,6 +96,12 @@ const { t } = useI18n()
             <li class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out">
               {{ $env.EMAIL }}
             </li>
+
+            <BuyMeCoffee
+              :username="$env.BUYMEACOFFEE_USERNAME"
+              :message="t('footer.buyMeACoffee')"
+              theme="colored"
+            />
           </ul>
         </div>
       </div>
