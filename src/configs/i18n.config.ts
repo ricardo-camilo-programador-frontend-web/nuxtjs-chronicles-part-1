@@ -79,6 +79,13 @@ export default defineI18nConfig(() => ({
         pawLoveAltText: 'Paw Love Logo with Heart and Paw Print',
         petServicesAltText: 'Pet Services Logo with Dog Silhouette',
         petCareHeartAltText: 'Pet Care Heart Logo with Heart Shape',
+      },
+      products: {
+        premiumDogFood: 'Premium Dog Food',
+        premiumCatFood: 'Premium Cat Food',
+        premiumDogFoodAltText: 'Premium Dog Food',
+        premiumCatFoodAltText: 'Premium Cat Food',
+        currency: 'USD',
       }
     },
     pt: {
@@ -160,6 +167,13 @@ export default defineI18nConfig(() => ({
         pawLoveAltText: 'Paw Love Logo com Coração e Símbolo de Pata',
         petServicesAltText: 'Pet Services Logo com Silhueta de Cachorro',
         petCareHeartAltText: 'Pet Care Heart Logo com Forma de Coração',
+      },
+      products: {
+        premiumDogFood: 'Alimento Premium para Cachorro',
+        premiumCatFood: 'Alimento Premium para Gato',
+        premiumDogFoodAltText: 'Alimento Premium para Cachorro',
+        premiumCatFoodAltText: 'Alimento Premium para Gato',
+        currency: 'BRL',
       }
     },
   },
