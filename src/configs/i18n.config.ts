@@ -111,7 +111,16 @@ export default defineI18nConfig(() => ({
         turtle: 'Turtle',
         rabbit: 'Rabbit',
         parrot: 'Parrot',
-      }
+      },
+      newsAndBlog: {
+        title: 'News and Blog',
+        seeAll: 'See All News',
+      },
+      blog: {
+        post1Title: 'Urna Cras Et Mauris Congue Nunc Nisl Nec Tempus Cursus',
+        post2Title: 'Id Tellus Dignissim Eu Nisl Aliquam. Massa Id Interdum',
+        post3Title: 'Mus Cursus Pellentesque Blandit Tortor Suspendisse Ornare',
+      },
     },
     pt: {
       hero: {
@@ -230,7 +239,16 @@ export default defineI18nConfig(() => ({
         turtle: 'Tartaruga',
         rabbit: 'Coelho',
         parrot: 'Papagaio',
-      }
+      },
+      newsAndBlog: {
+        title: 'Notícias e Blog',
+        seeAll: 'Ver Todas as Notícias',
+      },
+      blog: {
+        post1Title: 'Urna Cras Et Mauris Congue Nunc Nisl Nec Tempus Cursus',
+        post2Title: 'Id Tellus Dignissim Eu Nisl Aliquam. Massa Id Interdum',
+        post3Title: 'Mus Cursus Pellentesque Blandit Tortor Suspendisse Ornare',
+      },
     },
   },
 }))
