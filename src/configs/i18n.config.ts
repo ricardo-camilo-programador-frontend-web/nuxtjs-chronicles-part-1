@@ -53,6 +53,7 @@ export default defineI18nConfig(() => ({
       categories: {
         title: 'Browse by category',
         seeAll: 'See All Categories',
+        news: 'News',
         items: {
           accessories: {
             title: 'Accessories',
@@ -175,6 +176,7 @@ export default defineI18nConfig(() => ({
       categories: {
         title: 'Navegue por categoria',
         seeAll: 'Ver Todas as Categorias',
+        news: 'Notícias',
         items: {
           accessories: {
             title: 'Acessórios',
