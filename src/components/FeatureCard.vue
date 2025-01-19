@@ -22,7 +22,7 @@ const props = defineProps<FeatureCardProps>();
       />
     </div>
 
-    <div class="flex justify-between items-center w-full bg-white rounded-b-lg px-4 py-2">
+    <div class="flex justify-between items-center w-full bg-white rounded-b-lg px-4 py-2 min-h-24">
       <div class="w-full">
         <h3 class="mt-2 text-lg font-semibold">{{ productName }}</h3>
         <p class="text-gray-600">{{ productPrice }}</p>

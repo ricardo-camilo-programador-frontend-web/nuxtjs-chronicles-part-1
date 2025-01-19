@@ -83,6 +83,7 @@ export default defineI18nConfig(() => ({
       },
       products: {
         featuredTitle: 'Featured Products',
+        seeAll: 'See All Products',
         premiumDogFood: 'Premium Dog Food',
         premiumCatFood: 'Premium Cat Food',
         premiumDogFoodAltText: 'Premium Dog Food',
@@ -173,6 +174,7 @@ export default defineI18nConfig(() => ({
       },
       products: {
         featuredTitle: 'Produtos em Destaque',
+        seeAll: 'Ver Todos os Produtos',
         premiumDogFood: 'Alimento Premium para Cachorro',
         premiumCatFood: 'Alimento Premium para Gato',
         premiumDogFoodAltText: 'Alimento Premium para Cachorro',
