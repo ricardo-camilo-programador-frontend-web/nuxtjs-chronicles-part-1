@@ -38,23 +38,23 @@ const { t } = useI18n();
       >
         <div class="relative z-10 max-w-xl">
           <span class="inline-block mb-3 text-base font-medium text-orange-500">
-            Pet Shop
+            {{ t('infoBlock.category') }}
           </span>
 
           <h2
             id="info-block-heading"
             class="mb-4 text-4xl lg:text-5xl font-bold tracking-tight text-gray-900"
           >
-            The smarter way to shop for your pet
+            {{ t('infoBlock.title') }}
           </h2>
 
           <p class="mb-6 text-lg text-gray-600">
-            Discover a new, efficient way to meet all your pet's needs with our curated selection of high-quality products. From nutritious food options to fun toys, everything is designed to ensure your pet's happiness and health.
+            {{ t('infoBlock.description') }}
           </p>
 
           <Button
             class="px-8 py-3 text-base font-medium text-white bg-black rounded-md hover:bg-orange-500 transition-colors"
-            label="Learn More"
+            :label="t('infoBlock.buttonLabel')"
             id="info-block-button"
           />
         </div>
