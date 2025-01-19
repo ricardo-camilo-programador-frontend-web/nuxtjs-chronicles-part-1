@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
+
 interface LogoItem {
   id: string;
   name: string;
@@ -12,31 +14,31 @@ const logos: LogoItem[] = [
   {
     id: 'logo1',
     name: t('logos.petCare'),
-    imagePath: '/images/logos/pet-care.svg',
+    imagePath: katherineMcadoo,
     altText: t('logos.petCareAltText')
   },
   {
     id: 'logo2',
     name: t('logos.petHouse'),
-    imagePath: '/images/logos/pet-house.svg',
+    imagePath: katherineMcadoo,
     altText: t('logos.petHouseAltText')
   },
   {
     id: 'logo3',
     name: t('logos.pawLove'),
-    imagePath: '/images/logos/paw-love.svg',
+    imagePath: katherineMcadoo,
     altText: t('logos.pawLoveAltText')
   },
   {
     id: 'logo4',
     name: t('logos.petServices'),
-    imagePath: '/images/logos/pet-services.svg',
+    imagePath: katherineMcadoo,
     altText: t('logos.petServicesAltText')
   },
   {
     id: 'logo5',
     name: t('logos.petCareHeart'),
-    imagePath: '/images/logos/pet-care-heart.svg',
+    imagePath: katherineMcadoo,
     altText: t('logos.petCareHeartAltText')
   },
 ];
