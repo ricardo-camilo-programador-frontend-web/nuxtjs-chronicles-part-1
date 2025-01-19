@@ -23,7 +23,7 @@ const props = defineProps<Props>();
       <div class="flex items-center justify-between w-full h-full">
         <h3 class="font-medium text-lg">{{ product.name }}</h3>
 
-        <Button
+        <Button 
           class="p-2"
           icon-style="text-red-500"
           :icon="product.isFavorite ? 'i-heroicons-heart-solid' : 'i-heroicons-heart'"
