@@ -19,8 +19,8 @@ const props = defineProps<Props>();
       />
     </div>
 
-    <div class="space-y-2 bg-white px-4 py-2 rounded-b-lg">
-      <div class="flex items-center justify-between w-full">
+    <div class="space-y-2 bg-white px-4 py-2 rounded-b-lg min-h-[7rem] h-full flex flex-col max-h-[4rem]">
+      <div class="flex items-center justify-between w-full h-full">
         <h3 class="font-medium text-lg">{{ product.name }}</h3>
 
         <Button
@@ -32,7 +32,8 @@ const props = defineProps<Props>();
           "
         />
       </div>
-      <p class="text-gray-900 font-bold">
+
+      <p class="text-gray-900 font-bold mt-auto">
         {{ product.currency }} {{ product.price.toFixed(2) }}
       </p>
     </div>
