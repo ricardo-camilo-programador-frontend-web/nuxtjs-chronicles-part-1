@@ -1,31 +1,26 @@
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Swiper } from 'swiper/vue'
 import 'swiper/css'
-import 'swiper/css/pagination'
-import '@/assets/css/swipper.css'
-import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation'
+import { Navigation, Pagination } from 'swiper/modules'
 
-export interface Props {
-  items: Array<any>
+interface CarouselProps {
   slidesPerView?: number
+  spaceBetween?: number
   loop?: boolean
   pagination?: boolean
   navigation?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<CarouselProps>(), {
+  slidesPerView: 6,
+  spaceBetween: 24,
   loop: true,
-  pagination: false,
   navigation: false,
-  slidesPerView: 1,
+  pagination: false,
 })
 
 const modules = [Pagination, Navigation]
-
-const navigation = {
-  prevEl: '#prev-slide',
-  nextEl: '#next-slide',
-}
 
 const pagination = {
   el: '.swiper-pagination',
@@ -35,63 +30,41 @@ const pagination = {
   },
 }
 
-const desktopSlidersPerView
-  = props.items.length > 3 ? 3 : props.items.length
-const mobileSlidersPerView
-  = props.items.length > 2 ? 2 : props.items.length
-
 const breakpoints = {
-  640: {
-    slidesPerView: mobileSlidersPerView,
-    spaceBetween: 5,
-  },
-  1024: {
-    slidesPerView: desktopSlidersPerView,
-    spaceBetween: 5,
-  },
+  320: { slidesPerView: 2, spaceBetween: 16 },
+  640: { slidesPerView: 3, spaceBetween: 20 },
+  768: { slidesPerView: 4, spaceBetween: 24 },
+  1366: { slidesPerView: props.slidesPerView, spaceBetween: props.spaceBetween },
 }
 </script>
 
 <template>
   <Swiper
-    :slides-per-view="props.slidesPerView"
-    :loop="props.loop"
-    :navigation="props.navigation"
-    :pagination="props.pagination"
+    :slides-per-view="slidesPerView"
+    :loop="loop"
+    :navigation="navigation"
+    :pagination="pagination"
     :breakpoints="breakpoints"
     :modules="modules"
-    class="w-ful relative flex h-auto flex-col items-start sm:max-w-[900px]"
+    class="!overflow-visible max-w-[95vw]"
   >
-    <SwiperSlide
-      v-for="item in items"
-      :key="item.id"
-      class="h-auto w-full"
+    <slot />
+
+    <div
+      class="absolute right-2 -top-12 flex items-center justify-end gap-2 -translate-y-1/2"
     >
-      <slot :slot-props="{ item }" />
-    </SwiperSlide>
+      <Button
+        id="`shop-by-pet-prev-button`"
+        icon="i-heroicons-chevron-left"
+        class="p-2 !rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+      />
+
+      <Button
+        id="shop-by-pet-next-button"
+        icon="i-heroicons-chevron-right"
+        class="p-2 !rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+      />
+    </div>
   </Swiper>
 </template>
 
-<style>
-.swiper-pagination {
-  margin-left: 2rem;
-}
-.swiper-pagination .swiper-pagination-bullet {
-  opacity: 1;
-  background-color: #76767630;
-  width: 33px;
-  height: 10px;
-  border-radius: 4px;
-  margin-right: auto;
-  box-shadow: gray 0px 1px 1px 0px;
-}
-.swiper-pagination .swiper-pagination-bullet-active {
-  background-color: black;
-}
-
-@media screen and (max-width: 640px) {
-  .swiper-pagination {
-    margin-left: -1px;
-  }
-}
-</style>
