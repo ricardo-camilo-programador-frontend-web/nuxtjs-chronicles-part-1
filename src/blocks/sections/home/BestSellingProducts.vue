@@ -1,49 +1,53 @@
 <script setup lang="ts">
 import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
 
+const { t } = useI18n();
+
 const products: Array<Product> = [
   {
     id: "1",
-    name: "Cat Bowl",
+    name: t("products.premiumCatFood"),
     price: 20.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: "USD",
-    altText: "Cat Bowl",
+    currency: t("products.currency"),
+    altText: t("products.catBowlAltText"),
   },
   {
     id: "2",
-    name: "Cat Bowl",
+    name: t("products.dogLeash"),
     price: 49.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: "USD",
-    altText: "Cat Bowl",
+    currency: t("products.currency"),
+    altText: t("products.dogLeashAltText"),
     },
   {
     id: "3",
-    name: "Cat Bowl",
+    name: t("products.dogToy"),
     price: 49.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: "USD",
-    altText: "Cat Bowl",
+    currency: t("products.currency"),
+    altText: t("products.dogToyAltText"),
   },
   {
     id: "4",
-    name: "Cat Bowl",
+    name: t("products.dogBowl"),
     price: 49.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: "USD",
-    altText: "Cat Bowl",
+    currency: t("products.currency"),
+    altText: t("products.dogBowlAltText"),
   },
 ];
 </script>
 
 <template>
   <section class="mx-auto my-8 max-w-[95vw]">
-    <h2 class="text-2xl font-bold text-center mb-8">Best Selling Products</h2>
+    <h2 class="text-2xl font-bold text-center mb-8">
+      {{ t("bestSellingProducts.title") }}
+    </h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <ProductCard
