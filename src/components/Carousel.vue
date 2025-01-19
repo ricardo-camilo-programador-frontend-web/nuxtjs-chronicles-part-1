@@ -52,13 +52,13 @@ const breakpoints = {
     :pagination="pagination"
     :breakpoints="breakpoints"
     :modules="modules"
-    class="!overflow-visible max-w-[95vw]"
+    class="!overflow-visible max-w-[95vw] mx-auto"
   >
     <slot />
 
     <div
       :id="`${props.uniqueId}-button-prev`"
-      class="absolute right-2 -top-12 flex items-center justify-end gap-2 -translate-y-1/2"
+      class="absolute right-16 -top-12 flex items-center justify-end gap-2 -translate-y-1/2"
     >
       <Button
         :id="`${props.uniqueId}-button-prev`"
