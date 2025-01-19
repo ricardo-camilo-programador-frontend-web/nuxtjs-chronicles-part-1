@@ -7,6 +7,8 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -27,18 +29,25 @@ const props = defineProps<Props>();
       aria-label="Image representing {{ title }}"
     />
 
-    <div class="flex justify-between items-center bg-gray-100 w-full px-4 py-2 absolute bottom-[0.001rem] rounded-b-lg">
+    <div
+      class="flex justify-between items-center bg-gray-100 w-full px-4 py-2 absolute bottom-[0.001rem] rounded-b-lg"
+    >
       <div class="flex flex-col w-full relative">
         <div>
-          <h3 id="category-title" class="text-black text-xl font-bold">
+          <h3
+            id="category-title"
+            class="text-black text-xl font-bold truncate max-w-[10rem]"
+          >
             {{ title }}
           </h3>
           <p id="category-description" class="text-gray-600">
-            {{ productCount }} products
+            {{ productCount }} {{ t("categories.items.count") }}
           </p>
         </div>
 
-        <div class="flex items-center justify-center bg-white rounded-full w-10 h-10 overflow-hidden -mt-4 -mr-3 absolute top-3 right-2 scale-150 md:scale-100">
+        <div
+          class="flex items-center justify-center bg-white rounded-full w-10 h-10 overflow-hidden -mt-4 -mr-3 absolute top-3 right-2 scale-150 md:scale-100"
+        >
           <Button
             :id="`category-button-${title}`"
             icon="mdi:arrow-right"

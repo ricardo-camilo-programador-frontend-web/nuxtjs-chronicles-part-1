@@ -4,27 +4,29 @@ import backgroundGradientOrangeMini from "@/assets/images/background-gradient-or
 import charlesdeluvio from "@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp";
 import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
 
+const { t } = useI18n();
+
 const categories = ref([
   {
-    title: "Accessories",
+    title: t('categories.items.accessories.title'),
     productCount: 84,
     gradientClass: "bg-gradient-to-r from-purple-400 to-pink-400",
     src: backgroundGradientOrange,
   },
   {
-    title: "Food",
+    title: t('categories.items.food.title'),
     productCount: 64,
     gradientClass: "bg-gradient-to-r from-green-400 to-blue-400",
     src: backgroundGradientOrangeMini,
   },
   {
-    title: "Furniture",
+    title: t('categories.items.furniture.title'),
     productCount: 22,
     gradientClass: "bg-gradient-to-r from-blue-400 to-teal-400",
     src: charlesdeluvio,
   },
   {
-    title: "Bags",
+    title: t('categories.items.bags.title'),
     productCount: 16,
     gradientClass: "bg-gradient-to-r from-pink-400 to-red-400",
     src: katherineMcadoo,
@@ -41,12 +43,12 @@ const categories = ref([
     >
       <div class="flex flex-wrap justify-center md:justify-between items-center gap-4 w-full mb-8 md:mb-1">
         <h2 class="text-2xl font-bold text-center md:mb-6 mr-auto w-full md:w-auto">
-          Browse by category
+          {{ t('categories.title') }}
         </h2>
 
         <div class="ml-auto w-full md:w-auto flex justify-center md:justify-end">
           <Button
-            label="See All Categories"
+            :label="t('categories.seeAll')"
             id="see-all-categories-button"
           />
         </div>

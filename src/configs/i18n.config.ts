@@ -49,6 +49,25 @@ export default defineI18nConfig(() => ({
         checkOutPortfolio: 'Check out my portfolio',
       },
       loading: 'Loading...',
+      categories: {
+        title: 'Browse by category',
+        seeAll: 'See All Categories',
+        items: {
+          accessories: {
+            title: 'Accessories',
+          },
+          food: {
+            title: 'Food',
+          },
+          furniture: {
+            title: 'Furniture',
+          },
+          bags: {
+            title: 'Bags',
+          },
+          count: 'products',
+        }
+      },
     },
     pt: {
       hero: {
@@ -98,7 +117,26 @@ export default defineI18nConfig(() => ({
         viewOriginalDesign: 'Ver Template Original',
         checkOutPortfolio: 'Veja meu portfólio',
       },
+      loading: 'Carregando...',
+      categories: {
+        title: 'Navegue por categoria',
+        seeAll: 'Ver Todas as Categorias',
+        items: {
+          accessories: {
+            title: 'Acessórios',
+          },
+          food: {
+            title: 'Alimentação',
+          },
+          furniture: {
+            title: 'Móveis',
+          },
+          bags: {
+            title: 'Bolsas',
+          },
+          count: 'produtos'
+        }
+      }
     },
-    loading: 'Carregando...',
   },
 }))
