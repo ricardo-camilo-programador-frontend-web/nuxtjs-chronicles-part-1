@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 <template>
   <footer class="w-full py-12 overflow-hidden bg-gray-100 border-t min-w-screen grud">
-    <div class="container w-full px-4  max-w-7xl mx-auto">
+    <div class="container w-full px-4 max-w-[17rem] md:max-w-7xl mx-auto">
       <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-4">
         <div class="space-y-4">
           <div
@@ -106,7 +106,7 @@ const { t } = useI18n()
         </div>
       </div>
 
-      <div class="flex items-center justify-between pt-8 border-t">
+      <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t gap-6">
         <p class="text-sm text-gray-600">
           {{
             t('footer.copyright', {
