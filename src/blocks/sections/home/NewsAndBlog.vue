@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SwiperSlide } from 'swiper/vue'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
 interface BlogPost {
@@ -56,11 +57,11 @@ const blogPosts = ref<Array<BlogPost>>([
       {{ t('newsAndBlog.title') }}
     </h2>
 
-    <div
-      class="flex flex-col items-center justify-center gap-6 md:flex-row"
+    <Carousel
+      class="flex flex-col items-center justify-center gap-6 md:flex-row mt-[5rem] md:mt-0"
       role="list"
     >
-      <article
+      <SwiperSlide
         v-for="post in blogPosts"
         :key="post.id"
         class="group"
@@ -97,7 +98,7 @@ const blogPosts = ref<Array<BlogPost>>([
             {{ post.title }}
           </h3>
         </a>
-      </article>
-    </div>
+      </SwiperSlide>
+    </Carousel>
   </section>
 </template>
