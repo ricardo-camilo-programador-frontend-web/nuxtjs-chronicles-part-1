@@ -47,7 +47,7 @@ const blogPosts = ref<BlogPost[]>([
 <template>
   <section
     aria-labelledby="news-blog-title"
-    class="w-full max-w-7xl mx-auto py-12 px-4"
+    class="w-full max-w-[95vw] md:max-w-7xl mx-auto py-12 px-4"
   >
     <h2 id="news-blog-title" class="text-2xl font-bold text-center mb-8">
       {{ t("newsAndBlog.title") }}
@@ -60,7 +60,7 @@ const blogPosts = ref<BlogPost[]>([
       <article
         v-for="post in blogPosts"
         :key="post.id"
-        class="group max-w-[17rem]"
+        class="group"
         role="listitem"
       >
         <a
