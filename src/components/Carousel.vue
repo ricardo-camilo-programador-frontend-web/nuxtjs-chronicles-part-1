@@ -11,6 +11,12 @@ interface CarouselProps {
   loop?: boolean
   pagination?: boolean
   navigationClass?: string
+  mobileSlidesPerView?: number
+  tabletSlidesPerView?: number
+  desktopSlidesPerView?: number
+  mobileSpaceBetween?: number
+  tabletSpaceBetween?: number
+  desktopSpaceBetween?: number
 }
 
 const props = withDefaults(defineProps<CarouselProps>(), {
@@ -20,6 +26,12 @@ const props = withDefaults(defineProps<CarouselProps>(), {
   loop: true,
   pagination: false,
   navigationClass: '',
+  mobileSlidesPerView: 2,
+  tabletSlidesPerView: 3,
+  desktopSlidesPerView: 6,
+  mobileSpaceBetween: 16,
+  tabletSpaceBetween: 20,
+  desktopSpaceBetween: 24,
 })
 
 const modules = [Pagination, Navigation]
@@ -38,9 +50,18 @@ const pagination = {
 }
 
 const breakpoints = {
-  320: { slidesPerView: 2, spaceBetween: 16 },
-  640: { slidesPerView: 3, spaceBetween: 20 },
-  768: { slidesPerView: 4, spaceBetween: 24 },
+  320: {
+    slidesPerView: props.mobileSlidesPerView,
+    spaceBetween: props.mobileSpaceBetween,
+  },
+  640: {
+    slidesPerView: props.tabletSlidesPerView,
+    spaceBetween: props.tabletSpaceBetween,
+  },
+  768: {
+    slidesPerView: props.desktopSlidesPerView,
+    spaceBetween: props.desktopSpaceBetween,
+  },
   1366: {
     slidesPerView: props.slidesPerView,
     spaceBetween: props.spaceBetween,
