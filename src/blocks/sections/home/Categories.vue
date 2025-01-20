@@ -55,7 +55,7 @@ const categories = ref<Array<CategoryItem>>([
 <template>
   <section
     aria-labelledby="categories-title"
-    class="mx-auto max-w-[95vw] py-8"
+    class="mx-auto max-w-[95vw] py-8 flex flex-col items-center justify-center w-full"
   >
     <div
       class="mx-auto flex w-full max-w-[70rem] flex-col items-center justify-center"
@@ -84,13 +84,14 @@ const categories = ref<Array<CategoryItem>>([
 
       <Carousel
         uniqueId="categories-carousel"
-        class="grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-4"
+        class="w-full min-w-full"
         role="list"
         navigationClass="-mt-2"
       >
         <SwiperSlide
           v-for="category in categories"
           :key="category.id"
+          class="w-full min-w-[17rem]"
           role="listitem"
         >
           <CategorieCard
