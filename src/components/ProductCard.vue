@@ -3,6 +3,8 @@ interface Props {
   product: Product
 }
 
+const { t } = useI18n()
+
 defineProps<Props>()
 </script>
 
@@ -13,7 +15,7 @@ defineProps<Props>()
     <div class="relative mb-4 aspect-square">
       <Image
         :src="product.imageSrc"
-        :alt="product.altText"
+        :alt="t(product.altText)"
         class="h-full w-full rounded-lg object-cover p-4"
         loading="lazy"
         width="100"
@@ -26,7 +28,7 @@ defineProps<Props>()
     >
       <div class="flex h-full w-full items-center justify-between">
         <h3 class="text-lg font-medium">
-          {{ product.name }}
+          {{ t(product.name) }}
         </h3>
 
         <Button
@@ -42,7 +44,7 @@ defineProps<Props>()
       </div>
 
       <p class="mt-auto font-bold text-gray-900">
-        {{ product.currency }} {{ product.price.toFixed(2) }}
+        {{ t(product.currency) }} {{ product.price.toFixed(2) }}
       </p>
     </div>
   </article>
