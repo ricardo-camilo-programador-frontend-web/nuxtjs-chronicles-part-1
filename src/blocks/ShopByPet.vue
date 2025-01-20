@@ -67,6 +67,8 @@ const petCategories = ref<Array<PetCategory>>([
 
     <Carousel
       :mobile-slides-per-view="3"
+      :tablet-slides-per-view="4"
+      :desktop-slides-per-view="5"
     >
       <SwiperSlide
         v-for="pet in petCategories"
