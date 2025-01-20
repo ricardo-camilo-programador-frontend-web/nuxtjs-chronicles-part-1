@@ -53,7 +53,10 @@ const blogPosts = ref<BlogPost[]>([
       {{ t("newsAndBlog.title") }}
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" role="list">
+    <div
+      class="flex flex-col md:flex-row items-center justify-center gap-6"
+      role="list"
+    >
       <article
         v-for="post in blogPosts"
         :key="post.id"
