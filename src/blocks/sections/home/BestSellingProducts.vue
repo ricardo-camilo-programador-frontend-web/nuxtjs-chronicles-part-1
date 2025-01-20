@@ -44,7 +44,7 @@ const products: Array<Product> = [
 </script>
 
 <template>
-  <section class="mx-auto my-8 max-w-[95vw]">
+  <section class="mx-auto my-8 max-w-[95vw] md:max-w-[70rem]">
     <h2 class="text-2xl font-bold text-center mb-8">
       {{ t('bestSellingProducts.title') }}
     </h2>

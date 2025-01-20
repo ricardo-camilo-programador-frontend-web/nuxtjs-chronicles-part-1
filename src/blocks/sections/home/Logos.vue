@@ -47,7 +47,7 @@ const logos: Array<LogoItem> = [
 <template>
   <section
     aria-label="Partner Logos"
-    class="w-full py-12 px-4 max-w-[95vw] md:max-w-7xl mx-auto"
+    class="w-full py-12 px-4 max-w-[95vw] md:max-w-[70rem] mx-auto"
   >
     <div class="max-w-7xl mx-auto">
       <ul
