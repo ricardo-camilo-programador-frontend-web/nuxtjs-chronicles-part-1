@@ -54,7 +54,7 @@ const petCategories = ref<PetCategory[]>([
 <template>
   <section
     aria-labelledby="shop-by-pet-title"
-    class="w-full max-w-[95vw] mx-auto py-8 px-4"
+    class="w-full  max-w-[95vw] mx-auto py-8 px-4"
   >
     <div class="flex items-center justify-between mb-6">
       <h2 id="shop-by-pet-title" class="text-2xl font-bold">
