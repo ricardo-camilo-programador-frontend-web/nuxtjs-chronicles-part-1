@@ -38,6 +38,7 @@ export default defineNuxtConfig({
       'plugins',
       'configs',
       'utils',
+      'mocks',
       'composables',
       'static',
       'types',

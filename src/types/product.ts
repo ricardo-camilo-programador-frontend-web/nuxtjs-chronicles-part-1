@@ -5,5 +5,7 @@ export interface Product {
   price: number
   currency: CurrencyType
   altText: string
+  featured: boolean
+  bestSelling: boolean
   isFavorite?: boolean
 }
