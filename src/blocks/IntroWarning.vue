@@ -87,7 +87,7 @@ watch(analyticsEnabled, (newValue) => {
         </TransitionChild>
 
         <div class="fixed inset-0 overflow-y-auto">
-          <div class="flex items-center justify-center min-h-full p-4">
+          <div class="flex min-h-full items-center justify-center p-4">
             <TransitionChild
               enter="ease-out duration-300"
               enter-from="opacity-0 scale-95"
@@ -97,36 +97,36 @@ watch(analyticsEnabled, (newValue) => {
               leave-to="opacity-0 scale-95"
             >
               <DialogPanel
-                class="w-full max-w-2xl p-6 overflow-hidden transition-all transform bg-white shadow-xl rounded-2xl"
+                class="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 shadow-xl transition-all"
               >
                 <button
                   type="button"
-                  class="absolute text-gray-400 top-4 right-4 hover:text-gray-500"
+                  class="absolute right-4 top-4 text-gray-400 hover:text-gray-500"
                   @click="handleClose"
                 >
                   <span class="sr-only">{{ t('close') }}</span>
                   <Icon
                     name="mdi:close"
-                    class="w-6 h-6"
+                    class="h-6 w-6"
                     aria-hidden="true"
                   />
                 </button>
 
-                <DialogTitle class="mb-6 text-2xl font-bold text-center">
+                <DialogTitle class="mb-6 text-center text-2xl font-bold">
                   {{ $env.PROJECT_TITLE }}
                 </DialogTitle>
 
                 <div class="space-y-6">
                   <div
-                    class="bg-gradient-to-r from-yellow-600 to-orange-500 p-6 rounded-xl shadow-lg"
+                    class="rounded-xl bg-gradient-to-r from-yellow-600 to-orange-500 p-6 shadow-lg"
                   >
-                    <p class="text-xl font-medium text-center text-white">
+                    <p class="text-center text-xl font-medium text-white">
                       {{ t('introWarning.welcome') }}
                     </p>
                   </div>
 
-                  <div class="p-6 bg-gray-50 rounded-xl">
-                    <p class="leading-relaxed text-center text-gray-700">
+                  <div class="rounded-xl bg-gray-50 p-6">
+                    <p class="text-center leading-relaxed text-gray-700">
                       {{ t('introWarning.description') }}
                     </p>
                   </div>
@@ -136,12 +136,12 @@ watch(analyticsEnabled, (newValue) => {
                       :to="$env.PORTFOLIO_URL"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="flex items-center justify-center gap-2 p-3 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100 relative mx-auto"
+                      class="relative mx-auto flex items-center justify-center gap-2 rounded-lg bg-gray-50 p-3 transition-colors hover:bg-gray-100"
                     >
                       <img
                         src="@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp"
                         alt="Heart circle"
-                        class="w-8 h-8 mr-2"
+                        class="mr-2 h-8 w-8"
                       >
                       <span class="font-medium text-gray-700">
                         {{ t('introWarning.checkOutPortfolio') }}
@@ -152,11 +152,11 @@ watch(analyticsEnabled, (newValue) => {
                       :to="`https://www.linkedin.com/in/${$env.LINKEDIN_USERNAME}`"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="flex items-center justify-center gap-3 p-4 transition-colors bg-blue-50 hover:bg-blue-100 rounded-xl group"
+                      class="group flex items-center justify-center gap-3 rounded-xl bg-blue-50 p-4 transition-colors hover:bg-blue-100"
                     >
                       <Icon
                         name="mdi:linkedin"
-                        class="w-6 h-6 text-blue-600"
+                        class="h-6 w-6 text-blue-600"
                       />
                       <span
                         class="font-medium text-blue-600 group-hover:underline"
@@ -169,11 +169,11 @@ watch(analyticsEnabled, (newValue) => {
                       :to="`https://github.com/${$env.GITHUB_USERNAME}`"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="flex items-center justify-center gap-3 p-4 transition-colors bg-gray-50 hover:bg-gray-100 rounded-xl group"
+                      class="group flex items-center justify-center gap-3 rounded-xl bg-gray-50 p-4 transition-colors hover:bg-gray-100"
                     >
                       <Icon
                         name="mdi:github"
-                        class="w-6 h-6 text-gray-700"
+                        class="h-6 w-6 text-gray-700"
                       />
                       <span
                         class="font-medium text-gray-700 group-hover:underline"
@@ -184,7 +184,7 @@ watch(analyticsEnabled, (newValue) => {
                   </div>
 
                   <div
-                    class="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-xl"
+                    class="flex flex-col items-center gap-4 rounded-xl bg-gray-50 p-6"
                   >
                     <div class="flex items-center gap-3">
                       <span class="text-gray-700">{{
@@ -195,7 +195,7 @@ watch(analyticsEnabled, (newValue) => {
                         :class="[
                           analyticsEnabled ? 'bg-green-600' : 'bg-gray-200',
                         ]"
-                        class="relative inline-flex items-center h-6 rounded-full w-11"
+                        class="relative inline-flex h-6 w-11 items-center rounded-full"
                       >
                         <span
                           :class="[
@@ -203,7 +203,7 @@ watch(analyticsEnabled, (newValue) => {
                               ? 'translate-x-6'
                               : 'translate-x-1',
                           ]"
-                          class="inline-block w-4 h-4 transition transform bg-white rounded-full"
+                          class="inline-block h-4 w-4 transform rounded-full bg-white transition"
                         />
                       </Switch>
                     </div>
@@ -217,8 +217,8 @@ watch(analyticsEnabled, (newValue) => {
                     </NuxtLink>
                   </div>
 
-                  <div class="pt-4 space-y-2 border-t">
-                    <p class="text-sm text-center text-gray-500">
+                  <div class="space-y-2 border-t pt-4">
+                    <p class="text-center text-sm text-gray-500">
                       {{ t('introWarning.designCredits') }}
                       <NuxtLink
                         :to="`https://www.figma.com/${$env.FIGMA_USERNAME}`"
@@ -229,7 +229,7 @@ watch(analyticsEnabled, (newValue) => {
                         {{ $env.FIGMA_USERNAME }}
                       </NuxtLink>
                     </p>
-                    <p class="text-sm text-center text-gray-500">
+                    <p class="text-center text-sm text-gray-500">
                       <NuxtLink
                         :to="`https://www.figma.com/community/file/${$env.FIGMA_ORIGINAL_DESIGN}`"
                         target="_blank"

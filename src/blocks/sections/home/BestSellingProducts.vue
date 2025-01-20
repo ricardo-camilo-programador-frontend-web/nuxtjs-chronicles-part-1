@@ -45,12 +45,12 @@ const products: Array<Product> = [
 
 <template>
   <section class="mx-auto my-8 max-w-[95vw] md:max-w-[70rem]">
-    <h2 class="text-2xl font-bold text-center mb-8">
+    <h2 class="mb-8 text-center text-2xl font-bold">
       {{ t('bestSellingProducts.title') }}
     </h2>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 content-center"
+      class="grid grid-cols-1 content-center gap-6 sm:grid-cols-2 lg:grid-cols-4"
     >
       <ProductCard
         v-for="product in products"

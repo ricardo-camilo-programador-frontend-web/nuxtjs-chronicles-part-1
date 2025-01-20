@@ -8,13 +8,13 @@ defineProps<Props>()
 
 <template>
   <article
-    class="bg-gray-200 rounded-lg transition-shadow hover:shadow-lg max-w-[95vw] md:max-w-full"
+    class="max-w-[95vw] rounded-lg bg-gray-200 transition-shadow hover:shadow-lg md:max-w-full"
   >
-    <div class="relative aspect-square mb-4">
+    <div class="relative mb-4 aspect-square">
       <Image
         :src="product.imageSrc"
         :alt="product.altText"
-        class="w-full h-full object-cover rounded-lg p-4"
+        class="h-full w-full rounded-lg object-cover p-4"
         loading="lazy"
         width="100"
         height="100"
@@ -22,10 +22,10 @@ defineProps<Props>()
     </div>
 
     <div
-      class="space-y-2 bg-white px-4 py-2 rounded-b-lg min-h-[7rem] h-full flex flex-col max-h-[4rem] max-w-[95vw] sm:max-w-[17rem]"
+      class="flex h-full max-h-[4rem] min-h-[7rem] max-w-[95vw] flex-col space-y-2 rounded-b-lg bg-white px-4 py-2 sm:max-w-[17rem]"
     >
-      <div class="flex items-center justify-between w-full h-full">
-        <h3 class="font-medium text-lg">
+      <div class="flex h-full w-full items-center justify-between">
+        <h3 class="text-lg font-medium">
           {{ product.name }}
         </h3>
 
@@ -41,7 +41,7 @@ defineProps<Props>()
         />
       </div>
 
-      <p class="text-gray-900 font-bold mt-auto">
+      <p class="mt-auto font-bold text-gray-900">
         {{ product.currency }} {{ product.price.toFixed(2) }}
       </p>
     </div>

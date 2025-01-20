@@ -55,24 +55,24 @@ const breakpoints = {
     :pagination="pagination"
     :breakpoints="breakpoints"
     :modules="modules"
-    class="!overflow-visible max-w-[95vw] mx-auto"
+    class="mx-auto max-w-[95vw] !overflow-visible"
   >
     <slot />
 
     <div
       :id="`${props.uniqueId}-button-prev`"
-      class="absolute right-0 md:right-16 -top-12 flex items-center justify-end gap-2 -translate-y-1/2"
+      class="absolute -top-12 right-0 flex -translate-y-1/2 items-center justify-end gap-2 md:right-16"
     >
       <Button
         :id="`${props.uniqueId}-button-prev`"
         icon="i-heroicons-chevron-left"
-        class="p-2 !rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        class="!rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
       />
 
       <Button
         :id="`${props.uniqueId}-button-next`"
         icon="i-heroicons-chevron-right"
-        class="p-2 !rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        class="!rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
       />
     </div>
   </Swiper>

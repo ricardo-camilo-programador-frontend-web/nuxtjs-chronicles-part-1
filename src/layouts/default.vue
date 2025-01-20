@@ -8,11 +8,11 @@ useHead({
 
 <template>
   <div
-    class="relative flex flex-col max-w-screen md:min-w-screen md:min-h-screen bg-gray-50 overflow-hidden"
+    class="max-w-screen md:min-w-screen relative flex flex-col overflow-hidden bg-gray-50 md:min-h-screen"
   >
     <Header />
 
-    <main class="relative flex flex-col md:min-w-full min-h-screen px-2">
+    <main class="relative flex min-h-screen flex-col px-2 md:min-w-full">
       <slot />
     </main>
 

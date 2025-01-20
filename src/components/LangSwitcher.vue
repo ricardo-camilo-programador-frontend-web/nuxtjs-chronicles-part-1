@@ -31,7 +31,7 @@ const currentFlag = computed(() => {
 
 <template>
   <Button
-    class="flex items-center gap-2 border bg-gradient-to-r from-black/20 via-black/50 to-black/20 rounded-full px-2 text-white backdrop-blur-sm h-4"
+    class="flex h-4 items-center gap-2 rounded-full border bg-gradient-to-r from-black/20 via-black/50 to-black/20 px-2 text-white backdrop-blur-sm"
     id="lang-switcher-button"
   >
     <span
@@ -43,7 +43,7 @@ const currentFlag = computed(() => {
 
     <select
       :value="locale"
-      class="px-4 py-2 pr-8 transition-colors bg-transparent border-b border-transparent appearance-none cursor-pointer focus:outline-none focus:ring-transparent focus:border-transparent"
+      class="cursor-pointer appearance-none border-b border-transparent bg-transparent px-4 py-2 pr-8 transition-colors focus:border-transparent focus:outline-none focus:ring-transparent"
       aria-label="Select language"
       @change="onLocaleChanged"
     >

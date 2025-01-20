@@ -14,7 +14,7 @@ const { t } = useI18n()
 <template>
   <div
     :class="gradientClass"
-    class="rounded-lg flex flex-col items-center justify-center shadow-lg md:w-[15rem] h-[15rem] relative mb-6"
+    class="relative mb-6 flex h-[15rem] flex-col items-center justify-center rounded-lg shadow-lg md:w-[15rem]"
     role="region"
     aria-labelledby="category-title"
     aria-describedby="category-description"
@@ -24,19 +24,19 @@ const { t } = useI18n()
       width="100"
       height="100"
       alt="Category Image"
-      class="w-full h-full object-cover"
+      class="h-full w-full object-cover"
       role="img"
       aria-label="Image representing {{ title }}"
     />
 
     <div
-      class="flex justify-between items-center bg-gray-100 w-full px-4 py-2 absolute bottom-[0.001rem] rounded-b-lg"
+      class="absolute bottom-[0.001rem] flex w-full items-center justify-between rounded-b-lg bg-gray-100 px-4 py-2"
     >
-      <div class="flex flex-col w-full relative">
+      <div class="relative flex w-full flex-col">
         <div>
           <h3
             id="category-title"
-            class="text-black text-xl font-bold truncate max-w-[10rem]"
+            class="max-w-[10rem] truncate text-xl font-bold text-black"
           >
             {{ title }}
           </h3>
@@ -49,7 +49,7 @@ const { t } = useI18n()
         </div>
 
         <div
-          class="flex items-center justify-center bg-white rounded-full w-10 h-10 overflow-hidden -mt-4 -mr-3 absolute top-3 right-2 scale-150 md:scale-100"
+          class="absolute right-2 top-3 -mr-3 -mt-4 flex h-10 w-10 scale-150 items-center justify-center overflow-hidden rounded-full bg-white md:scale-100"
         >
           <Button
             :id="`category-button-${title}`"

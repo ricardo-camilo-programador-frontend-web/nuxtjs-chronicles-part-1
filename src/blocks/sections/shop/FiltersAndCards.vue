@@ -1,6 +1,6 @@
 <template>
   <Button
-    class="w-max mx-auto h-max my-auto"
+    class="mx-auto my-auto h-max w-max"
     label="About Our Store"
     id="filters-and-cards-button"
   />

@@ -54,23 +54,23 @@ const categories = ref<Array<CategoryItem>>([
 <template>
   <section
     aria-labelledby="categories-title"
-    class="py-8 max-w-[95vw] mx-auto"
+    class="mx-auto max-w-[95vw] py-8"
   >
     <div
-      class="mx-auto flex flex-col w-full justify-center items-center max-w-[70rem]"
+      class="mx-auto flex w-full max-w-[70rem] flex-col items-center justify-center"
     >
       <header
-        class="flex flex-wrap justify-center md:justify-between items-center gap-4 w-full mb-8 md:mb-1"
+        class="mb-8 flex w-full flex-wrap items-center justify-center gap-4 md:mb-1 md:justify-between"
       >
         <h2
           id="categories-title"
-          class="text-2xl font-bold text-center md:mb-6 mr-auto w-full md:w-auto"
+          class="mr-auto w-full text-center text-2xl font-bold md:mb-6 md:w-auto"
         >
           {{ t('categories.title') }}
         </h2>
 
         <div
-          class="ml-auto w-full md:w-auto flex justify-center md:justify-end"
+          class="ml-auto flex w-full justify-center md:w-auto md:justify-end"
         >
           <Button
             :label="t('categories.seeAll')"
@@ -81,7 +81,7 @@ const categories = ref<Array<CategoryItem>>([
       </header>
 
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-4 justify-center gap-4"
+        class="grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-4"
         role="list"
       >
         <CategorieCard

@@ -1,6 +1,6 @@
 <template>
   <Button
-    class="w-max mx-auto h-max my-auto"
+    class="mx-auto my-auto h-max w-max"
     label="Info Block"
     id="info-block-button"
   />

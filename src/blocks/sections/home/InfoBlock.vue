@@ -9,17 +9,17 @@ const { t } = useI18n()
 
 <template>
   <section
-    class="py-8 max-w-[99vw] mx-auto flex flex-col md:flex-row justify-center items-center md:justify-between md:gap-24"
+    class="mx-auto flex max-w-[99vw] flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
     aria-labelledby="info-block-heading"
   >
     <div
-      class="relative z-10 my-auto flex flex-col justify-center items-center h-[600px] w-full"
+      class="relative z-10 my-auto flex h-[600px] w-full flex-col items-center justify-center"
     >
       <Image
         :src="backgroundGradientOrange"
         :aria-hidden="true"
         alt=""
-        class="absolute -ml-1 inset-0 h-[600px] min-w-screen md:min-w-[17rem] w-[120rem] rounded-full opacity-90 z-[1] object-cover md:-ml-6"
+        class="min-w-screen absolute inset-0 z-[1] -ml-1 h-[600px] w-[120rem] rounded-full object-cover opacity-90 md:-ml-6 md:min-w-[17rem]"
         width="600"
         height="600"
       />
@@ -27,24 +27,24 @@ const { t } = useI18n()
       <Image
         :src="catsSilhouette"
         alt="Cat silhouettes"
-        class="w-full max-w-[18.75rem] mx-auto z-[2] object-cover"
+        class="z-[2] mx-auto w-full max-w-[18.75rem] object-cover"
         width="300"
         height="300"
       />
     </div>
 
-    <div class="mx-auto px-4 w-full flex flex-col justify-center items-center">
+    <div class="mx-auto flex w-full flex-col items-center justify-center px-4">
       <div
-        class="flex flex-col lg:flex-row justify-between w-full gap-8 items-center"
+        class="flex w-full flex-col items-center justify-between gap-8 lg:flex-row"
       >
         <div class="relative z-10 max-w-xl">
-          <span class="inline-block mb-3 text-base font-medium text-orange-500">
+          <span class="mb-3 inline-block text-base font-medium text-orange-500">
             {{ t('infoBlock.category') }}
           </span>
 
           <h2
             id="info-block-heading"
-            class="mb-4 text-4xl lg:text-5xl font-bold tracking-tight text-gray-900"
+            class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl"
           >
             {{ t('infoBlock.title') }}
           </h2>
@@ -55,7 +55,7 @@ const { t } = useI18n()
 
           <Button
             :label="t('infoBlock.buttonLabel')"
-            class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-max text-center"
+            class="flex w-full items-center justify-center rounded-md bg-black px-6 py-4 text-center text-sm font-medium text-white transition-colors hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 md:w-max md:px-8 md:py-3 md:text-base"
             id="info-block-button"
           />
         </div>

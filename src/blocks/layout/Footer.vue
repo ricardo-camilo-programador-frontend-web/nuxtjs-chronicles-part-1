@@ -5,13 +5,13 @@ const { t } = useI18n()
 
 <template>
   <footer
-    class="w-full py-12 overflow-hidden bg-gray-100 border-t min-w-screen grud"
+    class="min-w-screen grud w-full overflow-hidden border-t bg-gray-100 py-12"
   >
-    <div class="container w-full px-4 max-w-[17rem] md:max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-4">
+    <div class="container mx-auto w-full max-w-[17rem] px-4 md:max-w-7xl">
+      <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
         <div class="space-y-4">
           <div
-            class="w-32 h-12 overflow-visible rounded-md"
+            class="h-12 w-32 overflow-visible rounded-md"
             aria-label="Logo placeholder"
           >
             <Logo />
@@ -32,7 +32,7 @@ const { t } = useI18n()
               <Icon
                 :name="link.icon"
                 :aria-label="link.ariaLabel"
-                class="w-10 h-10 text-gray-800 transition-all duration-200 ease-in-out rounded-full cursor-pointer group-hover:text-orange-500"
+                class="h-10 w-10 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
               />
             </NuxtLink>
           </div>
@@ -50,7 +50,7 @@ const { t } = useI18n()
             >
               <NuxtLink
                 :to="localePath(link.path)"
-                class="text-gray-600 group-hover:text-orange-500 transition-all duration-200 ease-in-out"
+                class="text-gray-600 transition-all duration-200 ease-in-out group-hover:text-orange-500"
               >
                 {{ t(link.translationKey) }}
               </NuxtLink>
@@ -70,7 +70,7 @@ const { t } = useI18n()
             >
               <NuxtLink
                 :to="localePath(link.path)"
-                class="text-gray-600 group-hover:text-orange-500 transition-all duration-200 ease-in-out"
+                class="text-gray-600 transition-all duration-200 ease-in-out group-hover:text-orange-500"
               >
                 {{ t(link.translationKey) }}
               </NuxtLink>
@@ -84,25 +84,25 @@ const { t } = useI18n()
           </h3>
           <ul class="space-y-3">
             <li
-              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+              class="text-gray-600 transition-all duration-200 ease-in-out hover:text-orange-500"
             >
               {{ t('footer.storeInfo.address1') }}
             </li>
 
             <li
-              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+              class="text-gray-600 transition-all duration-200 ease-in-out hover:text-orange-500"
             >
               {{ t('footer.storeInfo.address2') }}
             </li>
 
             <li
-              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+              class="text-gray-600 transition-all duration-200 ease-in-out hover:text-orange-500"
             >
               {{ t('footer.storeInfo.phone') }}
             </li>
 
             <li
-              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+              class="text-gray-600 transition-all duration-200 ease-in-out hover:text-orange-500"
             >
               {{ $env.EMAIL }}
             </li>
@@ -117,7 +117,7 @@ const { t } = useI18n()
       </div>
 
       <div
-        class="flex flex-col md:flex-row items-center justify-between pt-8 border-t gap-6"
+        class="flex flex-col items-center justify-between gap-6 border-t pt-8 md:flex-row"
       >
         <p class="text-sm text-gray-600">
           {{
@@ -134,7 +134,7 @@ const { t } = useI18n()
             :key="method.ariaLabel"
             :name="method.icon"
             :aria-label="method.ariaLabel"
-            class="w-12 h-8 text-gray-800 transition-all duration-200 ease-in-out rounded cursor-pointer hover:text-orange-500"
+            class="h-8 w-12 cursor-pointer rounded text-gray-800 transition-all duration-200 ease-in-out hover:text-orange-500"
           />
         </div>
       </div>

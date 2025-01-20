@@ -7,12 +7,12 @@ const localePath = useLocalePath()
     :to="localePath('/')"
     title="Home"
     aria-label="Home"
-    class="w-full h-full max-w-[8rem] max-h-[8rem]"
+    class="h-full max-h-[8rem] w-full max-w-[8rem]"
   >
     <img
       src="@/assets/images/svg/logo-black.svg"
       alt="Logo"
-      class="object-contain w-full h-full"
+      class="h-full w-full object-contain"
     >
   </NuxtLink>
 </template>

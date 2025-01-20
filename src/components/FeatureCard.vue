@@ -12,31 +12,31 @@ defineProps<FeatureCardProps>()
 
 <template>
   <div
-    class="flex flex-col items-center border rounded-lg shadow-md h-[31rem] bg-gray-200 overflow-visible w-full max-w-[20rem]"
+    class="flex h-[31rem] w-full max-w-[20rem] flex-col items-center overflow-visible rounded-lg border bg-gray-200 shadow-md"
   >
-    <div class="w-full h-full p-24 overflow-visible">
+    <div class="h-full w-full overflow-visible p-24">
       <Image
         :src="imageSrc"
         alt="Product Image"
-        class="w-full h-full object-cover overflow-visible"
+        class="h-full w-full overflow-visible object-cover"
         width="100"
         height="100"
       />
     </div>
 
     <div
-      class="flex justify-between items-center w-full bg-white rounded-b-lg px-4 py-2 min-h-24"
+      class="flex min-h-24 w-full items-center justify-between rounded-b-lg bg-white px-4 py-2"
     >
-      <div class="w-full flex flex-col items-start justify-start h-full w-full">
-        <h3 class="mt-2 text-lg font-semibold max-w-[17rem]">
+      <div class="flex h-full w-full flex-col items-start justify-start">
+        <h3 class="mt-2 max-w-[17rem] text-lg font-semibold">
           {{ productName }}
         </h3>
-        <p class="text-gray-600 mt-auto">
+        <p class="mt-auto text-gray-600">
           {{ productPrice }}
         </p>
       </div>
 
-      <div class="w-auto flex items-start justify-center h-full pt-1">
+      <div class="flex h-full w-auto items-start justify-center pt-1">
         <Icon
           name="i-heroicons-heart"
           class="mt-2 text-red-500 hover:text-red-700"

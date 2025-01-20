@@ -6,7 +6,7 @@ definePageMeta({
 
 <template>
   <main
-    class="flex flex-col flex-wrap h-full mx-auto min-w-max min-h-[94vh] w-full items-center relative"
+    class="relative mx-auto flex h-full min-h-[94vh] w-full min-w-max flex-col flex-wrap items-center"
   >
     <HeroAbout />
     <AboutOurStore />

@@ -47,17 +47,17 @@ const logos: Array<LogoItem> = [
 <template>
   <section
     aria-label="Partner Logos"
-    class="w-full py-12 px-4 max-w-[95vw] md:max-w-[70rem] mx-auto"
+    class="mx-auto w-full max-w-[95vw] px-4 py-12 md:max-w-[70rem]"
   >
-    <div class="max-w-7xl mx-auto">
+    <div class="mx-auto max-w-7xl">
       <ul
-        class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center"
+        class="grid items-center justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
         role="list"
       >
         <li
           v-for="logo in logos"
           :key="logo.id"
-          class="w-full max-w-[17rem] md:max-w-[200px] transition-transform hover:scale-105"
+          class="w-full max-w-[17rem] transition-transform hover:scale-105 md:max-w-[200px]"
         >
           <Image
             :src="logo.imagePath"
@@ -65,10 +65,10 @@ const logos: Array<LogoItem> = [
             :title="logo.name"
             width="200"
             height="200"
-            class="w-full h-auto object-contain"
+            class="h-auto w-full object-contain"
             loading="lazy"
           />
-          <p class="text-center text-orange-500 mt-2 font-medium">
+          <p class="mt-2 text-center font-medium text-orange-500">
             {{ logo.name }}
           </p>
         </li>

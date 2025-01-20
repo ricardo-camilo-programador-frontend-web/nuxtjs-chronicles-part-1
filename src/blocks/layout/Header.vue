@@ -14,12 +14,12 @@ const headerClasses = computed(() => {
 
 <template>
   <header
-    class="top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-full mx-auto px-4"
+    class="left-0 right-0 top-0 z-[99] mx-auto flex w-full max-w-[50vw] items-center justify-center px-4 md:max-w-full dark:bg-gray-800"
   >
     <div
-      class="relative hidden md:flex items-center justify-between w-full h-10 mx-auto"
+      class="relative mx-auto hidden h-10 w-full items-center justify-between md:flex"
     >
-      <div class="flex items-center gap-2 group">
+      <div class="group flex items-center gap-2">
         <NuxtLink
           to="https://wa.me/5511999999999"
           target="_blank"
@@ -29,7 +29,7 @@ const headerClasses = computed(() => {
         >
           <Icon
             name="mdi:phone"
-            class="w-5 h-5 text-gray-800 transition-all duration-200 ease-in-out rounded-full cursor-pointer group-hover:text-orange-500"
+            class="h-5 w-5 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
             aria-label="Phone icon"
           />
           <span class="text-sm text-gray-800 group-hover:text-orange-500">
@@ -38,7 +38,7 @@ const headerClasses = computed(() => {
         </NuxtLink>
       </div>
 
-      <div class="flex items-center gap-2 group">
+      <div class="group flex items-center gap-2">
         <NuxtLink
           :to="`mailto:${$env.EMAIL}`"
           class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
@@ -46,7 +46,7 @@ const headerClasses = computed(() => {
         >
           <Icon
             name="mdi:email"
-            class="w-5 h-5 text-gray-800 transition-all duration-200 ease-in-out rounded-full cursor-pointer group-hover:text-orange-500"
+            class="h-5 w-5 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
             aria-label="Email icon"
           />
           <span class="text-sm text-gray-800 group-hover:text-orange-500">
@@ -65,7 +65,7 @@ const headerClasses = computed(() => {
         >
           <Icon
             name="mdi:map-marker"
-            class="w-5 h-5 text-gray-800 transition-all duration-200 ease-in-out rounded-full cursor-pointer group-hover:text-orange-500"
+            class="h-5 w-5 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
             aria-label="Location icon"
           />
           <span class="text-sm text-gray-800 group-hover:text-orange-500">
@@ -77,20 +77,20 @@ const headerClasses = computed(() => {
 
     <div
       :class="[headerClasses]"
-      class="w-screen fixed grid grid-cols-3 p-4 mx-auto mt-[6rem] bg-white rounded-full shadow-lg"
+      class="fixed mx-auto mt-[6rem] grid w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg"
     >
-      <div class="container relative left-0 flex w-auto mr-auto">
+      <div class="container relative left-0 mr-auto flex w-auto">
         <Logo />
       </div>
 
       <div
-        class="container relative hidden md:flex items-center justify-center w-full mx-auto"
+        class="container relative mx-auto hidden w-full items-center justify-center md:flex"
       >
         Menu Items(SOON)
       </div>
 
       <div
-        class="container relative hidden md:flex items-center justify-center w-full mx-auto"
+        class="container relative mx-auto hidden w-full items-center justify-center md:flex"
       >
         SHORTCUTS(SOON)
       </div>

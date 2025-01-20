@@ -14,14 +14,14 @@ const localePath = useLocalePath()
 
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full min-h-screen md:min-h-[44rem] lg:max-h-[38rem] h-full py-8 md:py-16 lg:py-24 md:overflow-hidden md:max-w-full min-w-screen mx-auto pt-[10rem] md:pt-0"
+    class="min-w-screen relative mx-auto flex h-full min-h-screen w-full flex-col items-center justify-center py-8 pt-[10rem] md:min-h-[44rem] md:max-w-full md:overflow-hidden md:py-16 md:pt-0 lg:max-h-[38rem] lg:py-24"
     aria-labelledby="hero-heading"
   >
     <Image
       :src="backgroundGradientOrange"
       :aria-hidden="true"
       alt="Background gradient orange"
-      class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full opacity-50 md:opacity-100 mt-32 object-cover"
+      class="absolute -right-[10rem] top-0 mt-32 h-[400px] w-[400px] rounded-full object-cover opacity-50 md:-right-40 md:h-[800px] md:w-[800px] md:opacity-100"
       width="400"
       height="400"
     />
@@ -30,7 +30,7 @@ const localePath = useLocalePath()
       :src="backgroundGradientOrangeMini"
       :aria-hidden="true"
       alt="Background gradient orange mini"
-      class="absolute left-[10%] md:left-[20%] mr-auto -top-14 h-[100px] w-[100px] md:h-[200px] md:w-[200px] rounded-full rotate-180"
+      class="absolute -top-14 left-[10%] mr-auto h-[100px] w-[100px] rotate-180 rounded-full md:left-[20%] md:h-[200px] md:w-[200px]"
       title="Background gradient orange mini"
       width="100"
       height="100"
@@ -40,17 +40,17 @@ const localePath = useLocalePath()
       :src="backgroundGradientOrangeMini"
       :aria-hidden="true"
       alt="Background gradient orange mini"
-      class="hidden md:block absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full"
+      class="absolute -bottom-14 left-[20%] mr-auto hidden h-[75px] w-[75px] rounded-full md:left-[30%] md:block md:h-[150px] md:w-[150px]"
       title="Background gradient orange mini"
       width="75"
       height="75"
     />
 
-    <div class="max-w-[96vw] md:max-w-full mx-auto">
+    <div class="mx-auto max-w-[96vw] md:max-w-full">
       <div class="grid items-center gap-8 md:gap-12 lg:grid-cols-2">
         <div class="relative z-10 max-w-xl md:text-center lg:text-left">
           <span
-            class="inline-block mb-3 md:mb-4 text-base md:text-lg font-medium text-orange-500"
+            class="mb-3 inline-block text-base font-medium text-orange-500 md:mb-4 md:text-lg"
             aria-label="Section category"
           >
             {{ t('hero.category') }}
@@ -58,18 +58,18 @@ const localePath = useLocalePath()
 
           <h1
             id="hero-heading"
-            class="mb-4 md:mb-6 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900"
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 md:mb-6 md:text-4xl lg:text-5xl xl:text-6xl"
           >
             {{ t('hero.title') }}
           </h1>
 
-          <p class="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
+          <p class="mb-6 text-base text-gray-600 md:mb-8 md:text-lg">
             {{ t('hero.description') }}
           </p>
 
           <NuxtLink
             :to="localePath({ path: '/shop' })"
-            class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-max text-center"
+            class="flex w-full items-center justify-center rounded-md bg-black px-6 py-4 text-center text-sm font-medium text-white transition-colors hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 md:w-max md:px-8 md:py-3 md:text-base"
             aria-label="Browse our shop collection"
           >
             {{ t('hero.cta') }}
@@ -80,32 +80,32 @@ const localePath = useLocalePath()
           :src="greenWingedMacaw"
           :aria-hidden="true"
           alt=""
-          class="absolute left-[30%] md:left-[38%] top-[7rem] md:top-24 w-20 md:w-32 scale-150"
+          class="absolute left-[30%] top-[7rem] w-20 scale-150 md:left-[38%] md:top-24 md:w-32"
           width="20"
           height="20"
           loading="eager"
         />
 
         <div
-          class="md:absolute right-0 md:bottom-0 md:right-0 md:mt-auto h-[20rem] w-[20rem] md:h-[40rem] md:w-[40rem] px-4 md:px-0 ml-4 -bottom-8"
+          class="-bottom-8 right-0 ml-4 h-[20rem] w-[20rem] px-4 md:absolute md:bottom-0 md:right-0 md:mt-auto md:h-[40rem] md:w-[40rem] md:px-0"
         >
           <div
-            class="mt-auto bottom-0 h-full w-full flex items-center justify-center md:-right-24 relative"
+            class="relative bottom-0 mt-auto flex h-full w-full items-center justify-center md:-right-24"
           >
             <Image
               :src="celineSayuriTagami"
               alt="Happy dog with its owner"
-              class="object-cover w-[25rem] -bottom-4 md:bottom-0 -mr-16 absolute z-[3]"
+              class="absolute -bottom-4 z-[3] -mr-16 w-[25rem] object-cover md:bottom-0"
               width="25"
               height="25"
               loading="eager"
             />
 
-            <div class="flex items-center justify-center bottom-0 mt-auto">
+            <div class="bottom-0 mt-auto flex items-center justify-center">
               <Image
                 :src="charlesdeluvio"
                 alt="Happy dog with its owner"
-                class="hidden md:block object-cover w-[18rem] mt-auto bottom-0 z-[4] -ml-[4rem] md:-ml-16"
+                class="bottom-0 z-[4] -ml-[4rem] mt-auto hidden w-[18rem] object-cover md:-ml-16 md:block"
                 width="18"
                 height="18"
                 loading="eager"
@@ -113,7 +113,7 @@ const localePath = useLocalePath()
               <Image
                 :src="katherineMcadoo"
                 alt="Happy dog with its owner"
-                class="hidden md:block object-cover w-[7rem] md:-mr-12 mt-auto bottom-0 z-[4]"
+                class="bottom-0 z-[4] mt-auto hidden w-[7rem] object-cover md:-mr-12 md:block"
                 width="7"
                 height="7"
                 loading="eager"

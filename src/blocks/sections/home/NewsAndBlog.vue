@@ -47,17 +47,17 @@ const blogPosts = ref<Array<BlogPost>>([
 <template>
   <section
     aria-labelledby="news-blog-title"
-    class="w-full max-w-[95vw] md:max-w-[70rem] mx-auto py-12 px-4"
+    class="mx-auto w-full max-w-[95vw] px-4 py-12 md:max-w-[70rem]"
   >
     <h2
       id="news-blog-title"
-      class="text-2xl font-bold text-center mb-8"
+      class="mb-8 text-center text-2xl font-bold"
     >
       {{ t('newsAndBlog.title') }}
     </h2>
 
     <div
-      class="flex flex-col md:flex-row items-center justify-center gap-6"
+      class="flex flex-col items-center justify-center gap-6 md:flex-row"
       role="list"
     >
       <article
@@ -68,31 +68,31 @@ const blogPosts = ref<Array<BlogPost>>([
       >
         <a
           :href="`/blog/${post.slug}`"
-          class="block focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-lg"
+          class="block rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
-          <div class="relative aspect-[4/3] overflow-hidden rounded-lg mb-4">
+          <div class="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg">
             <span
-              class="absolute top-4 left-4 bg-black text-white text-xs px-3 py-1 rounded-full z-10"
+              class="absolute left-4 top-4 z-10 rounded-full bg-black px-3 py-1 text-xs text-white"
             >
               {{ t(`categories.${post.category}`) }}
             </span>
             <img
               :src="post.imageUrl"
               :alt="post.imageAlt"
-              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               loading="lazy"
             >
           </div>
 
           <time
             :datetime="post.date"
-            class="text-sm text-gray-500 mb-2 block"
+            class="mb-2 block text-sm text-gray-500"
           >
             {{ post.date }}
           </time>
 
           <h3
-            class="text-lg font-semibold group-hover:text-orange-500 transition-colors line-clamp-2"
+            class="line-clamp-2 text-lg font-semibold transition-colors group-hover:text-orange-500"
           >
             {{ post.title }}
           </h3>
