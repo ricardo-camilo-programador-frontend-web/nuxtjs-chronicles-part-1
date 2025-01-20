@@ -49,7 +49,7 @@ const products: Array<Product> = [
       {{ t("bestSellingProducts.title") }}
     </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 content-center">
       <ProductCard
         v-for="product in products"
         :key="product.id"
