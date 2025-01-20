@@ -1,11 +1,16 @@
 <script setup lang="ts">
-interface Props {
-  product: Product
+interface ProductCardProps {
+  imageSrc: string
+  productName: string
+  productPrice: string
+  isFavorite?: boolean
+  altText: string
+  currency: string
+  formattedPrice: string
+  name: string
 }
 
-const { t } = useI18n()
-
-defineProps<Props>()
+defineProps<ProductCardProps>()
 </script>
 
 <template>
@@ -14,8 +19,8 @@ defineProps<Props>()
   >
     <div class="relative mb-4 aspect-square">
       <Image
-        :src="product.imageSrc"
-        :alt="t(product.altText)"
+        :src="imageSrc"
+        :alt="altText"
         class="h-full w-full rounded-lg object-cover p-4"
         loading="lazy"
         width="100"
@@ -28,15 +33,13 @@ defineProps<Props>()
     >
       <div class="flex h-full w-full items-center justify-between">
         <h3 class="text-lg font-medium">
-          {{ t(product.name) }}
+          {{ productName }}
         </h3>
 
         <Button
-          :icon="
-            product.isFavorite ? 'i-heroicons-heart-solid' : 'i-heroicons-heart'
-          "
+          :icon="isFavorite ? 'i-heroicons-heart-solid' : 'i-heroicons-heart'"
           :aria-label="
-            product.isFavorite ? 'Remove from favorites' : 'Add to favorites'
+            isFavorite ? 'Remove from favorites' : 'Add to favorites'
           "
           class="p-2"
           icon-style="text-red-500"
@@ -44,7 +47,7 @@ defineProps<Props>()
       </div>
 
       <p class="mt-auto font-bold text-gray-900">
-        {{ t(product.currency) }} {{ product.price.toFixed(2) }}
+        {{ productPrice }}
       </p>
     </div>
   </article>
