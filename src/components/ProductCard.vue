@@ -19,7 +19,7 @@ const props = defineProps<Props>();
       />
     </div>
 
-    <div class="space-y-2 bg-white px-4 py-2 rounded-b-lg min-h-[7rem] h-full flex flex-col max-h-[4rem]">
+    <div class="space-y-2 bg-white px-4 py-2 rounded-b-lg min-h-[7rem] h-full flex flex-col max-h-[4rem] max-w-[95vw] sm:max-w-[17rem]">
       <div class="flex items-center justify-between w-full h-full">
         <h3 class="font-medium text-lg">{{ product.name }}</h3>
 
