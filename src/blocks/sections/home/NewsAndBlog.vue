@@ -57,7 +57,7 @@ const blogPosts = ref<BlogPost[]>([
       <article
         v-for="post in blogPosts"
         :key="post.id"
-        class="group"
+        class="group max-w-[17rem]"
         role="listitem"
       >
         <a
