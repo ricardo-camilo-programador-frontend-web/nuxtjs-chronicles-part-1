@@ -1,4 +1,4 @@
-export const   pt = {
+export const pt = {
   hero: {
     category: 'Pet Shop',
     title: 'Uma loja pet com tudo que você precisa',
