@@ -105,7 +105,7 @@ const localePath = useLocalePath();
               <Image
                 :src="charlesdeluvio"
                 alt="Happy dog with its owner"
-                class="object-cover w-[18rem] mt-auto bottom-0 z-[4] -ml-[4rem] md:-ml-16"
+                class="hidden md:block object-cover w-[18rem] mt-auto bottom-0 z-[4] -ml-[4rem] md:-ml-16"
                 width="18"
                 height="18"
                 loading="eager"
@@ -113,7 +113,7 @@ const localePath = useLocalePath();
               <Image
                 :src="katherineMcadoo"
                 alt="Happy dog with its owner"
-                class="object-cover w-[7rem] md:-mr-12 mt-auto bottom-0 z-[4]"
+                class="hidden md:block object-cover w-[7rem] md:-mr-12 mt-auto bottom-0 z-[4]"
                 width="7"
                 height="7"
                 loading="eager"
