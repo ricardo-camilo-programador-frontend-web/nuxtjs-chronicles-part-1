@@ -14,10 +14,10 @@ const headerClasses = computed(() => {
 
 <template>
   <header
-    class="top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-screen mx-auto"
+    class="top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-full mx-auto px-4"
   >
     <div
-      class="container relative hidden md:flex items-center justify-around w-full h-10 mx-auto"
+      class="relative hidden md:flex items-center justify-between w-full h-10 mx-auto"
     >
       <div class="flex items-center gap-2 group">
         <NuxtLink
