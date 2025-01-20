@@ -47,7 +47,7 @@ const logos: LogoItem[] = [
 <template>
   <section
     aria-label="Partner Logos"
-    class="w-full py-12 px-4"
+    class="w-full py-12 px-4 max-w-[95vw] md:max-w-7xl mx-auto"
   >
     <div class="max-w-7xl mx-auto">
       <ul
@@ -57,7 +57,7 @@ const logos: LogoItem[] = [
         <li
           v-for="logo in logos"
           :key="logo.id"
-          class="w-full max-w-[200px] transition-transform hover:scale-105"
+          class="w-full max-w-[17rem] md:max-w-[200px] transition-transform hover:scale-105"
         >
           <Image
             :src="logo.imagePath"
