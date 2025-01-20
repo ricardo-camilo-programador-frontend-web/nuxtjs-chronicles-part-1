@@ -75,6 +75,7 @@ const categories = ref<Array<CategoryItem>>([
           <Button
             :label="t('categories.seeAll')"
             :aria-label="t('categories.seeAllAriaLabel')"
+            class="w-full md:w-auto"
             id="see-all-categories-button"
           />
         </div>
