@@ -52,7 +52,10 @@ const categories = ref<CategoryItem[]>([
 </script>
 
 <template>
-  <section aria-labelledby="categories-title" class="py-8 max-w-[95vw] mx-auto">
+  <section
+    aria-labelledby="categories-title"
+    class="py-8 max-w-[95vw] mx-auto"
+  >
     <div
       class="mx-auto flex flex-col w-full justify-center items-center max-w-[70rem]"
     >
