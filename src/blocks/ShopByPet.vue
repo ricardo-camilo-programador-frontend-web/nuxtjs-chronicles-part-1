@@ -66,10 +66,10 @@ const petCategories = ref<Array<PetCategory>>([
     </div>
 
     <Carousel
-      uniqueId="shop-by-pet-carousel"
       :mobile-slides-per-view="3"
       :tablet-slides-per-view="4"
       :desktop-slides-per-view="6"
+      unique-id="shop-by-pet-carousel"
     >
       <SwiperSlide
         v-for="pet in petCategories"
