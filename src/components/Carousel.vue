@@ -58,7 +58,7 @@ const breakpoints = {
 
     <div
       :id="`${props.uniqueId}-button-prev`"
-      class="absolute right-16 -top-12 flex items-center justify-end gap-2 -translate-y-1/2"
+      class="absolute right-0 md:right-16 -top-12 flex items-center justify-end gap-2 -translate-y-1/2"
     >
       <Button
         :id="`${props.uniqueId}-button-prev`"
