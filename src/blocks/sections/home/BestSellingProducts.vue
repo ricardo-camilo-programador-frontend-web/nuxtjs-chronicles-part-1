@@ -57,6 +57,7 @@ const products: Array<Product> = [
       <SwiperSlide
         v-for="product in products"
         :key="product.id"
+        class="w-full min-w-[17rem]"
       >
         <ProductCard :product="product" />
       </SwiperSlide>
