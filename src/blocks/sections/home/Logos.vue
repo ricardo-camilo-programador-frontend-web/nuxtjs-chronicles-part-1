@@ -53,13 +53,13 @@ const logos: Array<LogoItem> = [
     <div class="mx-auto max-w-7xl">
       <Carousel
         uniqueId="partner-logos-carousel"
-        class="grid items-center justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+        class="min-w-full w-full justify-between flex"
         role="list"
       >
         <SwiperSlide
           v-for="logo in logos"
           :key="logo.id"
-          class="w-full max-w-[17rem] transition-transform hover:scale-105 md:max-w-[200px]"
+          class="w-full max-w-[17rem] mx-auto transition-transform hover:scale-105 md:max-w-[200px]"
         >
           <Image
             :src="logo.imagePath"
