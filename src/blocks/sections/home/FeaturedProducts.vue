@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { SwiperSlide } from 'swiper/vue'
 import type { Product } from '@/types/product'
 import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
 import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import { SwiperSlide } from 'swiper/vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
 const products = ref<Array<Product>>([
   {
-    id: 'premium-dog-food-1',
+    id: 'premium-dog-food-orange-1',
     imageSrc: backgroundGradientOrange,
     name: t('products.premiumDogFood'),
     price: 18.99,
@@ -18,7 +18,7 @@ const products = ref<Array<Product>>([
     altText: t('products.premiumDogFoodAltText'),
   },
   {
-    id: 'premium-cat-food',
+    id: 'premium-cat-food-1',
     imageSrc: katherineMcadoo,
     name: t('products.premiumCatFood'),
     price: 18.99,
@@ -26,7 +26,79 @@ const products = ref<Array<Product>>([
     altText: t('products.premiumCatFoodAltText'),
   },
   {
-    id: 'premium-dog-food-2',
+    id: 'premium-dog-food-mini-1',
+    imageSrc: backgroundGradientOrangeMini,
+    name: t('products.premiumDogFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
+  },
+  {
+    id: 'premium-dog-food-orange-2',
+    imageSrc: backgroundGradientOrange,
+    name: t('products.premiumDogFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
+  },
+  {
+    id: 'premium-cat-food-2',
+    imageSrc: katherineMcadoo,
+    name: t('products.premiumCatFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumCatFoodAltText'),
+  },
+  {
+    id: 'premium-dog-food-mini-2',
+    imageSrc: backgroundGradientOrangeMini,
+    name: t('products.premiumDogFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
+  },
+  {
+    id: 'premium-dog-food-orange-3',
+    imageSrc: backgroundGradientOrange,
+    name: t('products.premiumDogFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
+  },
+  {
+    id: 'premium-cat-food-3',
+    imageSrc: katherineMcadoo,
+    name: t('products.premiumCatFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumCatFoodAltText'),
+  },
+  {
+    id: 'premium-dog-food-mini-3',
+    imageSrc: backgroundGradientOrangeMini,
+    name: t('products.premiumDogFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
+  },
+  {
+    id: 'premium-dog-food-orange-4',
+    imageSrc: backgroundGradientOrange,
+    name: t('products.premiumDogFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
+  },
+  {
+    id: 'premium-cat-food-4',
+    imageSrc: katherineMcadoo,
+    name: t('products.premiumCatFood'),
+    price: 18.99,
+    currency: t('products.currency'),
+    altText: t('products.premiumCatFoodAltText'),
+  },
+  {
+    id: 'premium-dog-food-mini-4',
     imageSrc: backgroundGradientOrangeMini,
     name: t('products.premiumDogFood'),
     price: 18.99,
@@ -64,22 +136,23 @@ const products = ref<Array<Product>>([
       </header>
 
       <Carousel
-        uniqueId="featured-products-carousel"
-        role="list"
+        :rows-desktop="1.5"
         :mobile-slides-per-view="1"
         :tablet-slides-per-view="2"
         :desktop-slides-per-view="3"
+        unique-id="featured-products-carousel"
+        role="list"
       >
         <SwiperSlide
           v-for="product in products"
           :key="product.id"
-          class="mx-auto ml-2"
+          class="m-auto ml-2 md:ml-0"
         >
           <FeatureCard
             :image-src="product.imageSrc"
             :product-name="product.name"
             :product-price="formatCurrency(product.price, product.currency)"
-          :alt-text="product.altText"
+            :alt-text="product.altText"
             role="listitem"
           />
         </SwiperSlide>
