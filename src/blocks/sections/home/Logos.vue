@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SwiperSlide } from 'swiper/vue'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
 interface LogoItem {
@@ -50,11 +51,11 @@ const logos: Array<LogoItem> = [
     class="mx-auto w-full max-w-[95vw] px-4 py-12 md:max-w-[70rem]"
   >
     <div class="mx-auto max-w-7xl">
-      <ul
+      <Carousel
         class="grid items-center justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
         role="list"
       >
-        <li
+        <SwiperSlide
           v-for="logo in logos"
           :key="logo.id"
           class="w-full max-w-[17rem] transition-transform hover:scale-105 md:max-w-[200px]"
@@ -71,8 +72,8 @@ const logos: Array<LogoItem> = [
           <p class="mt-2 text-center font-medium text-orange-500">
             {{ logo.name }}
           </p>
-        </li>
-      </ul>
+        </SwiperSlide>
+      </Carousel>
     </div>
   </section>
 </template>
