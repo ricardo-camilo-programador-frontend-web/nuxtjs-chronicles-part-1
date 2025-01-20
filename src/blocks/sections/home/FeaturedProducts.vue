@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SwiperSlide } from 'swiper/vue'
 import type { Product } from '@/types/product'
 import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
 import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
@@ -62,20 +63,26 @@ const products = ref<Array<Product>>([
         </div>
       </header>
 
-      <div
-        class="flex w-full flex-wrap justify-center gap-4 md:flex-nowrap"
+      <Carousel
         role="list"
+        :mobile-slides-per-view="1"
+        :tablet-slides-per-view="2"
+        :desktop-slides-per-view="3"
       >
-        <FeatureCard
+        <SwiperSlide
           v-for="product in products"
           :key="product.id"
-          :image-src="product.imageSrc"
-          :product-name="product.name"
-          :product-price="formatCurrency(product.price, product.currency)"
+          class="mx-auto ml-2"
+        >
+          <FeatureCard
+            :image-src="product.imageSrc"
+            :product-name="product.name"
+            :product-price="formatCurrency(product.price, product.currency)"
           :alt-text="product.altText"
-          role="listitem"
-        />
-      </div>
+            role="listitem"
+          />
+        </SwiperSlide>
+      </Carousel>
     </div>
   </section>
 </template>
