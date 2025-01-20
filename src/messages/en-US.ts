@@ -1,4 +1,3 @@
-
 export const en = {
   hero: {
     category: 'Pet Shop',
@@ -112,6 +111,20 @@ export const en = {
     dogBed: 'Dog Bed',
     dogBedAltText: 'Dog Bed',
     currency: 'USD',
+    leatherDogCollar: 'Leather Dog Collar',
+    dogCollarAltText: 'Premium Leather Dog Collar',
+    catScratchingPost: 'Cat Scratching Post',
+    scratchingPostAltText: 'Cat Scratching Post with Platform',
+    birdCageDeluxe: 'Deluxe Bird Cage',
+    birdCageAltText: 'Deluxe Bird Cage with Accessories',
+    hamsterHabitat: 'Hamster Habitat',
+    hamsterHabitatAltText: 'Complete Hamster Habitat Set',
+    fishTankFilter: 'Fish Tank Filter',
+    fishFilterAltText: 'High Performance Fish Tank Filter',
+    dogGroomingKit: 'Dog Grooming Kit',
+    groomingKitAltText: 'Professional Dog Grooming Kit',
+    catLitterBox: 'Cat Litter Box',
+    litterBoxAltText: 'Covered Cat Litter Box',
   },
   bestSellingProducts: {
     title: 'Best Selling Products',
