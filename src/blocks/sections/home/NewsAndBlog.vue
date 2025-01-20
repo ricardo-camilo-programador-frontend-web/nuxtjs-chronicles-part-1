@@ -65,7 +65,7 @@ const blogPosts = ref<Array<BlogPost>>([
       <SwiperSlide
         v-for="post in blogPosts"
         :key="post.id"
-        class="group"
+        class="group w-full min-w-[17rem] mx-auto"
         role="listitem"
       >
         <a
