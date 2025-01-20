@@ -10,6 +10,7 @@ interface CarouselProps {
   spaceBetween?: number
   loop?: boolean
   pagination?: boolean
+  navigationClass?: string
 }
 
 const props = withDefaults(defineProps<CarouselProps>(), {
@@ -18,6 +19,7 @@ const props = withDefaults(defineProps<CarouselProps>(), {
   spaceBetween: 24,
   loop: true,
   pagination: false,
+  navigationClass: '',
 })
 
 const modules = [Pagination, Navigation]
@@ -62,6 +64,7 @@ const breakpoints = {
     <div
       :id="`${props.uniqueId}-button-prev`"
       class="absolute -top-12 right-0 flex -translate-y-1/2 items-center justify-end gap-2 md:right-16"
+      :class="props.navigationClass"
     >
       <Button
         :id="`${props.uniqueId}-button-prev`"

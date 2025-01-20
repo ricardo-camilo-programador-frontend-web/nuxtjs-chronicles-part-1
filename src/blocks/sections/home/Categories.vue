@@ -82,17 +82,24 @@ const categories = ref<Array<CategoryItem>>([
         </div>
       </header>
 
-      <div
+      <Carousel
         class="grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-4"
         role="list"
+        navigationClass="-mt-2"
       >
-        <CategorieCard
+        <SwiperSlide
           v-for="category in categories"
           :key="category.id"
-          v-bind="category"
           role="listitem"
-        />
-      </div>
+        >
+          <CategorieCard
+            :src="category.src"
+            :title="category.title"
+            :product-count="category.productCount"
+            :gradient-class="category.gradientClass"
+          />
+        </SwiperSlide>
+      </Carousel>
     </div>
   </section>
 </template>
