@@ -52,7 +52,7 @@ const logos: Array<LogoItem> = [
   >
     <div class="mx-auto max-w-7xl">
       <Carousel
-        id="partner-logos-carousel"
+        uniqueId="partner-logos-carousel"
         class="grid items-center justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
         role="list"
       >

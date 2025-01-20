@@ -58,7 +58,7 @@ const blogPosts = ref<Array<BlogPost>>([
     </h2>
 
     <Carousel
-      id="news-blog-carousel"
+      uniqueId="news-blog-carousel"
       class="flex flex-col items-center justify-center gap-6 md:flex-row mt-[5rem] md:mt-0"
       role="list"
     >

@@ -83,7 +83,7 @@ const categories = ref<Array<CategoryItem>>([
       </header>
 
       <Carousel
-        id="categories-carousel"
+        uniqueId="categories-carousel"
         class="grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-4"
         role="list"
         navigationClass="-mt-2"

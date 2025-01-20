@@ -64,7 +64,7 @@ const products = ref<Array<Product>>([
       </header>
 
       <Carousel
-        id="featured-products-carousel"
+        uniqueId="featured-products-carousel"
         role="list"
         :mobile-slides-per-view="1"
         :tablet-slides-per-view="2"

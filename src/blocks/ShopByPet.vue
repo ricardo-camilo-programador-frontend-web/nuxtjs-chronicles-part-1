@@ -66,7 +66,7 @@ const petCategories = ref<Array<PetCategory>>([
     </div>
 
     <Carousel
-      id="shop-by-pet-carousel"
+      uniqueId="shop-by-pet-carousel"
       :mobile-slides-per-view="3"
       :tablet-slides-per-view="4"
       :desktop-slides-per-view="5"

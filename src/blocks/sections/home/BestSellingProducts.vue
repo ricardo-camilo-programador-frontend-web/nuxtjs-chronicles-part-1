@@ -51,7 +51,7 @@ const products: Array<Product> = [
     </h2>
 
     <Carousel
-      id="best-selling-products-carousel"
+      uniqueId="best-selling-products-carousel"
       class="grid grid-cols-1 content-center gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-[5rem] md:mt-0"
     >
       <SwiperSlide
