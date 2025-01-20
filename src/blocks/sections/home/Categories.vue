@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SwiperSlide } from 'swiper/vue'
 import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
 import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
 import charlesdeluvio from '@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp'
