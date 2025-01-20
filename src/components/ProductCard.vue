@@ -8,7 +8,7 @@ const props = defineProps<Props>();
 
 <template>
   <article
-    class="bg-gray-200 rounded-lg transition-shadow hover:shadow-lg max-w-[17rem]"
+    class="bg-gray-200 rounded-lg transition-shadow hover:shadow-lg max-w-[17rem] md:max-w-prose"
   >
     <div class="relative aspect-square mb-4">
       <Image
