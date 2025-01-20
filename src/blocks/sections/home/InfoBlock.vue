@@ -8,7 +8,7 @@ const { t } = useI18n();
 
 <template>
   <section
-    class="py-8 max-w-[95vw] mx-auto flex flex-col md:flex-row justify-center items-center md:justify-between md:gap-24"
+    class="py-8 max-w-[99vw] mx-auto flex flex-col md:flex-row justify-center items-center md:justify-between md:gap-24"
     aria-labelledby="info-block-heading"
   >
     <div
@@ -17,7 +17,7 @@ const { t } = useI18n();
       <Image
         :src="backgroundGradientOrange"
         alt=""
-        class="absolute inset-0 h-[600px] min-w-[17rem] w-[120rem] rounded-full opacity-90 z-[1] object-cover -ml6"
+        class="absolute -ml-1 inset-0 h-[600px] min-w-screen md:min-w-[17rem] w-[120rem] rounded-full opacity-90 z-[1] object-cover md:-ml-6"
         width="600"
         height="600"
         :aria-hidden="true"
@@ -53,7 +53,7 @@ const { t } = useI18n();
           </p>
 
           <Button
-            class="px-8 py-3 text-base font-medium text-white bg-black rounded-md hover:bg-orange-500 transition-colors"
+            class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-max text-center"
             :label="t('infoBlock.buttonLabel')"
             id="info-block-button"
           />
