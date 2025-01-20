@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { SwiperSlide } from 'swiper/vue'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import { SwiperSlide } from 'swiper/vue'
 
 const { t } = useI18n()
 
@@ -51,8 +51,10 @@ const products: Array<Product> = [
     </h2>
 
     <Carousel
-      uniqueId="best-selling-products-carousel"
-      class="grid grid-cols-1 content-center gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-[5rem] md:mt-0"
+      :slides-per-column="2"
+      :rows-desktop="1.5"
+      unique-id="best-selling-products-carousel"
+      class="mt-[5rem] grid grid-cols-1 content-center gap-6 sm:grid-cols-2 md:mt-0 lg:grid-cols-4"
     >
       <SwiperSlide
         v-for="product in products"
