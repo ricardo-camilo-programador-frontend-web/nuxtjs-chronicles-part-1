@@ -136,10 +136,10 @@ const products = ref<Array<Product>>([
       </header>
 
       <Carousel
-        :rows-desktop="1.5"
         :mobile-slides-per-view="1"
         :tablet-slides-per-view="2"
         :desktop-slides-per-view="3"
+        navigation-class="hidden"
         unique-id="featured-products-carousel"
         role="list"
       >
