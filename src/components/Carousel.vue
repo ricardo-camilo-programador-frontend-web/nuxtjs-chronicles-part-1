@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { Navigation, Pagination } from 'swiper/modules'
+import { Grid, Navigation, Pagination } from 'swiper/modules'
 import { Swiper } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/grid'
 
 interface CarouselProps {
   uniqueId?: string
@@ -17,6 +18,10 @@ interface CarouselProps {
   mobileSpaceBetween?: number
   tabletSpaceBetween?: number
   desktopSpaceBetween?: number
+  slidesPerColumn?: number
+  rowsMobile?: number
+  rowsTablet?: number
+  rowsDesktop?: number
 }
 
 const props = withDefaults(defineProps<CarouselProps>(), {
@@ -32,9 +37,13 @@ const props = withDefaults(defineProps<CarouselProps>(), {
   mobileSpaceBetween: 16,
   tabletSpaceBetween: 20,
   desktopSpaceBetween: 24,
+  slidesPerColumn: 1,
+  rowsMobile: 1,
+  rowsTablet: 1,
+  rowsDesktop: 1,
 })
 
-const modules = [Pagination, Navigation]
+const modules = [Pagination, Navigation, Grid]
 
 const navigation = {
   nextEl: `#${props.uniqueId}-button-next`,
@@ -53,14 +62,26 @@ const breakpoints = {
   320: {
     slidesPerView: props.mobileSlidesPerView,
     spaceBetween: props.mobileSpaceBetween,
+    grid: {
+      rows: props.rowsMobile,
+      fill: 'row' as const,
+    },
   },
   640: {
     slidesPerView: props.tabletSlidesPerView,
     spaceBetween: props.tabletSpaceBetween,
+    grid: {
+      rows: props.rowsTablet,
+      fill: 'row' as const,
+    },
   },
   768: {
     slidesPerView: props.desktopSlidesPerView,
     spaceBetween: props.desktopSpaceBetween,
+    grid: {
+      rows: props.rowsDesktop,
+      fill: 'row' as const,
+    },
   },
   1366: {
     slidesPerView: props.slidesPerView,
@@ -84,8 +105,8 @@ const breakpoints = {
 
     <div
       :id="`${props.uniqueId}-button-prev`"
-      class="absolute -top-12 right-0 flex -translate-y-1/2 items-center justify-end gap-2 md:right-16"
       :class="props.navigationClass"
+      class="absolute -top-12 right-0 flex -translate-y-1/2 items-center justify-end gap-2 md:right-16"
     >
       <Button
         :id="`${props.uniqueId}-button-prev`"
