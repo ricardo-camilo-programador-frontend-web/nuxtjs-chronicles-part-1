@@ -51,7 +51,7 @@ const logos: LogoItem[] = [
   >
     <div class="max-w-7xl mx-auto">
       <ul
-        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center"
+        class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center"
         role="list"
       >
         <li
