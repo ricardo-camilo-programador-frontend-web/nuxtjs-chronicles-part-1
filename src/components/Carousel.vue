@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import { Navigation, Pagination } from 'swiper/modules'
 
 interface CarouselProps {
   uniqueId?: string
@@ -39,7 +39,10 @@ const breakpoints = {
   320: { slidesPerView: 2, spaceBetween: 16 },
   640: { slidesPerView: 3, spaceBetween: 20 },
   768: { slidesPerView: 4, spaceBetween: 24 },
-  1366: { slidesPerView: props.slidesPerView, spaceBetween: props.spaceBetween },
+  1366: {
+    slidesPerView: props.slidesPerView,
+    spaceBetween: props.spaceBetween,
+  },
 }
 </script>
 
@@ -74,4 +77,3 @@ const breakpoints = {
     </div>
   </Swiper>
 </template>
-

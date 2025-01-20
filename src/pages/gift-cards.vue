@@ -5,5 +5,8 @@ definePageMeta({
 </script>
 
 <template>
-  <Button label="Gift cards page" id="gift-cards-page-button" />
+  <Button
+    label="Gift cards page"
+    id="gift-cards-page-button"
+  />
 </template>

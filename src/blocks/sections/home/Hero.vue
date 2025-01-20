@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import backgroundGradientOrange from "@/assets/images/background-gradient-orange.webp";
-import backgroundGradientOrangeMini from "@/assets/images/background-gradient-orange-mini.webp";
-import greenWingedMacaw from "@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp";
-import celineSayuriTagami from "@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp";
-import charlesdeluvio from "@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp";
-import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
+import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
+import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
+import celineSayuriTagami from '@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp'
+import charlesdeluvio from '@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp'
+import greenWingedMacaw from '@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp'
+import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
-import { useI18n } from "vue-i18n";
+import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n();
-const localePath = useLocalePath();
+const { t } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -19,31 +19,31 @@ const localePath = useLocalePath();
   >
     <Image
       :src="backgroundGradientOrange"
+      :aria-hidden="true"
       alt="Background gradient orange"
       class="absolute -right-[10rem] md:-right-40 top-0 h-[400px] w-[400px] md:h-[800px] md:w-[800px] rounded-full opacity-50 md:opacity-100 mt-32 object-cover"
       width="400"
       height="400"
-      :aria-hidden="true"
     />
 
     <Image
       :src="backgroundGradientOrangeMini"
+      :aria-hidden="true"
       alt="Background gradient orange mini"
       class="absolute left-[10%] md:left-[20%] mr-auto -top-14 h-[100px] w-[100px] md:h-[200px] md:w-[200px] rounded-full rotate-180"
       title="Background gradient orange mini"
       width="100"
       height="100"
-      :aria-hidden="true"
     />
 
     <Image
       :src="backgroundGradientOrangeMini"
+      :aria-hidden="true"
       alt="Background gradient orange mini"
       class="hidden md:block absolute left-[20%] md:left-[30%] mr-auto -bottom-14 h-[75px] w-[75px] md:h-[150px] md:w-[150px] rounded-full"
       title="Background gradient orange mini"
       width="75"
       height="75"
-      :aria-hidden="true"
     />
 
     <div class="max-w-[96vw] md:max-w-full mx-auto">
@@ -53,18 +53,18 @@ const localePath = useLocalePath();
             class="inline-block mb-3 md:mb-4 text-base md:text-lg font-medium text-orange-500"
             aria-label="Section category"
           >
-            {{ t("hero.category") }}
+            {{ t('hero.category') }}
           </span>
 
           <h1
             id="hero-heading"
             class="mb-4 md:mb-6 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900"
           >
-            {{ t("hero.title") }}
+            {{ t('hero.title') }}
           </h1>
 
           <p class="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
-            {{ t("hero.description") }}
+            {{ t('hero.description') }}
           </p>
 
           <NuxtLink
@@ -72,18 +72,18 @@ const localePath = useLocalePath();
             class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-max text-center"
             aria-label="Browse our shop collection"
           >
-            {{ t("hero.cta") }}
+            {{ t('hero.cta') }}
           </NuxtLink>
         </div>
 
         <Image
           :src="greenWingedMacaw"
+          :aria-hidden="true"
           alt=""
           class="absolute left-[30%] md:left-[38%] top-[7rem] md:top-24 w-20 md:w-32 scale-150"
           width="20"
           height="20"
           loading="eager"
-          :aria-hidden="true"
         />
 
         <div

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 interface Props {
-  src: string;
-  title: string;
-  productCount: number;
-  gradientClass: string;
+  src: string
+  title: string
+  productCount: number
+  gradientClass: string
 }
 
-const props = defineProps<Props>();
+defineProps<Props>()
 
-const { t } = useI18n();
+const { t } = useI18n()
 </script>
 
 <template>
@@ -40,8 +40,11 @@ const { t } = useI18n();
           >
             {{ title }}
           </h3>
-          <p id="category-description" class="text-gray-600">
-            {{ productCount }} {{ t("categories.items.count") }}
+          <p
+            id="category-description"
+            class="text-gray-600"
+          >
+            {{ productCount }} {{ t('categories.items.count') }}
           </p>
         </div>
 
@@ -51,7 +54,7 @@ const { t } = useI18n();
           <Button
             :id="`category-button-${title}`"
             icon="mdi:arrow-right"
-            iconStyle="text-orange-500 text-7xl scale-150"
+            icon-style="text-orange-500 text-7xl scale-150"
             aria-label="View more products in {{ title }}"
           />
         </div>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { defineProps } from 'vue'
 
 interface FeatureCardProps {
-  imageSrc: string;
-  productName: string;
-  productPrice: string;
+  imageSrc: string
+  productName: string
+  productPrice: string
 }
 
-const props = defineProps<FeatureCardProps>();
+defineProps<FeatureCardProps>()
 </script>
 
 <template>
@@ -28,8 +28,12 @@ const props = defineProps<FeatureCardProps>();
       class="flex justify-between items-center w-full bg-white rounded-b-lg px-4 py-2 min-h-24"
     >
       <div class="w-full flex flex-col items-start justify-start h-full w-full">
-        <h3 class="mt-2 text-lg font-semibold max-w-[17rem]">{{ productName }}</h3>
-        <p class="text-gray-600 mt-auto">{{ productPrice }}</p>
+        <h3 class="mt-2 text-lg font-semibold max-w-[17rem]">
+          {{ productName }}
+        </h3>
+        <p class="text-gray-600 mt-auto">
+          {{ productPrice }}
+        </p>
       </div>
 
       <div class="w-auto flex items-start justify-center h-full pt-1">

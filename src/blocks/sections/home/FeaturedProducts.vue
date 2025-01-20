@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import type { Product } from "@/types/product";
-import { useI18n } from "vue-i18n";
-import backgroundGradientOrange from "@/assets/images/background-gradient-orange.webp";
-import backgroundGradientOrangeMini from "@/assets/images/background-gradient-orange-mini.webp";
-import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
+import type { Product } from '@/types/product'
+import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
+import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
+import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n();
+const { t } = useI18n()
 
-const products = ref<Product[]>([
+const products = ref<Array<Product>>([
   {
-    id: "premium-dog-food-1",
+    id: 'premium-dog-food-1',
     imageSrc: backgroundGradientOrange,
-    name: t("products.premiumDogFood"),
+    name: t('products.premiumDogFood'),
     price: 18.99,
-    currency: t("products.currency"),
-    altText: t("products.premiumDogFoodAltText"),
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
   },
   {
-    id: "premium-cat-food",
+    id: 'premium-cat-food',
     imageSrc: katherineMcadoo,
-    name: t("products.premiumCatFood"),
+    name: t('products.premiumCatFood'),
     price: 18.99,
-    currency: t("products.currency"),
-    altText: t("products.premiumCatFoodAltText"),
+    currency: t('products.currency'),
+    altText: t('products.premiumCatFoodAltText'),
   },
   {
-    id: "premium-dog-food-2",
+    id: 'premium-dog-food-2',
     imageSrc: backgroundGradientOrangeMini,
-    name: t("products.premiumDogFood"),
+    name: t('products.premiumDogFood'),
     price: 18.99,
-    currency: t("products.currency"),
-    altText: t("products.premiumDogFoodAltText"),
+    currency: t('products.currency'),
+    altText: t('products.premiumDogFoodAltText'),
   },
-]);
+])
 </script>
 
 <template>
@@ -48,7 +48,7 @@ const products = ref<Product[]>([
           id="featured-products-title"
           class="text-2xl font-bold text-center md:mb-6 mr-auto w-full md:w-auto"
         >
-          {{ t("products.featuredTitle") }}
+          {{ t('products.featuredTitle') }}
         </h2>
 
         <div
@@ -69,10 +69,10 @@ const products = ref<Product[]>([
         <FeatureCard
           v-for="product in products"
           :key="product.id"
-          :imageSrc="product.imageSrc"
-          :productName="product.name"
-          :productPrice="formatCurrency(product.price, product.currency)"
-          :altText="product.altText"
+          :image-src="product.imageSrc"
+          :product-name="product.name"
+          :product-price="formatCurrency(product.price, product.currency)"
+          :alt-text="product.altText"
           role="listitem"
         />
       </div>

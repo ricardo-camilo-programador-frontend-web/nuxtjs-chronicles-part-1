@@ -4,27 +4,19 @@ export function useLocalStorage() {
     itemValue: string,
   ) {
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem(
-        itemName,
-        itemValue,
-      )
+      window.localStorage.setItem(itemName, itemValue)
     }
   }
 
-  const removeItem = function removeItemFromLocalStorage(
-    itemName: string,
-  ) {
+  const removeItem = function removeItemFromLocalStorage(itemName: string) {
     if (typeof window !== 'undefined') {
       window.localStorage.removeItem(itemName)
     }
   }
 
-  const getItem = function getItemFromLocalStorage(
-    itemName: string,
-  ) {
+  const getItem = function getItemFromLocalStorage(itemName: string) {
     if (typeof window !== 'undefined') {
-      const itemValue
-        = window.localStorage.getItem(itemName)
+      const itemValue = window.localStorage.getItem(itemName)
 
       return itemValue
     }

@@ -26,5 +26,5 @@ withDefaults(defineProps<Props>(), {
     :aria-label="ariaLabel"
     :width="width"
     :height="height"
-  />
+  >
 </template>

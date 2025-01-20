@@ -4,7 +4,9 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <footer class="w-full py-12 overflow-hidden bg-gray-100 border-t min-w-screen grud">
+  <footer
+    class="w-full py-12 overflow-hidden bg-gray-100 border-t min-w-screen grud"
+  >
     <div class="container w-full px-4 max-w-[17rem] md:max-w-7xl mx-auto">
       <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-4">
         <div class="space-y-4">
@@ -81,19 +83,27 @@ const { t } = useI18n()
             {{ t('footer.store') }}
           </h3>
           <ul class="space-y-3">
-            <li class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out">
+            <li
+              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+            >
               {{ t('footer.storeInfo.address1') }}
             </li>
 
-            <li class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out">
+            <li
+              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+            >
               {{ t('footer.storeInfo.address2') }}
             </li>
 
-            <li class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out">
+            <li
+              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+            >
               {{ t('footer.storeInfo.phone') }}
             </li>
 
-            <li class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out">
+            <li
+              class="text-gray-600 hover:text-orange-500 transition-all duration-200 ease-in-out"
+            >
               {{ $env.EMAIL }}
             </li>
 
@@ -106,7 +116,9 @@ const { t } = useI18n()
         </div>
       </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t gap-6">
+      <div
+        class="flex flex-col md:flex-row items-center justify-between pt-8 border-t gap-6"
+      >
         <p class="text-sm text-gray-600">
           {{
             t('footer.copyright', {

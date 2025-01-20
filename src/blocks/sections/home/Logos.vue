@@ -1,47 +1,47 @@
 <script setup lang="ts">
-import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
+import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
 interface LogoItem {
-  id: string;
-  name: string;
-  imagePath: string;
-  altText: string;
+  id: string
+  name: string
+  imagePath: string
+  altText: string
 }
 
-const { t } = useI18n();
+const { t } = useI18n()
 
-const logos: LogoItem[] = [
+const logos: Array<LogoItem> = [
   {
     id: 'logo1',
     name: t('logos.petCare'),
     imagePath: katherineMcadoo,
-    altText: t('logos.petCareAltText')
+    altText: t('logos.petCareAltText'),
   },
   {
     id: 'logo2',
     name: t('logos.petHouse'),
     imagePath: katherineMcadoo,
-    altText: t('logos.petHouseAltText')
+    altText: t('logos.petHouseAltText'),
   },
   {
     id: 'logo3',
     name: t('logos.pawLove'),
     imagePath: katherineMcadoo,
-    altText: t('logos.pawLoveAltText')
+    altText: t('logos.pawLoveAltText'),
   },
   {
     id: 'logo4',
     name: t('logos.petServices'),
     imagePath: katherineMcadoo,
-    altText: t('logos.petServicesAltText')
+    altText: t('logos.petServicesAltText'),
   },
   {
     id: 'logo5',
     name: t('logos.petCareHeart'),
     imagePath: katherineMcadoo,
-    altText: t('logos.petCareHeartAltText')
+    altText: t('logos.petCareHeartAltText'),
   },
-];
+]
 </script>
 
 <template>

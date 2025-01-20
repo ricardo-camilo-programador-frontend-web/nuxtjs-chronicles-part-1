@@ -23,9 +23,7 @@ function rippleEffect(event: MouseEvent, htmlElementId: string) {
   target.appendChild(circle)
 }
 
-export function useRippleEffect(
-  htmlElementId: string | undefined,
-) {
+export function useRippleEffect(htmlElementId: string | undefined) {
   const timeoutTimer = 1000
 
   // Retornando uma função que será chamada no setup do componente

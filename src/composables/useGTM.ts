@@ -34,7 +34,9 @@ export function useGTM() {
 
       window.dataLayer = []
 
-      const noscriptIframe = document.querySelector('iframe[src*="googletagmanager"]')
+      const noscriptIframe = document.querySelector(
+        'iframe[src*="googletagmanager"]',
+      )
       if (noscriptIframe) {
         noscriptIframe.remove()
       }

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import catsSilhouette from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
-import backgroundGradientOrange from "@/assets/images/background-gradient-orange.webp";
+import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
+import catsSilhouette from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -12,15 +13,15 @@ const { t } = useI18n();
     aria-labelledby="info-block-heading"
   >
     <div
-      class="relative z-10 my-auto flex flex-col justify-center items-center h-[600px] w-full "
+      class="relative z-10 my-auto flex flex-col justify-center items-center h-[600px] w-full"
     >
       <Image
         :src="backgroundGradientOrange"
+        :aria-hidden="true"
         alt=""
         class="absolute -ml-1 inset-0 h-[600px] min-w-screen md:min-w-[17rem] w-[120rem] rounded-full opacity-90 z-[1] object-cover md:-ml-6"
         width="600"
         height="600"
-        :aria-hidden="true"
       />
 
       <Image
@@ -53,8 +54,8 @@ const { t } = useI18n();
           </p>
 
           <Button
-            class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-max text-center"
             :label="t('infoBlock.buttonLabel')"
+            class="flex items-center justify-center px-6 md:px-8 py-4 md:py-3 text-sm md:text-base font-medium text-white transition-colors bg-black rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-max text-center"
             id="info-block-button"
           />
         </div>

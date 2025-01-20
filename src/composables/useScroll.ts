@@ -21,6 +21,6 @@ export function useScroll() {
 
   return {
     isScrollingDown,
-    isScrolled
+    isScrolled,
   }
 }

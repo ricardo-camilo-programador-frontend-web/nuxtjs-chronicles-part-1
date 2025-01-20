@@ -5,4 +5,3 @@
     id="banners-button"
   />
 </template>
-

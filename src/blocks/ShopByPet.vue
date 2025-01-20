@@ -1,64 +1,67 @@
 <script setup lang="ts">
-import { SwiperSlide } from "swiper/vue";
-import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
+import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import { SwiperSlide } from 'swiper/vue'
 
 interface PetCategory {
-  id: string;
-  name: string;
-  icon: string;
-  altText: string;
+  id: string
+  name: string
+  icon: string
+  altText: string
 }
 
-const { t } = useI18n();
+const { t } = useI18n()
 
-const petCategories = ref<PetCategory[]>([
+const petCategories = ref<Array<PetCategory>>([
   {
-    id: "cat",
-    name: t("pets.cat"),
+    id: 'cat',
+    name: t('pets.cat'),
     icon: katherineMcadoo,
-    altText: t("pets.catIconAlt"),
+    altText: t('pets.catIconAlt'),
   },
   {
-    id: "hamster",
-    name: t("pets.hamster"),
+    id: 'hamster',
+    name: t('pets.hamster'),
     icon: katherineMcadoo,
-    altText: t("pets.hamsterIconAlt"),
+    altText: t('pets.hamsterIconAlt'),
   },
   {
-    id: "dog",
-    name: t("pets.dog"),
+    id: 'dog',
+    name: t('pets.dog'),
     icon: katherineMcadoo,
-    altText: t("pets.dogIconAlt"),
+    altText: t('pets.dogIconAlt'),
   },
   {
-    id: "parrot",
-    name: t("pets.parrot"),
+    id: 'parrot',
+    name: t('pets.parrot'),
     icon: katherineMcadoo,
-    altText: t("pets.parrotIconAlt"),
+    altText: t('pets.parrotIconAlt'),
   },
   {
-    id: "rabbit",
-    name: t("pets.rabbit"),
+    id: 'rabbit',
+    name: t('pets.rabbit'),
     icon: katherineMcadoo,
-    altText: t("pets.rabbitIconAlt"),
+    altText: t('pets.rabbitIconAlt'),
   },
   {
-    id: "turtle",
-    name: t("pets.turtle"),
+    id: 'turtle',
+    name: t('pets.turtle'),
     icon: katherineMcadoo,
-    altText: t("pets.turtleIconAlt"),
+    altText: t('pets.turtleIconAlt'),
   },
-]);
+])
 </script>
 
 <template>
   <section
     aria-labelledby="shop-by-pet-title"
-    class="w-full  max-w-[95vw] mx-auto py-8 px-4"
+    class="w-full max-w-[95vw] mx-auto py-8 px-4"
   >
     <div class="flex items-center justify-between mb-6">
-      <h2 id="shop-by-pet-title" class="text-2xl font-bold">
-        {{ t("shopByPet.title") }}
+      <h2
+        id="shop-by-pet-title"
+        class="text-2xl font-bold"
+      >
+        {{ t('shopByPet.title') }}
       </h2>
     </div>
 

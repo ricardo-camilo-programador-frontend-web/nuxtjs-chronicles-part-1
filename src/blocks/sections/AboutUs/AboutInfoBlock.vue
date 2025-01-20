@@ -5,4 +5,3 @@
     id="info-block-button"
   />
 </template>
-

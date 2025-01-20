@@ -1,55 +1,57 @@
 <script setup lang="ts">
-import katherineMcadoo from "@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp";
+import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 const products: Array<Product> = [
   {
-    id: "1",
-    name: t("products.premiumCatFood"),
+    id: '1',
+    name: t('products.premiumCatFood'),
     price: 20.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: t("products.currency"),
-    altText: t("products.catBowlAltText"),
+    currency: t('products.currency'),
+    altText: t('products.catBowlAltText'),
   },
   {
-    id: "2",
-    name: t("products.dogLeash"),
+    id: '2',
+    name: t('products.dogLeash'),
     price: 49.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: t("products.currency"),
-    altText: t("products.dogLeashAltText"),
-    },
+    currency: t('products.currency'),
+    altText: t('products.dogLeashAltText'),
+  },
   {
-    id: "3",
-    name: t("products.dogToy"),
+    id: '3',
+    name: t('products.dogToy'),
     price: 49.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: t("products.currency"),
-    altText: t("products.dogToyAltText"),
+    currency: t('products.currency'),
+    altText: t('products.dogToyAltText'),
   },
   {
-    id: "4",
-    name: t("products.dogBowl"),
+    id: '4',
+    name: t('products.dogBowl'),
     price: 49.99,
     imageSrc: katherineMcadoo,
     isFavorite: false,
-    currency: t("products.currency"),
-    altText: t("products.dogBowlAltText"),
+    currency: t('products.currency'),
+    altText: t('products.dogBowlAltText'),
   },
-];
+]
 </script>
 
 <template>
   <section class="mx-auto my-8 max-w-[95vw]">
     <h2 class="text-2xl font-bold text-center mb-8">
-      {{ t("bestSellingProducts.title") }}
+      {{ t('bestSellingProducts.title') }}
     </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 content-center">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 content-center"
+    >
       <ProductCard
         v-for="product in products"
         :key="product.id"

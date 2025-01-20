@@ -4,18 +4,21 @@ const { isScrollingDown, isScrolled } = useScroll()
 
 const headerClasses = computed(() => {
   return {
-    'translate-y-[-40%]  md:translate-y-[-70%] rounded-none': isScrollingDown.value,
+    'translate-y-[-40%]  md:translate-y-[-70%] rounded-none':
+      isScrollingDown.value,
     'bg-white shadow-lg': isScrolled.value,
-    'transition-transform duration-300 ease-in-out': true
+    'transition-transform duration-300 ease-in-out': true,
   }
 })
 </script>
 
 <template>
   <header
-    class=" top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-screen mx-auto"
+    class="top-0 left-0 right-0 dark:bg-gray-800 z-[99] flex w-full items-center justify-center max-w-[50vw] md:max-w-screen mx-auto"
   >
-    <div class="container relative  hidden md:flex items-center justify-around w-full h-10 mx-auto">
+    <div
+      class="container relative hidden md:flex items-center justify-around w-full h-10 mx-auto"
+    >
       <div class="flex items-center gap-2 group">
         <NuxtLink
           to="https://wa.me/5511999999999"
@@ -73,27 +76,27 @@ const headerClasses = computed(() => {
     </div>
 
     <div
-      class="w-screen fixed grid grid-cols-3 p-4 mx-auto mt-[6rem] bg-white rounded-full shadow-lg"
       :class="[headerClasses]"
+      class="w-screen fixed grid grid-cols-3 p-4 mx-auto mt-[6rem] bg-white rounded-full shadow-lg"
     >
       <div class="container relative left-0 flex w-auto mr-auto">
         <Logo />
       </div>
 
-      <div class="container relative hidden md:flex items-center justify-center w-full mx-auto">
+      <div
+        class="container relative hidden md:flex items-center justify-center w-full mx-auto"
+      >
         Menu Items(SOON)
       </div>
 
-      <div class="container relative hidden md:flex items-center justify-center w-full mx-auto">
+      <div
+        class="container relative hidden md:flex items-center justify-center w-full mx-auto"
+      >
         SHORTCUTS(SOON)
       </div>
     </div>
 
-    <div
-      class="
-        fixed bottom-1 right-1 flex items-center gap-2
-      "
-    >
+    <div class="fixed bottom-1 right-1 flex items-center gap-2">
       <LangSwitcher />
     </div>
   </header>

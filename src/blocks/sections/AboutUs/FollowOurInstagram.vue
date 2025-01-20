@@ -5,4 +5,3 @@
     id="follow-our-instagram-button"
   />
 </template>
-

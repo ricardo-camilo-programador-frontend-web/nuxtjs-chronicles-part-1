@@ -5,4 +5,3 @@
     id="our-team-button"
   />
 </template>
-

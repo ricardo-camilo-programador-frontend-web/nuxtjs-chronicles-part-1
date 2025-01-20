@@ -5,4 +5,3 @@
     id="filters-and-cards-button"
   />
 </template>
-

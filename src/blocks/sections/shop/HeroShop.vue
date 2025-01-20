@@ -5,4 +5,3 @@
     id="hero-shop-button"
   />
 </template>
-

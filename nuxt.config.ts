@@ -4,32 +4,29 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   srcDir: './src/',
 
-  css: [
-    '~/assets/css/main.css',
-  ],
+  css: ['~/assets/css/main.css'],
 
-  modules: ['@nuxt/icon', 'nuxt-headlessui', '@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxt/icon',
+    'nuxt-headlessui',
+    '@nuxtjs/i18n',
+    '@nuxtjs/tailwindcss',
+  ],
 
   i18n: {
     locales: [
       { code: 'en', language: 'en-US' },
-      { code: 'pt', language: 'pt-BR' }
+      { code: 'pt', language: 'pt-BR' },
     ],
     strategy: 'prefix',
     defaultLocale: 'en',
-    vueI18n: './src/configs/i18n.config.ts'
+    vueI18n: './src/configs/i18n.config.ts',
   },
 
   icon: {
     serverBundle: {
-      collections: [
-        'mdi',
-        'circle-flags',
-        'ph',
-        'simple-icons',
-        'cib',
-      ]
-    }
+      collections: ['mdi', 'circle-flags', 'ph', 'simple-icons', 'cib'],
+    },
   },
 
   imports: {
@@ -91,8 +88,8 @@ export default defineNuxtConfig({
         '/privacy-policy',
         '/shop',
         '/products',
-      ]
-    }
+      ],
+    },
   },
 
   components: {
@@ -123,13 +120,16 @@ export default defineNuxtConfig({
       EMAIL: process.env.NUXT_PUBLIC_EMAIL,
       GTM_ID: process.env.NUXT_PUBLIC_GTM_ID,
       INSTAGRAM_USERNAME: process.env.NUXT_PUBLIC_INSTAGRAM_USERNAME,
-      SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'https://savana-nuxtjs-chronicles-part-1.netlify.app',
+      SITE_URL:
+        process.env.NUXT_PUBLIC_SITE_URL ||
+        'https://savana-nuxtjs-chronicles-part-1.netlify.app',
       GITHUB_USERNAME: process.env.NUXT_PUBLIC_GITHUB_USERNAME,
       LINKEDIN_USERNAME: process.env.NUXT_PUBLIC_LINKEDIN_USERNAME,
       X_USERNAME: process.env.NUXT_PUBLIC_X_USERNAME,
       WORKANA_USERNAME: process.env.NUXT_PUBLIC_WORKANA_USERNAME,
       TWITTER_USERNAME: process.env.NUXT_PUBLIC_TWITTER_USERNAME,
-      GOOGLE_SITE_VERIFICATION: process.env.NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      GOOGLE_SITE_VERIFICATION:
+        process.env.NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
       PORTFOLIO_URL: process.env.NUXT_PUBLIC_PORTFOLIO_URL,
       BUYMEACOFFEE_USERNAME: process.env.NUXT_PUBLIC_BUYMEACOFFEE_USERNAME,
     },

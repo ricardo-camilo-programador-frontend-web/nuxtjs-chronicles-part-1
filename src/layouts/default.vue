@@ -7,7 +7,9 @@ useHead({
 </script>
 
 <template>
-  <div class="relative flex flex-col max-w-screen md:min-w-screen md:min-h-screen bg-gray-50 overflow-hidden">
+  <div
+    class="relative flex flex-col max-w-screen md:min-w-screen md:min-h-screen bg-gray-50 overflow-hidden"
+  >
     <Header />
 
     <main class="relative flex flex-col md:min-w-full min-h-screen px-2">
@@ -25,13 +27,13 @@ useHead({
     />
 
     <ClientOnly>
-    <noscript>
-      <iframe
+      <noscript>
+        <iframe
         :src="`https://www.googletagmanager.com/ns.html?id=${$env.GTM_ID}`"
         height="0"
         width="0"
-        style="display:none;visibility:hidden"
-      />
+        style="display: none; visibility: hidden"
+        />
       </noscript>
     </ClientOnly>
   </div>

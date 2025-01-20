@@ -7,13 +7,6 @@ type NotationType =
 type CompactDisplayType = 'short' | 'long' | undefined
 type LocaleType = 'pt-BR' | 'en-US' | undefined
 export type CurrencyType = 'BRL' | 'USD' | string
-type StyleType =
-  | 'currency'
-  | 'decimal'
-  | 'percent'
-  | 'unit'
-  | 'accounting'
-  | undefined
 
 export function formatCurrency(
   value: any,
@@ -21,12 +14,11 @@ export function formatCurrency(
   notation: NotationType = 'standard',
   compactDisplay: CompactDisplayType = 'short',
   locale: LocaleType = 'pt-BR',
-  style: StyleType = 'currency',
   minimumFractionDigits = 2,
   maximumFractionDigits = 2,
 ) {
   if (value === undefined) {
-    return ''
+    return 'R$ undefined'
   }
 
   const convertedToNumber = Number(value)

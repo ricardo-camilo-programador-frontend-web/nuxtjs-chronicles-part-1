@@ -5,4 +5,3 @@
     id="about-our-store-button"
   />
 </template>
-

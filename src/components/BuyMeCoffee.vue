@@ -1,30 +1,30 @@
 <script setup lang="ts">
 interface Props {
-  username: string;
-  theme?: "default" | "outline" | "colored";
-  message?: string;
+  username: string
+  theme?: 'default' | 'outline' | 'colored'
+  message?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  theme: "default",
-  message: "Buy me a coffee",
-});
+  theme: 'default',
+  message: 'Buy me a coffee',
+})
 
 const buttonClass = computed(() => ({
-  "bg-[#FFDD00] text-black": props.theme === "default",
-  "border-2 border-[#FFDD00] text-[#FFDD00]": props.theme === "outline",
-  "bg-gradient-to-r from-[#FFDD00] to-[#FFA500] text-black":
-    props.theme === "colored",
-}));
+  'bg-[#FFDD00] text-black': props.theme === 'default',
+  'border-2 border-[#FFDD00] text-[#FFDD00]': props.theme === 'outline',
+  'bg-gradient-to-r from-[#FFDD00] to-[#FFA500] text-black':
+    props.theme === 'colored',
+}))
 </script>
 
 <template>
   <a
     :href="`https://www.buymeacoffee.com/${username}`"
+    :class="buttonClass"
     target="_blank"
     rel="noopener noreferrer"
     class="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#FFDD00] focus:ring-offset-2"
-    :class="buttonClass"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

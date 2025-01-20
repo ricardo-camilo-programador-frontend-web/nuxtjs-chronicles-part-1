@@ -5,6 +5,7 @@ interface Props {
   label?: string
   labelStyle?: string
   actionText?: string
+  loading?: boolean
   disabled?: boolean
   title?: string
   icon?: string
@@ -12,34 +13,12 @@ interface Props {
   ripple?: boolean
 }
 
-const { t } = useI18n()
-
 const props = withDefaults(defineProps<Props>(), {
   type: 'button',
   ripple: true,
   id: '',
+  loading: false,
 })
-
-const buttonText = ref(props.label)
-
-function handleWithButtonText() {
-  return props.disabled
-    ? t('loading')
-    : props.actionText || props.label || ''
-}
-
-function handleClick() {
-  if (!props.label) {
-    return
-  }
-
-  buttonText.value = handleWithButtonText()
-  const messageTime = 3000
-
-  setTimeout(() => {
-    buttonText.value = props.label
-  }, messageTime)
-}
 
 const initializeRippleEffect = useRippleEffect(props.id)
 initializeRippleEffect()
@@ -50,7 +29,7 @@ initializeRippleEffect()
     :id="id"
     :class="ripple ? 'relative overflow-hidden' : ''"
     :type="type"
-    :disabled="disabled"
+    :disabled="disabled || loading"
     :title="title"
     class="rounded-md font-bold text-xs tracking-widest p-4 ease-in-out duration-1350 !transition-all hover:bg-orange-300 disabled:opacity-25 flex items-center justify-center"
   >

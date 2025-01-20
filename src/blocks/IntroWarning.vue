@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import { useDevCounter } from '@/composables/useDevCounter'
 import { useGTM } from '@/composables/useGTM'
-import { Dialog, DialogPanel, DialogTitle, Switch, TransitionChild, TransitionRoot } from '@headlessui/vue'
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Switch,
+  TransitionChild,
+  TransitionRoot,
+} from '@headlessui/vue'
 
 const storageAnalyticsName = 'analytics-enabled'
 const showIntroWarning = 'show-intro-warning-modal'
@@ -28,8 +35,9 @@ onMounted(() => {
   const lastVisitTime = storage.getItem(lastVisit)
   const tenMinutesInMs = 10 * 60 * 1000
 
-  const shouldShowModal = !lastVisitTime
-    || (new Date().getTime() - new Date(lastVisitTime).getTime()) > tenMinutesInMs
+  const shouldShowModal
+    = !lastVisitTime
+      || new Date().getTime() - new Date(lastVisitTime).getTime() > tenMinutesInMs
 
   if (!storage.getItem(storageAnalyticsName)) {
     storage.setItem(storageAnalyticsName, 'true')
@@ -88,7 +96,9 @@ watch(analyticsEnabled, (newValue) => {
               leave-from="opacity-100 scale-100"
               leave-to="opacity-0 scale-95"
             >
-              <DialogPanel class="w-full max-w-2xl p-6 overflow-hidden transition-all transform bg-white shadow-xl rounded-2xl">
+              <DialogPanel
+                class="w-full max-w-2xl p-6 overflow-hidden transition-all transform bg-white shadow-xl rounded-2xl"
+              >
                 <button
                   type="button"
                   class="absolute text-gray-400 top-4 right-4 hover:text-gray-500"
@@ -107,7 +117,9 @@ watch(analyticsEnabled, (newValue) => {
                 </DialogTitle>
 
                 <div class="space-y-6">
-                  <div class="bg-gradient-to-r from-yellow-600 to-orange-500 p-6 rounded-xl shadow-lg">
+                  <div
+                    class="bg-gradient-to-r from-yellow-600 to-orange-500 p-6 rounded-xl shadow-lg"
+                  >
                     <p class="text-xl font-medium text-center text-white">
                       {{ t('introWarning.welcome') }}
                     </p>
@@ -124,13 +136,13 @@ watch(analyticsEnabled, (newValue) => {
                       :to="$env.PORTFOLIO_URL"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="flex items-center justify-center gap-2 p-3 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100 relative  mx-auto"
+                      class="flex items-center justify-center gap-2 p-3 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100 relative mx-auto"
                     >
                       <img
                         src="@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp"
                         alt="Heart circle"
                         class="w-8 h-8 mr-2"
-                      />
+                      >
                       <span class="font-medium text-gray-700">
                         {{ t('introWarning.checkOutPortfolio') }}
                       </span>
@@ -146,7 +158,9 @@ watch(analyticsEnabled, (newValue) => {
                         name="mdi:linkedin"
                         class="w-6 h-6 text-blue-600"
                       />
-                      <span class="font-medium text-blue-600 group-hover:underline">
+                      <span
+                        class="font-medium text-blue-600 group-hover:underline"
+                      >
                         {{ t('introWarning.connectLinkedIn') }}
                       </span>
                     </NuxtLink>
@@ -161,22 +175,34 @@ watch(analyticsEnabled, (newValue) => {
                         name="mdi:github"
                         class="w-6 h-6 text-gray-700"
                       />
-                      <span class="font-medium text-gray-700 group-hover:underline">
+                      <span
+                        class="font-medium text-gray-700 group-hover:underline"
+                      >
                         {{ t('introWarning.checkGitHub') }}
                       </span>
                     </NuxtLink>
                   </div>
 
-                  <div class="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-xl">
+                  <div
+                    class="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-xl"
+                  >
                     <div class="flex items-center gap-3">
-                      <span class="text-gray-700">{{ t('introWarning.allowAnalytics') }}</span>
+                      <span class="text-gray-700">{{
+                        t('introWarning.allowAnalytics')
+                      }}</span>
                       <Switch
                         v-model="analyticsEnabled"
-                        :class="[analyticsEnabled ? 'bg-green-600' : 'bg-gray-200']"
+                        :class="[
+                          analyticsEnabled ? 'bg-green-600' : 'bg-gray-200',
+                        ]"
                         class="relative inline-flex items-center h-6 rounded-full w-11"
                       >
                         <span
-                          :class="[analyticsEnabled ? 'translate-x-6' : 'translate-x-1']"
+                          :class="[
+                            analyticsEnabled
+                              ? 'translate-x-6'
+                              : 'translate-x-1',
+                          ]"
                           class="inline-block w-4 h-4 transition transform bg-white rounded-full"
                         />
                       </Switch>
