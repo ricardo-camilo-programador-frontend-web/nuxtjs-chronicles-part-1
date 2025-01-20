@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SwiperSlide } from 'swiper/vue'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
 const { t } = useI18n()
@@ -49,14 +50,15 @@ const products: Array<Product> = [
       {{ t('bestSellingProducts.title') }}
     </h2>
 
-    <div
-      class="grid grid-cols-1 content-center gap-6 sm:grid-cols-2 lg:grid-cols-4"
+    <Carousel
+      class="grid grid-cols-1 content-center gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-[5rem] md:mt-0"
     >
-      <ProductCard
+      <SwiperSlide
         v-for="product in products"
         :key="product.id"
-        :product="product"
-      />
-    </div>
+      >
+        <ProductCard :product="product" />
+      </SwiperSlide>
+    </Carousel>
   </section>
 </template>
