@@ -3,7 +3,7 @@ export interface Product {
   imageSrc: string
   name: string
   price: number
-  currency: CurrencyType
+  currency: string
   altText: string
   featured: boolean
   bestSelling: boolean
