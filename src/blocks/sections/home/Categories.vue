@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { SwiperSlide } from 'swiper/vue'
 import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
 import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
 import charlesdeluvio from '@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import { SwiperSlide } from 'swiper/vue'
 
 interface CategoryItem {
   id: string
@@ -55,7 +55,7 @@ const categories = ref<Array<CategoryItem>>([
 <template>
   <section
     aria-labelledby="categories-title"
-    class="mx-auto max-w-[95vw] py-8 flex flex-col items-center justify-center w-full"
+    class="mx-auto flex w-full max-w-[95vw] flex-col items-center justify-center py-8"
   >
     <div
       class="mx-auto flex w-full max-w-[70rem] flex-col items-center justify-center"
@@ -83,10 +83,10 @@ const categories = ref<Array<CategoryItem>>([
       </header>
 
       <Carousel
-        uniqueId="categories-carousel"
+        unique-id="categories-carousel"
         class="w-full min-w-full"
         role="list"
-        navigationClass="-mt-2"
+        navigation-class="-mt-2"
       >
         <SwiperSlide
           v-for="category in categories"
