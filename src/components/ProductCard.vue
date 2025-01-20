@@ -7,7 +7,9 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <article class="bg-gray-200 rounded-lg transition-shadow hover:shadow-lg">
+  <article
+    class="bg-gray-200 rounded-lg transition-shadow hover:shadow-lg max-w-[17rem]"
+  >
     <div class="relative aspect-square mb-4">
       <Image
         :src="product.imageSrc"
