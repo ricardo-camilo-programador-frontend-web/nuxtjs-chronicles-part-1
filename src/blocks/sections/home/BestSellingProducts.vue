@@ -28,7 +28,7 @@ const translatedProducts = computed(() =>
           :image-src="product.imageSrc"
           :product-name="product.name"
           :product-price="product.formattedPrice"
-          :is-favorite="product.isFavorite"
+          :is-favorite="product.favorite"
           :alt-text="product.altText"
           :currency="product.currency"
           :formatted-price="product.formattedPrice"
