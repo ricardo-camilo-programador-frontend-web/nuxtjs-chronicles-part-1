@@ -3,7 +3,13 @@ import { SwiperSlide } from 'swiper/vue'
 
 const { t } = useI18n()
 
-const translatedProducts = computed(() => useTranslateProducts(products))
+function returnOnlyBestSellingProducts(products: Array<Product>) {
+  return products.filter(product => product.bestSelling)
+}
+
+const translatedProducts = computed(() =>
+  useTranslateProducts(returnOnlyBestSellingProducts(products)),
+)
 </script>
 
 <template>
@@ -13,10 +19,10 @@ const translatedProducts = computed(() => useTranslateProducts(products))
     </h2>
 
     <Carousel
-    :mobile-slides-per-view="1"
-        :tablet-slides-per-view="2"
-        :desktop-slides-per-view="3"
-        :rows-desktop="2"
+      :mobile-slides-per-view="1"
+      :tablet-slides-per-view="2"
+      :desktop-slides-per-view="3"
+      :rows-desktop="2"
       unique-id="best-selling-products-carousel"
       class="mt-[5rem] grid grid-cols-1 content-center gap-6 sm:grid-cols-2 md:mt-0 lg:grid-cols-4"
     >
