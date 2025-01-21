@@ -3,7 +3,7 @@ interface ProductCardProps {
   imageSrc: string
   productName: string
   productPrice: string
-  isFavorite?: boolean
+  favorite?: boolean
   altText: string
   currency: string
   formattedPrice: string
@@ -37,9 +37,9 @@ defineProps<ProductCardProps>()
         </h3>
 
         <Button
-          :icon="isFavorite ? 'i-heroicons-heart-solid' : 'i-heroicons-heart'"
+          :icon="favorite ? 'i-heroicons-heart-solid' : 'i-heroicons-heart'"
           :aria-label="
-            isFavorite ? 'Remove from favorites' : 'Add to favorites'
+            favorite ? 'Remove from favorites' : 'Add to favorites'
           "
           class="p-2"
           icon-style="text-red-500"
