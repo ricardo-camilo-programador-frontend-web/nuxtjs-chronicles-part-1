@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import catImage from '@/assets/images/pets/cat.webp'
+import dogImage from '@/assets/images/pets/dog.webp'
+import hamsterImage from '@/assets/images/pets/hamster.webp'
+import parrotImage from '@/assets/images/pets/parrot.webp'
+import rabbitImage from '@/assets/images/pets/rabbit.webp'
+import turtleImage from '@/assets/images/pets/turtle.webp'
 import { SwiperSlide } from 'swiper/vue'
 
 interface PetCategory {
@@ -15,37 +20,37 @@ const petCategories = ref<Array<PetCategory>>([
   {
     id: 'cat',
     name: t('pets.cat'),
-    icon: katherineMcadoo,
+    icon: catImage,
     altText: t('pets.catIconAlt'),
   },
   {
     id: 'hamster',
     name: t('pets.hamster'),
-    icon: katherineMcadoo,
+    icon: hamsterImage,
     altText: t('pets.hamsterIconAlt'),
   },
   {
     id: 'dog',
     name: t('pets.dog'),
-    icon: katherineMcadoo,
+    icon: dogImage,
     altText: t('pets.dogIconAlt'),
   },
   {
     id: 'parrot',
     name: t('pets.parrot'),
-    icon: katherineMcadoo,
+    icon: parrotImage,
     altText: t('pets.parrotIconAlt'),
   },
   {
     id: 'rabbit',
     name: t('pets.rabbit'),
-    icon: katherineMcadoo,
+    icon: rabbitImage,
     altText: t('pets.rabbitIconAlt'),
   },
   {
     id: 'turtle',
     name: t('pets.turtle'),
-    icon: katherineMcadoo,
+    icon: turtleImage,
     altText: t('pets.turtleIconAlt'),
   },
 ])
@@ -86,9 +91,9 @@ const petCategories = ref<Array<PetCategory>>([
             <Image
               :src="pet.icon"
               :alt="pet.altText"
-              :width="80"
-              :height="80"
-              class="h-12 w-12 object-contain"
+              :width="150"
+              :height="150"
+              class="h-24 w-24 object-contain"
               loading="lazy"
             />
           </div>
