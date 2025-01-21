@@ -44,15 +44,16 @@ const translatedProducts = computed(() =>
 
       <Carousel
         :mobile-slides-per-view="1"
-        :tablet-slides-per-view="2"
+        :tablet-slides-per-view="3"
         :desktop-slides-per-view="3"
         :rows-desktop="1"
         navigation-class="hidden"
         unique-id="featured-products-carousel"
         role="list"
+        class="mx-auto max-w-[95vw]"
       >
         <SwiperSlide
-          v-for="product in translatedProducts"
+          v-for="product in translatedProducts.slice(0, 3)"
           :key="product.id"
           class="m-auto ml-2 md:ml-0"
         >
