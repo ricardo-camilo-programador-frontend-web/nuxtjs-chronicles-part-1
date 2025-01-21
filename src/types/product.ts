@@ -7,5 +7,5 @@ export interface Product {
   altText: string
   featured: boolean
   bestSelling: boolean
-  isFavorite?: boolean
+  favorite: boolean
 }
