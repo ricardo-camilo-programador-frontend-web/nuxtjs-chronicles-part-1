@@ -13,8 +13,10 @@ const translatedProducts = computed(() => useTranslateProducts(products))
     </h2>
 
     <Carousel
-      :slides-per-column="2"
-      :rows-desktop="1.5"
+    :mobile-slides-per-view="1"
+        :tablet-slides-per-view="2"
+        :desktop-slides-per-view="3"
+        :rows-desktop="2"
       unique-id="best-selling-products-carousel"
       class="mt-[5rem] grid grid-cols-1 content-center gap-6 sm:grid-cols-2 md:mt-0 lg:grid-cols-4"
     >
