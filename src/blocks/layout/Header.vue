@@ -20,7 +20,7 @@ const headerClasses = computed(() => {
       class="mx-auto hidden h-10 w-screen items-center justify-between md:flex"
     >
       <div class="flex gap-4">
-        <div class="group flex items-center gap-2 mr-auto">
+        <div class="group mr-auto flex items-center gap-2">
           <NuxtLink
             to="https://wa.me/5511999999999"
             target="_blank"
@@ -39,7 +39,7 @@ const headerClasses = computed(() => {
           </NuxtLink>
         </div>
 
-        <div class="group flex items-center gap-2 mr-auto h-16">
+        <div class="group mr-auto flex h-16 items-center gap-2">
           <NuxtLink
             :to="`mailto:${$env.EMAIL}`"
             class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
@@ -81,30 +81,24 @@ const headerClasses = computed(() => {
       :class="[headerClasses]"
       class="fixed mx-auto mt-[6rem] flex w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg"
     >
-      <div class="container relative mx-auto flex w-full lg:w-auto z-[9999]">
+      <div class="container relative z-[9999] mx-auto flex w-full lg:w-auto">
         <Logo />
       </div>
 
       <div
-        class="lg:flex relative mx-auto hidden w-full items-center justify-center"
+        class="relative mx-auto hidden w-full items-center justify-center lg:flex"
       >
         <DesktopMenu />
       </div>
 
-      <div
-        class="right-5 w-full items-center justify-end flex gap-4 lg:w-auto"
-      >
-        <div>
-          Pesquisa
-        </div>
+      <div class="right-5 flex w-full items-center justify-end gap-4 lg:w-auto">
+        <div>Pesquisa</div>
 
         <div>
           <FavoritesMenu />
         </div>
 
-        <div>
-          Carrinho
-        </div>
+        <div>Carrinho</div>
 
         <div class="lg:hidden">
           <MobileMenu />
