@@ -98,7 +98,9 @@ const headerClasses = computed(() => {
           <FavoritesMenu />
         </div>
 
-        <div>Carrinho</div>
+        <div>
+          <CartMenu />
+        </div>
 
         <div class="lg:hidden">
           <MobileMenu />
