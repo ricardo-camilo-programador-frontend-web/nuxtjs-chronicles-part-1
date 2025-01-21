@@ -21,8 +21,6 @@ function handleClickOutside(event: MouseEvent) {
     event,
   )
 
-  console.log('handleClickOutside', clickedOutsideDropdownList)
-
   if (clickedOutsideDropdownList) {
     showFavoritesMenu.value = false
   }
