@@ -86,13 +86,13 @@ const headerClasses = computed(() => {
       </div>
 
       <div
-        class="container relative mx-auto hidden w-full items-center justify-center lg:flex"
+        class="lg:flex relative mx-auto hidden w-full items-center justify-center"
       >
         <DesktopMenu />
       </div>
 
       <div
-        class="relative right-5 w-full items-center justify-end flex gap-4"
+        class="relative right-5 w-full items-center justify-end flex gap-4 lg:w-auto"
       >
         <div>
           Pesquisa
