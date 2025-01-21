@@ -38,9 +38,7 @@ defineProps<ProductCardProps>()
 
         <Button
           :icon="favorite ? 'i-heroicons-heart-solid' : 'i-heroicons-heart'"
-          :aria-label="
-            favorite ? 'Remove from favorites' : 'Add to favorites'
-          "
+          :aria-label="favorite ? 'Remove from favorites' : 'Add to favorites'"
           class="p-2"
           icon-style="text-red-500"
         />
