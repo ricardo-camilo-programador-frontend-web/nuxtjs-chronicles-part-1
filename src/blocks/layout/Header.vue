@@ -92,7 +92,9 @@ const headerClasses = computed(() => {
       </div>
 
       <div class="right-5 flex w-full items-center justify-end gap-4 lg:w-auto">
-        <div>Pesquisa</div>
+        <div>
+          <Search />
+        </div>
 
         <div>
           <FavoritesMenu />
