@@ -86,7 +86,7 @@ const petCategories = ref<Array<PetCategory>>([
           class="group flex w-full flex-col items-center gap-3 rounded-lg p-4 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
           <div
-            class="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-orange-100"
+            class="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-orange-500"
           >
             <Image
               :src="pet.icon"
