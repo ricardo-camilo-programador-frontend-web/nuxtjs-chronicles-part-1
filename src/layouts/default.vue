@@ -10,13 +10,14 @@ useHead({
   <div
     class="md:min-w-screen relative flex flex-col overflow-hidden bg-gray-50 md:min-h-screen"
   >
-    <div class="relative flex flex-col overflow-hidden bg-gray-50 md:min-h-screen max-w-7xl mx-auto">
+    <div
+      class="relative mx-auto flex max-w-7xl flex-col overflow-hidden bg-gray-50 md:min-h-screen"
+    >
       <Header />
 
       <main class="relative flex min-h-screen flex-col px-2 md:min-w-full">
         <slot />
       </main>
-
     </div>
     <Footer />
 
