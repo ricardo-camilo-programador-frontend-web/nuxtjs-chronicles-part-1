@@ -21,7 +21,7 @@ function toggleNav() {
         type="button"
         class="hover:text-primary block h-10 rounded-none border-transparent bg-transparent p-2 text-gray-600 shadow-transparent hover:border-none hover:bg-none hover:shadow-none"
         aria-label="toggle menu"
-        icon="mdi:menu"
+        icon="mdi:cart"
         icon-style="text-3xl"
         @click="toggleNav"
       />
