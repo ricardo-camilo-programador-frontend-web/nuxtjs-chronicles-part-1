@@ -1,10 +1,10 @@
 import type { Product } from '@/types/product'
-import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
-import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
-import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 import birdCage from '@/assets/images/bird-cage.webp'
+import catFoodPremium from '@/assets/images/cat-food-premium.webp'
 import catFood from '@/assets/images/cat-food.webp'
 import dogCollar from '@/assets/images/dog-collar.webp'
+import dogFoodLarge from '@/assets/images/dog-food-large.webp'
+import dogFoodMedium from '@/assets/images/dog-food-medium.webp'
 import dogFoodMini from '@/assets/images/dog-food-mini.webp'
 import dogFoodOrange from '@/assets/images/dog-food-orange.webp'
 import fishFilter from '@/assets/images/fish-filter.webp'
@@ -137,7 +137,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-orange-2',
-    imageSrc: backgroundGradientOrange,
+    imageSrc: dogFoodLarge,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -148,7 +148,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-cat-food-2',
-    imageSrc: katherineMcadoo,
+    imageSrc: catFoodPremium,
     name: 'products.premiumCatFood',
     price: 18.99,
     currency: 'products.currency',
@@ -159,7 +159,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-mini-2',
-    imageSrc: backgroundGradientOrangeMini,
+    imageSrc: dogFoodMedium,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -170,7 +170,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-orange-3',
-    imageSrc: backgroundGradientOrange,
+    imageSrc: dogFoodOrange,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -181,7 +181,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-cat-food-3',
-    imageSrc: katherineMcadoo,
+    imageSrc: catFood,
     name: 'products.premiumCatFood',
     price: 18.99,
     currency: 'products.currency',
@@ -192,7 +192,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-mini-3',
-    imageSrc: backgroundGradientOrangeMini,
+    imageSrc: dogFoodMini,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -203,7 +203,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-orange-4',
-    imageSrc: backgroundGradientOrange,
+    imageSrc: dogFoodOrange,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -214,7 +214,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-cat-food-4',
-    imageSrc: katherineMcadoo,
+    imageSrc: catFood,
     name: 'products.premiumCatFood',
     price: 18.99,
     currency: 'products.currency',
@@ -225,7 +225,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-mini-4',
-    imageSrc: backgroundGradientOrangeMini,
+    imageSrc: dogFoodMini,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -236,7 +236,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-orange-5',
-    imageSrc: backgroundGradientOrange,
+    imageSrc: dogFoodOrange,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -247,7 +247,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-cat-food-5',
-    imageSrc: katherineMcadoo,
+    imageSrc: catFood,
     name: 'products.premiumCatFood',
     price: 18.99,
     currency: 'products.currency',
