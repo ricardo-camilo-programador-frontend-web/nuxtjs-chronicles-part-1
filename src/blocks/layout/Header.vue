@@ -14,45 +14,47 @@ const headerClasses = computed(() => {
 
 <template>
   <header
-    class="left-0 right-0 top-0 z-[99] mx-auto flex w-full max-w-[50vw] items-center justify-center px-4 md:max-w-full dark:bg-gray-800"
+    class="left-0 right-0 top-0 z-[99] mx-auto flex w-full max-w-[50vw] items-center justify-center md:max-w-full dark:bg-gray-800"
   >
     <div
       class="relative mx-auto hidden h-10 w-full items-center justify-between md:flex"
     >
-      <div class="group flex items-center gap-2">
-        <NuxtLink
-          to="https://wa.me/5511999999999"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
-          aria-label="Enviar mensagem no WhatsApp"
-        >
-          <Icon
-            name="mdi:phone"
-            class="h-5 w-5 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
-            aria-label="Phone icon"
-          />
-          <span class="text-sm text-gray-800 group-hover:text-orange-500">
-            + 55 11 99999-9999
-          </span>
-        </NuxtLink>
-      </div>
+      <div class="flex gap-4">
+        <div class="group flex items-center gap-2 mr-auto">
+          <NuxtLink
+            to="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
+            aria-label="Enviar mensagem no WhatsApp"
+          >
+            <Icon
+              name="mdi:phone"
+              class="h-5 w-5 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
+              aria-label="Phone icon"
+            />
+            <span class="text-sm text-gray-800 group-hover:text-orange-500">
+              + 55 11 99999-9999
+            </span>
+          </NuxtLink>
+        </div>
 
-      <div class="group flex items-center gap-2">
-        <NuxtLink
-          :to="`mailto:${$env.EMAIL}`"
-          class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
-          aria-label="Enviar email"
-        >
-          <Icon
-            name="mdi:email"
-            class="h-5 w-5 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
-            aria-label="Email icon"
-          />
-          <span class="text-sm text-gray-800 group-hover:text-orange-500">
-            {{ $env.EMAIL }}
-          </span>
-        </NuxtLink>
+        <div class="group flex items-center gap-2 mr-auto">
+          <NuxtLink
+            :to="`mailto:${$env.EMAIL}`"
+            class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
+            aria-label="Enviar email"
+          >
+            <Icon
+              name="mdi:email"
+              class="h-5 w-5 cursor-pointer rounded-full text-gray-800 transition-all duration-200 ease-in-out group-hover:text-orange-500"
+              aria-label="Email icon"
+            />
+            <span class="text-sm text-gray-800 group-hover:text-orange-500">
+              {{ $env.EMAIL }}
+            </span>
+          </NuxtLink>
+        </div>
       </div>
 
       <div class="flex items-center gap-2">
