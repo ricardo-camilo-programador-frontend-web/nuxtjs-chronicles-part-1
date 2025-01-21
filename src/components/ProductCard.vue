@@ -29,7 +29,7 @@ defineProps<ProductCardProps>()
     </div>
 
     <div
-      class="flex h-full max-h-[4rem] min-h-[7rem] max-w-[95vw] flex-col space-y-2 rounded-b-lg bg-white px-4 py-2 sm:max-w-[17rem]"
+      class="flex h-full max-h-[4rem] min-h-[7rem] max-w-[95vw] flex-col space-y-2 rounded-b-lg bg-white px-4 py-2"
     >
       <div class="flex h-full w-full items-center justify-between">
         <h3 class="text-lg font-medium">
