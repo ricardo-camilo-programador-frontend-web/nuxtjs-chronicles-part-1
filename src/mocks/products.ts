@@ -2,13 +2,23 @@ import type { Product } from '@/types/product'
 import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
 import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
+import birdCage from '@/assets/images/bird-cage.webp'
+import catFood from '@/assets/images/cat-food.webp'
+import dogCollar from '@/assets/images/dog-collar.webp'
+import dogFoodMini from '@/assets/images/dog-food-mini.webp'
+import dogFoodOrange from '@/assets/images/dog-food-orange.webp'
+import fishFilter from '@/assets/images/fish-filter.webp'
+import groomingKit from '@/assets/images/grooming-kit.webp'
+import hamsterHabitat from '@/assets/images/hamster-habitat.webp'
+import litterBox from '@/assets/images/litter-box.webp'
+import scratchingPost from '@/assets/images/scratching-post.webp'
 
 export const products: Array<Product> = [
   {
     id: 'premium-cat-food-1',
     name: 'products.premiumCatFood',
     price: 24.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: catFood,
     favorite: true,
     currency: 'products.currency',
     altText: 'products.catBowlAltText',
@@ -19,7 +29,7 @@ export const products: Array<Product> = [
     id: 'leather-dog-collar',
     name: 'products.leatherDogCollar',
     price: 34.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: dogCollar,
     favorite: false,
     currency: 'products.currency',
     altText: 'products.dogCollarAltText',
@@ -30,7 +40,7 @@ export const products: Array<Product> = [
     id: 'cat-scratching-post',
     name: 'products.catScratchingPost',
     price: 59.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: scratchingPost,
     favorite: true,
     currency: 'products.currency',
     altText: 'products.scratchingPostAltText',
@@ -41,7 +51,7 @@ export const products: Array<Product> = [
     id: 'bird-cage-deluxe',
     name: 'products.birdCageDeluxe',
     price: 89.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: birdCage,
     favorite: false,
     currency: 'products.currency',
     altText: 'products.birdCageAltText',
@@ -52,7 +62,7 @@ export const products: Array<Product> = [
     id: 'hamster-habitat',
     name: 'products.hamsterHabitat',
     price: 45.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: hamsterHabitat,
     favorite: false,
     currency: 'products.currency',
     altText: 'products.hamsterHabitatAltText',
@@ -63,7 +73,7 @@ export const products: Array<Product> = [
     id: 'fish-tank-filter',
     name: 'products.fishTankFilter',
     price: 29.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: fishFilter,
     favorite: false,
     currency: 'products.currency',
     altText: 'products.fishFilterAltText',
@@ -74,7 +84,7 @@ export const products: Array<Product> = [
     id: 'dog-grooming-kit',
     name: 'products.dogGroomingKit',
     price: 49.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: groomingKit,
     favorite: true,
     currency: 'products.currency',
     altText: 'products.groomingKitAltText',
@@ -85,7 +95,7 @@ export const products: Array<Product> = [
     id: 'cat-litter-box',
     name: 'products.catLitterBox',
     price: 39.99,
-    imageSrc: katherineMcadoo,
+    imageSrc: litterBox,
     favorite: false,
     currency: 'products.currency',
     altText: 'products.litterBoxAltText',
@@ -94,7 +104,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-orange-1',
-    imageSrc: backgroundGradientOrange,
+    imageSrc: dogFoodOrange,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
@@ -105,7 +115,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-cat-food-1',
-    imageSrc: katherineMcadoo,
+    imageSrc: catFood,
     name: 'products.premiumCatFood',
     price: 18.99,
     currency: 'products.currency',
@@ -116,7 +126,7 @@ export const products: Array<Product> = [
   },
   {
     id: 'premium-dog-food-mini-1',
-    imageSrc: backgroundGradientOrangeMini,
+    imageSrc: dogFoodMini,
     name: 'products.premiumDogFood',
     price: 18.99,
     currency: 'products.currency',
