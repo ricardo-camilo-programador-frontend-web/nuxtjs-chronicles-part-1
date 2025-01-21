@@ -15,11 +15,11 @@ function toggleNav() {
   <div
     class="relative flex h-auto w-full content-center items-center transition-all duration-500 ease-out"
   >
-    <div class="flex items-center justify-center w-full h-full">
+    <div class="flex h-full w-full items-center justify-center">
       <span class="sr-only">Toggle menu</span>
       <Button
         type="button"
-        class="block rounded-none border-transparent bg-transparent p-2 text-gray-600 shadow-transparent hover:border-none hover:bg-none hover:text-primary hover:shadow-none h-10"
+        class="hover:text-primary block h-10 rounded-none border-transparent bg-transparent p-2 text-gray-600 shadow-transparent hover:border-none hover:bg-none hover:shadow-none"
         aria-label="toggle menu"
         icon="mdi:menu"
         icon-style="text-3xl"
@@ -36,7 +36,7 @@ function toggleNav() {
     >
       <div
         v-show="showMenu"
-        class="fixed inset-0 left-0 -mt-1 mr-auto flex h-full min-h-screen w-full min-w-[17rem] hover:text-primary/75 z-[99]"
+        class="hover:text-primary/75 fixed inset-0 left-0 z-[99] -mt-1 mr-auto flex h-full min-h-screen w-full min-w-[17rem]"
       >
         <nav
           class="container mx-auto flex h-full min-h-screen w-full min-w-[17rem] border-r-2 shadow-lg md:items-center md:justify-between"
@@ -52,7 +52,7 @@ function toggleNav() {
               >
                 <Button
                   type="button"
-                  class="focus:white group right-0 ml-auto h-min w-min border-none bg-transparent text-[1.3rem] text-black shadow-transparent hover:border-transparent hover:bg-none hover:text-primary hover:shadow-transparent focus:outline-none md:text-[1.43rem] xl:text-[1.5rem]"
+                  class="focus:white hover:text-primary group right-0 ml-auto h-min w-min border-none bg-transparent text-[1.3rem] text-black shadow-transparent hover:border-transparent hover:bg-none hover:shadow-transparent focus:outline-none md:text-[1.43rem] xl:text-[1.5rem]"
                   aria-label="Fechar menu."
                   title="Fechar menu."
                   icon="mdi:close"
@@ -60,7 +60,7 @@ function toggleNav() {
               </div>
             </div>
             <ul
-              class="inset-y-0 left-0 -mt-3 flex h-auto flex-col gap-1 bg-white text-base md:text-[1.5rem] xl:text-[1.6rem] max-w-[17rem] pt-16"
+              class="inset-y-0 left-0 -mt-3 flex h-auto max-w-[17rem] flex-col gap-1 bg-white pt-16 text-base md:text-[1.5rem] xl:text-[1.6rem]"
             >
               <li
                 v-for="item in menuLinks"
@@ -69,10 +69,10 @@ function toggleNav() {
               >
                 <NuxtLink
                   :to="item.path"
-                  class="items-between flex w-full cursor-pointer rounded px-2 py-4 pl-4 text-black border-b-2 border-transparent hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out"
+                  class="items-between flex w-full cursor-pointer rounded border-b-2 border-transparent px-2 py-4 pl-4 text-black transition-all duration-300 ease-in-out hover:border-orange-500 hover:text-orange-500"
                 >
                   <div
-                    class="flex w-full content-center items-center justify-center gap-2 group-hover:border-b-primary/75 group-hover:text-primary/75"
+                    class="group-hover:border-b-primary/75 group-hover:text-primary/75 flex w-full content-center items-center justify-center gap-2"
                   >
                     <div
                       v-if="item.icon"
@@ -80,7 +80,7 @@ function toggleNav() {
                     >
                       <img
                         :src="item.icon"
-                        class="force-svg-color h-6 w-6 fill-primary"
+                        class="force-svg-color fill-primary h-6 w-6"
                         alt="Ícone do menu."
                       >
                     </div>
