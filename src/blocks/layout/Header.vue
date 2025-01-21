@@ -4,7 +4,7 @@ const { isScrollingDown, isScrolled } = useScroll()
 
 const headerClasses = computed(() => {
   return {
-    'translate-y-[-40%]  md:translate-y-[-70%] rounded-none':
+    'translate-y-[-40%]  md:translate-y-[-50%] rounded-none':
       isScrollingDown.value,
     'bg-white shadow-lg': isScrolled.value,
     'transition-transform duration-300 ease-in-out': true,
@@ -39,7 +39,7 @@ const headerClasses = computed(() => {
           </NuxtLink>
         </div>
 
-        <div class="group flex items-center gap-2 mr-auto">
+        <div class="group flex items-center gap-2 mr-auto h-16">
           <NuxtLink
             :to="`mailto:${$env.EMAIL}`"
             class="flex items-center gap-2 transition-all duration-200 group-hover:text-orange-500"
