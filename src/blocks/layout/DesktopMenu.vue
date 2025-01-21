@@ -1,14 +1,12 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div class="flex gap-4 relative mx-auto">
+  <div class="relative mx-auto flex gap-4">
     <NuxtLink
       v-for="link in menuLinks"
       :key="link.path"
       :to="link.path"
-      class="text-lg hover:text-orange-500 border-b border-transparent hover:border-orange-500 transition-all duration-300 ease-in-out"
+      class="border-b border-transparent text-lg transition-all duration-300 ease-in-out hover:border-orange-500 hover:text-orange-500"
     >
       {{ $t(link.translationKey) }}
     </NuxtLink>
