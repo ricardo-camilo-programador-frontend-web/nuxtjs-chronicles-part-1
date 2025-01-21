@@ -40,6 +40,7 @@ const translatedProducts = computed(() => useTranslateProducts(products))
         :mobile-slides-per-view="1"
         :tablet-slides-per-view="2"
         :desktop-slides-per-view="3"
+        :rows-desktop="2"
         navigation-class="hidden"
         unique-id="featured-products-carousel"
         role="list"
