@@ -1,4 +1,15 @@
 export const en = {
+  menu: {
+    links: {
+      home: 'Home',
+      shop: 'Shop',
+      about: 'About Us',
+      contact: 'Contact Us',
+      search: 'Search',
+      favorites: 'Favorites',
+      cart: 'Cart',
+    },
+  },
   hero: {
     category: 'Pet Shop',
     title: 'A pet store with everything you need',

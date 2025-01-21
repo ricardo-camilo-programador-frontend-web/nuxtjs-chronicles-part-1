@@ -1,4 +1,15 @@
 export const pt = {
+  menu: {
+    links: {
+      home: 'Home',
+      shop: 'Loja',
+      about: 'Sobre Nós',
+      contact: 'Contato',
+      search: 'Pesquisa',
+      favorites: 'Favoritos',
+      cart: 'Carrinho',
+    },
+  },
   hero: {
     category: 'Pet Shop',
     title: 'Uma loja pet com tudo que você precisa',
