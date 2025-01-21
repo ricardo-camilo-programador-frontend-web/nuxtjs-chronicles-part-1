@@ -6,7 +6,13 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const translatedProducts = computed(() => useTranslateProducts(products))
+function returnOnlyFeaturedProducts(products: Array<Product>) {
+  return products.filter(product => product.featured)
+}
+
+const translatedProducts = computed(() =>
+  useTranslateProducts(returnOnlyFeaturedProducts(products)),
+)
 </script>
 
 <template>
