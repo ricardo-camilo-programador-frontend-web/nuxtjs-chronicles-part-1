@@ -1,4 +1,5 @@
 export const pt = {
+  soon: 'Em breve',
   menu: {
     links: {
       home: 'Home',
