@@ -55,7 +55,7 @@ function toggleNav() {
                   class="focus:white group right-0 ml-auto h-min w-min border-none bg-transparent text-[1.3rem] text-black shadow-transparent hover:border-transparent hover:bg-none hover:text-primary hover:shadow-transparent focus:outline-none md:text-[1.43rem] xl:text-[1.5rem]"
                   aria-label="Fechar menu."
                   title="Fechar menu."
-                  icon="bx bx-x group-hover:translate-x-0 ml-auto bx-md right-0 group-hover:text-primary"
+                  icon="mdi:close"
                 />
               </div>
             </div>
