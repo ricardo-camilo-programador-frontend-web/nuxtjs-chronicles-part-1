@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { SwiperSlide } from 'swiper/vue'
-
 const { t } = useI18n()
 
 function returnOnlyBestSellingProducts(products: Array<Product>) {
@@ -18,18 +16,13 @@ const translatedProducts = computed(() =>
       {{ t('bestSellingProducts.title') }}
     </h2>
 
-    <Carousel
-      :mobile-slides-per-view="1"
-      :tablet-slides-per-view="3"
-      :desktop-slides-per-view="4"
-      :rows-desktop="1.5"
-      unique-id="best-selling-products-carousel"
-      class="max-h-[850px]"
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[unset] min-h-[500px] max-w-[95vw]"
     >
-      <SwiperSlide
-        v-for="product in translatedProducts"
+      <div
+        v-for="product in translatedProducts.slice(0, 8)"
         :key="product.id"
-        class="w-full min-w-[17rem]"
+        class="w-full min-w-[17rem] h-auto"
       >
         <ProductCard
           :image-src="product.imageSrc"
@@ -41,7 +34,7 @@ const translatedProducts = computed(() =>
           :formatted-price="product.formattedPrice"
           :name="product.name"
         />
-      </SwiperSlide>
-    </Carousel>
+      </div>
+    </div>
   </section>
 </template>
