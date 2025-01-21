@@ -17,7 +17,7 @@ const headerClasses = computed(() => {
     class="left-0 right-0 top-0 z-[99] mx-auto flex w-full max-w-[50vw] items-center justify-center md:max-w-full dark:bg-gray-800"
   >
     <div
-      class="relative mx-auto hidden h-10 w-full items-center justify-between md:flex"
+      class="relative mx-auto hidden h-10 w-screen items-center justify-between md:flex"
     >
       <div class="flex gap-4">
         <div class="group flex items-center gap-2 mr-auto">
@@ -79,22 +79,36 @@ const headerClasses = computed(() => {
 
     <div
       :class="[headerClasses]"
-      class="fixed mx-auto mt-[6rem] grid w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg"
+      class="fixed mx-auto mt-[6rem] flex w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg"
     >
-      <div class="container relative left-0 mr-auto flex w-auto">
+      <div class="container relative left-0 mr-auto flex w-full lg:w-auto">
         <Logo />
       </div>
 
       <div
-        class="container relative mx-auto hidden w-full items-center justify-center md:flex"
+        class="container relative mx-auto hidden w-full items-center justify-center lg:flex"
       >
-        Menu Items(SOON)
+        <DesktopMenu />
       </div>
 
       <div
-        class="container relative mx-auto hidden w-full items-center justify-center md:flex"
+        class="relative right-5 w-full items-center justify-end flex gap-4"
       >
-        SHORTCUTS(SOON)
+        <div>
+          Pesquisa
+        </div>
+
+        <div>
+          Favoritos
+        </div>
+
+        <div>
+          Carrinho
+        </div>
+
+        <div class="lg:hidden">
+          <MobileMenu />
+        </div>
       </div>
     </div>
 
