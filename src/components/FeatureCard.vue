@@ -12,7 +12,7 @@ defineProps<FeatureCardProps>()
 
 <template>
   <div
-    class="flex h-[31rem] w-full min-w-[17rem] max-w-[20rem] flex-col items-center overflow-visible rounded-lg border bg-gray-200 shadow-md"
+    class="flex h-[31rem] w-full min-w-[17rem] max-w-[20rem] flex-col items-center overflow-visible rounded-lg border bg-gray-200 shadow-md hover:bg-orange-500 hover:shadow-lg"
   >
     <div class="h-full w-full overflow-visible p-24">
       <Image
