@@ -20,11 +20,11 @@ const translatedProducts = computed(() =>
 
     <Carousel
       :mobile-slides-per-view="1"
-      :tablet-slides-per-view="2"
-      :desktop-slides-per-view="3"
-      :rows-desktop="2"
+      :tablet-slides-per-view="3"
+      :desktop-slides-per-view="4"
+      :rows-desktop="1.5"
       unique-id="best-selling-products-carousel"
-      class="mt-[5rem] grid grid-cols-1 content-center gap-6 sm:grid-cols-2 md:mt-0 lg:grid-cols-4"
+      class="max-h-[850px]"
     >
       <SwiperSlide
         v-for="product in translatedProducts"
