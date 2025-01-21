@@ -1,4 +1,7 @@
-export function isClickOutsideElement(elementTarget: HTMLElement | null, event: MouseEvent): boolean {
+export function isClickOutsideElement(
+  elementTarget: HTMLElement | null,
+  event: MouseEvent,
+): boolean {
   if (!elementTarget) {
     return true
   }
