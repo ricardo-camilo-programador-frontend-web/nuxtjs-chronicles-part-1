@@ -81,7 +81,7 @@ const headerClasses = computed(() => {
       :class="[headerClasses]"
       class="fixed mx-auto mt-[6rem] flex w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg"
     >
-      <div class="container relative left-0 mr-auto flex w-full lg:w-auto z-[9999]">
+      <div class="container relative left-0 mr-auto flex w-full lg:w-auto z-[9999] scale-150 pl-16 lg:pl-7">
         <Logo />
       </div>
 
