@@ -17,12 +17,12 @@ const translatedProducts = computed(() =>
     </h2>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[unset] min-h-[500px] max-w-[95vw]"
+      class="grid max-h-[unset] min-h-[500px] max-w-[95vw] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
     >
       <div
         v-for="product in translatedProducts.slice(0, 8)"
         :key="product.id"
-        class="w-full min-w-[17rem] h-auto"
+        class="h-auto w-full min-w-[17rem]"
       >
         <ProductCard
           :image-src="product.imageSrc"
