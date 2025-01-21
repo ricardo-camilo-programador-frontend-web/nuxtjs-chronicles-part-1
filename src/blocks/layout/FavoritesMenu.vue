@@ -69,7 +69,7 @@ onUnmounted(() => {
               height="50"
             />
 
-            <p class="text-sm line-clamp-2">
+            <p class="line-clamp-2 text-sm">
               {{ product.name }}
             </p>
 
