@@ -79,9 +79,9 @@ const headerClasses = computed(() => {
 
     <div
       :class="[headerClasses]"
-      class="fixed mx-auto mt-[6rem] flex w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg min-h-16"
+      class="fixed mx-auto mt-[6rem] flex w-screen justify-between rounded-full bg-white p-4 shadow-lg min-h-16"
     >
-      <div class="absolute left-5 z-[9999] mx-auto flex w-full lg:w-auto">
+      <div class="lg:absolute lg:left-5 z-[9999] mx-auto flex w-auto mr-auto">
         <Logo />
       </div>
 
@@ -91,7 +91,7 @@ const headerClasses = computed(() => {
         <DesktopMenu />
       </div>
 
-      <div class="right-5 flex w-full items-center justify-end gap-4 lg:w-auto absolute">
+      <div class="right-5 flex w-full items-center justify-end gap-4 lg:w-auto lg:absolute">
         <div class="hidden lg:block">
           <Search />
         </div>
