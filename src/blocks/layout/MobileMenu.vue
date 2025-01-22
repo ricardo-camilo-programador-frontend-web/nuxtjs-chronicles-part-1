@@ -96,7 +96,7 @@ function toggleNav() {
           </div>
         </nav>
         <div
-          class="z-5 hidden h-full min-h-screen w-full min-w-full cursor-pointer bg-black/50 backdrop-blur-sm sm:block"
+          class="z-5  h-full min-h-screen w-full min-w-full cursor-pointer bg-black/50 backdrop-blur-sm block"
           title="Fechar menu."
           @click="toggleNav"
         />

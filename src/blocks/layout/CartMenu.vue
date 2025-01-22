@@ -26,6 +26,7 @@ function toggleNav() {
         @click="toggleNav"
       />
     </div>
+
     <Transition
       enter-active-class="transition-all duration-300 ease-out"
       enter-from-class="opacity-0 translate-x-full"
@@ -39,7 +40,7 @@ function toggleNav() {
         class="hover:text-primary/75 fixed inset-0 right-0 z-[99] -mt-1 ml-auto flex h-full min-h-screen w-full min-w-[17rem]"
       >
         <div
-          class="z-5 hidden h-full min-h-screen w-full min-w-full cursor-pointer bg-black/10 backdrop-blur-sm sm:block z-[90]"
+          class="z-5 h-full min-h-screen w-full min-w-full cursor-pointer bg-black/10 backdrop-blur-sm block z-[90]"
           title="Fechar menu."
           @click="toggleNav"
         />
