@@ -1,55 +1,10 @@
 <script setup lang="ts">
-import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
-import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
-import charlesdeluvio from '@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp'
-import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 import { SwiperSlide } from 'swiper/vue'
-
-interface CategoryItem {
-  id: string
-  title: string
-  productCount: number
-  gradientClass: string
-  src: string
-  altText: string
-}
 
 const { t } = useI18n()
 
-const categories = ref<Array<CategoryItem>>([
-  {
-    id: 'accessories',
-    title: t('categories.items.accessories.title'),
-    productCount: 84,
-    gradientClass: 'bg-gradient-to-r from-purple-400 to-pink-400',
-    src: backgroundGradientOrange,
-    altText: t('categories.items.accessories.altText'),
-  },
-  {
-    id: 'food',
-    title: t('categories.items.food.title'),
-    productCount: 64,
-    gradientClass: 'bg-gradient-to-r from-green-400 to-blue-400',
-    src: backgroundGradientOrangeMini,
-    altText: t('categories.items.food.altText'),
-  },
-  {
-    id: 'furniture',
-    title: t('categories.items.furniture.title'),
-    productCount: 22,
-    gradientClass: 'bg-gradient-to-r from-blue-400 to-teal-400',
-    src: charlesdeluvio,
-    altText: t('categories.items.furniture.altText'),
-  },
-  {
-    id: 'bags',
-    title: t('categories.items.bags.title'),
-    productCount: 16,
-    gradientClass: 'bg-gradient-to-r from-pink-400 to-red-400',
-    src: katherineMcadoo,
-    altText: t('categories.items.bags.altText'),
-  },
-])
+const categoriesStore = useCategoriesStore()
+const categories = computed(() => categoriesStore.getCategories)
 </script>
 
 <template>
@@ -96,7 +51,7 @@ const categories = ref<Array<CategoryItem>>([
         >
           <CategorieCard
             :src="category.src"
-            :title="category.title"
+            :title="t(category.title)"
             :product-count="category.productCount"
             :gradient-class="category.gradientClass"
           />
