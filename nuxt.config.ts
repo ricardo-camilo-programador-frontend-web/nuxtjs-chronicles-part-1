@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
   ],
 
   i18n: {
