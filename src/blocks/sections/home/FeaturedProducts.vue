@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useTranslateProducts } from '@/composables/useTranslateProduct'
-import { products } from '@/mocks/products'
 import { SwiperSlide } from 'swiper/vue'
 import { useI18n } from 'vue-i18n'
 
@@ -10,13 +9,18 @@ function returnOnlyFeaturedProducts(products: Array<Product>) {
   return products.filter(product => product.featured)
 }
 
+const { getProducts } = useProductStore()
+
+const products = computed(() => getProducts())
+
 const translatedProducts = computed(() =>
-  useTranslateProducts(returnOnlyFeaturedProducts(products)),
+  useTranslateProducts(returnOnlyFeaturedProducts(products.value)),
 )
 </script>
 
 <template>
   <section
+    v-if="translatedProducts.length > 0"
     aria-labelledby="featured-products-title"
     class="mx-auto my-8 max-w-[95vw] flex flex-col items-center justify-center w-full min-w-full"
   >
@@ -68,6 +72,5 @@ const translatedProducts = computed(() =>
         </SwiperSlide>
       </Carousel>
     </div>
-
   </section>
 </template>
