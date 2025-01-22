@@ -79,7 +79,7 @@ const headerClasses = computed(() => {
 
     <div
       :class="[headerClasses]"
-      class="fixed mx-auto mt-[6rem] flex w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg"
+      class="fixed mx-auto mt-[6rem] flex w-screen grid-cols-3 rounded-full bg-white p-4 shadow-lg min-h-16"
     >
       <div class="absolute left-5 z-[9999] mx-auto flex w-full lg:w-auto">
         <Logo />
@@ -92,7 +92,7 @@ const headerClasses = computed(() => {
       </div>
 
       <div class="right-5 flex w-full items-center justify-end gap-4 lg:w-auto absolute">
-        <div>
+        <div class="hidden lg:block">
           <Search />
         </div>
 
