@@ -11,6 +11,10 @@ function returnOnlyFavoriteProducts(products: Array<Product>) {
   return products.filter(product => product.favorite)
 }
 
+const { getProducts } = useProductStore()
+
+const products = computed(() => getProducts())
+
 const favoriteProducts = computed(() =>
   useTranslateProducts(returnOnlyFavoriteProducts(products)),
 )
