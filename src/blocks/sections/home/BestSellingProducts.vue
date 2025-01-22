@@ -5,13 +5,20 @@ function returnOnlyBestSellingProducts(products: Array<Product>) {
   return products.filter(product => product.bestSelling)
 }
 
+const { getProducts } = useProductStore()
+
+const products = computed(() => getProducts())
+
 const translatedProducts = computed(() =>
-  useTranslateProducts(returnOnlyBestSellingProducts(products)),
+  useTranslateProducts(returnOnlyBestSellingProducts(products.value)),
 )
 </script>
 
 <template>
-  <section class="mx-auto my-8 max-w-[95vw] md:max-w-[70rem]">
+  <section
+    v-if="translatedProducts.length > 0"
+    class="mx-auto my-8 max-w-[95vw] md:max-w-[70rem]"
+  >
     <h2 class="mb-8 text-center text-2xl font-bold">
       {{ t('bestSellingProducts.title') }}
     </h2>
