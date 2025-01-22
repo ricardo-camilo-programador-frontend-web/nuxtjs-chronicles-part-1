@@ -18,9 +18,9 @@ const translatedProducts = computed(() =>
 <template>
   <section
     aria-labelledby="featured-products-title"
-    class="mx-auto my-8 max-w-[95vw]"
+    class="mx-auto my-8 max-w-[95vw] flex flex-col items-center justify-center w-full min-w-full"
   >
-    <div class="mx-auto max-w-[70rem]">
+    <div class="mx-auto max-w-[70rem] w-full">
       <header
         class="mb-8 flex w-full flex-wrap items-center justify-center gap-4 md:mb-1 md:justify-between"
       >
@@ -50,22 +50,24 @@ const translatedProducts = computed(() =>
         navigation-class="hidden"
         unique-id="featured-products-carousel"
         role="list"
-        class="mx-auto max-w-[95vw]"
+        class="mx-auto max-w-[95vw] flex items-center justify-between"
       >
         <SwiperSlide
           v-for="product in translatedProducts.slice(0, 3)"
           :key="product.id"
-          class="m-auto ml-2 md:ml-0"
+          class="mx-auto ml-2 md:ml-auto w-full min-w-[20rem] pb-24"
         >
           <FeatureCard
             :image-src="product.imageSrc"
             :product-name="product.name"
             :product-price="product.formattedPrice"
             :alt-text="product.altText"
+            class="w-full min-w-[17rem] max-h-[20rem]"
             role="listitem"
           />
         </SwiperSlide>
       </Carousel>
     </div>
+
   </section>
 </template>
