@@ -23,7 +23,9 @@ const translatedProducts = computed(() =>
       {{ t('bestSellingProducts.title') }}
     </h2>
 
-    <div class="mx-auto grid w-full min-w-[17rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div
+      class="mx-auto grid w-full min-w-[17rem] grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4"
+    >
       <FeatureCard
         v-for="product in translatedProducts.slice(0, 8)"
         :key="product.id"
