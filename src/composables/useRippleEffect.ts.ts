@@ -26,7 +26,6 @@ function rippleEffect(event: MouseEvent, htmlElementId: string) {
 export function useRippleEffect(htmlElementId: string | undefined) {
   const timeoutTimer = 1000
 
-  // Retornando uma função que será chamada no setup do componente
   return () => {
     onMounted(() => {
       if (!htmlElementId) {
