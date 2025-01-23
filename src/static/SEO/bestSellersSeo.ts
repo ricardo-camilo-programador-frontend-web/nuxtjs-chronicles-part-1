@@ -51,11 +51,13 @@ export function bestSellersSEO(locale: string) {
       { name: 'robots', content: 'index, follow' },
       {
         property: 'og:url',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//best-sellers',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//best-sellers',
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -77,7 +79,8 @@ export function bestSellersSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',

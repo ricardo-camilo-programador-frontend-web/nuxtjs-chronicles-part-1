@@ -22,6 +22,7 @@ interface CarouselProps {
   rowsMobile?: number
   rowsTablet?: number
   rowsDesktop?: number
+  showNavigation?: boolean
 }
 
 const props = withDefaults(defineProps<CarouselProps>(), {
@@ -41,6 +42,7 @@ const props = withDefaults(defineProps<CarouselProps>(), {
   rowsMobile: 1,
   rowsTablet: 1,
   rowsDesktop: 1,
+  showNavigation: true,
 })
 
 const modules = [Pagination, Navigation, Grid]
@@ -99,25 +101,31 @@ const breakpoints = {
     :pagination="pagination"
     :breakpoints="breakpoints"
     :modules="modules"
-    class="mx-auto max-w-[95vw] !overflow-visible"
+    class="relative mx-auto max-w-[95vw] !overflow-visible"
   >
     <slot />
 
     <div
-      :id="`${props.uniqueId}-button-prev`"
-      :class="props.navigationClass"
-      class="absolute -top-12 right-0 flex -translate-y-1/2 items-center justify-end gap-2 md:right-16"
+      v-if="showNavigation"
+      id="carousel-button-prev"
+      class="absolute inset-y-0 left-0 z-[90] -ml-10 flex w-16 items-center justify-center"
     >
       <Button
         :id="`${props.uniqueId}-button-prev`"
         icon="i-heroicons-chevron-left"
-        class="!rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        class="z-[90] my-auto !rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
       />
+    </div>
 
+    <div
+      v-if="showNavigation"
+      id="carousel-button-next"
+      class="absolute inset-y-0 right-0 z-[90] -mr-7 flex w-16 items-center justify-center"
+    >
       <Button
         :id="`${props.uniqueId}-button-next`"
         icon="i-heroicons-chevron-right"
-        class="!rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        class="z-[90] my-auto !rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
       />
     </div>
   </Swiper>

@@ -49,10 +49,14 @@ export function faqSEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/' },
+      {
+        property: 'og:url',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/',
+      },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -74,7 +78,8 @@ export function faqSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
@@ -146,10 +151,14 @@ export function privacyPolicySEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/' },
+      {
+        property: 'og:url',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/',
+      },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -171,7 +180,8 @@ export function privacyPolicySEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',

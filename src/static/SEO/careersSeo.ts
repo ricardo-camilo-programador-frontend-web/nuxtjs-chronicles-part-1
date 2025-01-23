@@ -49,10 +49,14 @@ export function careersSEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//careers' },
+      {
+        property: 'og:url',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//careers',
+      },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -74,7 +78,8 @@ export function careersSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content:
+          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',

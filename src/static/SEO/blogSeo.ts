@@ -34,7 +34,10 @@ export function blogSEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: `https://savana-nuxtjs-chronicles-part-1.netlify.app//${locale}/blog` },
+      {
+        property: 'og:url',
+        content: `https://savana-nuxtjs-chronicles-part-1.netlify.app//${locale}/blog`,
+      },
       {
         property: 'og:image',
         content: 'URL_TO_DEFAULT_BLOG_IMAGE',
