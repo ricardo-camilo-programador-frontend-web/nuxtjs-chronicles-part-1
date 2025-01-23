@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useTranslateProducts } from '@/composables/useTranslateProduct'
-import { SwiperSlide } from 'swiper/vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -22,7 +21,7 @@ const translatedProducts = computed(() =>
   <section
     v-if="translatedProducts.length > 0"
     aria-labelledby="featured-products-title"
-    class="mx-auto my-8 flex w-full min-w-full max-w-[95vw] flex-col items-center justify-center"
+    class="mx-auto my-8 flex w-full max-w-[95vw] min-w-full flex-col items-center justify-center"
   >
     <div class="mx-auto w-full max-w-[70rem]">
       <header
@@ -47,29 +46,24 @@ const translatedProducts = computed(() =>
       </header>
 
       <Carousel
-        :mobile-slides-per-view="1"
-        :tablet-slides-per-view="3"
-        :desktop-slides-per-view="3"
-        :rows-desktop="1"
-        navigation-class="hidden"
-        unique-id="featured-products-carousel"
-        role="list"
-        class="mx-auto flex max-w-[95vw] items-center justify-between"
+        :items="translatedProducts.slice(0, 3)"
+        :items-per-view="{
+          base: 1,
+          md: 2,
+          lg: 3,
+        }"
+        class="mx-auto w-full"
       >
-        <SwiperSlide
-          v-for="product in translatedProducts.slice(0, 3)"
-          :key="product.id"
-          class="mx-auto ml-2 w-full min-w-[20rem] pb-24 md:ml-auto"
-        >
+        <template #default="{ item: product }">
           <FeatureCard
             :image-src="product.imageSrc"
             :product-name="product.name"
             :product-price="product.formattedPrice"
             :alt-text="product.altText"
-            class="max-h-[20rem] w-full min-w-[17rem]"
+            class="mx-auto w-full min-w-[17rem] max-h-[20rem] pb-24"
             role="listitem"
           />
-        </SwiperSlide>
+        </template>
       </Carousel>
     </div>
   </section>

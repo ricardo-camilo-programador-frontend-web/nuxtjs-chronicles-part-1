@@ -19,7 +19,7 @@ const { t } = useI18n()
         :src="backgroundGradientOrange"
         :aria-hidden="true"
         alt=""
-        class="min-w-screen absolute inset-0 z-[1] -ml-1 h-[600px] w-[120rem] rounded-full object-cover opacity-90 md:-ml-6 md:min-w-[17rem]"
+        class="absolute inset-0 z-[1] -ml-1 h-[600px] w-[120rem] min-w-screen rounded-full object-cover opacity-90 md:-ml-6 md:min-w-[17rem]"
         width="600"
         height="600"
       />
@@ -55,7 +55,7 @@ const { t } = useI18n()
 
           <Button
             :label="t('infoBlock.buttonLabel')"
-            class="flex w-full items-center justify-center rounded-md bg-black px-6 py-4 text-center text-sm font-medium text-white transition-colors hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 md:w-max md:px-8 md:py-3 md:text-base"
+            class="flex w-full items-center justify-center rounded-md bg-black px-6 py-4 text-center text-sm font-medium text-white transition-colors hover:bg-orange-500 focus:ring-2 focus:ring-black focus:ring-offset-2 focus:outline-none md:w-max md:px-8 md:py-3 md:text-base"
             id="info-block-button"
           />
         </div>

@@ -49,7 +49,7 @@ const { t } = useI18n()
         </div>
 
         <div
-          class="absolute right-2 top-3 -mr-3 -mt-4 flex h-10 w-10 scale-150 items-center justify-center overflow-hidden rounded-full bg-white md:scale-100"
+          class="absolute top-3 right-2 -mt-4 -mr-3 flex h-10 w-10 scale-150 items-center justify-center overflow-hidden rounded-full bg-white md:scale-100"
         >
           <Button
             :id="`category-button-${title}`"

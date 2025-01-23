@@ -14,7 +14,7 @@ const headerClasses = computed(() => {
 
 <template>
   <header
-    class="left-0 right-0 top-0 z-[99] mx-auto flex w-full max-w-[95vw] items-center justify-center dark:bg-gray-800"
+    class="top-0 right-0 left-0 z-[99] mx-auto flex w-full max-w-[95vw] items-center justify-center dark:bg-gray-800"
   >
     <div
       class="mx-auto hidden h-10 w-screen items-center justify-between md:flex"
@@ -112,7 +112,7 @@ const headerClasses = computed(() => {
       </div>
     </div>
 
-    <div class="fixed bottom-1 right-1 flex items-center gap-2">
+    <div class="fixed right-1 bottom-1 flex items-center gap-2">
       <LangSwitcher />
     </div>
   </header>

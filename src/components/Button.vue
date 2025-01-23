@@ -31,7 +31,7 @@ initializeRippleEffect()
     :type="type"
     :disabled="disabled || loading"
     :title="title"
-    class="duration-1350 flex items-center justify-center rounded-md p-4 text-xs font-bold tracking-widest !transition-all ease-in-out hover:bg-orange-300 disabled:opacity-25"
+    class="flex items-center justify-center rounded-md p-4 text-xs font-bold tracking-widest !transition-all duration-1350 ease-in-out hover:bg-orange-300 disabled:opacity-25"
   >
     <Icon
       v-if="icon"

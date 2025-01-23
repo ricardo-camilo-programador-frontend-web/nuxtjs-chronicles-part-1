@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
-import { SwiperSlide } from 'swiper/vue'
 
 interface BlogPost {
   id: string
@@ -58,24 +57,21 @@ const blogPosts = ref<Array<BlogPost>>([
     </h2>
 
     <Carousel
-      unique-id="news-blog-carousel"
-      class="mt-[5rem] flex flex-col items-center justify-center gap-6 md:mt-0 md:flex-row"
-      role="list"
+      :items="blogPosts"
+      :items-per-view="{
+        base: 1,
+        md: 2,
+        lg: 3,
+      }"
+      class="mt-[5rem] md:mt-0"
     >
-      <SwiperSlide
-        v-for="post in blogPosts"
-        :key="post.id"
-        class="group mx-auto w-full min-w-[17rem]"
-        role="listitem"
-      >
+      <template #default="{ item: post }">
         <a
           :href="`/blog/${post.slug}`"
           class="block rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
           <div class="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg">
-            <span
-              class="absolute left-4 top-4 z-10 rounded-full bg-black px-3 py-1 text-xs text-white"
-            >
+            <span class="absolute left-4 top-4 z-10 rounded-full bg-black px-3 py-1 text-xs text-white">
               {{ t(`categories.${post.category}`) }}
             </span>
             <img
@@ -85,21 +81,17 @@ const blogPosts = ref<Array<BlogPost>>([
               loading="lazy"
             >
           </div>
-
           <time
             :datetime="post.date"
             class="mb-2 block text-sm text-gray-500"
           >
             {{ post.date }}
           </time>
-
-          <h3
-            class="line-clamp-2 text-lg font-semibold transition-colors group-hover:text-orange-500"
-          >
+          <h3 class="line-clamp-2 text-lg font-semibold transition-colors group-hover:text-orange-500">
             {{ post.title }}
           </h3>
         </a>
-      </SwiperSlide>
+      </template>
     </Carousel>
   </section>
 </template>

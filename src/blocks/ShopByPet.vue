@@ -5,7 +5,6 @@ import hamsterImage from '@/assets/images/pets/hamster.webp'
 import parrotImage from '@/assets/images/pets/parrot.webp'
 import rabbitImage from '@/assets/images/pets/rabbit.webp'
 import turtleImage from '@/assets/images/pets/turtle.webp'
-import { SwiperSlide } from 'swiper/vue'
 
 interface PetCategory {
   id: string
@@ -71,23 +70,19 @@ const petCategories = ref<Array<PetCategory>>([
     </div>
 
     <Carousel
-      :mobile-slides-per-view="3"
-      :tablet-slides-per-view="4"
-      :desktop-slides-per-view="6"
-      unique-id="shop-by-pet-carousel"
+      :items="petCategories"
+      :items-per-view="{
+        base: 3,
+        md: 4,
+        lg: 6,
+      }"
     >
-      <SwiperSlide
-        v-for="pet in petCategories"
-        :key="pet.id"
-        class="!h-auto"
-      >
+      <template #default="{ item: pet }">
         <button
           :aria-label="t('shopByPet.shopFor', { pet: pet.name })"
           class="group flex w-full flex-col items-center gap-3 rounded-lg p-4 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
-          <div
-            class="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-orange-500"
-          >
+          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-orange-500">
             <Image
               :src="pet.icon"
               :alt="pet.altText"
@@ -99,7 +94,7 @@ const petCategories = ref<Array<PetCategory>>([
           </div>
           <span class="text-sm font-medium">{{ pet.name }}</span>
         </button>
-      </SwiperSlide>
+      </template>
     </Carousel>
   </section>
 </template>

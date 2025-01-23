@@ -101,7 +101,7 @@ watch(analyticsEnabled, (newValue) => {
               >
                 <button
                   type="button"
-                  class="absolute right-4 top-4 text-gray-400 hover:text-gray-500"
+                  class="absolute top-4 right-4 text-gray-400 hover:text-gray-500"
                   @click="handleClose"
                 >
                   <span class="sr-only">{{ t('close') }}</span>

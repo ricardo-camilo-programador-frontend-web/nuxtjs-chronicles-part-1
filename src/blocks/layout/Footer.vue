@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 <template>
   <footer
-    class="min-w-screen grud w-full overflow-hidden border-t bg-gray-100 py-12"
+    class="grud w-full min-w-screen overflow-hidden border-t bg-gray-100 py-12"
   >
     <div class="container mx-auto w-full max-w-[17rem] px-4 md:max-w-7xl">
       <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">

@@ -4,7 +4,6 @@ import dogHeart from '@/assets/images/svg/dog-heart.svg'
 import dogHouse from '@/assets/images/svg/dog-house.svg'
 import pawHeart from '@/assets/images/svg/paw-heart.svg'
 import paw from '@/assets/images/svg/paw.svg'
-import { SwiperSlide } from 'swiper/vue'
 
 interface LogoItem {
   id: string
@@ -56,32 +55,31 @@ const logos: Array<LogoItem> = [
   >
     <div class="mx-auto max-w-7xl">
       <Carousel
-        unique-id="partner-logos-carousel"
+        :items="logos"
+        :items-per-view="{
+          base: 2,
+          md: 3,
+          lg: 5,
+        }"
+        :autoplay="true"
         class="flex w-full min-w-full justify-between"
-        role="list"
       >
-        <SwiperSlide
-          v-for="logo in logos"
-          :key="logo.id"
-          auto-play="1000"
-          class="mx-auto flex h-[35rem] w-full max-w-[17rem] flex-col items-center justify-center transition-transform hover:scale-105 md:max-w-[200px]"
-        >
-          <Image
-            :src="logo.imagePath"
-            :alt="logo.altText"
-            :title="logo.name"
-            class="h-[8rem] w-full overflow-visible object-cover"
-            loading="lazy"
-            width="200"
-            height="200"
-          />
-
-          <p
-            class="bottom-0 mt-auto h-6 text-center font-medium text-orange-500"
-          >
-            {{ logo.name }}
-          </p>
-        </SwiperSlide>
+        <template #default="{ item: logo }">
+          <div class="mx-auto flex h-[35rem] w-full max-w-[17rem] flex-col items-center justify-center transition-transform hover:scale-105 md:max-w-[200px]">
+            <Image
+              :src="logo.imagePath"
+              :alt="logo.altText"
+              :title="logo.name"
+              class="h-[8rem] w-full overflow-visible object-cover"
+              loading="lazy"
+              width="200"
+              height="200"
+            />
+            <p class="bottom-0 mt-auto h-6 text-center font-medium text-orange-500">
+              {{ logo.name }}
+            </p>
+          </div>
+        </template>
       </Carousel>
     </div>
   </section>

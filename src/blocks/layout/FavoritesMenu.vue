@@ -58,7 +58,7 @@ onUnmounted(() => {
       >
         <div
           v-if="showFavoritesMenu && favoriteProducts.length > 0"
-          class="absolute right-16 top-16 z-[99] h-full w-full"
+          class="absolute top-16 right-16 z-[99] h-full w-full"
         >
           <div
             class="absolute right-0 flex max-h-[20rem] w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-2"
@@ -86,7 +86,7 @@ onUnmounted(() => {
 
         <div
           v-if="showFavoritesMenu && !favoriteProducts.length"
-          class="absolute right-0 top-16 z-[99] flex h-full w-[17rem] items-center justify-center bg-black/50"
+          class="absolute top-16 right-0 z-[99] flex h-full w-[17rem] items-center justify-center bg-black/50"
         >
           <p class="text-white">
             {{ $t('favorites.empty') }}

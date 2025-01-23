@@ -43,7 +43,7 @@ const currentFlag = computed(() => {
 
     <select
       :value="locale"
-      class="cursor-pointer appearance-none border-b border-transparent bg-transparent px-4 py-2 pr-8 transition-colors focus:border-transparent focus:outline-none focus:ring-transparent"
+      class="cursor-pointer appearance-none border-b border-transparent bg-transparent px-4 py-2 pr-8 transition-colors focus:border-transparent focus:ring-transparent focus:outline-none"
       aria-label="Select language"
       @change="onLocaleChanged"
     >

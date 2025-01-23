@@ -24,7 +24,7 @@ const buttonClass = computed(() => ({
     :class="buttonClass"
     target="_blank"
     rel="noopener noreferrer"
-    class="inline-flex items-center gap-2 rounded-lg px-4 py-2 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#FFDD00] focus:ring-offset-2"
+    class="inline-flex items-center gap-2 rounded-lg px-4 py-2 transition-transform hover:scale-105 focus:ring-2 focus:ring-[#FFDD00] focus:ring-offset-2 focus:outline-none"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

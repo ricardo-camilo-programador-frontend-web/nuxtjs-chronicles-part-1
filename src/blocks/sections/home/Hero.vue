@@ -14,14 +14,14 @@ const localePath = useLocalePath()
 
 <template>
   <section
-    class="min-w-screen relative mx-auto flex h-full min-h-screen w-full flex-col items-center justify-center py-8 pt-[10rem] md:min-h-[44rem] md:max-w-full md:overflow-hidden md:py-16 md:pt-0 lg:max-h-[38rem] lg:py-24"
+    class="relative mx-auto flex h-full min-h-screen w-full min-w-screen flex-col items-center justify-center py-8 pt-[10rem] md:min-h-[44rem] md:max-w-full md:overflow-hidden md:py-16 md:pt-0 lg:max-h-[38rem] lg:py-24"
     aria-labelledby="hero-heading"
   >
     <Image
       :src="backgroundGradientOrange"
       :aria-hidden="true"
       alt="Background gradient orange"
-      class="absolute -right-[10rem] top-0 mt-32 h-[400px] w-[400px] rounded-full object-cover opacity-50 md:-right-40 md:h-[800px] md:w-[800px] md:opacity-100"
+      class="absolute top-0 -right-[10rem] mt-32 h-[400px] w-[400px] rounded-full object-cover opacity-50 md:-right-40 md:h-[800px] md:w-[800px] md:opacity-100"
       width="400"
       height="400"
     />
@@ -69,7 +69,7 @@ const localePath = useLocalePath()
 
           <NuxtLink
             :to="localePath({ path: '/shop' })"
-            class="flex w-full items-center justify-center rounded-md bg-black px-6 py-4 text-center text-sm font-medium text-white transition-colors hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 md:w-max md:px-8 md:py-3 md:text-base"
+            class="flex w-full items-center justify-center rounded-md bg-black px-6 py-4 text-center text-sm font-medium text-white transition-colors hover:bg-orange-500 focus:ring-2 focus:ring-black focus:ring-offset-2 focus:outline-none md:w-max md:px-8 md:py-3 md:text-base"
             aria-label="Browse our shop collection"
           >
             {{ t('hero.cta') }}
@@ -80,14 +80,14 @@ const localePath = useLocalePath()
           :src="greenWingedMacaw"
           :aria-hidden="true"
           alt=""
-          class="absolute left-[30%] top-[7rem] w-20 scale-150 md:left-[38%] md:top-24 md:w-32"
+          class="absolute top-[7rem] left-[30%] w-20 scale-150 md:top-24 md:left-[38%] md:w-32"
           width="20"
           height="20"
           loading="eager"
         />
 
         <div
-          class="-bottom-8 right-0 ml-4 h-[20rem] w-[20rem] px-4 md:absolute md:bottom-0 md:right-0 md:mt-auto md:h-[40rem] md:w-[40rem] md:px-0"
+          class="right-0 -bottom-8 ml-4 h-[20rem] w-[20rem] px-4 md:absolute md:right-0 md:bottom-0 md:mt-auto md:h-[40rem] md:w-[40rem] md:px-0"
         >
           <div
             class="relative bottom-0 mt-auto flex h-full w-full items-center justify-center md:-right-24"
@@ -105,7 +105,7 @@ const localePath = useLocalePath()
               <Image
                 :src="charlesdeluvio"
                 alt="Happy dog with its owner"
-                class="bottom-0 z-[4] -ml-[4rem] mt-auto hidden w-[18rem] object-cover md:-ml-16 md:block"
+                class="bottom-0 z-[4] mt-auto -ml-[4rem] hidden w-[18rem] object-cover md:-ml-16 md:block"
                 width="18"
                 height="18"
                 loading="eager"
