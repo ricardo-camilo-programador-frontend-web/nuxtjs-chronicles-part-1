@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { homeSEO } from '@/static/SEO/home'
+
 definePageMeta({
   layout: 'default',
 })
+
+useHead(homeSEO)
 </script>
 
 <template>
