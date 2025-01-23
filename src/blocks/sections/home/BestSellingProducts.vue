@@ -17,7 +17,7 @@ const translatedProducts = computed(() =>
 <template>
   <section
     v-if="translatedProducts.length > 0"
-    class="max-w-[95vw] mx-auto"
+    class="mx-auto max-w-[95vw]"
   >
     <h2 class="mb-8 text-center text-2xl font-bold">
       {{ t('bestSellingProducts.title') }}
