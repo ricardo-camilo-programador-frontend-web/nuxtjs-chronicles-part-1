@@ -280,6 +280,11 @@ export const useProductStore = defineStore({
       )
     },
   },
+  getters: {
+    getFavoriteProducts(): Array<Product> {
+      return this.products.filter(product => product.favorite)
+    },
+  },
 })
 
 if (import.meta.hot) {
