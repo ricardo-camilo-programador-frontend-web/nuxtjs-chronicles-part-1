@@ -11,9 +11,10 @@ function returnOnlyFavoriteProducts(products: Array<Product>) {
   return products.filter(product => product.favorite)
 }
 
-const { getProducts } = useProductStore()
-
-const products = computed(() => getProducts())
+const products = computed(() => {
+  const store = useProductStore()
+  return store.products
+})
 
 const favoriteProducts = computed(() =>
   useTranslateProducts(returnOnlyFavoriteProducts(products.value)),
@@ -51,13 +52,15 @@ onUnmounted(() => {
     </div>
 
     <Transition>
-      <div v-if="showFavoritesMenu">
+      <div
+        v-if="showFavoritesMenu"
+        ref="favoritesMenu"
+      >
         <div
           v-if="showFavoritesMenu && favoriteProducts.length > 0"
           class="absolute right-16 top-16 z-[99] h-full w-full"
         >
           <div
-            ref="favoritesMenu"
             class="absolute right-0 flex max-h-[20rem] w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-2"
           >
             <div
@@ -76,12 +79,7 @@ onUnmounted(() => {
                 {{ product.name }}
               </p>
 
-              <Button
-                :id="`favorite-button-${product.id}`"
-                :icon="product.favorite ? 'mdi:heart' : 'mdi:heart-outline'"
-                :icon-style="`text-3xl ${product.favorite ? 'text-red-500' : ''}`"
-                class="w-auto py-0"
-              />
+              <FavoriteShortcut :product="product" />
             </div>
           </div>
         </div>
