@@ -84,6 +84,15 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
+
+      <div
+        v-else
+        class="absolute right-0 top-16 z-[99] h-full w-full bg-black/50"
+      >
+        <p class="text-black">
+          {{ $t('favorites.empty') }}
+        </p>
+      </div>
     </Transition>
   </div>
 </template>

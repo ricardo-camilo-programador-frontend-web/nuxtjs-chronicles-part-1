@@ -11,6 +11,9 @@ export const en = {
       cart: 'Cart',
     },
   },
+  favorites: {
+    empty: 'No favorites found',
+  },
   hero: {
     category: 'Pet Shop',
     title: 'A pet store with everything you need',

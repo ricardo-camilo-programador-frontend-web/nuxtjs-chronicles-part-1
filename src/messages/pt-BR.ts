@@ -11,6 +11,9 @@ export const pt = {
       cart: 'Carrinho',
     },
   },
+  favorites: {
+    empty: 'Nenhum favorito encontrado',
+  },
   hero: {
     category: 'Pet Shop',
     title: 'Uma loja pet com tudo que você precisa',
