@@ -14,7 +14,7 @@ const { t } = useI18n()
 <template>
   <div
     :class="gradientClass"
-    class="relative mb-6 flex h-[15rem] flex-col items-center justify-center rounded-lg shadow-lg md:w-[15rem] hover:bg-orange-500 hover:shadow-lg transition-all duration-300 ease-in-out"
+    class="relative mb-6 flex h-[15rem] flex-col items-center justify-center rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-orange-500 hover:shadow-lg md:w-[15rem]"
     role="region"
     aria-labelledby="category-title"
     aria-describedby="category-description"

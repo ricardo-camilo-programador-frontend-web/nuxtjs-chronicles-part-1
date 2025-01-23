@@ -5,7 +5,8 @@ definePageMeta({
   layout: 'default',
 })
 
-useHead(homeSEO)
+const { locale } = useI18n()
+useHead(homeSEO(locale.value))
 </script>
 
 <template>

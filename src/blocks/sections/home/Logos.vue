@@ -64,19 +64,21 @@ const logos: Array<LogoItem> = [
           v-for="logo in logos"
           :key="logo.id"
           auto-play="1000"
-          class="mx-auto w-full max-w-[17rem] transition-transform hover:scale-105 md:max-w-[200px] h-[35rem] flex flex-col items-center justify-center"
+          class="mx-auto flex h-[35rem] w-full max-w-[17rem] flex-col items-center justify-center transition-transform hover:scale-105 md:max-w-[200px]"
         >
           <Image
             :src="logo.imagePath"
             :alt="logo.altText"
             :title="logo.name"
-            class="w-full h-[8rem] object-cover overflow-visible"
+            class="h-[8rem] w-full overflow-visible object-cover"
             loading="lazy"
             width="200"
             height="200"
           />
 
-          <p class="text-center font-medium text-orange-500 mt-auto bottom-0 h-6">
+          <p
+            class="bottom-0 mt-auto h-6 text-center font-medium text-orange-500"
+          >
             {{ logo.name }}
           </p>
         </SwiperSlide>

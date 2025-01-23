@@ -40,13 +40,13 @@ function toggleNav() {
         class="hover:text-primary/75 fixed inset-0 right-0 z-[99] -mt-1 ml-auto flex h-full min-h-screen w-full min-w-[17rem]"
       >
         <div
-          class="z-5 h-full min-h-screen w-full min-w-full cursor-pointer bg-black/10 backdrop-blur-sm block z-[90]"
+          class="z-5 z-[90] block h-full min-h-screen w-full min-w-full cursor-pointer bg-black/10 backdrop-blur-sm"
           title="Fechar menu."
           @click="toggleNav"
         />
 
         <nav
-          class="absolute inset-y-0 right-0 mx-auto flex h-full min-h-screen w-[17rem] border-l-2 shadow-lg md:items-center md:justify-between z-[9999]"
+          class="absolute inset-y-0 right-0 z-[9999] mx-auto flex h-full min-h-screen w-[17rem] border-l-2 shadow-lg md:items-center md:justify-between"
           role="navigation"
         >
           <div

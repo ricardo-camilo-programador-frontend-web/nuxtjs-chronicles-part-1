@@ -15,7 +15,7 @@ defineProps<ProductCardProps>()
 
 <template>
   <article
-    class="max-w-[95vw] rounded-lg bg-gray-200 hover:bg-orange-500 transition-shadow hover:shadow-lg md:max-w-full transition-all duration-300 ease-in-out"
+    class="max-w-[95vw] rounded-lg bg-gray-200 transition-all transition-shadow duration-300 ease-in-out hover:bg-orange-500 hover:shadow-lg md:max-w-full"
   >
     <div class="relative mb-4 aspect-square">
       <Image
