@@ -4,17 +4,17 @@ const { isScrollingDown, isScrolled } = useScroll()
 
 const headerClasses = computed(() => {
   return {
-    'translate-y-[-40%]  md:translate-y-[-50%] rounded-none':
+    'translate-y-[-40%] lg:translate-y-[-50%] rounded-none max-w-[99vw]':
       isScrollingDown.value,
-    'bg-white shadow-lg': isScrolled.value,
-    'transition-transform duration-300 ease-in-out': true,
+    'bg-white shadow-lg max-w-[95vw]': isScrolled.value,
+    'transition-all duration-300 ease-in-out': true,
   }
 })
 </script>
 
 <template>
   <header
-    class="left-0 right-0 top-0 z-[99] mx-auto flex w-full max-w-[50vw] items-center justify-center md:max-w-full dark:bg-gray-800"
+    class="left-0 right-0 top-0 z-[99] mx-auto flex w-full max-w-[95vw] items-center justify-center dark:bg-gray-800"
   >
     <div
       class="mx-auto hidden h-10 w-screen items-center justify-between md:flex"
