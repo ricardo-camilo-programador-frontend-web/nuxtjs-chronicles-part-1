@@ -6,6 +6,7 @@ interface LocaleObject {
 
 const { locale, locales } = useI18n()
 const supportedLocales = locales.value as Array<LocaleObject>
+const currentFlagOption = ref('circle-flags:us')
 
 const router = useRouter()
 const switchLocalePath = useSwitchLocalePath()
@@ -26,6 +27,14 @@ const currentFlag = computed(() => {
     default:
       return 'ph:globe'
   }
+})
+
+function setCurrentFlagOption() {
+  currentFlagOption.value = currentFlag.value
+}
+
+onMounted(() => {
+  setCurrentFlagOption()
 })
 </script>
 
@@ -53,6 +62,7 @@ const currentFlag = computed(() => {
         :value="loc.code"
         :title="loc.name"
         :aria-label="loc.name"
+        :default="currentFlagOption"
         class="py-1 text-black"
       >
         {{ loc.code }}
