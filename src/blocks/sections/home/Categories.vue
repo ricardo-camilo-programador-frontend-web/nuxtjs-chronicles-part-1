@@ -38,20 +38,15 @@ const categories = computed(() => categoriesStore.getCategories)
       </header>
 
       <Carousel
-        :centered-slides="true"
-        slides-per-view="auto"
         unique-id="categories-carousel"
         class="w-full min-w-full"
         role="list"
         navigation-class="-mt-2"
-        mobile-slides-per-view="auto"
-        tablet-slides-per-view="auto"
-        desktop-slides-per-view="auto"
       >
         <SwiperSlide
           v-for="category in categories"
           :key="category.id"
-          class="w-auto"
+          class="w-full min-w-[17rem]"
           role="listitem"
         >
           <CategorieCard

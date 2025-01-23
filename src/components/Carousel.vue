@@ -7,14 +7,14 @@ import 'swiper/css/grid'
 
 interface CarouselProps {
   uniqueId?: string
-  slidesPerView?: number | 'auto'
+  slidesPerView?: number
   spaceBetween?: number
   loop?: boolean
   pagination?: boolean
   navigationClass?: string
-  mobileSlidesPerView?: number | 'auto'
-  tabletSlidesPerView?: number | 'auto'
-  desktopSlidesPerView?: number | 'auto'
+  mobileSlidesPerView?: number
+  tabletSlidesPerView?: number
+  desktopSlidesPerView?: number
   mobileSpaceBetween?: number
   tabletSpaceBetween?: number
   desktopSpaceBetween?: number
