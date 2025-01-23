@@ -16,7 +16,7 @@ const { getProducts } = useProductStore()
 const products = computed(() => getProducts())
 
 const favoriteProducts = computed(() =>
-  useTranslateProducts(returnOnlyFavoriteProducts(products)),
+  useTranslateProducts(returnOnlyFavoriteProducts(products.value)),
 )
 
 function handleClickOutside(event: MouseEvent) {
