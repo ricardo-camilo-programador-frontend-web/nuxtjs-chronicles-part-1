@@ -49,10 +49,10 @@ export function contactSEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: 'https://www.seusite.com.br/contato' },
+      { property: 'og:url', content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//contato' },
       {
         property: 'og:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -74,22 +74,22 @@ export function contactSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://www.seusite.com.br/pt-BR/contato',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/contato',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://www.seusite.com.br/es/contact',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/contact',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://www.seusite.com.br/en/contact',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/contact',
       },
     ],
   }

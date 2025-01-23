@@ -51,11 +51,11 @@ export function bestSellersSEO(locale: string) {
       { name: 'robots', content: 'index, follow' },
       {
         property: 'og:url',
-        content: 'https://www.seusite.com.br/best-sellers',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//best-sellers',
       },
       {
         property: 'og:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -77,22 +77,22 @@ export function bestSellersSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://www.seusite.com.br/pt/best-sellers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/best-sellers',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://www.seusite.com.br/es/best-sellers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/best-sellers',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://www.seusite.com.br/en/best-sellers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/best-sellers',
       },
     ],
   }

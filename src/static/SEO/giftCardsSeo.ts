@@ -49,10 +49,10 @@ export function faqSEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: 'https://www.seusite.com.br' },
+      { property: 'og:url', content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/' },
       {
         property: 'og:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -74,22 +74,22 @@ export function faqSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://www.seusite.com.br/pt/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/faq',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://www.seusite.com.br/es/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/faq',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://www.seusite.com.br/en/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/faq',
       },
     ],
   }
@@ -146,10 +146,10 @@ export function giftCardsSEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: 'https://www.seusite.com.br' },
+      { property: 'og:url', content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/' },
       {
         property: 'og:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -171,22 +171,22 @@ export function giftCardsSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://www.seusite.com.br/pt/gift-cards',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/gift-cards',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://www.seusite.com.br/es/gift-cards',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/gift-cards',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://www.seusite.com.br/en/gift-cards',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/gift-cards',
       },
     ],
   }

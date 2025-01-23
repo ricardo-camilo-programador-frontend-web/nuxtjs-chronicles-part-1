@@ -49,10 +49,10 @@ export function careersSEO(locale: string) {
       },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: 'https://www.seusite.com.br/careers' },
+      { property: 'og:url', content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//careers' },
       {
         property: 'og:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -74,22 +74,22 @@ export function careersSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://www.seusite.com.br/imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://www.seusite.com.br/pt/careers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/careers',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://www.seusite.com.br/es/careers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/careers',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://www.seusite.com.br/en/careers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/careers',
       },
     ],
   }
