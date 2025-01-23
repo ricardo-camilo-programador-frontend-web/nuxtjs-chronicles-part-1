@@ -21,7 +21,7 @@ const translatedProducts = computed(() =>
   <section
     v-if="translatedProducts.length > 0"
     aria-labelledby="featured-products-title"
-    class="mx-auto max-w-[95vw] flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
+    class="mx-auto flex max-w-[95vw] flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
   >
     <div class="mx-auto w-full">
       <header
@@ -45,7 +45,9 @@ const translatedProducts = computed(() =>
         </div>
       </header>
 
-      <div class="mx-auto grid w-full min-w-[17rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div
+        class="mx-auto grid w-full min-w-[17rem] grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4"
+      >
         <FeatureCard
           v-for="product in translatedProducts.slice(0, 4)"
           :key="product.id"
