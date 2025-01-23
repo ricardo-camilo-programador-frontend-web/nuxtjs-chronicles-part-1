@@ -11,7 +11,7 @@ useHead({
     class="md:min-w-screen relative flex flex-col overflow-hidden bg-gray-50 md:min-h-screen"
   >
     <div
-      class="relative mx-auto flex max-w-7xl flex-col overflow-hidden bg-gray-50 md:min-h-screen"
+      class="relative mx-auto flex max-w-[99vw] flex-col overflow-hidden bg-gray-50 md:min-h-screen"
     >
       <Header />
 
