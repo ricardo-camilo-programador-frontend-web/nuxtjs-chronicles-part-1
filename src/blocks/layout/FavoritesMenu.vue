@@ -47,7 +47,10 @@ onUnmounted(() => {
 
     <FavoriteCard :favorite-products="favoriteProducts">
       <template #default="{ product }">
-        <FavoriteShortcut :product="product" />
+        <FavoriteShortcut
+          :product="product"
+          @favorite-updated="setFavoriteProducts"
+        />
       </template>
     </FavoriteCard>
   </div>
