@@ -6,12 +6,14 @@ interface FavoriteShortcutProps {
 }
 
 const props = defineProps<FavoriteShortcutProps>()
+const emit = defineEmits(['favoriteUpdated'])
 const productStore = useProductStore()
 const { updateProductFavorite } = productStore
 
-function handleFavoriteClick(event: MouseEvent) {
+async function handleFavoriteClick(event: MouseEvent) {
   event.stopPropagation()
-  updateProductFavorite(props.product)
+  await updateProductFavorite(props.product)
+  emit('favoriteUpdated')
 }
 </script>
 
