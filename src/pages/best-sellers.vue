@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import { bestSellersSEO } from '@/static/SEO/bestSellersSeo'
+
 definePageMeta({
   layout: 'default',
 })
+
+const { locale } = useI18n()
+useHead(bestSellersSEO(locale.value))
 </script>
 
 <template>

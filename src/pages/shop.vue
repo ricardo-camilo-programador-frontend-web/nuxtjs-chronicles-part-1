@@ -1,7 +1,12 @@
 <script lang="ts" setup>
+import { shopSEO } from '@/static/SEO/shopSeo'
+
 definePageMeta({
   layout: 'default',
 })
+
+const { locale } = useI18n()
+useHead(shopSEO(locale.value))
 </script>
 
 <template>

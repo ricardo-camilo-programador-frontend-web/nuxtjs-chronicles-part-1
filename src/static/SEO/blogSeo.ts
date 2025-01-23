@@ -1,24 +1,15 @@
-export interface BlogArticle {
-  title: string
-  description: string
-  image: string
-  url: string
-  publishDate: string
-  author: string
-}
-
-export function blogArticleSEO(locale: string, article: BlogArticle) {
+export function blogSEO(locale: string) {
   const getLocalizedContent = (key: string) => {
     switch (key) {
       case 'title':
       case 'og:title':
       case 'twitter:title':
-        return article.title
+        return 'Blog | Pet Care Tips and Articles'
 
       case 'description':
       case 'og:description':
       case 'twitter:description':
-        return article.description
+        return 'Discover helpful articles and tips about pet care, animal health, and more.'
     }
   }
 
@@ -41,20 +32,18 @@ export function blogArticleSEO(locale: string, article: BlogArticle) {
         property: 'og:description',
         content: getLocalizedContent('og:description'),
       },
-      { property: 'og:type', content: 'article' },
+      { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' },
-      { property: 'og:url', content: article.url },
+      { property: 'og:url', content: `https://www.seusite.com.br/${locale}/blog` },
       {
         property: 'og:image',
-        content: article.image,
+        content: 'URL_TO_DEFAULT_BLOG_IMAGE',
       },
       { property: 'og:locale', content: locale },
       {
         property: 'og:locale:alternate',
         content: ['pt-BR', 'es', 'en'].filter(lang => lang !== locale),
       },
-      { name: 'author', content: article.author },
-      { property: 'article:published_time', content: article.publishDate },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       { name: 'language', content: locale },
       { name: 'revisit-after', content: '7 days' },
@@ -69,7 +58,7 @@ export function blogArticleSEO(locale: string, article: BlogArticle) {
       },
       {
         name: 'twitter:image',
-        content: article.image,
+        content: 'URL_TO_DEFAULT_BLOG_IMAGE',
       },
       {
         rel: 'alternate',
