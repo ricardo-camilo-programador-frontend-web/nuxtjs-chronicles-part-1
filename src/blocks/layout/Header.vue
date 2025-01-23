@@ -4,9 +4,9 @@ const { isScrollingDown, isScrolled } = useScroll()
 
 const headerClasses = computed(() => {
   return {
-    'translate-y-[-40%] lg:translate-y-[-50%] rounded-none max-w-[99vw]':
+    'translate-y-[-40%] lg:translate-y-[-50%] rounded-none ':
       isScrollingDown.value,
-    'bg-white shadow-lg max-w-[95vw]': isScrolled.value,
+    'bg-white shadow-lg': isScrolled.value,
     'transition-all duration-300 ease-in-out': true,
   }
 })
@@ -14,7 +14,7 @@ const headerClasses = computed(() => {
 
 <template>
   <header
-    class="top-0 right-0 left-0 z-[99] mx-auto flex w-full max-w-[95vw] items-center justify-center dark:bg-gray-800"
+    class="top-0 right-0 left-0 z-[99] mx-auto flex w-full items-center justify-center dark:bg-gray-800"
   >
     <div
       class="mx-auto hidden h-10 w-screen items-center justify-between md:flex"
@@ -79,7 +79,7 @@ const headerClasses = computed(() => {
 
     <div
       :class="[headerClasses]"
-      class="fixed mx-auto mt-[6rem] flex min-h-16 w-screen justify-between rounded-full bg-white p-4 shadow-lg"
+      class="fixed mx-auto mt-[6rem] flex min-h-16 w-screen max-w-[1920px] justify-between rounded-full bg-white p-4 shadow-lg"
     >
       <div class="z-[9999] mx-auto mr-auto flex w-auto lg:absolute lg:left-5">
         <Logo />

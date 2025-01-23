@@ -51,9 +51,9 @@ const logos: Array<LogoItem> = [
 <template>
   <section
     aria-label="Partner Logos"
-    class="mx-auto w-full max-w-[95vw] px-4 py-12 md:max-w-[70rem]"
+    class="mx-auto flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
   >
-    <div class="mx-auto max-w-7xl">
+    <div class="mx-auto">
       <Carousel
         :items="logos"
         :items-per-view="{
@@ -62,20 +62,24 @@ const logos: Array<LogoItem> = [
           lg: 5,
         }"
         :autoplay="true"
-        class="flex w-full min-w-full justify-between"
+        class="flex max-h-[100px] w-full min-w-full justify-between"
       >
         <template #default="{ item: logo }">
-          <div class="mx-auto flex h-[35rem] w-full max-w-[17rem] flex-col items-center justify-center transition-transform hover:scale-105 md:max-w-[200px]">
+          <div
+            class="mx-auto flex h-[35rem] w-full max-w-[17rem] flex-col items-center justify-center transition-transform hover:scale-105 md:max-w-[200px]"
+          >
             <Image
               :src="logo.imagePath"
               :alt="logo.altText"
               :title="logo.name"
-              class="h-[8rem] w-full overflow-visible object-cover"
+              class="h-[5rem] w-full object-cover"
               loading="lazy"
               width="200"
               height="200"
             />
-            <p class="bottom-0 mt-auto h-6 text-center font-medium text-orange-500">
+            <p
+              class="bottom-0 mt-auto h-6 text-center font-medium text-orange-500"
+            >
               {{ logo.name }}
             </p>
           </div>

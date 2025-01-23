@@ -12,8 +12,8 @@ const carouselConfig = {
 
   itemsPerView: {
     base: 2,
-    md: 3,
-    lg: 6,
+    md: 2,
+    lg: 2,
   },
 
   prevButton: {
@@ -31,26 +31,22 @@ const carouselConfig = {
 <template>
   <section
     aria-labelledby="categories-title"
-    class="mx-auto w-full px-4 py-8"
+    class="mx-auto flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
   >
-    <div
-      class="mx-auto flex w-full max-w-7xl flex-col items-start justify-start"
-    >
-      <header
-        class="mb-8 flex w-full max-w-[95vw] flex-col items-center justify-between gap-4 md:mb-1 md:flex-row"
-      >
+    <div class="grid grid-cols-1 bg-pink-400">
+      <header class="mb-8 grid grid-cols-2 gap-4 md:mb-1">
         <h2
           id="categories-title"
-          class="w-full text-center text-2xl font-bold md:mb-0 md:w-auto md:text-left"
+          class="w-full text-center text-2xl font-bold md:mb-0 md:text-left"
         >
           {{ t('categories.title') }}
         </h2>
 
-        <div class="w-full md:w-auto">
+        <div class="flex w-full justify-end">
           <Button
             :label="t('categories.seeAll')"
             :aria-label="t('categories.seeAllAriaLabel')"
-            class="w-full md:w-auto"
+            class="ml-auto w-auto"
             id="see-all-categories-button"
           />
         </div>
@@ -59,7 +55,12 @@ const carouselConfig = {
       <Carousel
         v-bind="carouselConfig"
         :items="categories"
-        class="w-full max-w-7xl"
+        :items-per-view="{
+          base: 1,
+          md: 2,
+          lg: 2,
+        }"
+        class="w-full"
       >
         <template #default="{ item: category }">
           <CategorieCard
@@ -67,7 +68,7 @@ const carouselConfig = {
             :title="t(category.title)"
             :product-count="category.productCount"
             :gradient-class="category.gradientClass"
-            class="w-full max-w-[95vw] min-w-full"
+            class="w-full min-w-[10rem]"
           />
         </template>
       </Carousel>

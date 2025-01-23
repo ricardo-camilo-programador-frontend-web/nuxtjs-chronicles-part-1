@@ -47,7 +47,7 @@ const blogPosts = ref<Array<BlogPost>>([
 <template>
   <section
     aria-labelledby="news-blog-title"
-    class="mx-auto w-full max-w-[95vw] px-4 py-12 md:max-w-[70rem]"
+    class="mx-auto w-full px-4 py-12"
   >
     <h2
       id="news-blog-title"
@@ -56,30 +56,26 @@ const blogPosts = ref<Array<BlogPost>>([
       {{ t('newsAndBlog.title') }}
     </h2>
 
-    <Carousel
-      :items="blogPosts"
-      :items-per-view="{
-        base: 1,
-        md: 2,
-        lg: 3,
-      }"
-      class="mt-[5rem] md:mt-0"
-    >
+    <Carousel :items="blogPosts">
       <template #default="{ item: post }">
-        <a
-          :href="`/blog/${post.slug}`"
-          class="block rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+        <NuxtLink
+          :to="`/blog/${post.slug}`"
+          class="block max-w-[17rem] rounded-lg bg-blue-500 focus:ring-2 focus:ring-orange-500 focus:outline-none"
         >
           <div class="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg">
-            <span class="absolute left-4 top-4 z-10 rounded-full bg-black px-3 py-1 text-xs text-white">
+            <span
+              class="absolute top-4 left-4 z-10 rounded-full bg-black px-3 py-1 text-xs text-white"
+            >
               {{ t(`categories.${post.category}`) }}
             </span>
-            <img
+            <Image
               :src="post.imageUrl"
               :alt="post.imageAlt"
+              width="300"
+              height="300"
               class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               loading="lazy"
-            >
+            />
           </div>
           <time
             :datetime="post.date"
@@ -87,10 +83,12 @@ const blogPosts = ref<Array<BlogPost>>([
           >
             {{ post.date }}
           </time>
-          <h3 class="line-clamp-2 text-lg font-semibold transition-colors group-hover:text-orange-500">
+          <h3
+            class="line-clamp-2 text-lg font-semibold transition-colors group-hover:text-orange-500"
+          >
             {{ post.title }}
           </h3>
-        </a>
+        </NuxtLink>
       </template>
     </Carousel>
   </section>

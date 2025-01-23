@@ -17,19 +17,19 @@ const translatedProducts = computed(() =>
 <template>
   <section
     v-if="translatedProducts.length > 0"
-    class="mx-auto my-8 max-w-[95vw] md:max-w-[70rem]"
+    class=""
   >
     <h2 class="mb-8 text-center text-2xl font-bold">
       {{ t('bestSellingProducts.title') }}
     </h2>
 
     <div
-      class="grid max-h-[unset] min-h-[500px] max-w-[95vw] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      class="grid min-h-[500px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-10 xl:grid-cols-4"
     >
       <div
         v-for="product in translatedProducts.slice(0, 8)"
         :key="product.id"
-        class="h-auto w-full min-w-[17rem]"
+        class="h-auto w-auto min-w-[10rem] bg-blue-500"
       >
         <ProductCard
           :image-src="product.imageSrc"

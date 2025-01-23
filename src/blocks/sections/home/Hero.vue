@@ -14,7 +14,7 @@ const localePath = useLocalePath()
 
 <template>
   <section
-    class="relative mx-auto flex h-full min-h-screen w-full min-w-screen flex-col items-center justify-center py-8 pt-[10rem] md:min-h-[44rem] md:max-w-full md:overflow-hidden md:py-16 md:pt-0 lg:max-h-[38rem] lg:py-24"
+    class="md: relative mx-auto flex h-full min-h-screen w-full min-w-screen flex-col items-center justify-center py-8 pt-[10rem] md:min-h-[44rem] md:overflow-hidden md:py-16 md:pt-0 lg:max-h-[38rem] lg:py-24"
     aria-labelledby="hero-heading"
   >
     <Image
@@ -46,7 +46,7 @@ const localePath = useLocalePath()
       height="75"
     />
 
-    <div class="mx-auto max-w-[96vw] md:max-w-full">
+    <div class="md: mx-auto">
       <div class="grid items-center gap-8 md:gap-12 lg:grid-cols-2">
         <div class="relative z-10 max-w-xl md:text-center lg:text-left">
           <span

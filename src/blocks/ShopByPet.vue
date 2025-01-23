@@ -58,7 +58,7 @@ const petCategories = ref<Array<PetCategory>>([
 <template>
   <section
     aria-labelledby="shop-by-pet-title"
-    class="mx-auto w-full max-w-[95vw] px-4 py-8 md:max-w-[70rem]"
+    class="mx-auto w-full px-4 py-8"
   >
     <div class="mb-6 flex items-center justify-between">
       <h2
@@ -80,9 +80,11 @@ const petCategories = ref<Array<PetCategory>>([
       <template #default="{ item: pet }">
         <button
           :aria-label="t('shopByPet.shopFor', { pet: pet.name })"
-          class="group flex w-full flex-col items-center gap-3 rounded-lg p-4 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          class="group flex w-full flex-col items-center gap-3 rounded-lg p-4 transition-colors hover:bg-gray-50 focus:ring-2 focus:ring-orange-500 focus:outline-none"
         >
-          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-orange-500">
+          <div
+            class="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-orange-500"
+          >
             <Image
               :src="pet.icon"
               :alt="pet.altText"

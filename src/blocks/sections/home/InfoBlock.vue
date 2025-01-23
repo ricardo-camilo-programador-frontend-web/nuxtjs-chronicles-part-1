@@ -9,7 +9,7 @@ const { t } = useI18n()
 
 <template>
   <section
-    class="mx-auto flex max-w-[99vw] flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
+    class="mx-auto flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
     aria-labelledby="info-block-heading"
   >
     <div

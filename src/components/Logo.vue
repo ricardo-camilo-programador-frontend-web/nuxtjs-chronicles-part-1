@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import appLogo from '@/assets/images/svg/logo-black.svg'
+
 const localePath = useLocalePath()
 </script>
 
@@ -9,10 +11,12 @@ const localePath = useLocalePath()
     aria-label="Home"
     class="h-full max-h-[8rem] w-full max-w-[8rem]"
   >
-    <img
-      src="@/assets/images/svg/logo-black.svg"
+    <Image
+      :src="appLogo"
       alt="Logo"
       class="h-full w-full object-contain"
-    >
+      width="300"
+      height="300"
+    />
   </NuxtLink>
 </template>

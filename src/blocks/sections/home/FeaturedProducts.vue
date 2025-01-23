@@ -21,9 +21,9 @@ const translatedProducts = computed(() =>
   <section
     v-if="translatedProducts.length > 0"
     aria-labelledby="featured-products-title"
-    class="mx-auto my-8 flex w-full max-w-[95vw] min-w-full flex-col items-center justify-center"
+    class="mx-auto flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
   >
-    <div class="mx-auto w-full max-w-[70rem]">
+    <div class="mx-auto w-full">
       <header
         class="mb-8 flex w-full flex-wrap items-center justify-center gap-4 md:mb-1 md:justify-between"
       >
@@ -46,7 +46,7 @@ const translatedProducts = computed(() =>
       </header>
 
       <Carousel
-        :items="translatedProducts.slice(0, 3)"
+        :items="translatedProducts"
         :items-per-view="{
           base: 1,
           md: 2,
@@ -60,7 +60,7 @@ const translatedProducts = computed(() =>
             :product-name="product.name"
             :product-price="product.formattedPrice"
             :alt-text="product.altText"
-            class="mx-auto w-full min-w-[17rem] max-h-[20rem] pb-24"
+            class="mx-auto max-h-[20rem] w-full min-w-[17rem] pb-24"
             role="listitem"
           />
         </template>

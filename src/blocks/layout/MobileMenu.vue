@@ -78,11 +78,13 @@ function toggleNav() {
                       v-if="item.icon"
                       class="icon relative"
                     >
-                      <img
+                      <Image
                         :src="item.icon"
                         class="force-svg-color fill-primary h-6 w-6"
                         alt="Ícone do menu."
-                      >
+                        width="300"
+                        height="300"
+                      />
                     </div>
                     <span
                       class="text-[1.1rem] md:text-[1.2rem] xl:text-[1.3rem]"

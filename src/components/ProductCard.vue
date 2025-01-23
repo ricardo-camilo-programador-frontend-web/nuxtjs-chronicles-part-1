@@ -15,7 +15,7 @@ defineProps<ProductCardProps>()
 
 <template>
   <article
-    class="max-w-[95vw] rounded-lg bg-gray-200 transition-all transition-shadow duration-300 ease-in-out hover:bg-orange-500 hover:shadow-lg md:max-w-full"
+    class="md: rounded-lg bg-gray-200 transition-all transition-shadow duration-300 ease-in-out hover:bg-orange-500 hover:shadow-lg"
   >
     <div class="relative mb-4 aspect-square">
       <Image
@@ -29,7 +29,7 @@ defineProps<ProductCardProps>()
     </div>
 
     <div
-      class="flex h-full max-h-[4rem] min-h-[7rem] max-w-[95vw] flex-col space-y-2 rounded-b-lg bg-white px-4 py-2"
+      class="flex h-full max-h-[4rem] min-h-[7rem] flex-col space-y-2 rounded-b-lg bg-white px-4 py-2"
     >
       <div class="flex h-full w-full items-center justify-between">
         <h3 class="text-lg font-medium">
