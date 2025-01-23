@@ -54,39 +54,28 @@ const logos: Array<LogoItem> = [
     class="container mx-auto px-4 py-8 sm:py-12 lg:py-16"
   >
     <div class="w-full">
-      <Carousel
-        :items="logos"
-        :items-per-view="{
-          base: 1,
-          sm: 2,
-          md: 3,
-          lg: 4,
-          xl: 5,
-        }"
-        :autoplay="true"
-        class="flex w-full justify-between"
-      >
-        <template #default="{ item: logo }">
-          <div
-            class="mx-auto flex w-full max-w-[150px] flex-col items-center justify-center px-4 transition-all duration-300 hover:scale-105 sm:max-w-[180px] lg:max-w-[200px]"
+      <div class="flex w-full justify-between">
+        <div
+          v-for="logo in logos"
+          :key="logo.id"
+          class="mx-auto flex w-full max-w-[150px] flex-col items-center justify-center px-4 transition-all duration-300 hover:scale-105 sm:max-w-[180px] lg:max-w-[200px]"
+        >
+          <Image
+            :src="logo.imagePath"
+            :alt="logo.altText"
+            :title="logo.name"
+            class="h-16 w-auto object-contain sm:h-20 lg:h-24"
+            loading="lazy"
+            width="200"
+            height="200"
+          />
+          <p
+            class="mt-4 text-center text-sm font-medium text-orange-500 sm:text-base"
           >
-            <Image
-              :src="logo.imagePath"
-              :alt="logo.altText"
-              :title="logo.name"
-              class="h-16 w-auto object-contain sm:h-20 lg:h-24"
-              loading="lazy"
-              width="200"
-              height="200"
-            />
-            <p
-              class="mt-4 text-center text-sm font-medium text-orange-500 sm:text-base"
-            >
-              {{ logo.name }}
-            </p>
-          </div>
-        </template>
-      </Carousel>
+            {{ logo.name }}
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
