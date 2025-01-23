@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import portifolioImage from '@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
 import { useDevCounter } from '@/composables/useDevCounter'
 import { useGTM } from '@/composables/useGTM'
 import {
@@ -139,7 +140,7 @@ watch(analyticsEnabled, (newValue) => {
                       class="relative mx-auto flex items-center justify-center gap-2 rounded-lg bg-gray-50 p-3 transition-colors hover:bg-gray-100"
                     >
                       <Image
-                        src="@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp"
+                        :src="portifolioImage"
                         alt="Heart circle"
                         class="mr-2 h-8 w-8"
                         width="300"
