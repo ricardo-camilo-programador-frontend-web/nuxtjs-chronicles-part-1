@@ -5,12 +5,16 @@ export default defineNuxtConfig({
   srcDir: './src/',
 
   css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      '@tailwindcss/postcss': {},
+    },
+  },
 
   modules: [
     '@nuxt/icon',
     'nuxt-headlessui',
     '@nuxtjs/i18n',
-    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
   ],
 

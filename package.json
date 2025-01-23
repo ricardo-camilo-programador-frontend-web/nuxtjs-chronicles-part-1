@@ -32,8 +32,8 @@
     "@iconify/json": "^2.2.297",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
-    "@nuxtjs/tailwindcss": "^6.13.1",
     "@rushstack/eslint-patch": "^1.10.5",
+    "@tailwindcss/postcss": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
     "@vue/eslint-config-prettier": "^10.2.0",
@@ -44,6 +44,7 @@
     "eslint-plugin-vue": "^9.32.0",
     "nuxt-headlessui": "^1.2.0",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.10"
+    "prettier-plugin-tailwindcss": "^0.6.10",
+    "tailwindcss": "^4.0.0"
   }
 }
