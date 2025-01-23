@@ -54,7 +54,7 @@ const logos: Array<LogoItem> = [
     class="container mx-auto px-4 py-8 sm:py-12 lg:py-16"
   >
     <div class="w-full">
-      <div class="flex w-full justify-between">
+      <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         <div
           v-for="logo in logos"
           :key="logo.id"
