@@ -23,25 +23,19 @@ const translatedProducts = computed(() =>
       {{ t('bestSellingProducts.title') }}
     </h2>
 
-    <div
-      class="grid min-h-[500px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-10 xl:grid-cols-4"
-    >
-      <div
+    <div class="mx-auto grid w-full min-w-[17rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <FeatureCard
         v-for="product in translatedProducts.slice(0, 8)"
         :key="product.id"
-        class="h-auto w-auto min-w-[10rem]"
-      >
-        <ProductCard
-          :image-src="product.imageSrc"
-          :product-name="product.name"
-          :product-price="product.formattedPrice"
-          :is-favorite="product.favorite"
-          :alt-text="product.altText"
-          :currency="product.currency"
-          :formatted-price="product.formattedPrice"
-          :name="product.name"
-        />
-      </div>
+        :image-src="product.imageSrc"
+        :product-name="product.name"
+        :product-price="product.formattedPrice"
+        :is-favorite="product.favorite"
+        :alt-text="product.altText"
+        :currency="product.currency"
+        :formatted-price="product.formattedPrice"
+        :name="product.name"
+      />
     </div>
   </section>
 </template>

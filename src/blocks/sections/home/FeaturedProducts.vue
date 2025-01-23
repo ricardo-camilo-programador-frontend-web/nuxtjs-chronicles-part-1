@@ -21,7 +21,7 @@ const translatedProducts = computed(() =>
   <section
     v-if="translatedProducts.length > 0"
     aria-labelledby="featured-products-title"
-    class="mx-auto flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
+    class="mx-auto max-w-[95vw] flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
   >
     <div class="mx-auto w-full">
       <header
@@ -45,26 +45,18 @@ const translatedProducts = computed(() =>
         </div>
       </header>
 
-      <Carousel
-        :items="translatedProducts.slice(0, 4)"
-        :items-per-view="{
-          md: 2,
-          lg: 3,
-          xl: 4,
-        }"
-        class="mx-auto w-full max-w-[95vw]"
-      >
-        <template #default="{ item: product }">
-          <FeatureCard
-            :image-src="product.imageSrc"
-            :product-name="product.name"
-            :product-price="product.formattedPrice"
-            :alt-text="product.altText"
-            class="mx-auto max-h-[20rem] w-full min-w-[17rem] pb-24"
-            role="listitem"
-          />
-        </template>
-      </Carousel>
+      <div class="mx-auto grid w-full min-w-[17rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <FeatureCard
+          v-for="product in translatedProducts.slice(0, 4)"
+          :key="product.id"
+          :image-src="product.imageSrc"
+          :product-name="product.name"
+          :product-price="product.formattedPrice"
+          :alt-text="product.altText"
+          class="mx-auto max-h-[20rem] w-full min-w-[17rem] pb-24"
+          role="listitem"
+        />
+      </div>
     </div>
   </section>
 </template>

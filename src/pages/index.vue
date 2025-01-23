@@ -10,7 +10,7 @@ useHead(homeSEO(locale.value))
 </script>
 
 <template>
-  <main class="mx-auto grid max-w-[95vw] grid-cols-1">
+  <main class="mx-auto grid grid-cols-1 max-w-[95vw] lg:max-w-[1920px]">
     <div class="grid grid-cols-1">
       <Hero />
     </div>
