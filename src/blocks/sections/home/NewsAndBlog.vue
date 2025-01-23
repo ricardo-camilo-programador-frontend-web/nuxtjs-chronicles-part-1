@@ -47,7 +47,7 @@ const blogPosts = ref<Array<BlogPost>>([
 <template>
   <section
     aria-labelledby="news-blog-title"
-    class="mx-auto w-full px-4 py-12"
+    class="mx-auto w-full px-4 py-12 lg:max-w-[1350px]"
   >
     <h2
       id="news-blog-title"
