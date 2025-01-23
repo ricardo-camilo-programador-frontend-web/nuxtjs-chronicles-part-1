@@ -272,6 +272,13 @@ export const useProductStore = defineStore({
     getProducts() {
       return this.products
     },
+    updateProductFavorite(productToUpdate: Product): void {
+      this.products = this.products.map(product =>
+        product.id === productToUpdate.id
+          ? { ...product, favorite: !product.favorite }
+          : product,
+      )
+    },
   },
 })
 
