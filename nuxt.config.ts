@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
+    '@nuxt/ui',
   ],
 
   i18n: {
