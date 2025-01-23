@@ -103,8 +103,10 @@ export const pt = {
     petCareHeartAltText: 'Pet Care Heart Logo com Forma de Coração',
   },
   products: {
-    featuredTitle: 'Produtos em Destaque',
+    favorite: 'Favorito',
     seeAll: 'Ver Todos os Produtos',
+    featuredTitle: 'Produtos em Destaque',
+    seeAllAriaLabel: 'Ver Todos os Produtos',
     premiumDogFood: 'Alimento Premium para Cachorro',
     premiumCatFood: 'Alimento Premium para Gato',
     premiumDogFoodAltText: 'Alimento Premium para Cachorro',
