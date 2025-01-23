@@ -1,24 +1,17 @@
 <script setup lang="ts">
 const showFavoritesMenu = ref(false)
 const favoritesMenu = ref<HTMLElement | null>(null)
+const favoriteProducts = ref<Array<Product>>([])
+const productStore = useProductStore()
 
 function toggleFavoritesMenu(e: Event) {
   e.stopPropagation()
   showFavoritesMenu.value = !showFavoritesMenu.value
 }
 
-function returnOnlyFavoriteProducts(products: Array<Product>) {
-  return products.filter(product => product.favorite)
+function setFavoriteProducts() {
+  favoriteProducts.value = productStore.getFavoriteProducts
 }
-
-const products = computed(() => {
-  const store = useProductStore()
-  return store.products
-})
-
-const favoriteProducts = computed(() =>
-  useTranslateProducts(returnOnlyFavoriteProducts(products.value)),
-)
 
 function handleClickOutside(event: MouseEvent) {
   const clickedOutsideDropdownList = isClickOutsideElement(
@@ -33,6 +26,7 @@ function handleClickOutside(event: MouseEvent) {
 
 onMounted(() => {
   window.addEventListener('click', handleClickOutside)
+  setFavoriteProducts()
 })
 
 onUnmounted(() => {
@@ -55,13 +49,14 @@ onUnmounted(() => {
       <div
         v-if="showFavoritesMenu"
         ref="favoritesMenu"
+        class="h-[20rem]"
       >
         <div
           v-if="showFavoritesMenu && favoriteProducts.length > 0"
           class="absolute top-16 right-16 z-[99] h-full w-full"
         >
           <div
-            class="absolute right-0 flex max-h-[20rem] w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-2"
+            class="absolute right-0 flex h-full w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-2"
           >
             <div
               v-for="product in favoriteProducts"
@@ -79,7 +74,10 @@ onUnmounted(() => {
                 {{ product.name }}
               </p>
 
-              <FavoriteShortcut :product="product" />
+              <FavoriteShortcut
+                :product="product"
+                @favorite-updated="setFavoriteProducts"
+              />
             </div>
           </div>
         </div>
