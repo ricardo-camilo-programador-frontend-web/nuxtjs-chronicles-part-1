@@ -7,10 +7,8 @@ useHead({
 </script>
 
 <template>
-  <div class="relative grid grid-cols-1 bg-purple-500 md:min-h-screen">
-    <div
-      class="relative mx-auto flex flex-col overflow-hidden bg-orange-500 md:min-h-screen"
-    >
+  <div class="relative grid grid-cols-1 bg-gray-50 md:min-h-screen">
+    <div class="relative mx-auto flex flex-col overflow-hidden md:min-h-screen">
       <Header />
 
       <main class="relative mx-auto grid max-w-[1920px] grid-cols-1">

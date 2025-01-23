@@ -33,7 +33,7 @@ const carouselConfig = {
     aria-labelledby="categories-title"
     class="mx-auto flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
   >
-    <div class="grid grid-cols-1 bg-pink-400">
+    <div class="grid grid-cols-1">
       <header class="mb-8 grid grid-cols-2 gap-4 md:mb-1">
         <h2
           id="categories-title"

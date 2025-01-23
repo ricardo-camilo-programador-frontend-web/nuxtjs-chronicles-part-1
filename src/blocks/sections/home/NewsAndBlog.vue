@@ -60,7 +60,7 @@ const blogPosts = ref<Array<BlogPost>>([
       <template #default="{ item: post }">
         <NuxtLink
           :to="`/blog/${post.slug}`"
-          class="block max-w-[17rem] rounded-lg bg-blue-500 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          class="block max-w-[17rem] rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
         >
           <div class="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg">
             <span

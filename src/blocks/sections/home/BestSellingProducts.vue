@@ -29,7 +29,7 @@ const translatedProducts = computed(() =>
       <div
         v-for="product in translatedProducts.slice(0, 8)"
         :key="product.id"
-        class="h-auto w-auto min-w-[10rem] bg-blue-500"
+        class="h-auto w-auto min-w-[10rem]"
       >
         <ProductCard
           :image-src="product.imageSrc"

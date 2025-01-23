@@ -10,29 +10,29 @@ useHead(homeSEO(locale.value))
 </script>
 
 <template>
-  <main class="mx-auto grid max-w-[95vw] grid-cols-1 bg-blue-500">
-    <div class="grid grid-cols-1 bg-yellow-500">
+  <main class="mx-auto grid max-w-[95vw] grid-cols-1">
+    <div class="grid grid-cols-1">
       <Hero />
     </div>
-    <div class="grid grid-cols-1 bg-green-500">
+    <div class="grid grid-cols-1">
       <Categories />
     </div>
-    <div class="grid grid-cols-1 bg-red-500">
+    <div class="grid grid-cols-1">
       <FeaturedProducts />
     </div>
-    <div class="grid grid-cols-1 bg-purple-500">
+    <div class="grid grid-cols-1">
       <InfoBlock />
     </div>
-    <div class="grid grid-cols-1 bg-pink-500">
+    <div class="grid grid-cols-1">
       <Logos />
     </div>
-    <div class="grid grid-cols-1 bg-orange-500">
+    <div class="grid grid-cols-1">
       <BestSellingProducts />
     </div>
-    <div class="grid grid-cols-1 bg-pink-500">
+    <div class="grid grid-cols-1">
       <ShopByPet />
     </div>
-    <div class="grid grid-cols-1 bg-purple-500">
+    <div class="grid grid-cols-1">
       <NewsAndBlog />
     </div>
   </main>

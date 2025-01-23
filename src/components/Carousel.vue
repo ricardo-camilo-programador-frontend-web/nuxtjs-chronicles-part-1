@@ -30,6 +30,11 @@ interface CarouselProps {
   indicatorsPosition?: 'inside' | 'outside'
   indicatorsClass?: string
   itemsPerView?: ResponsiveConfig
+  autoScroll?: boolean
+  autoScrollInterval?: number
+  autoScrollDirection?: 'left' | 'right'
+  autoScrollEasing?: string
+  autoScrollSnap?: boolean
 }
 
 const props = withDefaults(defineProps<CarouselProps>(), {
@@ -44,7 +49,12 @@ const props = withDefaults(defineProps<CarouselProps>(), {
   loop: true,
   dots: true,
   autoplayInterval: 3000,
-  indicatorsPosition: 'inside',
+  autoScroll: true,
+  autoScrollInterval: 3000,
+  autoScrollDirection: 'left',
+  autoScrollEasing: 'ease-in-out',
+  autoScrollSnap: true,
+  indicatorsPosition: 'outside',
   indicatorsClass: '',
   itemsPerView: () => ({
     base: 1,
@@ -127,6 +137,7 @@ onMounted(() => setupAutoplay(carouselRef, props.autoplayInterval))
     :autoplay="autoplay"
     :autoplay-interval="autoplayInterval"
     :dots="dots"
+    :auto-scroll="autoScroll"
   >
     <template #default="slotProps">
       <slot v-bind="{ ...slotProps }" />

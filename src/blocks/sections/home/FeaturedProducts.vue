@@ -46,13 +46,13 @@ const translatedProducts = computed(() =>
       </header>
 
       <Carousel
-        :items="translatedProducts"
+        :items="translatedProducts.slice(0, 4)"
         :items-per-view="{
-          base: 1,
           md: 2,
           lg: 3,
+          xl: 4,
         }"
-        class="mx-auto w-full"
+        class="mx-auto w-full max-w-[95vw]"
       >
         <template #default="{ item: product }">
           <FeatureCard

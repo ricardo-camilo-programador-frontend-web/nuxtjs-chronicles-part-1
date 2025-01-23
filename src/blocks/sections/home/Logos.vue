@@ -51,34 +51,36 @@ const logos: Array<LogoItem> = [
 <template>
   <section
     aria-label="Partner Logos"
-    class="mx-auto flex flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
+    class="container mx-auto px-4 py-8 sm:py-12 lg:py-16"
   >
-    <div class="mx-auto">
+    <div class="w-full">
       <Carousel
         :items="logos"
         :items-per-view="{
-          base: 2,
+          base: 1,
+          sm: 2,
           md: 3,
-          lg: 5,
+          lg: 4,
+          xl: 5,
         }"
         :autoplay="true"
-        class="flex max-h-[100px] w-full min-w-full justify-between"
+        class="flex w-full justify-between"
       >
         <template #default="{ item: logo }">
           <div
-            class="mx-auto flex h-[35rem] w-full max-w-[17rem] flex-col items-center justify-center transition-transform hover:scale-105 md:max-w-[200px]"
+            class="mx-auto flex w-full max-w-[150px] flex-col items-center justify-center px-4 transition-all duration-300 hover:scale-105 sm:max-w-[180px] lg:max-w-[200px]"
           >
             <Image
               :src="logo.imagePath"
               :alt="logo.altText"
               :title="logo.name"
-              class="h-[5rem] w-full object-cover"
+              class="h-16 w-auto object-contain sm:h-20 lg:h-24"
               loading="lazy"
               width="200"
               height="200"
             />
             <p
-              class="bottom-0 mt-auto h-6 text-center font-medium text-orange-500"
+              class="mt-4 text-center text-sm font-medium text-orange-500 sm:text-base"
             >
               {{ logo.name }}
             </p>
