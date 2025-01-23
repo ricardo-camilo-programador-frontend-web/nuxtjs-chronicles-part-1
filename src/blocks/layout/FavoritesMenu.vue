@@ -57,7 +57,7 @@ onUnmounted(() => {
       >
         <div
           ref="favoritesMenu"
-          class="absolute right-0 flex max-h-[20rem] w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-lg bg-white p-2"
+          class="absolute right-0 flex max-h-[20rem] w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl bg-white p-2 border border-gray-200"
         >
           <div
             v-for="product in favoriteProducts"
