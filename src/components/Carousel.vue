@@ -1,132 +1,113 @@
 <script setup lang="ts">
-import { Grid, Navigation, Pagination } from 'swiper/modules'
-import { Swiper } from 'swiper/vue'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/grid'
-
 interface CarouselProps {
-  uniqueId?: string
-  slidesPerView?: number
-  spaceBetween?: number
+  items?: Array<any>
+  dir?: 'ltr' | 'rtl'
+  arrows?: boolean
+  indicators?: boolean
+  wrapperClass?: string
+  containerClass?: string
+  itemClass?: string
+  autoplay?: boolean
   loop?: boolean
-  pagination?: boolean
-  navigationClass?: string
-  mobileSlidesPerView?: number
-  tabletSlidesPerView?: number
-  desktopSlidesPerView?: number
-  mobileSpaceBetween?: number
-  tabletSpaceBetween?: number
-  desktopSpaceBetween?: number
-  slidesPerColumn?: number
-  rowsMobile?: number
-  rowsTablet?: number
-  rowsDesktop?: number
-  showNavigation?: boolean
+  dots?: boolean
+  autoplayInterval?: number
+  prevButton?: {
+    color?: string
+    icon?: string
+    class?: string
+  }
+  nextButton?: {
+    color?: string
+    icon?: string
+    class?: string
+  }
+  indicatorsPosition?: 'inside' | 'outside'
+  indicatorsClass?: string
+  itemsPerView?: {
+    base?: number | string
+    sm?: number | string
+    md?: number | string
+    lg?: number | string
+    xl?: number | string
+  }
 }
-
 const props = withDefaults(defineProps<CarouselProps>(), {
-  uniqueId: 'swiper',
-  slidesPerView: 6,
-  spaceBetween: 24,
+  items: () => [],
+  dir: 'ltr',
+  arrows: true,
+  indicators: true,
+  wrapperClass: '',
+  containerClass: '',
+  itemClass: '',
+  autoplay: true,
   loop: true,
-  pagination: false,
-  navigationClass: '',
-  mobileSlidesPerView: 2,
-  tabletSlidesPerView: 3,
-  desktopSlidesPerView: 6,
-  mobileSpaceBetween: 16,
-  tabletSpaceBetween: 20,
-  desktopSpaceBetween: 24,
-  slidesPerColumn: 1,
-  rowsMobile: 1,
-  rowsTablet: 1,
-  rowsDesktop: 1,
-  showNavigation: true,
+  dots: true,
+  autoplayInterval: 3000,
+  indicatorsPosition: 'inside',
+  indicatorsClass: '',
+  itemsPerView: () => ({
+    base: 1,
+    sm: 2,
+    md: 3,
+    lg: 4,
+    xl: 5,
+  }),
 })
-
-const modules = [Pagination, Navigation, Grid]
-
-const navigation = {
-  nextEl: `#${props.uniqueId}-button-next`,
-  prevEl: `#${props.uniqueId}-button-prev`,
-}
-
-const pagination = {
-  el: `#${props.uniqueId}-pagination`,
-  clickable: true,
-  renderBullet() {
-    return '<span class="swiper-pagination-bullet"></span>'
-  },
-}
-
-const breakpoints = {
-  320: {
-    slidesPerView: props.mobileSlidesPerView,
-    spaceBetween: props.mobileSpaceBetween,
-    grid: {
-      rows: props.rowsMobile,
-      fill: 'row' as const,
-    },
-  },
-  640: {
-    slidesPerView: props.tabletSlidesPerView,
-    spaceBetween: props.tabletSpaceBetween,
-    grid: {
-      rows: props.rowsTablet,
-      fill: 'row' as const,
-    },
-  },
-  768: {
-    slidesPerView: props.desktopSlidesPerView,
-    spaceBetween: props.desktopSpaceBetween,
-    grid: {
-      rows: props.rowsDesktop,
-      fill: 'row' as const,
-    },
-  },
-  1366: {
-    slidesPerView: props.slidesPerView,
-    spaceBetween: props.spaceBetween,
-  },
-}
+const carouselUI = computed(() => ({
+  root: `relative ${props.wrapperClass}`,
+  viewport: `relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth ${props.containerClass}`,
+  container: '',
+  item: `flex flex-none snap-center basis-full/${props.itemsPerView.base} sm:basis-1/${props.itemsPerView.sm} md:basis-1/${props.itemsPerView.md} lg:basis-1/${props.itemsPerView.lg} xl:basis-1/${props.itemsPerView.xl} ${props.itemClass}`,
+  arrows: 'flex items-center justify-between',
+  prev:
+    props.prevButton?.class
+    || 'absolute start-4 top-1/2 transform -translate-y-1/2',
+  next:
+    props.nextButton?.class
+    || 'absolute end-4 top-1/2 transform -translate-y-1/2',
+  dots: `flex items-center justify-center gap-3 inset-x-0 ${
+    props.indicatorsPosition === 'inside'
+      ? 'absolute bottom-4'
+      : 'relative bottom-0 mt-4'
+  } ${props.indicatorsClass}`,
+  dot: 'rounded-full h-3 w-3 bg-primary-500 dark:bg-primary-400',
+}))
+const carouselRef = ref()
+onMounted(() => {
+  if (props.autoplay) {
+    const interval = setInterval(() => {
+      if (!carouselRef.value) {
+        return
+      }
+      if (carouselRef.value.page === carouselRef.value.pages) {
+        carouselRef.value.select(0)
+      }
+      else {
+        carouselRef.value.next()
+      }
+    }, props.autoplayInterval)
+    onUnmounted(() => {
+      clearInterval(interval)
+    })
+  }
+})
 </script>
 
 <template>
-  <Swiper
-    :id="props.uniqueId"
-    :slides-per-view="slidesPerView"
+  <UCarousel
+    ref="carouselRef"
+    :items="items"
+    :dir="dir"
+    :ui="carouselUI"
+    :arrows="arrows"
+    :indicators="indicators"
     :loop="loop"
-    :navigation="navigation"
-    :pagination="pagination"
-    :breakpoints="breakpoints"
-    :modules="modules"
-    class="relative mx-auto max-w-[95vw] !overflow-visible"
+    :autoplay="autoplay"
+    :autoplay-interval="autoplayInterval"
+    :dots="dots"
   >
-    <slot />
-
-    <div
-      v-if="showNavigation"
-      id="carousel-button-prev"
-      class="absolute inset-y-0 left-0 z-[90] -ml-10 flex w-16 items-center justify-center"
-    >
-      <Button
-        :id="`${props.uniqueId}-button-prev`"
-        icon="i-heroicons-chevron-left"
-        class="z-[90] my-auto !rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-      />
-    </div>
-
-    <div
-      v-if="showNavigation"
-      id="carousel-button-next"
-      class="absolute inset-y-0 right-0 z-[90] -mr-7 flex w-16 items-center justify-center"
-    >
-      <Button
-        :id="`${props.uniqueId}-button-next`"
-        icon="i-heroicons-chevron-right"
-        class="z-[90] my-auto !rounded-full bg-gray-100 p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-      />
-    </div>
-  </Swiper>
+    <template #default="slotProps">
+      <slot v-bind="{ ...slotProps }" />
+    </template>
+  </UCarousel>
 </template>
