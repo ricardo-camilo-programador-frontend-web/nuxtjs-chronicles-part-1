@@ -61,7 +61,6 @@ watch(productStore, () => {
           role="listitem"
         >
           <FavoriteShortcut
-            v-if="product.featured"
             :product="product"
             @favorite-updated="setFeaturedProducts"
           />
