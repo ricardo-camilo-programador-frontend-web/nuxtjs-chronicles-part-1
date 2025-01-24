@@ -1,19 +1,4 @@
 import type { Product } from '@/types/product'
-import {
-  birdCage,
-  catFood,
-  catFoodPremium,
-  dogCollar,
-  dogFoodLarge,
-  dogFoodMedium,
-  dogFoodMini,
-  dogFoodOrange,
-  fishFilter,
-  groomingKit,
-  hamsterHabitat,
-  litterBox,
-  scratchingPost,
-} from '@/utils/imageFiles'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 interface CartItem extends Product {
