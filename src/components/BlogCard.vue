@@ -15,7 +15,7 @@ const { t } = useI18n()
 <template>
   <NuxtLink
     :to="`/blog/${slug}`"
-    class="block md:max-w-[17rem] rounded-lg border-2 border-gray-100 p-2 shadow-md hover:shadow-lg focus:ring-2 focus:ring-orange-500 focus:outline-none md:max-w-full"
+    class="block rounded-lg border-2 border-gray-100 p-2 shadow-md hover:shadow-lg focus:ring-2 focus:ring-orange-500 focus:outline-none md:max-w-[17rem] md:max-w-full"
   >
     <div class="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg">
       <span
