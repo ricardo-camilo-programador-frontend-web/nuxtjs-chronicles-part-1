@@ -24,12 +24,6 @@ function handleClickOutside(event: MouseEvent) {
   }
 }
 
-watch(showFavoritesMenu, () => {
-  if (showFavoritesMenu.value) {
-    setFavoriteProducts()
-  }
-})
-
 watch(productStore, () => {
   setFavoriteProducts()
 })
