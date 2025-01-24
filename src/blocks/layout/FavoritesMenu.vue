@@ -20,7 +20,7 @@ watch(productStore, () => {
   <div class="relative">
     <div class="relative z-[100]">
       <Button
-        :icon="showFavoritesMenu ? 'mdi:heart' : 'mdi:heart-outline'"
+        :icon="showFavoritesMenu ? 'mdi:heart text-red-500' : 'mdi:heart-outline text-black'"
         id="favoritesMenuButton"
         class="w-auto py-0"
         icon-style="text-3xl"
