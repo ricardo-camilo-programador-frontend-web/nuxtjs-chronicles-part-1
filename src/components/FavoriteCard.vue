@@ -40,9 +40,9 @@ const { t } = useI18n()
 
     <div
       v-if="!favoriteProducts.length"
-      class="absolute top-16 right-0 z-[99] flex h-full w-[17rem] items-center justify-center bg-black/50"
+      class="absolute top-16 right-16 z-[99] h-full w-full bg-white flex items-center justify-center rounded-xl border border-gray-200"
     >
-      <p class="text-white">
+      <p class="text-black">
         {{ $t('favorites.empty') }}
       </p>
     </div>
