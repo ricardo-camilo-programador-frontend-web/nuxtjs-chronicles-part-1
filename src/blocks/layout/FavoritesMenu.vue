@@ -4,8 +4,7 @@ const favoritesMenu = ref<HTMLElement | null>(null)
 const favoriteProducts = ref<Array<Product>>([])
 const productStore = useProductStore()
 
-function toggleFavoritesMenu(e: Event) {
-  e.stopPropagation()
+function toggleFavoritesMenu() {
   showFavoritesMenu.value = !showFavoritesMenu.value
 }
 
