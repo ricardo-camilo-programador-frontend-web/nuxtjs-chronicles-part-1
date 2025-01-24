@@ -36,7 +36,7 @@ function toggleNav() {
     >
       <div
         v-show="showMenu"
-        class="hover:text-primary/75 fixed inset-0 left-0 z-[99] -mt-1 mr-auto flex h-full min-h-screen w-full min-w-[17rem]"
+        class="hover:text-primary/75 fixed inset-0 left-0 z-[999] -mt-1 mr-auto flex h-full min-h-screen w-full min-w-[17rem]"
       >
         <nav
           class="container mx-auto flex h-full min-h-screen w-full min-w-[17rem] border-r-2 shadow-lg md:items-center md:justify-between"
