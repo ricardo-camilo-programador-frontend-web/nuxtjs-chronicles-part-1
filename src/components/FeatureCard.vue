@@ -34,7 +34,7 @@ const { t } = useI18n()
           {{ t(productName) }}
         </h3>
         <p class="mt-auto text-gray-600">
-          {{ t(productPrice) }}
+          {{ productPrice }}
         </p>
       </div>
 
