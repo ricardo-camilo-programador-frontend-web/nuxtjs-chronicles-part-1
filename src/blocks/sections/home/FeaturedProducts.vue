@@ -1,25 +1,27 @@
 <script setup lang="ts">
-import { useTranslateProducts } from '@/composables/useTranslateProduct'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+const featuredProducts = ref<Array<Product>>([])
 
-function returnOnlyFeaturedProducts(products: Array<Product>) {
-  return products.filter(product => product.featured)
+const productStore = useProductStore()
+
+function setFeaturedProducts() {
+  featuredProducts.value = productStore.getFeaturedProducts
 }
 
-const { getProducts } = useProductStore()
+onMounted(() => {
+  setFeaturedProducts()
+})
 
-const products = computed(() => getProducts())
-
-const translatedProducts = computed(() =>
-  useTranslateProducts(returnOnlyFeaturedProducts(products.value)),
-)
+watch(productStore, () => {
+  setFeaturedProducts()
+})
 </script>
 
 <template>
   <section
-    v-if="translatedProducts.length > 0"
+    v-if="featuredProducts.length > 0"
     aria-labelledby="featured-products-title"
     class="mx-auto flex max-w-[95vw] flex-col items-center justify-center py-8 md:flex-row md:justify-between md:gap-24"
   >
@@ -49,15 +51,21 @@ const translatedProducts = computed(() =>
         class="mx-auto grid w-full min-w-[17rem] grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4"
       >
         <FeatureCard
-          v-for="product in translatedProducts.slice(0, 4)"
+          v-for="product in featuredProducts.slice(0, 4)"
           :key="product.id"
           :image-src="product.imageSrc"
           :product-name="product.name"
-          :product-price="product.formattedPrice"
+          :product-price="product.price.toString()"
           :alt-text="product.altText"
           class="mx-auto max-h-[20rem] w-full min-w-[17rem] pb-24"
           role="listitem"
-        />
+        >
+          <FavoriteShortcut
+            v-if="product.featured"
+            :product="product"
+            @favorite-updated="setFeaturedProducts"
+          />
+        </FeatureCard>
       </div>
     </div>
   </section>
