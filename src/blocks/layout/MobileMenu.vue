@@ -18,10 +18,10 @@ function toggleNav() {
     <div class="flex h-full w-full items-center justify-center">
       <span class="sr-only">Toggle menu</span>
       <Button
+        :icon="showMenu ? 'mdi:close text-orange-500' : 'mdi:menu text-black'"
         type="button"
         class="hover:text-primary block h-10 rounded-none border-transparent bg-transparent p-2 text-gray-600 shadow-transparent hover:border-none hover:bg-none hover:shadow-none"
         aria-label="toggle menu"
-        icon="mdi:menu"
         icon-style="text-3xl"
         @click="toggleNav"
       />
