@@ -5,6 +5,9 @@ import Button from '~/components/Button.vue'
 const { t } = useI18n()
 
 const showMenu = ref(false)
+const menuIcon = computed(() => {
+  return showMenu.value ? 'mdi:close text-orange-500' : 'ph:globe text-black'
+})
 
 function toggleNav() {
   showMenu.value = !showMenu.value
@@ -18,7 +21,7 @@ function toggleNav() {
     <div class="flex h-full w-full items-center justify-center">
       <span class="sr-only">Toggle menu</span>
       <Button
-        :icon="showMenu ? 'mdi:close text-orange-500' : 'mdi:menu text-black'"
+        :icon="menuIcon"
         id="mobileMenuButton"
         type="button"
         class="hover:text-primary block h-10 rounded-none border-transparent bg-transparent p-2 text-gray-600 shadow-transparent hover:border-none hover:bg-none hover:shadow-none"
