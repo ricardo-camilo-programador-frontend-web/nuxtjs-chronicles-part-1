@@ -33,9 +33,14 @@ const { t } = useI18n()
         <h3 class="mt-2 max-w-[17rem] text-lg font-semibold">
           {{ t(productName) }}
         </h3>
-        <p class="mt-auto text-gray-600">
-          {{ productPrice }}
-        </p>
+
+        <div class="flex w-full items-center justify-between mt-auto">
+          <p class=" text-gray-600">
+            {{ productPrice }}
+          </p>
+
+          <slot name="action" />
+        </div>
       </div>
 
       <div class="flex h-full w-auto items-start justify-center pt-1">
