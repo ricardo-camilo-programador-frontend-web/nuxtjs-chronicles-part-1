@@ -39,6 +39,7 @@ watch(cartStore, () => {
   >
     <Button
       :id="`cart-quantity-handler-decrease-button-${product.id}`"
+      :disabled="quantity === 0"
       icon="mdi:minus"
       icon-style="text-2xl"
       class="rounded-full p-1 transition-all duration-200 hover:bg-gray-200"
