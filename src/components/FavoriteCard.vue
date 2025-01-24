@@ -9,36 +9,34 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="h-[20rem]">
-    <Transition>
+  <div class="h-full w-full">
+    <div
+      v-if="favoriteProducts.length > 0"
+      class="absolute top-16 right-16 z-[99] h-full w-full"
+    >
       <div
-        v-if="favoriteProducts.length > 0"
-        class="absolute top-16 right-16 z-[99] h-full w-full"
+        class="absolute right-0 flex h-full w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-2"
       >
         <div
-          class="absolute right-0 flex h-full w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-2"
+          v-for="product in favoriteProducts"
+          :key="product.id"
+          class="mx-auto flex w-full items-center justify-start gap-2 border-b pb-2"
         >
-          <div
-            v-for="product in favoriteProducts"
-            :key="product.id"
-            class="mx-auto flex w-full items-center justify-start gap-2 border-b pb-2"
-          >
-            <Image
-              :src="product.imageSrc"
-              :alt="product.altText"
-              width="50"
-              height="50"
-            />
+          <Image
+            :src="product.imageSrc"
+            :alt="product.altText"
+            width="50"
+            height="50"
+          />
 
-            <p class="line-clamp-2 text-sm">
-              {{ t(product.name) }}
-            </p>
+          <p class="line-clamp-2 text-sm">
+            {{ t(product.name) }}
+          </p>
 
-            <slot :product="product" />
-          </div>
+          <slot :product="product" />
         </div>
       </div>
-    </Transition>
+    </div>
 
     <div
       v-if="!favoriteProducts.length"
