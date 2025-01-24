@@ -3,7 +3,9 @@ const showFavoritesMenu = ref(false)
 const favoriteProducts = ref<Array<Product>>([])
 const productStore = useProductStore()
 const favoritesTotal = computed(() => {
-  return favoriteProducts.value.length >= 99 ? '99+' : favoriteProducts.value.length
+  return favoriteProducts.value.length >= 99
+    ? '99+'
+    : favoriteProducts.value.length
 })
 const showTotalCountForThreeSeconds = ref(false)
 
@@ -38,7 +40,11 @@ onMounted(() => {
   <div class="relative">
     <div class="relative z-[99]">
       <Button
-        :icon="showFavoritesMenu ? 'mdi:heart text-red-500' : 'mdi:heart-outline text-black'"
+        :icon="
+          showFavoritesMenu
+            ? 'mdi:heart text-red-500'
+            : 'mdi:heart-outline text-black'
+        "
         id="favoritesMenuButton"
         class="w-auto py-0"
         icon-style="text-3xl"
@@ -53,7 +59,7 @@ onMounted(() => {
       >
         <span
           v-if="favoriteProducts.length > 0 && showTotalCountForThreeSeconds"
-          class="absolute flex items-center justify-center p-2 h-7 w-7 top-2 right-0 text-xs font-bold text-black rounded-full px-2 py-1"
+          class="absolute top-2 right-0 flex h-7 w-7 items-center justify-center rounded-full p-2 px-2 py-1 text-xs font-bold text-black"
         >
           {{ favoritesTotal }}
         </span>
