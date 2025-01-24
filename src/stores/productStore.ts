@@ -284,6 +284,9 @@ export const useProductStore = defineStore({
     getFavoriteProducts(): Array<Product> {
       return this.products.filter(product => product.favorite)
     },
+    getFeaturedProducts(): Array<Product> {
+      return this.products.filter(product => product.featured)
+    },
   },
 })
 
