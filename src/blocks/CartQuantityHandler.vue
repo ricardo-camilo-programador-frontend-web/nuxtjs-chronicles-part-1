@@ -1,36 +1,59 @@
 <script setup lang="ts">
 interface Props {
-  id: string
+  product: Product
 }
 
 const props = defineProps<Props>()
 
 const cartStore = useCartStore()
-
-const quantity = computed(() => {
-  return cartStore.getProductQuantity(props.id)
-})
+const quantity = ref(0)
+const productExistsInCart = ref(false)
 
 function increaseQuantity() {
-  cartStore.increaseCartItemQuantity(props.id)
+  if (productExistsInCart.value) {
+    cartStore.increaseCartItemQuantity(props.product.id)
+    return
+  }
+
+  cartStore.addToCart(props.product)
 }
 
 function decreaseQuantity() {
-  cartStore.decreaseCartItemQuantity(props.id)
+  cartStore.decreaseCartItemQuantity(props.product.id)
 }
+
+onMounted(() => {
+  quantity.value = cartStore.getProductQuantity(props.product.id)
+  productExistsInCart.value = cartStore.productExistsInCart(props.product.id)
+})
+
+watch(cartStore, () => {
+  quantity.value = cartStore.getProductQuantity(props.product.id)
+  productExistsInCart.value = cartStore.productExistsInCart(props.product.id)
+})
 </script>
 
 <template>
-  <div class="flex items-center justify-center gap-2">
+  <div
+    class="flex max-h-[3rem] items-center justify-between gap-4 rounded-lg p-1"
+  >
     <Button
+      :id="`cart-quantity-handler-decrease-button-${product.id}`"
       icon="mdi:minus"
+      icon-style="text-2xl"
+      class="rounded-full p-1 transition-all duration-200 hover:bg-gray-200"
       @click="decreaseQuantity"
     />
 
-    <p>{{ quantity }}</p>
+    <p class="w-[1rem] text-center text-lg font-medium">
+      {{ quantity }}
+    </p>
 
     <Button
+      :id="`cart-quantity-handler-increase-button-${product.id}`"
       icon="mdi:plus"
+      icon-style="text-2xl"
+      class="rounded-full p-1 transition-all duration-200 hover:bg-gray-200"
       @click="increaseQuantity"
     />
   </div>
