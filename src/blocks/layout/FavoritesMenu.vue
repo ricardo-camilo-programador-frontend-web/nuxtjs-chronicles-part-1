@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const showFavoritesMenu = ref(false)
-const favoritesMenu = ref<HTMLElement | null>(null)
 const favoriteProducts = ref<Array<Product>>([])
 const productStore = useProductStore()
 
@@ -12,35 +11,17 @@ function setFavoriteProducts() {
   favoriteProducts.value = productStore.getFavoriteProducts
 }
 
-function handleClickOutside(event: MouseEvent) {
-  const clickedOutsideDropdownList = isClickOutsideElement(
-    document.getElementById('favoritesMenu'),
-    event,
-  )
-
-  if (clickedOutsideDropdownList) {
-    showFavoritesMenu.value = false
-  }
-}
-
 watch(productStore, () => {
   setFavoriteProducts()
-})
-
-onMounted(() => {
-  window.addEventListener('click', handleClickOutside)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('click', handleClickOutside)
 })
 </script>
 
 <template>
   <div class="relative">
-    <div>
+    <div class="relative z-[100]">
       <Button
         :icon="showFavoritesMenu ? 'mdi:heart' : 'mdi:heart-outline'"
+        id="favoritesMenuButton"
         class="w-auto py-0"
         icon-style="text-3xl"
         @click="toggleFavoritesMenu"
@@ -54,11 +35,11 @@ onUnmounted(() => {
       leave-to-class="opacity-0"
     >
       <FavoriteCard
-        id="favoritesMenu"
-        ref="favoritesMenu"
         v-if="showFavoritesMenu"
         :favorite-products="favoriteProducts"
-        class="absolute inset-x-0 md:-inset-x-16 -top-4 -right-32 z-[99] !h-[20rem] !w-[17rem]"
+        :show-menu="showFavoritesMenu"
+        :toggle-menu="toggleFavoritesMenu"
+        class="absolute inset-x-0 -top-4 -right-32 z-[98] !h-[20rem] !w-[17rem] md:-inset-x-16"
       >
         <template #default="{ product }">
           <FavoriteShortcut
