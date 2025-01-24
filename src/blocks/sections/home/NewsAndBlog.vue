@@ -1,9 +1,19 @@
 <script setup lang="ts">
-import { useBlogStore } from '@/stores/blogStore'
-
 const { t } = useI18n()
 const blogStore = useBlogStore()
-const blogPosts = computed(() => blogStore.getBlogPosts)
+const blogPosts = ref<Array<BlogPost>>([])
+
+function setBlogPosts() {
+  blogPosts.value = blogStore.getBlogPosts
+}
+
+onMounted(() => {
+  setBlogPosts()
+})
+
+watch(blogStore, () => {
+  setBlogPosts()
+})
 </script>
 
 <template>
