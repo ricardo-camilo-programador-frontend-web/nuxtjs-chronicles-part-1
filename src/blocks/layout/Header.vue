@@ -17,7 +17,7 @@ const headerClasses = computed(() => {
     class="top-0 right-0 left-0 z-[99] mx-auto flex w-full items-center justify-center dark:bg-gray-800"
   >
     <div
-      class="mx-auto hidden h-10 w-screen items-center justify-between md:flex max-w-7xl"
+      class="mx-auto hidden h-10 w-screen max-w-7xl items-center justify-between md:flex"
     >
       <div class="flex gap-4">
         <div class="group mr-auto flex items-center gap-2">
