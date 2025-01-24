@@ -7,7 +7,7 @@ const { t } = useI18n()
   <footer
     class="grud w-full min-w-screen overflow-hidden border-t bg-gray-100 py-12"
   >
-    <div class="container mx-auto w-full max-w-[17rem] px-4 md:max-w-7xl">
+    <div class="container mx-auto w-full max-w-[95vw] px-4 md:max-w-7xl">
       <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
         <div class="space-y-4">
           <div
