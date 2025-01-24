@@ -29,7 +29,7 @@ const { t } = useI18n()
             height="50"
           />
 
-          <p class="line-clamp-2 w-full text-sm">
+          <p class="line-clamp-2 text-sm">
             {{ t(product.name) }}
           </p>
 
