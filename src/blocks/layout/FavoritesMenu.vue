@@ -2,6 +2,19 @@
 const showFavoritesMenu = ref(false)
 const favoriteProducts = ref<Array<Product>>([])
 const productStore = useProductStore()
+const favoritesTotal = computed(() => {
+  return favoriteProducts.value.length >= 99 ? '99+' : favoriteProducts.value.length
+})
+const showTotalCountForThreeSeconds = ref(false)
+
+function toggleShowTotalCountForThreeSeconds() {
+  const timeout = 2000
+  showTotalCountForThreeSeconds.value = true
+
+  setTimeout(() => {
+    showTotalCountForThreeSeconds.value = false
+  }, timeout)
+}
 
 function toggleFavoritesMenu() {
   showFavoritesMenu.value = !showFavoritesMenu.value
@@ -12,6 +25,11 @@ function setFavoriteProducts() {
 }
 
 watch(productStore, () => {
+  setFavoriteProducts()
+  toggleShowTotalCountForThreeSeconds()
+})
+
+onMounted(() => {
   setFavoriteProducts()
 })
 </script>
@@ -26,6 +44,20 @@ watch(productStore, () => {
         icon-style="text-3xl"
         @click="toggleFavoritesMenu"
       />
+
+      <Transition
+        enter-active-class="transition-all duration-300 ease-in-out"
+        leave-active-class="transition-all duration-300 ease-in-out"
+        enter-from-class="opacity-0"
+        leave-to-class="opacity-0"
+      >
+        <span
+          v-if="favoriteProducts.length > 0 && showTotalCountForThreeSeconds"
+          class="absolute flex items-center justify-center p-2 h-7 w-7 -top-4 right-0 text-xs font-bold text-black bg-white rounded-full px-2 py-1 border border-black"
+        >
+          {{ favoritesTotal }}
+        </span>
+      </Transition>
     </div>
 
     <Transition
