@@ -59,7 +59,7 @@ onUnmounted(() => {
         ref="favoritesMenu"
         v-if="showFavoritesMenu"
         :favorite-products="favoriteProducts"
-        class="absolute inset-x-0 md:inset-x-auto md:-top-4 md:-right-32 z-[99] !h-[20rem] !w-[17rem]"
+        class="absolute inset-x-0 md:-inset-x-16 -top-4 -right-32 z-[99] !h-[20rem] !w-[17rem]"
       >
         <template #default="{ product }">
           <FavoriteShortcut
