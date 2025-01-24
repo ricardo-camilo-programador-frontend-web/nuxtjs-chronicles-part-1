@@ -1,15 +1,46 @@
 <script setup lang="ts">
 interface FavoriteCardProps {
   favoriteProducts: Array<Product>
+  showMenu: boolean
+  toggleMenu: () => void
 }
 
-defineProps<FavoriteCardProps>()
+const props = withDefaults(defineProps<FavoriteCardProps>(), {
+  showMenu: false,
+})
 
+defineExpose({
+  toggleMenu: props.toggleMenu,
+})
+
+const favoritesMenu = ref<HTMLDivElement | null>(null)
 const { t } = useI18n()
+
+function handleClickOutside(event: MouseEvent) {
+  const clickedOutsideDropdownList = isClickOutsideElement(
+    favoritesMenu.value,
+    event,
+  )
+
+  if (clickedOutsideDropdownList && props.showMenu) {
+    props.toggleMenu()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('click', handleClickOutside)
+})
 </script>
 
 <template>
-  <div class="h-full w-full">
+  <div
+    ref="favoritesMenu"
+    class="h-full w-full"
+  >
     <div
       v-if="favoriteProducts.length > 0"
       class="absolute top-16 right-16 z-[99] h-full w-full"
@@ -40,7 +71,7 @@ const { t } = useI18n()
 
     <div
       v-if="!favoriteProducts.length"
-      class="absolute top-16 right-16 z-[99] h-full w-full bg-white flex items-center justify-center rounded-xl border border-gray-200"
+      class="absolute top-16 right-16 z-[99] flex h-full w-full items-center justify-center rounded-xl border border-gray-200 bg-white"
     >
       <p class="text-black">
         {{ $t('favorites.empty') }}
