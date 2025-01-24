@@ -39,11 +39,7 @@ export const useBlogStore = defineStore({
       },
     ],
   }),
-  actions: {
-    getBlogPosts() {
-      return this.blogPosts
-    },
-  },
+  actions: {},
   getters: {
     getBlogPosts(): Array<BlogPost> {
       return this.blogPosts
