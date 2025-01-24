@@ -1,5 +1,6 @@
 export const en = {
   soon: 'Soon',
+  close: 'Close',
   menu: {
     links: {
       home: 'Home',
