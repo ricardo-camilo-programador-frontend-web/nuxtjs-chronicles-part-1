@@ -41,7 +41,7 @@ onUnmounted(() => {
   <div class="relative">
     <div>
       <Button
-        icon="mdi:heart-outline"
+        :icon="showFavoritesMenu ? 'mdi:heart' : 'mdi:heart-outline'"
         class="w-auto py-0"
         icon-style="text-3xl"
         @click="toggleFavoritesMenu"
@@ -59,7 +59,7 @@ onUnmounted(() => {
         ref="favoritesMenu"
         v-if="showFavoritesMenu"
         :favorite-products="favoriteProducts"
-        class="absolute -top-4 -right-32 z-[99] !h-[20rem] !w-[17rem]"
+        class="absolute inset-x-0 md:inset-x-auto md:-top-4 md:-right-32 z-[99] !h-[20rem] !w-[17rem]"
       >
         <template #default="{ product }">
           <FavoriteShortcut
