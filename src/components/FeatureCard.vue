@@ -8,6 +8,8 @@ interface FeatureCardProps {
 }
 
 defineProps<FeatureCardProps>()
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -29,18 +31,15 @@ defineProps<FeatureCardProps>()
     >
       <div class="flex h-full w-full flex-col items-start justify-start">
         <h3 class="mt-2 max-w-[17rem] text-lg font-semibold">
-          {{ productName }}
+          {{ t(productName) }}
         </h3>
         <p class="mt-auto text-gray-600">
-          {{ productPrice }}
+          {{ t(productPrice) }}
         </p>
       </div>
 
       <div class="flex h-full w-auto items-start justify-center pt-1">
-        <Icon
-          name="i-heroicons-heart"
-          class="mt-2 text-red-500 hover:text-red-700"
-        />
+        <slot />
       </div>
     </div>
   </div>
