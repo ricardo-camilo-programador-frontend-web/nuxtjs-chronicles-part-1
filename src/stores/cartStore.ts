@@ -12,6 +12,10 @@ export const useCartStore = defineStore('cartStore', () => {
     return cart.value
   }
 
+  function addToCart(product: Product): void {
+    cart.value.push({ ...product, quantity: 1 })
+  }
+
   function increaseCartItemQuantity(productId: string): void {
     const product = cart.value.find(item => item.id === productId)
 
@@ -24,7 +28,12 @@ export const useCartStore = defineStore('cartStore', () => {
     const product = cart.value.find(item => item.id === productId)
 
     if (product) {
-      product.quantity -= 1
+      if (product.quantity > 1) {
+        product.quantity -= 1
+        return
+      }
+
+      removeFromCart(productId)
     }
   }
 
@@ -33,7 +42,10 @@ export const useCartStore = defineStore('cartStore', () => {
   }
 
   function getCartTotal(): number {
-    return cart.value.reduce((total, item) => total + item.price * item.quantity, 0)
+    return cart.value.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0,
+    )
   }
 
   function getCartCount(): number {
@@ -43,6 +55,10 @@ export const useCartStore = defineStore('cartStore', () => {
   function getProductQuantity(productId: string): number {
     const product = cart.value.find(item => item.id === productId)
     return product ? product.quantity : 0
+  }
+
+  function productExistsInCart(productId: string): boolean {
+    return cart.value.some(item => item.id === productId)
   }
 
   function clearCart(): void {
@@ -59,6 +75,8 @@ export const useCartStore = defineStore('cartStore', () => {
     getCartCount,
     getProductQuantity,
     clearCart,
+    productExistsInCart,
+    addToCart,
   }
 })
 
