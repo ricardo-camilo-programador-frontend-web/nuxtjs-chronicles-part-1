@@ -287,6 +287,9 @@ export const useProductStore = defineStore({
     getFeaturedProducts(): Array<Product> {
       return this.products.filter(product => product.featured)
     },
+    getBestSellingProducts(): Array<Product> {
+      return this.products.filter(product => product.bestSelling)
+    },
   },
 })
 
