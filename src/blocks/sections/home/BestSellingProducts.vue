@@ -41,7 +41,6 @@ watch(productStore, () => {
         :name="product.name"
       >
         <FavoriteShortcut
-          v-if="product.featured"
           :product="product"
           @favorite-updated="setBestSellingProducts"
         />
