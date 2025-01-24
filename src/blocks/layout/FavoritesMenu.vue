@@ -24,9 +24,14 @@ function handleClickOutside(event: MouseEvent) {
   }
 }
 
+watch(showFavoritesMenu, () => {
+  if (showFavoritesMenu.value) {
+    setFavoriteProducts()
+  }
+})
+
 onMounted(() => {
   window.addEventListener('click', handleClickOutside)
-  setFavoriteProducts()
 })
 
 onUnmounted(() => {
