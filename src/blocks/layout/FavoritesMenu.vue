@@ -30,6 +30,10 @@ watch(showFavoritesMenu, () => {
   }
 })
 
+watch(productStore, () => {
+  setFavoriteProducts()
+})
+
 onMounted(() => {
   window.addEventListener('click', handleClickOutside)
 })
