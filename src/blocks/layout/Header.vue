@@ -19,7 +19,7 @@ const headerClasses = computed(() => {
     <div
       class="mx-auto hidden h-10 w-screen max-w-7xl items-center justify-between md:flex"
     >
-      <div class="flex gap-4 max-w-[95vw] w-full px-6">
+      <div class="flex w-full max-w-[95vw] gap-4 px-6">
         <div class="group mr-auto flex items-center gap-2">
           <NuxtLink
             to="https://wa.me/5511999999999"
@@ -57,7 +57,7 @@ const headerClasses = computed(() => {
         </div>
       </div>
 
-      <div class="flex items-center gap-2 w-auto min-w-[10rem]">
+      <div class="flex w-auto min-w-[10rem] items-center gap-2">
         <NuxtLink
           to="https://www.google.com/maps/search/?api=1&query=Fatec+Jaú+SP"
           target="_blank"
