@@ -53,7 +53,7 @@ onMounted(() => {
       >
         <span
           v-if="favoriteProducts.length > 0 && showTotalCountForThreeSeconds"
-          class="absolute flex items-center justify-center p-2 h-7 w-7 -top-4 right-0 text-xs font-bold text-black bg-white rounded-full px-2 py-1 border border-black"
+          class="absolute flex items-center justify-center p-2 h-7 w-7 top-2 right-0 text-xs font-bold text-black rounded-full px-2 py-1"
         >
           {{ favoritesTotal }}
         </span>
