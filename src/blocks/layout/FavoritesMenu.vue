@@ -36,7 +36,7 @@ onMounted(() => {
 
 <template>
   <div class="relative">
-    <div class="relative z-[80]">
+    <div class="relative z-[99]">
       <Button
         :icon="showFavoritesMenu ? 'mdi:heart text-red-500' : 'mdi:heart-outline text-black'"
         id="favoritesMenuButton"
