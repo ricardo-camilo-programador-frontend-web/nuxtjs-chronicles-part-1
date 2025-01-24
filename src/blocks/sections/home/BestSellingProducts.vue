@@ -45,6 +45,12 @@ watch(productStore, () => {
           :product="product"
           @favorite-updated="setBestSellingProducts"
         />
+
+        <template #actions>
+          <CartQuantityHandler
+            :product="product"
+          />
+        </template>
       </FeatureCard>
     </div>
   </section>
