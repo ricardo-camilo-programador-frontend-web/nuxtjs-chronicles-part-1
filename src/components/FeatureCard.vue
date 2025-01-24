@@ -34,12 +34,14 @@ const { t } = useI18n()
           {{ t(productName) }}
         </h3>
 
-        <div class="flex w-full items-center justify-between mt-auto">
-          <p class=" text-gray-600">
+        <div class="mt-auto grid w-full grid-cols-2 place-items-center">
+          <p class="flex w-full items-center justify-start text-gray-600">
             {{ productPrice }}
           </p>
 
-          <slot name="action" />
+          <div class="flex w-full items-center justify-start text-gray-600">
+            <slot name="actions" />
+          </div>
         </div>
       </div>
 
