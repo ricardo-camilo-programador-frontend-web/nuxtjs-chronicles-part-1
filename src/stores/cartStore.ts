@@ -5,42 +5,61 @@ interface CartItem extends Product {
   quantity: number
 }
 
-interface CartStore {
-  cart: Array<CartItem>
-}
+export const useCartStore = defineStore('cartStore', () => {
+  const cart = ref<Array<CartItem>>([])
 
-export const useCartStore = defineStore({
-  id: 'cartStore',
-  state: (): CartStore => ({
-    cart: [],
-  }),
-  actions: {
-    getCart() {
-      return this.cart
-    },
-    increaseCartItemQuantity(product: Product): void {
-      this.cart = [...this.cart, { ...product, quantity: 1 }]
-    },
-    decreaseCartItemQuantity(product: Product): void {
-      this.cart = this.cart.map(item =>
-        item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item,
-      )
-    },
-    removeFromCart(product: Product): void {
-      this.cart = this.cart.filter(item => item.id !== product.id)
-    },
-  },
-  getters: {
-    getCart(): Array<CartItem> {
-      return this.cart
-    },
-    getCartTotal(): number {
-      return this.cart.reduce((total, item) => total + item.price * item.quantity, 0)
-    },
-    getCartCount(): number {
-      return this.cart.reduce((total, item) => total + item.quantity, 0)
-    },
-  },
+  function getCart() {
+    return cart.value
+  }
+
+  function increaseCartItemQuantity(productId: string): void {
+    const product = cart.value.find(item => item.id === productId)
+
+    if (product) {
+      product.quantity += 1
+    }
+  }
+
+  function decreaseCartItemQuantity(productId: string): void {
+    const product = cart.value.find(item => item.id === productId)
+
+    if (product) {
+      product.quantity -= 1
+    }
+  }
+
+  function removeFromCart(productId: string): void {
+    cart.value = cart.value.filter(item => item.id !== productId)
+  }
+
+  function getCartTotal(): number {
+    return cart.value.reduce((total, item) => total + item.price * item.quantity, 0)
+  }
+
+  function getCartCount(): number {
+    return cart.value.reduce((total, item) => total + item.quantity, 0)
+  }
+
+  function getProductQuantity(productId: string): number {
+    const product = cart.value.find(item => item.id === productId)
+    return product ? product.quantity : 0
+  }
+
+  function clearCart(): void {
+    cart.value = []
+  }
+
+  return {
+    cart,
+    getCart,
+    increaseCartItemQuantity,
+    decreaseCartItemQuantity,
+    removeFromCart,
+    getCartTotal,
+    getCartCount,
+    getProductQuantity,
+    clearCart,
+  }
 })
 
 if (import.meta.hot) {
