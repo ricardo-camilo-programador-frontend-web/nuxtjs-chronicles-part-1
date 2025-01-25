@@ -3,6 +3,10 @@ export function useDevCounter() {
 
   const enableCounter = () => {
     if (typeof window !== 'undefined') {
+      if (document.getElementById('counter-dev-script')) {
+        return
+      }
+
       const script = document.createElement('script')
       script.id = 'counter-dev-script'
       script.async = true
@@ -13,17 +17,7 @@ export function useDevCounter() {
     }
   }
 
-  const disableCounter = () => {
-    if (typeof window !== 'undefined') {
-      const script = document.getElementById('counter-dev-script')
-      if (script) {
-        script.remove()
-      }
-    }
-  }
-
   return {
     enableCounter,
-    disableCounter,
   }
 }
