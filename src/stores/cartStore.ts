@@ -4,7 +4,7 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 export const useCartStore = defineStore('cartStore', () => {
   const cart = ref<Array<CartItem>>([])
 
-  function getCart() {
+  function getCartItems(): Array<CartItem> {
     return cart.value
   }
 
@@ -63,7 +63,7 @@ export const useCartStore = defineStore('cartStore', () => {
 
   return {
     cart,
-    getCart,
+    getCartItems,
     increaseCartItemQuantity,
     decreaseCartItemQuantity,
     removeFromCart,
