@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  product: Product
+  product: Product | CartItem
 }
 
 const props = defineProps<Props>()
@@ -35,6 +35,7 @@ watch(cartStore, () => {
 
 <template>
   <div
+    v-bind="$attrs"
     class="flex max-h-[3rem] items-center justify-between gap-4 rounded-lg p-1"
   >
     <Button
