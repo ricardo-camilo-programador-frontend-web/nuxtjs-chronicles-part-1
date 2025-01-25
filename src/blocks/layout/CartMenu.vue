@@ -124,7 +124,7 @@ onMounted(() => {
 
                 <div
                   v-if="!cartItems.length"
-                  class="absolute top-16 right-16 z-[99] flex h-full w-full items-center justify-center rounded-xl border border-gray-200 bg-white"
+                  class="flex h-full w-full items-center justify-center rounded-xl"
                 >
                   <p class="text-black">
                     {{ $t('cart.empty') }}
