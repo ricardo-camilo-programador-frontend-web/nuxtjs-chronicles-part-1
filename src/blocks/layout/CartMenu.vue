@@ -6,17 +6,23 @@ const { t } = useI18n()
 
 const showMenu = ref(false)
 const cartStore = useCartStore()
-const cartItems = ref<Array<CartItem>>(cartStore.getCart())
+const cartItems = ref<Array<CartItem>>([])
 
 function toggleNav() {
   showMenu.value = !showMenu.value
 }
 
 function setCartItems() {
-  cartItems.value = cartStore.getCart()
+  cartItems.value = cartStore.getCartItems()
 }
 
-watch(cartStore, setCartItems)
+watch(cartStore, () => {
+  setCartItems()
+})
+
+watch(showMenu, () => {
+  setCartItems()
+})
 
 onMounted(() => {
   setCartItems()
@@ -79,23 +85,51 @@ onMounted(() => {
               </div>
             </div>
 
-            <FavoriteCard
-              v-if="cartItems.length > 0"
-              :favorite-products="cartItems"
-              :show-menu="showMenu"
-              :toggle-menu="toggleNav"
-              class="absolute inset-x-0 -top-4 -right-32 z-[98] !h-[20rem] !w-[17rem] md:-inset-x-16"
+            <div
+              class="relative h-full max-h-[70vh] w-[17rem] overflow-hidden overflow-y-auto"
             >
-              <template #default="{ product }">
-                <CartItem :product="product" />
-              </template>
-            </FavoriteCard>
-            <p
-              v-else
-              class="text-center text-2xl font-bold"
-            >
-              {{ t('cart.empty') }}
-            </p>
+              <div class="h-full w-full">
+                <div
+                  v-if="cartItems.length > 0"
+                  class="h-full min-h-32 w-full"
+                >
+                  <div
+                    class="flex h-full w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border-b border-gray-200 p-2"
+                  >
+                    <div
+                      v-for="product in cartItems"
+                      :key="`cart-item-${product.id}`"
+                      class="mx-auto flex w-full min-h-[10rem] items-center justify-start gap-2 border relative pb-2"
+                    >
+                      <Image
+                        :src="product.imageSrc"
+                        :alt="product.altText"
+                        width="50"
+                        height="50"
+                      />
+
+                      <p class="line-clamp-2 text-sm max-w-[10rem]">
+                        {{ t(product.name) }}
+                      </p>
+
+                      <CartQuantityHandler
+                        :product="product"
+                        class="flex-col my-auto relative bg-red-500"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  v-if="!cartItems.length"
+                  class="absolute top-16 right-16 z-[99] flex h-full w-full items-center justify-center rounded-xl border border-gray-200 bg-white"
+                >
+                  <p class="text-black">
+                    {{ $t('cart.empty') }}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
