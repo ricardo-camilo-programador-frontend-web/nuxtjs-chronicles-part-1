@@ -5,10 +5,22 @@ import Button from '~/components/Button.vue'
 const { t } = useI18n()
 
 const showMenu = ref(false)
+const cartStore = useCartStore()
+const cartItems = ref<Array<CartItem>>(cartStore.getCart())
 
 function toggleNav() {
   showMenu.value = !showMenu.value
 }
+
+function setCartItems() {
+  cartItems.value = cartStore.getCart()
+}
+
+watch(cartStore, setCartItems)
+
+onMounted(() => {
+  setCartItems()
+})
 </script>
 
 <template>
@@ -40,7 +52,7 @@ function toggleNav() {
         class="hover:text-primary/75 fixed inset-0 right-0 z-[99] -mt-1 ml-auto flex h-full min-h-screen w-full min-w-[17rem]"
       >
         <div
-          class="z-5 z-[90] block h-full min-h-screen w-full min-w-full cursor-pointer bg-black/10 backdrop-blur-sm"
+          class="z-[90] block h-full min-h-screen w-full min-w-full cursor-pointer bg-black/10 backdrop-blur-sm"
           title="Fechar menu."
           @click="toggleNav"
         />
@@ -67,8 +79,22 @@ function toggleNav() {
               </div>
             </div>
 
-            <p class="text-center text-2xl font-bold">
-              {{ t('soon') }}
+            <FavoriteCard
+              v-if="cartItems.length > 0"
+              :favorite-products="cartItems"
+              :show-menu="showMenu"
+              :toggle-menu="toggleNav"
+              class="absolute inset-x-0 -top-4 -right-32 z-[98] !h-[20rem] !w-[17rem] md:-inset-x-16"
+            >
+              <template #default="{ product }">
+                <CartItem :product="product" />
+              </template>
+            </FavoriteCard>
+            <p
+              v-else
+              class="text-center text-2xl font-bold"
+            >
+              {{ t('cart.empty') }}
             </p>
           </div>
         </nav>
