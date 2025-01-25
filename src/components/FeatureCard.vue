@@ -30,7 +30,10 @@ const { t } = useI18n()
       class="flex min-h-24 w-full items-center justify-between rounded-b-lg bg-white px-4 py-2"
     >
       <div class="flex h-full w-full flex-col items-start justify-start">
-        <h3 class="mt-2 max-w-[17rem] text-lg font-semibold">
+        <h3
+          :title="t(productName)"
+          class="mt-2 max-w-[17rem] text-lg font-semibold line-clamp-1"
+        >
           {{ t(productName) }}
         </h3>
 
