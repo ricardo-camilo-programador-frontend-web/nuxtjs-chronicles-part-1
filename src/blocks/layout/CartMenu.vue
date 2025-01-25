@@ -64,7 +64,7 @@ onMounted(() => {
         />
 
         <nav
-          class="absolute inset-y-0 right-0 z-[9999] mx-auto flex h-full min-h-screen w-[17rem] border-l-2 shadow-lg md:items-center md:justify-between"
+          class="absolute inset-y-0 right-0 z-[9999] mx-auto flex h-full min-h-screen w-[17rem] border-l-2 border-gray-200 shadow-lg md:items-center md:justify-between"
           role="navigation"
         >
           <div
@@ -99,7 +99,7 @@ onMounted(() => {
                     <div
                       v-for="product in cartItems"
                       :key="`cart-item-${product.id}`"
-                      class="mx-auto flex w-full min-h-[10rem] items-center justify-start gap-2 border relative pb-2"
+                      class="mx-auto flex w-full min-h-[10rem] items-center justify-start gap-2 border-b border-gray-200 relative pb-2"
                     >
                       <Image
                         :src="product.imageSrc"
@@ -112,10 +112,12 @@ onMounted(() => {
                         {{ t(product.name) }}
                       </p>
 
-                      <CartQuantityHandler
-                        :product="product"
-                        class="flex-col my-auto relative bg-red-500"
-                      />
+                      <div class="flex-col my-auto relative -mt-[0.00000001rem]">
+                        <CartQuantityHandler
+                          :product="product"
+                          class="flex-col"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
