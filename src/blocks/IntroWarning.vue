@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import portifolioImage from '@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
-import { useDevCounter } from '@/composables/useDevCounter'
 import { useGTM } from '@/composables/useGTM'
 import {
   Dialog,
@@ -20,7 +19,6 @@ const storage = useLocalStorage()
 const localePath = useLocalePath()
 const { t } = useI18n()
 const { enableGTM, disableGTM } = useGTM()
-const { enableCounter } = useDevCounter()
 const { $env } = useNuxtApp()
 
 function handleClose() {
@@ -31,8 +29,6 @@ function handleClose() {
 }
 
 onMounted(() => {
-  enableCounter()
-
   const lastVisitTime = storage.getItem(lastVisit)
   const tenMinutesInMs = 10 * 60 * 1000
 
