@@ -4,6 +4,21 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   srcDir: './src/',
 
+  app: {
+    head: {
+      script: [
+        {
+          src: 'https://cdn.counter.dev/script.js',
+          type: 'text/javascript',
+          defer: true,
+          'data-id': process.env.COUNTER_API_KEY,
+          'data-utcoffset': '-3',
+          async: true,
+        },
+      ],
+    },
+  },
+
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
