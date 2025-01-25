@@ -25,6 +25,8 @@ useHead({
       :figma-original-design="$env.FIGMA_ORIGINAL_DESIGN"
     />
 
+    <CounterDevScript />
+
     <ClientOnly>
       <noscript>
         <iframe
