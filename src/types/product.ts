@@ -9,3 +9,7 @@ export interface Product {
   bestSelling: boolean
   favorite: boolean
 }
+
+export interface CartItem extends Product {
+  quantity: number
+}
