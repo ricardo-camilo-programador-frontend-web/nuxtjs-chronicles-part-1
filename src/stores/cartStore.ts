@@ -1,10 +1,6 @@
 import type { Product } from '@/types/product'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
-interface CartItem extends Product {
-  quantity: number
-}
-
 export const useCartStore = defineStore('cartStore', () => {
   const cart = ref<Array<CartItem>>([])
 
