@@ -8,12 +8,10 @@ console.log('cartItems', cartItems.value)
 </script>
 
 <template>
-  <div
-    class="h-full w-full"
-  >
+  <div class="h-full w-full">
     <div
       v-if="cartItems.length > 0"
-      class="min-h-8 h-full w-full"
+      class="h-full min-h-8 w-full"
     >
       <div
         class="flex h-full w-[17rem] flex-col gap-2 overflow-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-2"

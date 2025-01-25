@@ -99,7 +99,7 @@ onMounted(() => {
                     <div
                       v-for="product in cartItems"
                       :key="`cart-item-${product.id}`"
-                      class="mx-auto flex w-full min-h-[10rem] items-center justify-start gap-2 border-b border-gray-200 relative pb-2"
+                      class="relative mx-auto flex min-h-[10rem] w-full items-center justify-start gap-2 border-b border-gray-200 pb-2"
                     >
                       <Image
                         :src="product.imageSrc"
@@ -108,11 +108,13 @@ onMounted(() => {
                         height="50"
                       />
 
-                      <p class="line-clamp-2 text-sm max-w-[10rem]">
+                      <p class="line-clamp-2 max-w-[10rem] text-sm">
                         {{ t(product.name) }}
                       </p>
 
-                      <div class="flex-col my-auto relative -mt-[0.00000001rem]">
+                      <div
+                        class="relative my-auto -mt-[0.00000001rem] flex-col"
+                      >
                         <CartQuantityHandler
                           :product="product"
                           class="flex-col"

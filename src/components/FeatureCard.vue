@@ -32,7 +32,7 @@ const { t } = useI18n()
       <div class="flex h-full w-full flex-col items-start justify-start">
         <h3
           :title="t(productName)"
-          class="mt-2 max-w-[17rem] text-lg font-semibold line-clamp-1"
+          class="mt-2 line-clamp-1 max-w-[17rem] text-lg font-semibold"
         >
           {{ t(productName) }}
         </h3>

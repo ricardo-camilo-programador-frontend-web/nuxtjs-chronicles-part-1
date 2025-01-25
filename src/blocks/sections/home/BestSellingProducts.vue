@@ -46,9 +46,7 @@ watch(productStore, () => {
         />
 
         <template #actions>
-          <CartQuantityHandler
-            :product="product"
-          />
+          <CartQuantityHandler :product="product" />
         </template>
       </FeatureCard>
     </div>
