@@ -1,6 +1,10 @@
 export const en = {
   soon: 'Soon',
   close: 'Close',
+  addItemsToCart: 'Add items to cart',
+  cart: {
+    empty: 'No items in cart',
+  },
   menu: {
     links: {
       home: 'Home',

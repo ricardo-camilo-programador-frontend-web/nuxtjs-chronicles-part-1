@@ -1,5 +1,9 @@
 export const pt = {
   soon: 'Em breve',
+  addItemsToCart: 'Adicione itens ao carrinho',
+  cart: {
+    empty: 'Nenhum item no carrinho',
+  },
   menu: {
     links: {
       home: 'Home',
