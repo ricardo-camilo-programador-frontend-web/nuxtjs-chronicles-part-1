@@ -11,7 +11,7 @@ useHead(shopSEO(locale.value))
 
 <template>
   <main
-    class="relative mx-auto flex h-full min-h-[94vh] w-full flex-col flex-wrap items-center"
+    class="relative mx-auto flex h-full min-h-[94vh] w-full flex-col flex-wrap items-center pt-24"
   >
     <HeroShop />
     <ShopByPet />
