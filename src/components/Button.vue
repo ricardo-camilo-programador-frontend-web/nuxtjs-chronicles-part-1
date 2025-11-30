@@ -20,8 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
   loading: false,
 })
 
-const initializeRippleEffect = useRippleEffect(props.id)
-initializeRippleEffect()
+useRippleEffect(props.id)
 </script>
 
 <template>
