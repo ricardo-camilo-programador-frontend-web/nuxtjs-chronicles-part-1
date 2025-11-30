@@ -2,8 +2,13 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu({
   rules: {
-    curly: ['error', 'all'],
+    'curly': ['error', 'all'],
+    'camelcase': ['warn', { properties: 'always' }],
+    'arrow-parens': 'off',
+    'operator-linebreak': ['error', 'before'],
+    // 'eslintstyle/brace-style': '1tbs',
   },
+  unicorn: false,
   vue: {
     overrides: {
       'vue/max-attributes-per-line': [
@@ -44,7 +49,7 @@ export default antfu({
       ],
       'vue/no-reserved-component-names': 0,
       'vue/no-mutating-props': 1,
-      'curly': ['error', 'all'],
+      curly: ['error', 'all'],
       'no-console': 'warn',
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-misleading-capturing-group': 'off',
@@ -58,7 +63,7 @@ export default antfu({
           default: 'generic',
         },
       ],
-      'curly': ['error', 'all'],
+      curly: ['error', 'all'],
     },
   },
   toml: {
@@ -73,5 +78,6 @@ export default antfu({
       ],
     },
   },
-  ignores: ['.gitlab/', 'README.md', '**/*.d.ts', 'nuxt.config.ts'],
+  overrides: [],
+  ignores: ['.gitlab/', 'README.md', '**/*.d.ts', 'node_modules', 'dev-dist/', '*.tsbuildinfo'],
 })

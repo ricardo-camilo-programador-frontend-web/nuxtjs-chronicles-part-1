@@ -1,0 +1,164 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!**/.gitlab/",
+      "!**/README.md",
+      "!**/*.d.ts",
+      "!**/node_modules",
+      "!**/build",
+      "!**/coverage",
+      "!**/dist",
+      "!**/dev-dist/",
+      "!**/*.tsbuildinfo"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "attributePosition": "auto"
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              { "type": true, "source": [":NODE:", ":URL:"] },
+              { "type": true, "source": ":BUN:" },
+              { "type": true },
+              ":URL:",
+              ":NODE:"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "includes": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.vue"],
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "useHookAtTopLevel": "off",
+        "useParseIntRadix": "error",
+        "noUnusedImports": "off",
+        "noUnusedVariables": "off"
+      },
+      "style": {
+        "useBlockStatements": "off",
+        "useConst": "warn",
+        "useTemplate": "warn",
+        "noNonNullAssertion": "warn",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["PascalCase", "kebab-case"]
+          }
+        },
+        "useImportType": "warn",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "generic"
+          }
+        },
+        "useNamingConvention": {
+          "level": "warn",
+          "options": {
+            "strictCase": false
+          }
+        }
+      },
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "noArrayIndexKey": "warn",
+        "noConsole": { "level": "off", "options": { "allow": ["log"] } }
+      },
+      "a11y": {
+        "useValidAutocomplete": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all",
+      "quoteProperties": "preserve",
+      "arrowParentheses": "asNeeded",
+      "operatorLinebreak": "before",
+      "lineEnding": "lf"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.vue"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": {
+              "level": "error",
+              "options": {
+                "filenameCases": ["PascalCase"]
+              }
+            }
+          },
+          "a11y": {
+            "useValidAutocomplete": "off"
+          }
+        }
+      },
+      "formatter": {
+        "attributePosition": "auto"
+      },
+      "javascript": {
+        "formatter": {
+          "operatorLinebreak": "before"
+        }
+      }
+    },
+    {
+      "includes": ["**/*.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": {
+              "level": "error",
+              "options": {
+                "filenameCases": ["kebab-case"]
+              }
+            }
+          }
+        }
+      },
+      "javascript": {
+        "formatter": {
+          "trailingCommas": "all",
+          "operatorLinebreak": "before"
+        }
+      }
+    }
+  ]
+}
