@@ -1,0 +1,195 @@
+---
+alwaysApply: true
+---
+
+### 1. **Clean Code**
+Escreva código como se outra pessoa fosse mantê-lo amanhã — e essa pessoa fosse você, com má memória.
+Use nomes claros, métodos curtos e propósito definido. Elimine duplicações e evite "gambiarras".
+
+---
+
+### 2. **SOLID Principles**
+Aplique os cinco princípios de design orientado a objetos para manter o código flexível e sustentável:
+
+* **S**ingle Responsibility: cada classe faz só uma coisa.
+* **O**pen/Closed: aberto para extensão, fechado para modificação.
+* **L**iskov Substitution: classes filhas devem poder substituir as pais.
+* **I**nterface Segregation: interfaces pequenas e específicas.
+* **D**ependency Inversion: dependa de abstrações, não de implementações.
+
+---
+
+### 3. **DRY (Don’t Repeat Yourself)**
+Nunca repita código.
+Se encontrar blocos parecidos, extraia funções, classes ou componentes.
+Código duplicado é bug duplicado.
+
+---
+
+### 4. **KISS (Keep It Simple, Stupid)**
+Evite complexidade desnecessária.
+Escolha sempre a solução mais simples que resolve o problema com clareza e eficiência.
+
+---
+
+### 5. **YAGNI (You Aren’t Gonna Need It)**
+Não implemente nada “para o futuro”.
+Faça apenas o que o sistema precisa **agora**.
+A complexidade antecipada é inimiga da produtividade.
+
+---
+
+### 6. **Code Smells**
+Aprenda a reconhecer “cheiros ruins” no código — métodos longos, variáveis genéricas, dependências demais.
+Sempre que sentir algo estranho, refatore.
+
+---
+
+### 7. **Refactoring**
+Melhore o código sem mudar o comportamento.
+Refatore pequenos trechos continuamente, nunca deixe o acúmulo de dívida técnica.
+
+---
+
+### 8. **Naming Conventions**
+Dê nomes claros, diretos e consistentes a variáveis, funções e classes.
+Um bom nome explica o propósito sem precisar de comentários.
+
+---
+
+### 9. **Consistent Code Style**
+Use ferramentas automáticas (Prettier, ESLint, Black, etc.).
+Todo o time deve seguir o mesmo estilo — espaços, aspas, indentação e convenções.
+
+---
+
+### 10. **TDD (Test-Driven Development)**
+Escreva testes antes do código.
+Garanta que cada unidade tenha cobertura, e use testes como documentação viva.
+
+---
+
+### 11. **Design Patterns**
+Use padrões de projeto (Factory, Singleton, Observer, etc.) para resolver problemas comuns de forma reutilizável e organizada.
+
+---
+
+### 12. **Domain-Driven Design (DDD)**
+Modele o código refletindo a linguagem e as regras do domínio de negócio.
+Deixe o software “falar” o mesmo idioma do cliente e da equipe.
+
+---
+
+### 13. **Separation of Concerns (SoC)**
+Separe responsabilidades por camadas (ex: lógica, apresentação, dados).
+Cada módulo deve ter uma função bem definida.
+
+---
+
+### 14. **Single Responsibility Principle (SRP)**
+Cada classe ou função deve ter apenas um motivo para mudar.
+Se faz mais de uma coisa, divida.
+
+---
+
+### 15. **Code Review Practices**
+Sempre revise e faça o código ser revisado.
+Um bom review encontra falhas, melhora padrões e compartilha conhecimento entre o time.
+
+---
+
+# 🔐 **Boas Práticas de Segurança**
+### 1. **OWASP Top 10**
+Conheça os dez riscos mais críticos da web (injeção, XSS, autenticação fraca, exposição de dados, etc.).
+Desenvolva sempre com essa lista em mente.
+
+---
+
+### 2. **Principle of Least Privilege (PoLP)**
+Conceda apenas as permissões mínimas necessárias.
+Tanto para usuários quanto para sistemas.
+Menos acesso = menos risco.
+
+---
+
+### 3. **Defense in Depth**
+Não confie em uma única barreira de segurança.
+Combine autenticação, criptografia, firewall, validação e monitoramento.
+Uma camada protege a outra.
+---
+
+### 4. **Zero Trust Architecture**
+Não confie em nada por padrão — nem em usuários internos.
+Sempre valide identidade, permissões e contexto antes de liberar acesso.
+
+---
+
+### 5. **Input Validation & Sanitization**
+Nunca confie em dados externos.
+Valide tipo, tamanho e formato de tudo que entra.
+Sanitize antes de salvar ou exibir.
+
+---
+
+### 6. **Secure Authentication & Authorization**
+Implemente autenticação forte (tokens, OAuth, MFA).
+Separe autenticação (quem é) de autorização (o que pode fazer).
+
+---
+
+### 7. **Encryption at Rest & in Transit**
+Criptografe dados sensíveis em banco (at rest) e durante o tráfego (in transit).
+Use HTTPS e TLS sempre.
+
+---
+
+### 8. **Use of HTTPS/TLS**
+Nunca aceite HTTP puro em produção.
+Redirecione tudo para HTTPS e use certificados válidos.
+
+---
+
+### 9. **Secret Management**
+Nunca exponha tokens, senhas ou chaves em código.
+Use arquivos `.env`, cofres (Vault, AWS Secrets) e mantenha-os fora do repositório.
+
+---
+
+### 10. **Avoid Hardcoded Credentials**
+Senhas e chaves nunca devem estar fixas no código-fonte.
+Isso é uma das falhas mais graves e fáceis de explorar.
+
+---
+
+### 11. **Security Headers**
+Configure cabeçalhos HTTP de proteção (CSP, X-Frame-Options, X-XSS-Protection, etc.).
+Eles bloqueiam ataques comuns de navegador.
+
+---
+
+### 12. **Audit Logging & Monitoring**
+Monitore acessos, falhas e tentativas suspeitas.
+Logs bem configurados ajudam a detectar e responder a incidentes rapidamente.
+
+---
+
+### 13. **Dependency Vulnerability Scanning**
+Sempre escaneie dependências (npm audit, Snyk, Dependabot).
+Bibliotecas desatualizadas são portas abertas.
+
+---
+
+### 14. **Regular Security Patching**
+Atualize tudo: servidor, pacotes e frameworks.
+A maioria dos ataques explora versões antigas com falhas conhecidas.
+
+---
+
+### 15. **Threat Modeling**
+Pense como um invasor.
+Identifique onde o sistema pode ser atacado e corrija as brechas antes que alguém explore.
+
+---
+
+### EXTRA
+Sempre embeleze os textos, relatórios e explicações com emojis.
