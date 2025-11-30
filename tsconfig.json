@@ -38,6 +38,6 @@
       "path": "./tsconfig.node.json"
     }
   ], // Aponta para outros arquivos de configuração tsconfig, permitindo compartilhamento de configurações e builds multi-projeto.
-  "include": ["src/**/*", "vite-env.d.ts"], // Lista de padrões de arquivos/folders a serem considerados na compilação pelo TypeScript.
-  "exclude": ["node_modules", "dist", ".nuxt", ".output"] // Lista de pastas a serem desconsideradas da compilação (inclusive builds/bundles e dependências).
+  "include": ["src/**/*", "vite-env.d.ts", "nuxt.d.ts", ".nuxt/**/*.d.ts"], // Lista de padrões de arquivos/folders a serem considerados na compilação pelo TypeScript.
+  "exclude": ["node_modules", "dist", ".output"] // Lista de pastas a serem desconsideradas da compilação (inclusive builds/bundles e dependências).
 }
