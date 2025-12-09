@@ -6,7 +6,6 @@
     "jsx": "preserve", // Mantém o código JSX nos arquivos para que futuras etapas (como o bundler) possam processá-lo.
     "lib": ["ES2022", "DOM", "DOM.Iterable"], // Especifica quais bibliotecas globais (ex: ES2020, DOM) estarão disponíveis durante a compilação. Garante que as APIs mais recentes estejam acessíveis.
     "useDefineForClassFields": true, // Controla como os campos de classe são inicializados; padrão para a especificação mais nova do JavaScript.
-    "baseUrl": ".", // Define o diretório base para resolução de módulos (útil no uso de paths ou importações relativas).
     "module": "ESNext", // Define que os módulos seguirão o padrão ECMAScript mais moderno, permitindo import/export dinâmico e otimizações mais recentes.
     "moduleResolution": "bundler", // Define o modo de resolução de módulos para projetos que usam bundlers modernos como Vite, esbuild, etc.
     "paths": {
@@ -14,7 +13,6 @@
       "@icons/*": ["./src/components/icons/*"]
     }, // Cria atalhos personalizados para importação de módulos, facilitando organização e manutenção do código.
     "resolveJsonModule": true, // Permite importar arquivos .json diretamente via import, tipando seu conteúdo automaticamente.
-    "allowImportingTsExtensions": true, // Permite usar extensões .ts/.tsx explicitamente nos imports (relevante para compatibilidade em alguns bundlers).
     "allowJs": true, // Faz o compilador aceitar e analisar também arquivos JavaScript além dos TypeScript.
     "checkJs": true, // Se true, valida arquivos .js também, levantando possíveis problemas; false desabilita essa checagem.
     "strict": true, // Ativa todas as checagens estritas, maximizando a qualidade e segurança do código TypeScript.
