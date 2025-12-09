@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@pinia/nuxt',
     '@nuxt/ui',
+    '@vueuse/nuxt',
   ],
 
   i18n: {

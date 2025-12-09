@@ -16,23 +16,10 @@ defineExpose({
 const favoritesMenu = ref<HTMLDivElement | null>(null)
 const { t } = useI18n()
 
-function handleClickOutside(event: MouseEvent) {
-  const clickedOutsideDropdownList = isClickOutsideElement(
-    favoritesMenu.value,
-    event,
-  )
-
-  if (clickedOutsideDropdownList && props.showMenu) {
+onClickOutside(favoritesMenu, () => {
+  if (props.showMenu) {
     props.toggleMenu()
   }
-}
-
-onMounted(() => {
-  window.addEventListener('click', handleClickOutside)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('click', handleClickOutside)
 })
 </script>
 
