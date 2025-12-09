@@ -82,7 +82,7 @@ export function faqSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/faq',
       },
       {
         rel: 'alternate',
@@ -92,7 +92,7 @@ export function faqSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/faq',
       },
     ],
   }

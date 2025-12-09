@@ -1,5 +1,3 @@
-export const { $env } = useNuxtApp()
-
 export const companyLinks: Array<FooterLink> = [
   { path: '/about', translationKey: 'footer.links.about' },
   { path: '/blog', translationKey: 'footer.links.blog' },
@@ -14,38 +12,42 @@ export const usefulLinks: Array<FooterLink> = [
   { path: '/faq', translationKey: 'footer.useful.faq' },
 ]
 
-export const socialLinks: Array<SocialLink> = [
-  {
-    platform: 'facebook',
-    icon: 'mdi:facebook',
-    url: `https://www.facebook.com/profile.php?id=${$env.FACEBOOK_ID}`,
-    ariaLabel: 'Facebook icon',
-  },
-  {
-    platform: 'instagram',
-    icon: 'mdi:instagram',
-    url: `https://www.instagram.com/${$env.INSTAGRAM_USERNAME}`,
-    ariaLabel: 'Instagram icon',
-  },
-  {
-    platform: 'twitter',
-    icon: 'mdi:twitter',
-    url: `https://x.com/${$env.X_USERNAME}`,
-    ariaLabel: 'Twitter icon',
-  },
-  {
-    platform: 'youtube',
-    icon: 'mdi:youtube',
-    url: `https://www.youtube.com/${$env.YOUTUBE_USERNAME}`,
-    ariaLabel: 'YouTube icon',
-  },
-  {
-    platform: 'linkedin',
-    icon: 'mdi:linkedin',
-    url: `https://www.linkedin.com/in/${$env.LINKEDIN_USERNAME}`,
-    ariaLabel: 'LinkedIn icon',
-  },
-]
+export function getSocialLinks(): Array<SocialLink> {
+  const { $env } = useNuxtApp()
+  
+  return [
+    {
+      platform: 'facebook',
+      icon: 'mdi:facebook',
+      url: `https://www.facebook.com/profile.php?id=${$env.FACEBOOK_ID}`,
+      ariaLabel: 'Facebook icon',
+    },
+    {
+      platform: 'instagram',
+      icon: 'mdi:instagram',
+      url: `https://www.instagram.com/${$env.INSTAGRAM_USERNAME}`,
+      ariaLabel: 'Instagram icon',
+    },
+    {
+      platform: 'twitter',
+      icon: 'mdi:twitter',
+      url: `https://x.com/${$env.X_USERNAME}`,
+      ariaLabel: 'Twitter icon',
+    },
+    {
+      platform: 'youtube',
+      icon: 'mdi:youtube',
+      url: `https://www.youtube.com/${$env.YOUTUBE_USERNAME}`,
+      ariaLabel: 'YouTube icon',
+    },
+    {
+      platform: 'linkedin',
+      icon: 'mdi:linkedin',
+      url: `https://www.linkedin.com/in/${$env.LINKEDIN_USERNAME}`,
+      ariaLabel: 'LinkedIn icon',
+    },
+  ]
+}
 
 export const paymentMethods: Array<PaymentMethod> = [
   { icon: 'simple-icons:visa', ariaLabel: 'Visa' },

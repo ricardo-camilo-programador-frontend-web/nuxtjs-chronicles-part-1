@@ -81,7 +81,7 @@ export function careersSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/careers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/careers',
       },
       {
         rel: 'alternate',
@@ -91,7 +91,7 @@ export function careersSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/careers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/careers',
       },
     ],
   }

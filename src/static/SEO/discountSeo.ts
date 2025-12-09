@@ -82,7 +82,7 @@ export function discountSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/discount',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/discount',
       },
       {
         rel: 'alternate',
@@ -92,7 +92,7 @@ export function discountSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/discount',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/discount',
       },
     ],
   }

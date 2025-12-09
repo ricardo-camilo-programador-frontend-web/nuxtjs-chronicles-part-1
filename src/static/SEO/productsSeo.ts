@@ -82,7 +82,7 @@ export function productsSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/produtos',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/produtos',
       },
       {
         rel: 'alternate',
@@ -92,7 +92,7 @@ export function productsSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/products',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/products',
       },
     ],
   }

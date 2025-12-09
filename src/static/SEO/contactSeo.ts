@@ -91,7 +91,7 @@ export function contactSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/contact',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/contact',
       },
     ],
   }

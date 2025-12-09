@@ -82,7 +82,7 @@ export function bestSellersSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/best-sellers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/best-sellers',
       },
       {
         rel: 'alternate',
@@ -92,7 +92,7 @@ export function bestSellersSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/best-sellers',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/best-sellers',
       },
     ],
   }

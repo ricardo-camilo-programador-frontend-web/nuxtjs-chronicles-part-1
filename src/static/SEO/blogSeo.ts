@@ -66,7 +66,7 @@ export function blogSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/blog',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/blog',
       },
       {
         rel: 'alternate',
@@ -76,7 +76,7 @@ export function blogSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/blog',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/blog',
       },
     ],
   }

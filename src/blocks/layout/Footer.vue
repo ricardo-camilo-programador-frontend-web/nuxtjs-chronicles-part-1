@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { t } = useI18n()
+const socialLinks = getSocialLinks()
 </script>
 
 <template>

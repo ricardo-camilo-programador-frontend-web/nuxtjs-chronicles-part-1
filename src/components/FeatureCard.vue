@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 interface FeatureCardProps {
   imageSrc: string
   productName: string
