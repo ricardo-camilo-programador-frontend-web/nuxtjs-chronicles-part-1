@@ -4,14 +4,14 @@ type LocaleType = 'pt-BR' | 'en-US' | undefined
 export type CurrencyType = 'BRL' | 'USD' | string
 
 export function formatCurrency(
-  value: any,
+  value: number | string,
   currency: CurrencyType = 'BRL',
   notation: NotationType = 'standard',
   compactDisplay: CompactDisplayType = 'short',
   locale: LocaleType = 'pt-BR',
   minimumFractionDigits = 2,
   maximumFractionDigits = 2,
-) {
+): string {
   if (value === undefined) {
     return 'R$ undefined'
   }
@@ -27,7 +27,6 @@ export function formatCurrency(
     maximumFractionDigits,
   })
 
-  const formattedValue = formatter.format(convertedToNumber)
-
-  return formattedValue
+  return formatter.format(convertedToNumber)
 }
+// Removed duplicate and dead code

@@ -13,8 +13,12 @@ interface ResponsiveConfig {
   xl?: number | string
 }
 
+interface CarouselItem {
+  [key: string]: unknown
+}
+
 interface CarouselProps {
-  items?: Array<any>
+  items?: Array<CarouselItem>
   dir?: 'ltr' | 'rtl'
   arrows?: boolean
   indicators?: boolean
@@ -92,7 +96,14 @@ const carouselUI = computed(() => ({
   dot: 'rounded-full h-3 w-3 bg-primary-500 dark:bg-primary-400',
 }))
 
-function setupAutoplay(carouselRef: Ref<any>, interval: number) {
+interface CarouselInstance {
+  page: number
+  pages: number
+  select: (index: number) => void
+  next: () => void
+}
+
+function setupAutoplay(carouselRef: Ref<CarouselInstance | undefined>, interval: number) {
   if (!props.autoplay) {
     return
   }

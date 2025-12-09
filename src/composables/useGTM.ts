@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    dataLayer: Array<any>
+    dataLayer: Array<unknown>
   }
 }
 
