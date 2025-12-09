@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import process from 'node:process'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
@@ -26,14 +28,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    '@nuxt/icon',
-    'nuxt-headlessui',
-    '@nuxtjs/i18n',
-    '@pinia/nuxt',
-    '@nuxt/ui',
-    '@vueuse/nuxt',
-  ],
+  modules: ['@nuxt/icon', 'nuxt-headlessui', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/ui'],
 
   i18n: {
     locales: [
