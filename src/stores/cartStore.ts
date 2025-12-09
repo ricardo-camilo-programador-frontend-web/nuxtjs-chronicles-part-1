@@ -38,10 +38,7 @@ export const useCartStore = defineStore('cartStore', () => {
   }
 
   function getCartTotal(): number {
-    return cart.value.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0,
-    )
+    return cart.value.reduce((total, item) => total + item.price * item.quantity, 0)
   }
 
   function getCartCount(): number {

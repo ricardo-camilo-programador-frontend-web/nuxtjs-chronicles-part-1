@@ -22,7 +22,7 @@ export function bestSellersSEO(locale: string) {
           case 'es':
             return 'Descubre los productos para mascotas más populares de Savana Pet Shop. Los artículos favoritos de nuestros clientes con las mejores valoraciones.'
           default:
-            return 'Discover Savana Pet Shop\'s most popular pet products. Customer favorites with the best ratings.'
+            return "Discover Savana Pet Shop's most popular pet products. Customer favorites with the best ratings."
         }
     }
   }
@@ -51,13 +51,11 @@ export function bestSellersSEO(locale: string) {
       { name: 'robots', content: 'index, follow' },
       {
         property: 'og:url',
-        content:
-          'https://savana-nuxtjs-chronicles-part-1.netlify.app//best-sellers',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//best-sellers',
       },
       {
         property: 'og:image',
-        content:
-          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -79,8 +77,7 @@ export function bestSellersSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content:
-          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',

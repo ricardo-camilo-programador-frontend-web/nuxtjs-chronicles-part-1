@@ -36,8 +36,7 @@ export function careersSEO(locale: string) {
       },
       {
         name: 'keywords',
-        content:
-          'carreiras, empregos, vagas, oportunidades, trabalhe conosco, pet shop, savana',
+        content: 'carreiras, empregos, vagas, oportunidades, trabalhe conosco, pet shop, savana',
       },
       {
         property: 'og:title',
@@ -55,8 +54,7 @@ export function careersSEO(locale: string) {
       },
       {
         property: 'og:image',
-        content:
-          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -78,8 +76,7 @@ export function careersSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content:
-          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',

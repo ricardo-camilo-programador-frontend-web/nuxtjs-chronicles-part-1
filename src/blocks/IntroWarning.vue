@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import portifolioImage from '@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
-import { useGTM } from '@/composables/useGTM'
 import {
   Dialog,
   DialogPanel,
@@ -9,6 +7,8 @@ import {
   TransitionChild,
   TransitionRoot,
 } from '@headlessui/vue'
+import portifolioImage from '@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
+import { useGTM } from '@/composables/useGTM'
 
 const storageAnalyticsName = 'analytics-enabled'
 const showIntroWarning = 'show-intro-warning-modal'
@@ -32,9 +32,8 @@ onMounted(() => {
   const lastVisitTime = storage.getItem(lastVisit)
   const tenMinutesInMs = 10 * 60 * 1000
 
-  const shouldShowModal
-    = !lastVisitTime
-      || new Date().getTime() - new Date(lastVisitTime).getTime() > tenMinutesInMs
+  const shouldShowModal =
+    !lastVisitTime || new Date().getTime() - new Date(lastVisitTime).getTime() > tenMinutesInMs
 
   if (!storage.getItem(storageAnalyticsName)) {
     storage.setItem(storageAnalyticsName, 'true')
@@ -48,12 +47,11 @@ onMounted(() => {
   }
 })
 
-watch(analyticsEnabled, (newValue) => {
+watch(analyticsEnabled, newValue => {
   storage.setItem(storageAnalyticsName, newValue.toString())
   if (newValue) {
     enableGTM()
-  }
-  else {
+  } else {
     disableGTM()
   }
 })

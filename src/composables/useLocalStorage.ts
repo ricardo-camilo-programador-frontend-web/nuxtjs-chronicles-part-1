@@ -1,8 +1,5 @@
 export function useLocalStorage() {
-  const setItem = function saveItemOnLocalStorage(
-    itemName: string,
-    itemValue: string,
-  ) {
+  const setItem = function saveItemOnLocalStorage(itemName: string, itemValue: string) {
     if (typeof window !== 'undefined') {
       window.localStorage.setItem(itemName, itemValue)
     }

@@ -1,8 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
 import catsSilhouette from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
-
-import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 </script>

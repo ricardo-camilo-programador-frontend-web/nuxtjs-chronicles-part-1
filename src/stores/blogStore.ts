@@ -1,6 +1,6 @@
 import type { BlogPost } from '@/types/blogPost'
-import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
 
 interface BlogStore {
   blogPosts: Array<BlogPost>

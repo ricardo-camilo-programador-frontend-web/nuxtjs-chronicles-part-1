@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
+import { useI18n } from 'vue-i18n'
 import backgroundGradientOrange from '@/assets/images/background-gradient-orange.webp'
+import backgroundGradientOrangeMini from '@/assets/images/background-gradient-orange-mini.webp'
 import celineSayuriTagami from '@/assets/images/celine-sayuri-tagami-2s6ORaJY6gI-unsplash.webp'
 import charlesdeluvio from '@/assets/images/charlesdeluvio-5R5HgLyHMVQ-unsplash.webp'
 import greenWingedMacaw from '@/assets/images/green-winged-macaw-ara-chloropterus-flying.webp'
 import katherineMcadoo from '@/assets/images/katherine-mcadoo-vSS2_KfzbLY-unsplash.webp'
-
-import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const localePath = useLocalePath()

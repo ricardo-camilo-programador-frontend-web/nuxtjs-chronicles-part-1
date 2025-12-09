@@ -1,10 +1,6 @@
 import { nextTick, onMounted, onUnmounted } from 'vue'
 
-function createRippleElement(
-  x: number,
-  y: number,
-  diameter: number,
-): HTMLSpanElement {
+function createRippleElement(x: number, y: number, diameter: number): HTMLSpanElement {
   const ripple = document.createElement('span')
   ripple.className = 'ripple'
   ripple.style.width = `${diameter}px`

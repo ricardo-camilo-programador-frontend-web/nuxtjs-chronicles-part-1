@@ -1,6 +1,6 @@
 import type { Product } from '@/types/product'
-import { type CurrencyType, formatCurrency } from '@/utils/formatCurrency'
 import { useI18n } from 'vue-i18n'
+import { type CurrencyType, formatCurrency } from '@/utils/formatCurrency'
 
 export function translateProduct(product: Product) {
   const { t } = useI18n()

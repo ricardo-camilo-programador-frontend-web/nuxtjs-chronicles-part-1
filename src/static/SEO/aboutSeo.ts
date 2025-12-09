@@ -22,7 +22,7 @@ export function aboutSEO(locale: string) {
           case 'es':
             return 'Conoce la historia de Savana Pet Shop, nuestra misión, valores y compromiso con el bienestar animal. Descubre por qué somos referencia en productos para mascotas.'
           default:
-            return 'Learn about Savana Pet Shop\'s history, our mission, values and commitment to animal welfare. Discover why we are a reference in pet supplies.'
+            return "Learn about Savana Pet Shop's history, our mission, values and commitment to animal welfare. Discover why we are a reference in pet supplies."
         }
     }
   }
@@ -55,8 +55,7 @@ export function aboutSEO(locale: string) {
       },
       {
         property: 'og:image',
-        content:
-          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -78,8 +77,7 @@ export function aboutSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content:
-          'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',

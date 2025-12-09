@@ -1,4 +1,5 @@
 import type { Product } from '@/types/product'
+import { acceptHMRUpdate, defineStore } from 'pinia'
 import {
   birdCage,
   catFood,
@@ -14,7 +15,6 @@ import {
   litterBox,
   scratchingPost,
 } from '@/utils/imageFiles'
-import { acceptHMRUpdate, defineStore } from 'pinia'
 
 interface ProductStore {
   products: Array<Product>
@@ -274,9 +274,7 @@ export const useProductStore = defineStore({
     },
     updateProductFavorite(productToUpdate: Product): void {
       this.products = this.products.map(product =>
-        product.id === productToUpdate.id
-          ? { ...product, favorite: !product.favorite }
-          : product,
+        product.id === productToUpdate.id ? { ...product, favorite: !product.favorite } : product,
       )
     },
   },
@@ -285,7 +283,7 @@ export const useProductStore = defineStore({
       const favoriteProducts = this.products.filter(product => product.favorite)
       const uniqueFavorites = new Map()
 
-      favoriteProducts.forEach((product) => {
+      favoriteProducts.forEach(product => {
         if (!uniqueFavorites.has(product.id)) {
           uniqueFavorites.set(product.id, product)
         }

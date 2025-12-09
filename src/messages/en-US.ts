@@ -30,7 +30,7 @@ export const en = {
     category: 'Pet Shop',
     title: 'The smarter way to shop for your pet',
     description:
-      'Discover a new, efficient way to meet all your pet\'s needs with our curated selection of high-quality products. From nutritious food options to fun toys, everything is designed to ensure your pet\'s happiness and health.',
+      "Discover a new, efficient way to meet all your pet's needs with our curated selection of high-quality products. From nutritious food options to fun toys, everything is designed to ensure your pet's happiness and health.",
     buttonLabel: 'Learn More',
   },
   footer: {

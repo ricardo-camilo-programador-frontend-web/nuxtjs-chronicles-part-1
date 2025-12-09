@@ -9,7 +9,8 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   icon: 'mdi:paw',
   title: 'Under Development',
-  message: 'We\'re working on something pawsome! This section of our pet shop is currently under development. Please check back later.',
+  message:
+    "We're working on something pawsome! This section of our pet shop is currently under development. Please check back later.",
 })
 </script>
 

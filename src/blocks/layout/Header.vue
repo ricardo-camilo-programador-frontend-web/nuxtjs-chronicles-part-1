@@ -4,8 +4,7 @@ const { isScrollingDown, isScrolled } = useScroll()
 
 const headerClasses = computed(() => {
   return {
-    'translate-y-[-40%] lg:translate-y-[-50%] rounded-none max-w-[100vw] ':
-      isScrollingDown.value,
+    'translate-y-[-40%] lg:translate-y-[-50%] rounded-none max-w-[100vw] ': isScrollingDown.value,
     'bg-white shadow-lg max-w-[90vw]': isScrolled.value,
     'transition-all duration-300 ease-in-out': true,
   }

@@ -1,9 +1,4 @@
-type NotationType =
-  | 'standard'
-  | 'scientific'
-  | 'engineering'
-  | 'compact'
-  | undefined
+type NotationType = 'standard' | 'scientific' | 'engineering' | 'compact' | undefined
 type CompactDisplayType = 'short' | 'long' | undefined
 type LocaleType = 'pt-BR' | 'en-US' | undefined
 export type CurrencyType = 'BRL' | 'USD' | string
