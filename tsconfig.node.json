@@ -7,5 +7,5 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   },
-  "include": ["vite.config.ts", "vite-plugins/**/*.ts", "package.json"]
+  "include": ["nuxt.config.ts"]
 }

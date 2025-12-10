@@ -204,7 +204,7 @@ ANY RULES IN THE ProviderContextOverrides SECTION CAN OVERRULE SPECIFIC RULES IN
   ### Scheduled Functions
   - Use scheduled functions when the logic needs to run on an interval or can be defined via CRON timing.
   - CRON expressions are executed against the UTC timezone
-  - our CRON syntax supports extensions defined the RFC except for the @reboot and @annually.
+  - our CRON syntax supports extensions defined in RFC 6645 except for the @reboot and @annually.
   - The minimum interval is 1 minute
   - Scheduled functions have a 30-second execution limit
   - Scheduled functions do not return response bodies
@@ -214,7 +214,7 @@ ANY RULES IN THE ProviderContextOverrides SECTION CAN OVERRULE SPECIFIC RULES IN
       [functions."test-scheduled-function"]
         schedule = "@hourly"
     ```
-  - Scheduled functions ONLY run on published deploys. They donâ€™t run on Deploy Previews or branch deploys.
+  - Scheduled functions ONLY run on published deploys. They don't run on Deploy Previews or branch deploys.
   - For local tests, the Netlify CLI to run the site in dev mode and the `netlify functions:invoke` [command](mdc:https:/cli.netlify.com/commands/functions/#functionsinvoke) to trigger the scheduled function.
     example:
     ```bash
@@ -552,7 +552,7 @@ ANY RULES IN THE ProviderContextOverrides SECTION CAN OVERRULE SPECIFIC RULES IN
       //    -- ONLY if you have to reduce searched data, use `prefix: 'some-prefix'` to pull blobs that start with that prefix value. Use `directories: true` to include the full directory path on the `key`
       // - By default, the list() method retrieves all pages, meaning you'll always get the full list of results. This can be slow or memory intensive. To paginate, pass the `paginate: true` in the options to turn the response into an AsyncIterator that allows you to for-of loop through the blobs in the store.
       // - if store path is empty, the blobs will resolve the promise with an empty array
-      list(options?: { directories?: boolean, paginate?: boolean. prefix?: string }): Promise<{ blobs: BlobResult[], directories: string[] }> | AsyncIterable<{ blobs: BlobResult[], directories: string[] }>
+      list(options?: { directories?: boolean, paginate?: boolean, prefix?: string }): Promise<{ blobs: BlobResult[], directories: string[] }> | AsyncIterable<{ blobs: BlobResult[], directories: string[] }>
 
       // Deletes a blob.
       // example: await store.delete('key-name');
@@ -656,7 +656,7 @@ ANY RULES IN THE ProviderContextOverrides SECTION CAN OVERRULE SPECIFIC RULES IN
 
     function getBlobStore(...storeOptions){
 
-      if((Netlify.context?.deploy.context === 'production'){
+      if(Netlify.context?.deploy.context === 'production'){
         return getStore(...storeOptions);
       }
 

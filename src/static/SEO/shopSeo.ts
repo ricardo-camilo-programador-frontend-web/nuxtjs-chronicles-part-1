@@ -51,11 +51,11 @@ export function shopSEO(locale: string) {
       { name: 'robots', content: 'index, follow' },
       {
         property: 'og:url',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//shop',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/shop',
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -77,22 +77,22 @@ export function shopSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/shop',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/shop',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/shop',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/shop',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/shop',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/shop',
       },
     ],
   }

@@ -55,7 +55,7 @@ export function faqSEO(locale: string) {
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -77,22 +77,22 @@ export function faqSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/faq',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/faq',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/faq',
       },
     ],
   }
@@ -155,7 +155,7 @@ export function privacyPolicySEO(locale: string) {
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -177,22 +177,22 @@ export function privacyPolicySEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/privacy-policy',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt/privacy-policy',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/privacy-policy',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/privacy-policy',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/privacy-policy',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en/privacy-policy',
       },
     ],
   }

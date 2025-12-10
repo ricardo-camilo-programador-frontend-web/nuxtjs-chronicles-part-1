@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { getSocialLinks, companyLinks, usefulLinks, paymentMethods } from '~/static/footer'
+
 const localePath = useLocalePath()
 const { t } = useI18n()
 const socialLinks = getSocialLinks()

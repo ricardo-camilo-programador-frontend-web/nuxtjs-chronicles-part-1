@@ -281,7 +281,7 @@ export const useProductStore = defineStore({
   getters: {
     getFavoriteProducts(): Array<Product> {
       const favoriteProducts = this.products.filter(product => product.favorite)
-      const uniqueFavorites = new Map()
+      const uniqueFavorites = new Map<string, Product>()
 
       favoriteProducts.forEach(product => {
         if (!uniqueFavorites.has(product.id)) {

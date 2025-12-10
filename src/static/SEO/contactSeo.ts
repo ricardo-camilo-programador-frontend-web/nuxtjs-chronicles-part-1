@@ -50,11 +50,11 @@ export function contactSEO(locale: string) {
       { name: 'robots', content: 'index, follow' },
       {
         property: 'og:url',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//contato',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/contato',
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -76,22 +76,22 @@ export function contactSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/contato',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/contato',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/contact',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/contact',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/contact',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/contact',
       },
     ],
   }

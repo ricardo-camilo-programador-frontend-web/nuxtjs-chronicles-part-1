@@ -1,7 +1,8 @@
 ---
 description: Guidelines for UI and styling in Vue.js components.
-globs: src/components/**/*.{vue,scss,css}
+globs: src/components/**/*.{vue,css}
 ---
-- Maintain a consistent design language across the application.
-- Use CSS preprocessors (e.g., Sass, Less) for improved styling capabilities.
-- Follow BEM (Block Element Modifier) naming conventions for CSS classes.
+- Use Tailwind CSS utilities for styling; prefer DaisyUI components for pre-built patterns.
+- Minimize custom CSS; leverage Tailwind's `@apply` directive only when abstracting repeated utility combinations.
+- Avoid BEM and custom naming; use Tailwind's class names as the design language.
+- Keep scoped styles minimal; use Tailwind for responsive and state-driven design.

@@ -55,7 +55,7 @@ export function faqSEO(locale: string) {
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -77,22 +77,22 @@ export function faqSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/faq',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/faq',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/faq',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/faq',
       },
     ],
   }
@@ -155,7 +155,7 @@ export function giftCardsSEO(locale: string) {
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -177,22 +177,22 @@ export function giftCardsSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt/gift-cards',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt/gift-cards',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/gift-cards',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/gift-cards',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en/gift-cards',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en/gift-cards',
       },
     ],
   }

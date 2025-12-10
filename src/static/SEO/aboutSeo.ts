@@ -55,7 +55,7 @@ export function aboutSEO(locale: string) {
       },
       {
         property: 'og:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       { property: 'og:locale', content: locale },
       {
@@ -77,22 +77,22 @@ export function aboutSEO(locale: string) {
       },
       {
         name: 'twitter:image',
-        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//imagem-compartilhamento.jpg',
+        content: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/imagem-compartilhamento.jpg',
       },
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/about',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/about',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/about',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/about',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/about',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/about',
       },
     ],
   }

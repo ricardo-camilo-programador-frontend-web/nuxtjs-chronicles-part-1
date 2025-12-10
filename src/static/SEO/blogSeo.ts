@@ -36,7 +36,7 @@ export function blogSEO(locale: string) {
       { name: 'robots', content: 'index, follow' },
       {
         property: 'og:url',
-        content: `https://savana-nuxtjs-chronicles-part-1.netlify.app//${locale}/blog`,
+        content: `https://savana-nuxtjs-chronicles-part-1.netlify.app/${locale}/blog`,
       },
       {
         property: 'og:image',
@@ -66,17 +66,17 @@ export function blogSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//pt-BR/blog',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/blog',
       },
       {
         rel: 'alternate',
         hreflang: 'es',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//es/blog',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/es/blog',
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app//en-US/blog',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/blog',
       },
     ],
   }

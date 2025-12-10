@@ -1,5 +1,7 @@
 import { nextTick, onMounted, onUnmounted } from 'vue'
 
+const RIPPLE_ANIMATION_DURATION = 600 // ms
+
 function createRippleElement(x: number, y: number, diameter: number): HTMLSpanElement {
   const ripple = document.createElement('span')
   ripple.className = 'ripple'
@@ -23,11 +25,11 @@ function createRippleHandler(element: HTMLElement) {
 
     setTimeout(() => {
       ripple.remove()
-    }, 600)
+    }, RIPPLE_ANIMATION_DURATION)
   }
 }
 
-export function useRippleEffect(elementId: string) {
+export function useRippleEffect(elementId?: string) {
   let clickHandler: ((event: MouseEvent) => void) | null = null
   let element: HTMLElement | null = null
 
