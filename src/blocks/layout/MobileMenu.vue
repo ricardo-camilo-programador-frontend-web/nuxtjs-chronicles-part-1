@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { menuLinks } from '@/static/menu'
+
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const showMenu = ref(false)
 
@@ -79,7 +82,7 @@ function toggleNav() {
                 class="text-menu-text-primary group flex w-full font-semibold"
               >
                 <NuxtLink
-                  :to="item.path"
+                  :to="localePath(item.path)"
                   class="items-between flex w-full cursor-pointer rounded border-b-2 border-transparent px-2 py-4 pl-4 text-black transition-all duration-300 ease-in-out hover:border-orange-500 hover:text-orange-500"
                 >
                   <div
