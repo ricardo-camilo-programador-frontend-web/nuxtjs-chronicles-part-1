@@ -111,6 +111,7 @@ export const en = {
     petCareHeartAltText: 'Pet Care Heart Logo with Heart Shape',
   },
   products: {
+    favorite: 'Favorite',
     featuredTitle: 'Featured Products',
     seeAll: 'See All Products',
     seeAllAriaLabel: 'See All Products',

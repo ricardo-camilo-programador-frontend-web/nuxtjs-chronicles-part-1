@@ -1,8 +1,13 @@
-import type { Product } from '@/types/product'
-import { acceptHMRUpdate, defineStore } from 'pinia'
+import { ref } from 'vue'
+import type { Product } from '~/types/product'
+import { acceptHMRUpdate, defineStore, skipHydrate } from 'pinia'
+
+interface CartItem extends Product {
+  quantity: number
+}
 
 export const useCartStore = defineStore('cartStore', () => {
-  const cart = ref<Array<CartItem>>([])
+  const cart = skipHydrate(ref<Array<CartItem>>([]))
 
   function getCartItems(): Array<CartItem> {
     return cart.value
