@@ -11,3 +11,9 @@ interface ImportMetaEnv extends Readonly<Record<string, string>> {
   readonly NUXT_PUBLIC_TITLE: string
   readonly NUXT_PUBLIC_URL: string
 }
+
+declare global {
+  interface ImportMeta {
+    readonly env: ImportMetaEnv
+  }
+}
