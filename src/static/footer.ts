@@ -14,7 +14,7 @@ export const usefulLinks: Array<FooterLink> = [
 
 export function getSocialLinks(): Array<SocialLink> {
   const { $env } = useNuxtApp()
-  
+
   return [
     {
       platform: 'facebook',

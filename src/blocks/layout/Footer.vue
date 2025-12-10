@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getSocialLinks, companyLinks, usefulLinks, paymentMethods } from '~/static/footer'
+import { companyLinks, getSocialLinks, paymentMethods, usefulLinks } from '~/static/footer'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
