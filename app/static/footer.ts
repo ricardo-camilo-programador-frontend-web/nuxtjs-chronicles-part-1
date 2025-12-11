@@ -1,3 +1,7 @@
+import type { FooterLink } from '~/types/footerLink'
+import type { SocialLink } from '~/types/socialLink'
+import type { PaymentMethod } from '~/types/paymentMethod'
+
 export const companyLinks: Array<FooterLink> = [
   { path: '/about', translationKey: 'footer.links.about' },
   { path: '/blog', translationKey: 'footer.links.blog' },

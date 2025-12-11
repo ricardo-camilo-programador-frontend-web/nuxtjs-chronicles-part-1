@@ -7,7 +7,7 @@ import {
   TransitionChild,
   TransitionRoot,
 } from '@headlessui/vue'
-import portifolioImage from '@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
+import portfolioImage from '@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
 import { useGTM } from '@/composables/useGTM'
 
 const storageAnalyticsName = 'analytics-enabled'
@@ -134,7 +134,7 @@ watch(analyticsEnabled, newValue => {
                       class="relative mx-auto flex items-center justify-center gap-2 rounded-lg bg-gray-50 p-3 transition-colors hover:bg-gray-100"
                     >
                       <Image
-                        :src="portifolioImage"
+                        :src="portfolioImage"
                         alt="Heart circle"
                         class="mr-2 h-8 w-8"
                         width="300"

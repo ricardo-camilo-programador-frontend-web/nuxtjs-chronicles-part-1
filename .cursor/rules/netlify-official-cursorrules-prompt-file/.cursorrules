@@ -264,7 +264,7 @@ ANY RULES IN THE ProviderContextOverrides SECTION CAN OVERRULE SPECIFIC RULES IN
   - Edge functions have a global `Netlify` object that is also accessible.
     - ONLY use `Netlify.env.*` for interacting with environment variables in code.
   - Place function files in `YOUR_BASE_DIRECTORY/netlify/edge-functions` or a subdirectory.
-    - The serverless functions director can be changed via`netlify.toml`:
+    - The serverless functions directory can be changed via `netlify.toml`:
       ```toml
       [build]
         edge_functions = "my-custom-directory"

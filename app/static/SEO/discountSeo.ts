@@ -91,7 +91,7 @@ export function discountSEO(locale: string) {
       },
       {
         rel: 'alternate',
-        hreflang: 'en',
+        hreflang: 'en-US',
         href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/discount',
       },
     ],

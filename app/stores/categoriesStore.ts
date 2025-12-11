@@ -58,5 +58,5 @@ export const useCategoriesStore = defineStore({
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useCategoriesStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(useCategoriesStore, import.meta.hot) as any)
 }

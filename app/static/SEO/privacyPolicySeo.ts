@@ -182,7 +182,7 @@ export function privacyPolicySEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt/privacy-policy',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/privacy-policy',
       },
       {
         rel: 'alternate',
@@ -191,8 +191,8 @@ export function privacyPolicySEO(locale: string) {
       },
       {
         rel: 'alternate',
-        hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en/privacy-policy',
+        hreflang: 'en-US',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/privacy-policy',
       },
     ],
   }

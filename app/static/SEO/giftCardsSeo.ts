@@ -182,7 +182,7 @@ export function giftCardsSEO(locale: string) {
       {
         rel: 'alternate',
         hreflang: 'pt-BR',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt/gift-cards',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/pt-BR/gift-cards',
       },
       {
         rel: 'alternate',
@@ -191,8 +191,8 @@ export function giftCardsSEO(locale: string) {
       },
       {
         rel: 'alternate',
-        hreflang: 'en',
-        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en/gift-cards',
+        hreflang: 'en-US',
+        href: 'https://savana-nuxtjs-chronicles-part-1.netlify.app/en-US/gift-cards',
       },
     ],
   }
