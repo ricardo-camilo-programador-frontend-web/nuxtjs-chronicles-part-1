@@ -9,8 +9,8 @@
     "module": "ESNext", // Define que os módulos seguirão o padrão ECMAScript mais moderno, permitindo import/export dinâmico e otimizações mais recentes.
     "moduleResolution": "bundler", // Define o modo de resolução de módulos para projetos que usam bundlers modernos como Vite, esbuild, etc.
     "paths": {
-      "~/*": ["./src/*"],
-      "@icons/*": ["./src/components/icons/*"]
+      "~/*": ["./app/*"],
+      "@icons/*": ["./app/components/icons/*"]
     }, // Cria atalhos personalizados para importação de módulos, facilitando organização e manutenção do código.
     "resolveJsonModule": true, // Permite importar arquivos .json diretamente via import, tipando seu conteúdo automaticamente.
     "allowJs": true, // Faz o compilador aceitar e analisar também arquivos JavaScript além dos TypeScript.

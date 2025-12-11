@@ -1,12 +1,10 @@
-/// <reference path="./.nuxt/nuxt.d.ts" />
-/// <reference path="./.nuxt/types/modules.d.ts" />
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 import process from 'node:process'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  srcDir: './src/',
+  srcDir: './app/',
 
   app: {
     head: {
@@ -31,6 +29,10 @@ export default defineNuxtConfig({
   },
 
   modules: ['@nuxt/icon', 'nuxt-headlessui', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/ui'],
+
+  future: {
+    compatibilityVersion: 4,
+  },
 
   i18n: {
     strategy: 'prefix',
@@ -70,11 +72,10 @@ export default defineNuxtConfig({
     dirs: [
       'blocks',
       'components',
-      'store',
+      'stores',
       'plugins',
       'configs',
       'utils',
-      'mocks',
       'composables',
       'static',
       'types',
