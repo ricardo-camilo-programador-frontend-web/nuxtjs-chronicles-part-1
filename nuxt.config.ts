@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 import process from 'node:process'
+import type { NuxtConfig } from 'nuxt/schema'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
@@ -161,4 +162,4 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-})
+}) satisfies NuxtConfig
