@@ -1,1 +1,1 @@
-export { default } from './src/configs/i18n.config'
+export { default } from './app/configs/i18n.config'

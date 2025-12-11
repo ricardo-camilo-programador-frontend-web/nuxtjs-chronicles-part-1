@@ -14,7 +14,7 @@ const vue3CompositionApiBestPractices = [
 // Folder structure
 
 const folderStructure = `
-src/
+app/
   components/
   composables/
   views/

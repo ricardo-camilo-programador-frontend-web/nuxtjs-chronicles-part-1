@@ -1,6 +1,6 @@
 ---
 description: Defines the style and structure for Vue.js components, including naming conventions, composition API usage, and UI library preferences.
-globs: src/components/**/*.vue
+globs: app/components/**/*.vue
 ---
 - Use lowercase with dashes for directories (e.g., components/auth-wizard).
 - Favor named exports for functions.

@@ -1,6 +1,6 @@
 ---
 description: Testing guidelines for Vue 3 Composition API applications, including unit testing, component testing, and end-to-end testing strategies.
-globs: src/**/*
+globs: app/**/*
 ---
 - Use Vitest for unit testing Vue components and utility functions.
 - Use Vue Test Utils for component testing with a focus on user behavior.

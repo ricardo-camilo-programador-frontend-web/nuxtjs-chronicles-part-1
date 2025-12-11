@@ -1,6 +1,6 @@
 ---
 description: Performance optimization strategies for Vue 3 Composition API applications, including bundle optimization, caching, and rendering strategies.
-globs: src/**/*
+globs: app/**/*
 ---
 - Use functional components for simple presentational components.
 - Implement proper code splitting with dynamic imports.

@@ -1,6 +1,6 @@
 ---
 description: Accessibility guidelines for Vue 3 Composition API applications to ensure inclusive design and compliance with WCAG standards.
-globs: src/**/*
+globs: app/**/*
 ---
 - Use semantic HTML elements for proper document structure.
 - Implement proper heading hierarchy (h1, h2, h3, etc.) for content organization.

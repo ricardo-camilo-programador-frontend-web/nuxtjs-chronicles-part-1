@@ -1,6 +1,6 @@
 ---
 description: Specific conventions for Vue.js components. Follow Vue.js docs where appropriate.
-globs: src/components/**/*.vue
+globs: app/components/**/*.vue
 ---
 - Follow Vue.js documentation for best practices.
 - Organize component options in a consistent order (e.g., data, computed, methods, watch, lifecycle hooks).
