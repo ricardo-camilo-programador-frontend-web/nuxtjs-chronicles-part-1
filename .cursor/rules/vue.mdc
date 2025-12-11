@@ -1,0 +1,83 @@
+---
+description: Vue.js best practices and patterns for modern web applications
+globs: **/*.vue, **/*.ts, components/**/*
+---
+
+# Vue.js Best Practices
+
+## Component Structure
+- Use Composition API over Options API for all new components
+- Keep components small and focused (under 300 lines preferred)
+- Use TypeScript for type safety in all components
+- Implement strict prop validation with types
+- Use explicit emit declarations with proper types
+- Keep template logic minimal; extract to computed properties or methods
+
+## Composition API
+- Use `ref()` for primitive values; `reactive()` for objects; prefer `ref()` for most cases
+- Use lifecycle hooks: `onMounted()` for DOM access, `onUnmounted()` for cleanup
+- Extract reusable logic into composables (e.g., `useCount()`, `useFetch(url)`)
+- Keep setup functions under 50 lines; extract logic to composables or helpers if longer
+- Use `computed()` to derive state; use `watch()` sparingly (consider `watchEffect()` for side effects)
+
+## State Management
+- Use Pinia for all global state management
+- Keep stores modular by domain; one store per feature
+- Use actions for mutations and async operations
+- Define getters for computed state values
+- Implement proper error handling for async actions
+
+## Performance
+- Use `defineAsyncComponent()` with Suspense for code splitting
+- Implement Vue query or Pinia-Colada for caching strategies
+- Use `computed()` to memoize expensive calculations; update only when dependencies change
+- Replace `watch()` with `watchEffect()` for simpler side effects
+- Use `v-show` for frequently toggled elements; `v-if` for rarely shown content
+- Add `:key` binding with stable unique identifiers for dynamic lists
+
+## Routing
+- Use `defineRouteComponent()` for automatic code splitting
+- Implement navigation guards for authentication and authorization checks
+- Add route meta fields for layout info, breadcrumbs, and permissions
+- Use `router.push()` with object notation; avoid hardcoded URLs
+- Lazy load routes with dynamic imports for faster initial load
+
+## Forms
+- Use `v-model` with proper data binding and validation
+- Integrate Vee-Validate or Zod for validation logic
+- Handle form submission with error states and loading indicators
+- Show validation feedback on blur or change
+- Implement form reset by resetting reactive data or using methods
+- Use readonly computed properties for derived form values
+
+## TypeScript Integration
+- Define `PropType<T>` for complex prop types and interfaces
+- Use `ComponentPublicInstance` and `ComponentOptions` for type hints
+- Export types for props, emits, and custom events
+- Use generic composables: `useFetch<T>(url: string): Promise<T>`
+- Avoid `any`; use `unknown` with type guards instead
+- Define interfaces for store state, actions, and getters
+
+## Testing
+- Unit test composables with `vitest` and `@vue/test-utils`
+- Test component behavior with mount and user interactions
+- Mock external dependencies; test components in isolation
+- Test composables with actual usage scenarios
+- Use snapshot tests for static content only
+- Aim for 80%+ code coverage on critical paths
+
+## Best Practices
+- Follow Vue style guide at https://vuejs.org/guide/scaling-up/sfc.html
+- Use consistent naming: PascalCase for components, camelCase for variables/functions
+- Organize components by feature: `/components/Header/`, `/components/Auth/`
+- Implement error boundaries with `<ErrorBoundary>` for graceful error handling
+- Use semantic HTML elements and ARIA attributes for accessibility
+- Keep business logic separate from UI; place in composables or services
+
+## Build and Tooling
+- Use Vite with `import.meta.hot` for HMR; disable in production
+- Configure build optimizations: code splitting, compression, minification
+- Use `.env` files for environment variables; load with `import.meta.env`
+- Implement code splitting with dynamic imports for routes and heavy components
+- Optimize asset delivery with `<img loading="lazy">` and image compression
+- Monitor bundle size with Vite analyzer plugin 
