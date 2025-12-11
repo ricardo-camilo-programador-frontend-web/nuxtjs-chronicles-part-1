@@ -58,7 +58,7 @@ export default defineNuxtConfig({
       alwaysRedirect: true,
       fallbackLocale: 'pt-BR',
     },
-    vueI18n: './i18n.config.ts',
+    vueI18n: './app/configs/i18n.config.ts',
   },
 
   icon: {

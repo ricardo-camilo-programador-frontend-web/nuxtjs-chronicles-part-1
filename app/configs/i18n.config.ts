@@ -12,12 +12,14 @@ export default defineI18nConfig(() => ({
   legacy: false,
   locale: 'pt-BR',
   fallbackLocale: {
+    en: ['en-US'],
     pt: ['pt-BR'],
     'pt-BR': ['en-US'],
     'en-US': ['pt-BR'],
     default: ['pt-BR', 'en-US'],
   },
   messages: {
+    en,
     pt,
     'en-US': en,
     'pt-BR': pt,
