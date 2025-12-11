@@ -7,5 +7,5 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   },
-  "include": ["nuxt.config.ts"]
+  "include": ["nuxt.config.ts", "types/**/*.d.ts"]
 }

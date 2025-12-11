@@ -1,3 +1,5 @@
+/// <reference path="./.nuxt/nuxt.d.ts" />
+/// <reference path="./.nuxt/types/modules.d.ts" />
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 import process from 'node:process'
@@ -31,20 +33,30 @@ export default defineNuxtConfig({
   modules: ['@nuxt/icon', 'nuxt-headlessui', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/ui'],
 
   i18n: {
-    locales: [
-      { code: 'en-US', language: 'en-US', name: 'English', iso: 'en-US' },
-      { code: 'pt-BR', language: 'pt-BR', name: 'Português', iso: 'pt-BR' },
-    ],
     strategy: 'prefix',
-    defaultLocale: 'en-US',
+    defaultLocale: 'pt-BR',
+    locales: [
+      {
+        code: 'en-US',
+        language: 'en-US',
+        name: 'English',
+        iso: 'en-US',
+      },
+      {
+        code: 'pt-BR',
+        language: 'pt-BR',
+        name: 'Português',
+        iso: 'pt-BR',
+      },
+    ],
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
       alwaysRedirect: true,
-      fallbackLocale: 'en-US',
+      fallbackLocale: 'pt-BR',
     },
-    vueI18n: './src/configs/i18n.config.ts',
+    vueI18n: './i18n.config.ts',
   },
 
   icon: {
@@ -148,10 +160,4 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-
-  nitro: {
-    prerender: {
-      failOnError: false,
-    },
-  },
 })
