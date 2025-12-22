@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const { $env } = useNuxtApp()
+import type { Env } from '~/types/env'
+
+const nuxtApp = useNuxtApp()
+const $env = nuxtApp.$env as Env
 
 useHead({
   title: $env.PROJECT_TITLE,

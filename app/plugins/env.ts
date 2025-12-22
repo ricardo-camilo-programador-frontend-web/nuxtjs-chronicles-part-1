@@ -1,4 +1,4 @@
-import type { Env } from '@/types/env'
+import type { Env } from '~/types/env'
 
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
