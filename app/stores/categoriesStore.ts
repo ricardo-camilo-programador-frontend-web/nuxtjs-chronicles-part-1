@@ -1,11 +1,11 @@
-import type { CategoryItem } from '@/types/categories'
+import type { CategoryItem } from '~/types/categories'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import {
   backgroundGradientOrange,
   backgroundGradientOrangeMini,
   charlesdeluvio,
   katherineMcadoo,
-} from '@/utils/imageFiles'
+} from '~/utils/imageFiles'
 
 interface CategoriesStore {
   categories: Array<CategoryItem>
