@@ -21,8 +21,7 @@ interface ProductStore {
   products: Array<Product>
 }
 
-export const useProductStore = defineStore({
-  id: 'productStore',
+export const useProductStore = defineStore('productStore', {
   state: (): ProductStore => ({
     products: [
       {

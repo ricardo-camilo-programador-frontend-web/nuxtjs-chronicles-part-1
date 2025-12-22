@@ -11,8 +11,7 @@ interface CategoriesStore {
   categories: Array<CategoryItem>
 }
 
-export const useCategoriesStore = defineStore({
-  id: 'categoriesStore',
+export const useCategoriesStore = defineStore('categoriesStore', {
   state: (): CategoriesStore => ({
     categories: [
       {

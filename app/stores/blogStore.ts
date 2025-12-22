@@ -6,8 +6,7 @@ interface BlogStore {
   blogPosts: Array<BlogPost>
 }
 
-export const useBlogStore = defineStore({
-  id: 'blogStore',
+export const useBlogStore = defineStore('blogStore', {
   state: (): BlogStore => ({
     blogPosts: [
       {
