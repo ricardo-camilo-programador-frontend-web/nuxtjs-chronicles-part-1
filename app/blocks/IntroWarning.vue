@@ -7,6 +7,7 @@ import {
   TransitionChild,
   TransitionRoot,
 } from '@headlessui/vue'
+import type { Env } from '~/types/env'
 import portfolioImage from '~/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
 import { useGTM } from '~/composables/useGTM'
 
@@ -19,7 +20,8 @@ const storage = useLocalStorage()
 const localePath = useLocalePath()
 const { t } = useI18n()
 const { enableGTM, disableGTM } = useGTM()
-const { $env } = useNuxtApp()
+const nuxtApp = useNuxtApp()
+const $env = nuxtApp.$env as Env
 
 function handleClose() {
   isOpen.value = false
