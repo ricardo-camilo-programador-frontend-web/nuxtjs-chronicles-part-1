@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { homeSEO } from '@/static/SEO/home'
+import { homeSEO } from '~/static/SEO/home'
 
 definePageMeta({
   layout: 'default',

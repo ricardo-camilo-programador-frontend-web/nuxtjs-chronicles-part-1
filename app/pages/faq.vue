@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { faqSEO } from '@/static/SEO/faqSeo'
+import { faqSEO } from '~/static/SEO/faqSeo'
 
 definePageMeta({
   layout: 'default',

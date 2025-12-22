@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { privacyPolicySEO } from '@/static/SEO/privacyPolicySeo'
+import { privacyPolicySEO } from '~/static/SEO/privacyPolicySeo'
 
 definePageMeta({
   layout: 'default',

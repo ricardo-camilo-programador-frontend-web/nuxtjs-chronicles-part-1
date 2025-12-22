@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { giftCardsSEO } from '@/static/SEO/giftCardsSeo'
+import { giftCardsSEO } from '~/static/SEO/giftCardsSeo'
 
 definePageMeta({
   layout: 'default',

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { contactSEO } from '@/static/SEO/contactSeo'
+import { contactSEO } from '~/static/SEO/contactSeo'
 
 definePageMeta({
   layout: 'default',

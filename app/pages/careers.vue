@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { careersSEO } from '@/static/SEO/careersSeo'
+import { careersSEO } from '~/static/SEO/careersSeo'
 
 definePageMeta({
   layout: 'default',
