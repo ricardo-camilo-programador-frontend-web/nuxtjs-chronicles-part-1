@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { menuLinks } from '@/static/menu'
+import { menuLinks } from '~/static/menu'
 
 const { t } = useI18n()
 const localePath = useLocalePath()

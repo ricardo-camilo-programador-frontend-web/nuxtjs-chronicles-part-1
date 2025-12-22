@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import catImage from '@/assets/images/pets/cat.webp'
-import dogImage from '@/assets/images/pets/dog.webp'
-import hamsterImage from '@/assets/images/pets/hamster.webp'
-import parrotImage from '@/assets/images/pets/parrot.webp'
-import rabbitImage from '@/assets/images/pets/rabbit.webp'
-import turtleImage from '@/assets/images/pets/turtle.webp'
+import catImage from '~/assets/images/pets/cat.webp'
+import dogImage from '~/assets/images/pets/dog.webp'
+import hamsterImage from '~/assets/images/pets/hamster.webp'
+import parrotImage from '~/assets/images/pets/parrot.webp'
+import rabbitImage from '~/assets/images/pets/rabbit.webp'
+import turtleImage from '~/assets/images/pets/turtle.webp'
 
 interface PetCategory {
   id: string

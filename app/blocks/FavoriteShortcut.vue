@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useProductStore } from '@/stores/productStore'
+import { useProductStore } from '~/stores/productStore'
 
 interface FavoriteShortcutProps {
   product: Product

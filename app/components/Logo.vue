@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import appLogo from '@/assets/images/svg/logo-black.svg'
+import appLogo from '~/assets/images/svg/logo-black.svg'
 
 const localePath = useLocalePath()
 </script>

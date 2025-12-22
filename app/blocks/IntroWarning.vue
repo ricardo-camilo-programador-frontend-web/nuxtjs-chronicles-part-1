@@ -7,8 +7,8 @@ import {
   TransitionChild,
   TransitionRoot,
 } from '@headlessui/vue'
-import portfolioImage from '@/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
-import { useGTM } from '@/composables/useGTM'
+import portfolioImage from '~/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
+import { useGTM } from '~/composables/useGTM'
 
 const storageAnalyticsName = 'analytics-enabled'
 const showIntroWarning = 'show-intro-warning-modal'
