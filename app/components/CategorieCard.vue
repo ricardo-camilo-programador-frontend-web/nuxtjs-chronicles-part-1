@@ -12,10 +12,9 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div
+  <section
     :class="gradientClass"
     class="relative mb-6 flex h-[15rem] max-w-[15rem] flex-col items-center justify-center rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-orange-500 hover:shadow-lg"
-    role="region"
     aria-labelledby="category-title"
     aria-describedby="category-description"
   >
@@ -25,7 +24,6 @@ const { t } = useI18n()
       height="100"
       alt="Category Image"
       class="h-full w-full object-cover"
-      role="img"
       aria-label="Image representing {{ title }}"
     />
 
@@ -60,5 +58,5 @@ const { t } = useI18n()
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
