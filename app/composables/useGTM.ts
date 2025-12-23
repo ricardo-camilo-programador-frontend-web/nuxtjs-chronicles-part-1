@@ -10,10 +10,11 @@ export function useGTM() {
   const enableGTM = () => {
     const gtmId = $env.GTM_ID
 
-    if (typeof window !== 'undefined' && gtmId) {
-      window.dataLayer = window.dataLayer || []
-      window.dataLayer.push({
-        'gtm.start': new Date().getTime(),
+    if (typeof globalThis.window !== 'undefined' && gtmId) {
+      const win = globalThis.window as Window
+      win.dataLayer = win.dataLayer || []
+      win.dataLayer.push({
+        'gtm.start': Date.now(),
         'event': 'gtm.js',
       })
 
@@ -26,13 +27,14 @@ export function useGTM() {
   }
 
   const disableGTM = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof globalThis.window !== 'undefined') {
       const script = document.getElementById('gtm-script')
       if (script) {
         script.remove()
       }
 
-      window.dataLayer = []
+      const win = globalThis.window as Window
+      win.dataLayer = []
 
       const noscriptIframe = document.querySelector('iframe[src*="googletagmanager"]')
       if (noscriptIframe) {
