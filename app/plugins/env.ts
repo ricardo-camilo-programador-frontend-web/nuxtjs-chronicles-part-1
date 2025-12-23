@@ -3,12 +3,11 @@ import type { Env } from '~/types/env'
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
 
-  // Type-safe env object with fallbacks for optional keys
-  const env: Partial<Env> = config.public
+  const env = config.public as Env
 
   return {
     provide: {
-      env: env as Env,
+      env,
     },
   }
 })
