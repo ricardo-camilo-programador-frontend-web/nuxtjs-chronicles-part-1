@@ -1,27 +1,27 @@
+function saveItemOnLocalStorage(itemName: string, itemValue: string) {
+  if (typeof globalThis.window !== 'undefined') {
+    globalThis.window.localStorage.setItem(itemName, itemValue)
+  }
+}
+
+function removeItemFromLocalStorage(itemName: string) {
+  if (typeof globalThis.window !== 'undefined') {
+    globalThis.window.localStorage.removeItem(itemName)
+  }
+}
+
+function getItemFromLocalStorage(itemName: string) {
+  if (typeof globalThis.window !== 'undefined') {
+    const itemValue = globalThis.window.localStorage.getItem(itemName)
+
+    return itemValue
+  }
+}
+
 export function useLocalStorage() {
-  const setItem = function saveItemOnLocalStorage(itemName: string, itemValue: string) {
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(itemName, itemValue)
-    }
-  }
-
-  const removeItem = function removeItemFromLocalStorage(itemName: string) {
-    if (typeof window !== 'undefined') {
-      window.localStorage.removeItem(itemName)
-    }
-  }
-
-  const getItem = function getItemFromLocalStorage(itemName: string) {
-    if (typeof window !== 'undefined') {
-      const itemValue = window.localStorage.getItem(itemName)
-
-      return itemValue
-    }
-  }
-
   return {
-    setItem,
-    removeItem,
-    getItem,
+    setItem: saveItemOnLocalStorage,
+    removeItem: removeItemFromLocalStorage,
+    getItem: getItemFromLocalStorage,
   }
 }
