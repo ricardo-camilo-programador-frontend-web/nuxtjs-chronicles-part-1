@@ -1,7 +1,7 @@
 type NotationType = 'standard' | 'scientific' | 'engineering' | 'compact' | undefined
 type CompactDisplayType = 'short' | 'long' | undefined
 type LocaleType = 'pt-BR' | 'en-US' | undefined
-export type CurrencyType = 'BRL' | 'USD' | string
+export type CurrencyType = 'BRL' | 'USD'
 
 export function formatCurrency(
   value: number | string,
