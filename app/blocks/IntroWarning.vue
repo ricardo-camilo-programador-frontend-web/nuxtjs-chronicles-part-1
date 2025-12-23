@@ -35,7 +35,7 @@ onMounted(() => {
   const tenMinutesInMs = 10 * 60 * 1000
 
   const shouldShowModal =
-    !lastVisitTime || Date.now() - new Date(lastVisitTime).getTime() > tenMinutesInMs
+    !lastVisitTime || Date.now() - Date.parse(lastVisitTime) > tenMinutesInMs
 
   if (!storage.getItem(storageAnalyticsName)) {
     storage.setItem(storageAnalyticsName, 'true')
