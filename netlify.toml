@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm build"
+  publish = ".output/public"
+
+[build.environment]
+  NODE_VERSION = "18.20.8"
+  PNPM_VERSION = "9.15.4"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
