@@ -172,4 +172,13 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+
+  vite: {
+    css: {
+      devSourcemap: true,
+    },
+    build: {
+      sourcemap: false,
+    },
+  },
 }) satisfies NuxtConfig

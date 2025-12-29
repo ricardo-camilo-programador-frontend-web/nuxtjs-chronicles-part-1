@@ -9,6 +9,16 @@ const favoritesTotal = computed(() => {
 })
 const showTotalCountForThreeSeconds = ref(false)
 
+const favoriteIcon = computed(() => {
+  return showFavoritesMenu.value ? 'mdi:heart' : 'mdi:heart-outline'
+})
+
+const favoriteIconStyle = computed(() => {
+  const baseStyle = 'text-3xl'
+  const colorStyle = showFavoritesMenu.value ? 'text-red-500' : 'text-black'
+  return `${baseStyle} ${colorStyle}`
+})
+
 function toggleShowTotalCountForThreeSeconds() {
   const timeout = 2000
   showTotalCountForThreeSeconds.value = true
@@ -40,14 +50,10 @@ onMounted(() => {
   <div class="relative">
     <div class="relative z-[99]">
       <Button
-        :icon="
-          showFavoritesMenu
-            ? 'mdi:heart text-red-500'
-            : 'mdi:heart-outline text-black'
-        "
+        :icon="favoriteIcon"
         id="favoritesMenuButton"
         class="w-auto py-0"
-        icon-style="text-3xl"
+        :icon-style="favoriteIconStyle"
         @click="toggleFavoritesMenu"
       />
 
