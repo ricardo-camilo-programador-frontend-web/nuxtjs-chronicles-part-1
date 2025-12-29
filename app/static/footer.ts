@@ -1,6 +1,7 @@
+import type { Env } from '~/types/env'
 import type { FooterLink } from '~/types/footerLink'
-import type { SocialLink } from '~/types/socialLink'
 import type { PaymentMethod } from '~/types/paymentMethod'
+import type { SocialLink } from '~/types/socialLink'
 
 export const companyLinks: Array<FooterLink> = [
   { path: '/about', translationKey: 'footer.links.about' },
@@ -17,7 +18,8 @@ export const usefulLinks: Array<FooterLink> = [
 ]
 
 export function getSocialLinks(): Array<SocialLink> {
-  const { $env } = useNuxtApp()
+  const nuxtApp = useNuxtApp()
+  const $env = nuxtApp.$env as Env
 
   return [
     {

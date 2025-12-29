@@ -1,6 +1,5 @@
 interface LocalizedContent {
-  'pt-BR': string
-  es: string
+  pt: string
   en: string
 }
 
@@ -9,9 +8,8 @@ interface SEOContent {
   descriptions: LocalizedContent | string
   keywords: string
   paths: {
-    'pt-BR': string
-    es: string
-    'en-US': string
+    pt: string
+    en: string
   }
   ogUrl?: string
   ogImage?: string
@@ -21,34 +19,35 @@ interface SEOContent {
 
 const BASE_URL = 'https://savana-nuxtjs-chronicles-part-1.netlify.app'
 const DEFAULT_OG_IMAGE = `${BASE_URL}/imagem-compartilhamento.jpg`
-const SUPPORTED_LOCALES = ['pt-BR', 'es', 'en'] as const
+const SUPPORTED_LOCALES = ['pt', 'en'] as const
 
-function getLocalizedValue(content: LocalizedContent | string, locale: string): string {
+function getLocalizedValue(
+  content: LocalizedContent | string,
+  locale: string,
+): string {
   if (typeof content === 'string') {
     return content
   }
-  if (locale === 'pt-BR' || locale === 'es') {
-    return content[locale]
+  if (locale === 'pt') {
+    return content.pt
   }
   return content.en
 }
 
-function generateAlternateLinks(paths: SEOContent['paths'], includeXDefault = false) {
+function generateAlternateLinks(
+  paths: SEOContent['paths'],
+  includeXDefault = false,
+) {
   const links = [
     {
       rel: 'alternate',
-      hreflang: 'pt-BR',
-      href: `${BASE_URL}/pt-BR${paths['pt-BR']}`,
-    },
-    {
-      rel: 'alternate',
-      hreflang: 'es',
-      href: `${BASE_URL}/es${paths.es}`,
+      hreflang: 'pt',
+      href: `${BASE_URL}/pt${paths.pt}`,
     },
     {
       rel: 'alternate',
       hreflang: 'en',
-      href: `${BASE_URL}/en-US${paths['en-US']}`,
+      href: `${BASE_URL}/en${paths.en}`,
     },
   ]
 
@@ -123,10 +122,15 @@ export function createSEO(locale: string, content: SEOContent) {
   ]
 
   if (includeAuthor) {
-    meta.splice(meta.findIndex(m => m.property === 'og:locale:alternate') + 1, 0, {
-      name: 'author',
-      content: 'Savana Pet Shop',
-    })
+    const alternateIndex = meta.findIndex(
+      m => 'property' in m && m.property === 'og:locale:alternate',
+    )
+    if (alternateIndex !== -1) {
+      meta.splice(alternateIndex + 1, 0, {
+        name: 'author',
+        content: 'Savana Pet Shop',
+      })
+    }
   }
 
   return {
@@ -134,4 +138,3 @@ export function createSEO(locale: string, content: SEOContent) {
     meta,
   }
 }
-
