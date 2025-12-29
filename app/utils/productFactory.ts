@@ -12,8 +12,8 @@ export function createProductVariations(
   baseName: string,
   basePrice: number,
   baseAltText: string,
-  variations: ProductVariation[],
-): Product[] {
+  variations: Array<ProductVariation>,
+): Array<Product> {
   return variations.map(variation => ({
     id: variation.id,
     name: baseName,
@@ -26,4 +26,3 @@ export function createProductVariations(
     bestSelling: variation.bestSelling ?? false,
   }))
 }
-
