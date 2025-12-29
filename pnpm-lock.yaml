@@ -23,6 +23,9 @@ importers:
       '@nuxtjs/i18n':
         specifier: ^10.2.1
         version: 10.2.1(@netlify/blobs@10.5.0)(@vue/compiler-dom@3.5.26)(db0@0.3.4)(eslint@9.39.2(jiti@2.6.1))(ioredis@5.8.2)(magicast@0.5.1)(rollup@4.54.0)(vue@3.5.26(typescript@5.9.3))
+      '@oxc-minify/binding-linux-x64-gnu':
+        specifier: ^0.106.0
+        version: 0.106.0
       '@oxc-parser/binding-linux-x64-gnu':
         specifier: ^0.106.0
         version: 0.106.0
@@ -1517,6 +1520,12 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  '@oxc-minify/binding-linux-x64-gnu@0.106.0':
+    resolution: {integrity: sha512-sZOPGQtg6xs/onafBI0W1nC6Bq3bfvR3FZY+dWPGdOxNb/kfOqotw9cmTlLvf3QUDiOKSW+dEV0AeTLtPStZSA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
+
   '@oxc-minify/binding-linux-x64-musl@0.102.0':
     resolution: {integrity: sha512-Ew4QDpEsXoV+pG5+bJpheEy3GH436GBe6ASPB0X27Hh9cQ2gb1NVZ7cY7xJj68+fizwS/PtT8GHoG3uxyH17Pg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -1858,7 +1867,6 @@ packages:
   '@oxc-transform/binding-linux-x64-gnu@0.106.0':
     resolution: {integrity: sha512-JLSdBWhgul80D+mc4xhgT+OinN4eWSuQORZ64sy2oKrhUgdLSc2WrtA6CWu7qCilTD6WGaU6EORbSFu5wN5Fng==}
     engines: {node: ^20.19.0 || >=22.12.0}
-    cpu: [x64]
     os: [linux]
 
   '@oxc-transform/binding-linux-x64-gnu@0.95.0':
@@ -9799,6 +9807,8 @@ snapshots:
 
   '@oxc-minify/binding-linux-x64-gnu@0.102.0':
     optional: true
+
+  '@oxc-minify/binding-linux-x64-gnu@0.106.0': {}
 
   '@oxc-minify/binding-linux-x64-musl@0.102.0':
     optional: true
