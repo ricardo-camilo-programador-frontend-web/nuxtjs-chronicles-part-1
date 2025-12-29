@@ -2,12 +2,12 @@ import { createSEO } from '~/utils/seoFactory'
 
 const seoContent = {
   titles: 'Blog | Pet Care Tips and Articles',
-  descriptions: 'Discover helpful articles and tips about pet care, animal health, and more.',
+  descriptions:
+    'Discover helpful articles and tips about pet care, animal health, and more.',
   keywords: 'blog, artigos, pets, dicas para pets, cuidados com animais',
   paths: {
-    'pt-BR': '/blog',
-    es: '/blog',
-    'en-US': '/blog',
+    pt: '/blog',
+    en: '/blog',
   },
   includeAuthor: false,
   ogImage: 'URL_TO_DEFAULT_BLOG_IMAGE',
