@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import process from 'node:process'
 import type { NuxtConfig } from 'nuxt/schema'
+import process from 'node:process'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
@@ -11,12 +11,12 @@ export default defineNuxtConfig({
     head: {
       script: [
         {
-          src: 'https://cdn.counter.dev/script.js',
-          type: 'text/javascript',
-          defer: true,
+          'src': 'https://cdn.counter.dev/script.js',
+          'type': 'text/javascript',
+          'defer': true,
           'data-id': process.env.COUNTER_API_KEY,
           'data-utcoffset': '-3',
-          async: true,
+          'async': true,
         },
       ],
     },
@@ -29,7 +29,13 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/icon', 'nuxt-headlessui', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/ui'],
+  modules: [
+    '@nuxt/icon',
+    'nuxt-headlessui',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+    '@nuxt/ui',
+  ],
 
   future: {
     compatibilityVersion: 4,
@@ -37,19 +43,22 @@ export default defineNuxtConfig({
 
   i18n: {
     strategy: 'prefix',
-    defaultLocale: 'pt-BR',
+    defaultLocale: 'pt',
+    langDir: 'locales',
     locales: [
       {
-        code: 'en-US',
-        language: 'en-US',
+        code: 'en',
+        language: 'en',
         name: 'English',
-        iso: 'en-US',
+        iso: 'en',
+        file: 'en.ts',
       },
       {
-        code: 'pt-BR',
-        language: 'pt-BR',
+        code: 'pt',
+        language: 'pt',
         name: 'Português',
-        iso: 'pt-BR',
+        iso: 'pt',
+        file: 'pt.ts',
       },
     ],
     detectBrowserLanguage: {
@@ -57,9 +66,8 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
       alwaysRedirect: true,
-      fallbackLocale: 'pt-BR',
+      fallbackLocale: 'pt',
     },
-    vueI18n: './app/configs/i18n.config.ts',
   },
 
   icon: {
@@ -86,35 +94,35 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'netlify',
+    preset: process.env.NODE_ENV === 'production' ? 'netlify' : undefined,
     prerender: {
       crawlLinks: true,
       failOnError: false,
       routes: [
-        '/en-US',
-        '/pt-BR',
-        '/en-US/about',
-        '/pt-BR/about',
-        '/en-US/blog',
-        '/pt-BR/blog',
-        '/en-US/best-sellers',
-        '/pt-BR/best-sellers',
-        '/en-US/careers',
-        '/pt-BR/careers',
-        '/en-US/contact',
-        '/pt-BR/contact',
-        '/en-US/discount',
-        '/pt-BR/discount',
-        '/en-US/faq',
-        '/pt-BR/faq',
-        '/en-US/privacy-policy',
-        '/pt-BR/privacy-policy',
-        '/en-US/gift-cards',
-        '/pt-BR/gift-cards',
-        '/en-US/shop',
-        '/pt-BR/shop',
-        '/en-US/products',
-        '/pt-BR/products',
+        '/en',
+        '/pt',
+        '/en/about',
+        '/pt/about',
+        '/en/blog',
+        '/pt/blog',
+        '/en/best-sellers',
+        '/pt/best-sellers',
+        '/en/careers',
+        '/pt/careers',
+        '/en/contact',
+        '/pt/contact',
+        '/en/discount',
+        '/pt/discount',
+        '/en/faq',
+        '/pt/faq',
+        '/en/privacy-policy',
+        '/pt/privacy-policy',
+        '/en/gift-cards',
+        '/pt/gift-cards',
+        '/en/shop',
+        '/pt/shop',
+        '/en/products',
+        '/pt/products',
       ],
     },
   },
@@ -148,13 +156,15 @@ export default defineNuxtConfig({
       GTM_ID: process.env.NUXT_PUBLIC_GTM_ID,
       INSTAGRAM_USERNAME: process.env.NUXT_PUBLIC_INSTAGRAM_USERNAME,
       SITE_URL:
-        process.env.NUXT_PUBLIC_SITE_URL || 'https://savana-nuxtjs-chronicles-part-1.netlify.app',
+        process.env.NUXT_PUBLIC_SITE_URL
+        || 'https://savana-nuxtjs-chronicles-part-1.netlify.app',
       GITHUB_USERNAME: process.env.NUXT_PUBLIC_GITHUB_USERNAME,
       LINKEDIN_USERNAME: process.env.NUXT_PUBLIC_LINKEDIN_USERNAME,
       X_USERNAME: process.env.NUXT_PUBLIC_X_USERNAME,
       WORKANA_USERNAME: process.env.NUXT_PUBLIC_WORKANA_USERNAME,
       TWITTER_USERNAME: process.env.NUXT_PUBLIC_TWITTER_USERNAME,
-      GOOGLE_SITE_VERIFICATION: process.env.NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      GOOGLE_SITE_VERIFICATION:
+        process.env.NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
       PORTFOLIO_URL: process.env.NUXT_PUBLIC_PORTFOLIO_URL,
       BUYMEACOFFEE_USERNAME: process.env.NUXT_PUBLIC_BUYMEACOFFEE_USERNAME,
     },

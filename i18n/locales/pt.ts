@@ -1,5 +1,6 @@
-export const pt = {
+export default {
   soon: 'Em breve',
+  close: 'Fechar',
   addItemsToCart: 'Adicione itens ao carrinho',
   cart: {
     empty: 'Nenhum item no carrinho',
@@ -87,11 +88,14 @@ export const pt = {
       },
       furniture: {
         title: 'Móveis',
+        altText: 'Móveis',
       },
       bags: {
         title: 'Bolsas',
+        altText: 'Bolsas',
       },
       count: 'produtos',
+      altText: 'Produtos',
     },
   },
   logos: {
