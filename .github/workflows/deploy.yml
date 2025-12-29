@@ -1,0 +1,45 @@
+name: Deploy
+
+concurrency:
+  group: nuxtjs-chronicles-part-1-selfhosted
+  cancel-in-progress: false
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [ completed ]
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    name: Deploy em Produção
+    runs-on: self-hosted
+    timeout-minutes: 20
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.GH_SSH_KEY }}
+          fetch-depth: 0
+      - name: Download build artifacts
+        uses: actions/download-artifact@v6
+        with:
+          name: build-dist
+          path: dist/
+
+      - name: Verificar artefatos
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "::error::Artifact dist/ não encontrado"
+            exit 1
+          fi
+          echo "✅ Artifact pronto para deploy"
+
+      # - name: Deploy para produção
+      #   run: |
+      #     echo "Deploy realizado com sucesso!"
+      #     echo "Build disponível em: $(pwd)/dist"
+      #     # Exemplo:
+      #     # rsync -avz dist/ user@server:/var/www/app

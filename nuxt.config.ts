@@ -1,19 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import type { NuxtConfig } from 'nuxt/schema'
+import process from 'node:process'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  srcDir: './src/',
+  srcDir: './app/',
 
   app: {
     head: {
       script: [
         {
-          src: 'https://cdn.counter.dev/script.js',
-          type: 'text/javascript',
-          defer: true,
+          'src': 'https://cdn.counter.dev/script.js',
+          'type': 'text/javascript',
+          'defer': true,
           'data-id': process.env.COUNTER_API_KEY,
           'data-utcoffset': '-3',
-          async: true,
+          'async': true,
         },
       ],
     },
@@ -34,14 +37,37 @@ export default defineNuxtConfig({
     '@nuxt/ui',
   ],
 
+  future: {
+    compatibilityVersion: 4,
+  },
+
   i18n: {
-    locales: [
-      { code: 'en', language: 'en-US' },
-      { code: 'pt', language: 'pt-BR' },
-    ],
     strategy: 'prefix',
-    defaultLocale: 'en',
-    vueI18n: './src/configs/i18n.config.ts',
+    defaultLocale: 'pt',
+    langDir: 'locales',
+    locales: [
+      {
+        code: 'en',
+        language: 'en',
+        name: 'English',
+        iso: 'en',
+        file: 'en.ts',
+      },
+      {
+        code: 'pt',
+        language: 'pt',
+        name: 'Português',
+        iso: 'pt',
+        file: 'pt.ts',
+      },
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      alwaysRedirect: true,
+      fallbackLocale: 'pt',
+    },
   },
 
   icon: {
@@ -55,11 +81,10 @@ export default defineNuxtConfig({
     dirs: [
       'blocks',
       'components',
-      'store',
+      'stores',
       'plugins',
       'configs',
       'utils',
-      'mocks',
       'composables',
       'static',
       'types',
@@ -69,7 +94,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'netlify',
+    preset: process.env.NODE_ENV === 'production' ? 'netlify' : undefined,
     prerender: {
       crawlLinks: true,
       failOnError: false,
@@ -131,8 +156,8 @@ export default defineNuxtConfig({
       GTM_ID: process.env.NUXT_PUBLIC_GTM_ID,
       INSTAGRAM_USERNAME: process.env.NUXT_PUBLIC_INSTAGRAM_USERNAME,
       SITE_URL:
-        process.env.NUXT_PUBLIC_SITE_URL ||
-        'https://savana-nuxtjs-chronicles-part-1.netlify.app',
+        process.env.NUXT_PUBLIC_SITE_URL
+        || 'https://savana-nuxtjs-chronicles-part-1.netlify.app',
       GITHUB_USERNAME: process.env.NUXT_PUBLIC_GITHUB_USERNAME,
       LINKEDIN_USERNAME: process.env.NUXT_PUBLIC_LINKEDIN_USERNAME,
       X_USERNAME: process.env.NUXT_PUBLIC_X_USERNAME,
@@ -147,4 +172,13 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-})
+
+  vite: {
+    css: {
+      devSourcemap: true,
+    },
+    build: {
+      sourcemap: false,
+    },
+  },
+}) satisfies NuxtConfig

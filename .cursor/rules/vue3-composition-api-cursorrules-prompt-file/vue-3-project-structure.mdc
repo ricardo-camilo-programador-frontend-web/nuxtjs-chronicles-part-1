@@ -1,0 +1,17 @@
+---
+description: Defines the recommended folder structure for a Vue 3 project to maintain consistency and organization.
+globs: app/**/*
+---
+- Recommended folder structure:
+  - app/
+    - components/
+    - composables/
+    - layouts/
+    - views/
+    - router/
+    - stores/
+    - types/
+    - utils/
+    - assets/
+    - App.vue
+    - main.js

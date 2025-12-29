@@ -1,0 +1,8 @@
+---
+description: Guidelines for UI and styling in Vue.js components.
+globs: app/components/**/*.{vue,css}
+---
+- Use Tailwind CSS utilities for styling; prefer DaisyUI components for pre-built patterns.
+- Minimize custom CSS; leverage Tailwind's `@apply` directive only when abstracting repeated utility combinations.
+- Avoid BEM and custom naming; use Tailwind's class names as the design language.
+- Keep scoped styles minimal; use Tailwind for responsive and state-driven design.

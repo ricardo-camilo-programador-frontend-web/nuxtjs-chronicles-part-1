@@ -1,0 +1,8 @@
+---
+description: Defines syntax and formatting rules for consistent code appearance.
+globs: **/*.{js,ts,jsx,tsx,vue}
+---
+- Use 2-space indentation for all files.
+- Keep lines under 100 characters for readability.
+- Use K&R bracing style (opening brace on same line).
+- Avoid unnecessary semicolons where possible.

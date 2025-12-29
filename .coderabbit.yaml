@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+# General settings
+language: 'pt-BR'
+tone_instructions: 'friendly and constructive'
+
+# Review configuration
+reviews:
+  enabled: true
+  auto_review:
+    enabled: true
+    base_branches: ['.*']
+    ignore_labels: ['skip-review', 'dependencies']
+
+  # Path configurations
+  path_filters:
+    - '**/*'
+    - '!**/*.md'
+    - '!**/*.txt'
+    - '!package-lock.json'
+    - '!yarn.lock'
+    - '!pnpm-lock.yaml'
+    - '!**/*.min.js'
+    - '!**/*.min.css'
+
+  # Review settings
+  review_status: true
+  max_files_to_review: 1000
+  max_lines_to_review: 10000
+  request_changes_workflow: false
+
+  # Code review specifications
+  path_instructions:
+    - path: '**/*'
+      instructions: |
+        - Priorize legibilidade, manutenibilidade e performance.
+        - Aplique Clean Code e o princípio DRY.
+        - Use nomenclatura clara e intencional.
+        - Identifique possíveis otimizações de performance quando fizer sentido (sem micro-otimizações prematuras).
+        - Evite comentários desnecessários; prefira código autoexplicativo e docstrings úteis.
+        - Considere Object Calisthenics com pragmatismo (sem tornar o código excessivamente cerimonial).
+        - Evite usar o any.
+    - path: '**/*.{ts,tsx}'
+      instructions: |
+        - Garanta tipagem TypeScript adequada (strict), evitando any implícito.
+        - Tipos explícitos em APIs públicas (funções/exportações) e generics bem definidos.
+
+  # Notification settings
+  notifications:
+    slack: false

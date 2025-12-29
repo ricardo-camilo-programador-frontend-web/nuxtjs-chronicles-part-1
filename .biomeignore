@@ -1,0 +1,13 @@
+.gitlab/
+README.md
+**/*.d.ts
+node_modules/
+dist/
+.nuxt/
+.output/
+.vscode/
+coverage/
+playwright-report/
+test-results/
+dev-dist/
+*.tsbuildinfo
