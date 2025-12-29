@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Env } from '~/types/env'
 import {
   Dialog,
   DialogPanel,
@@ -7,7 +8,6 @@ import {
   TransitionChild,
   TransitionRoot,
 } from '@headlessui/vue'
-import type { Env } from '~/types/env'
 import portfolioImage from '~/assets/images/ricardo-camilo-frontend-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript-component-architecture.webp'
 import { useGTM } from '~/composables/useGTM'
 
@@ -34,8 +34,8 @@ onMounted(() => {
   const lastVisitTime = storage.getItem(lastVisit)
   const tenMinutesInMs = 10 * 60 * 1000
 
-  const shouldShowModal =
-    !lastVisitTime || Date.now() - Date.parse(lastVisitTime) > tenMinutesInMs
+  const shouldShowModal
+    = !lastVisitTime || Date.now() - Date.parse(lastVisitTime) > tenMinutesInMs
 
   if (!storage.getItem(storageAnalyticsName)) {
     storage.setItem(storageAnalyticsName, 'true')
@@ -49,11 +49,12 @@ onMounted(() => {
   }
 })
 
-watch(analyticsEnabled, newValue => {
+watch(analyticsEnabled, (newValue) => {
   storage.setItem(storageAnalyticsName, newValue.toString())
   if (newValue) {
     enableGTM()
-  } else {
+  }
+  else {
     disableGTM()
   }
 })

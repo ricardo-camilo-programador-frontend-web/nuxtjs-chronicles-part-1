@@ -3,7 +3,9 @@ const showFavoritesMenu = ref(false)
 const favoriteProducts = ref<Array<Product>>([])
 const productStore = useProductStore()
 const favoritesTotal = computed(() => {
-  return favoriteProducts.value.length >= 99 ? '99+' : favoriteProducts.value.length
+  return favoriteProducts.value.length >= 99
+    ? '99+'
+    : favoriteProducts.value.length
 })
 const showTotalCountForThreeSeconds = ref(false)
 

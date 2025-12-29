@@ -1,6 +1,11 @@
-type NotationType = 'standard' | 'scientific' | 'engineering' | 'compact' | undefined
+type NotationType
+  = | 'standard'
+    | 'scientific'
+    | 'engineering'
+    | 'compact'
+    | undefined
 type CompactDisplayType = 'short' | 'long' | undefined
-type LocaleType = 'pt-BR' | 'en-US' | undefined
+type LocaleType = 'pt' | 'en' | undefined
 export type CurrencyType = 'BRL' | 'USD'
 
 export function formatCurrency(
@@ -8,7 +13,7 @@ export function formatCurrency(
   currency: CurrencyType = 'BRL',
   notation: NotationType = 'standard',
   compactDisplay: CompactDisplayType = 'short',
-  locale: LocaleType = 'pt-BR',
+  locale: LocaleType = 'pt',
   minimumFractionDigits = 2,
   maximumFractionDigits = 2,
 ): string {

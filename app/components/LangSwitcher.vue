@@ -13,16 +13,16 @@ const switchLocalePath = useSwitchLocalePath()
 
 function onLocaleChanged(event: Event) {
   const target = event.target as HTMLInputElement
-  const newLocale = target.value as 'en-US' | 'pt-BR'
+  const newLocale = target.value as 'en' | 'pt'
 
   router.push({ path: switchLocalePath(newLocale) })
 }
 
 const currentFlag = computed(() => {
   switch (locale.value) {
-    case 'en-US':
+    case 'en':
       return 'circle-flags:us'
-    case 'pt-BR':
+    case 'pt':
       return 'circle-flags:br'
     default:
       return 'ph:globe'

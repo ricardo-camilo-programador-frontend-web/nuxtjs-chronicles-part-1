@@ -112,24 +112,118 @@ export const useProductStore = defineStore('productStore', {
         featured: true,
         bestSelling: true,
       },
-      ...createProductVariations('products.premiumDogFood', 18.99, 'products.premiumDogFoodAltText', [
-        { id: 'premium-dog-food-orange-1', imageSrc: dogFoodOrange, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-dog-food-mini-1', imageSrc: dogFoodMini, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-dog-food-orange-2', imageSrc: dogFoodLarge, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-dog-food-mini-2', imageSrc: dogFoodMedium, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-dog-food-orange-3', imageSrc: dogFoodOrange, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-dog-food-mini-3', imageSrc: dogFoodMini, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-dog-food-orange-4', imageSrc: dogFoodOrange, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-dog-food-mini-4', imageSrc: dogFoodMini, featured: false, bestSelling: false, favorite: true },
-        { id: 'premium-dog-food-orange-5', imageSrc: dogFoodOrange, featured: false, bestSelling: false, favorite: true },
-      ]),
-      ...createProductVariations('products.premiumCatFood', 18.99, 'products.premiumCatFoodAltText', [
-        { id: 'premium-cat-food-1', imageSrc: catFood, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-cat-food-2', imageSrc: catFoodPremium, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-cat-food-3', imageSrc: catFood, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-cat-food-4', imageSrc: catFood, featured: true, bestSelling: true, favorite: true },
-        { id: 'premium-cat-food-5', imageSrc: catFood, featured: false, bestSelling: false, favorite: true },
-      ]),
+      ...createProductVariations(
+        'products.premiumDogFood',
+        18.99,
+        'products.premiumDogFoodAltText',
+        [
+          {
+            id: 'premium-dog-food-orange-1',
+            imageSrc: dogFoodOrange,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-mini-1',
+            imageSrc: dogFoodMini,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-orange-2',
+            imageSrc: dogFoodLarge,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-mini-2',
+            imageSrc: dogFoodMedium,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-orange-3',
+            imageSrc: dogFoodOrange,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-mini-3',
+            imageSrc: dogFoodMini,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-orange-4',
+            imageSrc: dogFoodOrange,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-mini-4',
+            imageSrc: dogFoodMini,
+            featured: false,
+            bestSelling: false,
+            favorite: true,
+          },
+          {
+            id: 'premium-dog-food-orange-5',
+            imageSrc: dogFoodOrange,
+            featured: false,
+            bestSelling: false,
+            favorite: true,
+          },
+        ],
+      ),
+      ...createProductVariations(
+        'products.premiumCatFood',
+        18.99,
+        'products.premiumCatFoodAltText',
+        [
+          {
+            id: 'premium-cat-food-1',
+            imageSrc: catFood,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-cat-food-2',
+            imageSrc: catFoodPremium,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-cat-food-3',
+            imageSrc: catFood,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-cat-food-4',
+            imageSrc: catFood,
+            featured: true,
+            bestSelling: true,
+            favorite: true,
+          },
+          {
+            id: 'premium-cat-food-5',
+            imageSrc: catFood,
+            featured: false,
+            bestSelling: false,
+            favorite: true,
+          },
+        ],
+      ),
     ],
   }),
   actions: {
@@ -138,16 +232,20 @@ export const useProductStore = defineStore('productStore', {
     },
     updateProductFavorite(productToUpdate: Product): void {
       this.products = this.products.map(product =>
-        product.id === productToUpdate.id ? { ...product, favorite: !product.favorite } : product,
+        product.id === productToUpdate.id
+          ? { ...product, favorite: !product.favorite }
+          : product,
       )
     },
   },
   getters: {
     getFavoriteProducts(): Array<Product> {
-      const favoriteProducts = this.products.filter(product => product.favorite)
+      const favoriteProducts = this.products.filter(
+        product => product.favorite,
+      )
       const uniqueFavorites = new Map<string, Product>()
 
-      favoriteProducts.forEach(product => {
+      favoriteProducts.forEach((product) => {
         if (!uniqueFavorites.has(product.id)) {
           uniqueFavorites.set(product.id, product)
         }

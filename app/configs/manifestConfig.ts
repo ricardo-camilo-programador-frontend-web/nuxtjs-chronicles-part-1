@@ -11,7 +11,7 @@ export const manifest: Manifest = {
   meta: {
     name: 'Savana Pet Shop - NuxtJS Chronicles',
     theme_color: '#4CAF50',
-    lang: 'pt-BR',
+    lang: 'pt',
     nativeUI: true,
   },
   icons: generateManifestIcons(),

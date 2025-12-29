@@ -77,7 +77,10 @@ function computeItemClasses(itemsPerView: ResponsiveConfig): string {
     xl:basis-1/${itemsPerView.xl}`
 }
 
-function computeDotsPosition(position: 'inside' | 'outside', indicatorsClass: string): string {
+function computeDotsPosition(
+  position: 'inside' | 'outside',
+  indicatorsClass: string,
+): string {
   const baseClasses = `flex items-center justify-center gap-3 inset-x-0 ${indicatorsClass}`
   return position === 'inside'
     ? `${baseClasses} absolute bottom-4`
@@ -90,8 +93,12 @@ const carouselUI = computed(() => ({
   container: '',
   item: `${computeItemClasses(props.itemsPerView)} ${props.itemClass}`,
   arrows: 'flex items-center justify-between',
-  prev: props.prevButton?.class ?? 'absolute start-4 top-1/2 transform -translate-y-1/2',
-  next: props.nextButton?.class ?? 'absolute end-4 top-1/2 transform -translate-y-1/2',
+  prev:
+    props.prevButton?.class
+    ?? 'absolute start-4 top-1/2 transform -translate-y-1/2',
+  next:
+    props.nextButton?.class
+    ?? 'absolute end-4 top-1/2 transform -translate-y-1/2',
   dots: computeDotsPosition(props.indicatorsPosition, props.indicatorsClass),
   dot: 'rounded-full h-3 w-3 bg-primary-500 dark:bg-primary-400',
 }))
@@ -103,7 +110,10 @@ interface CarouselInstance {
   next: () => void
 }
 
-function setupAutoplay(carouselRef: Ref<CarouselInstance | undefined>, interval: number) {
+function setupAutoplay(
+  carouselRef: Ref<CarouselInstance | undefined>,
+  interval: number,
+) {
   if (!props.autoplay) {
     return
   }
@@ -116,7 +126,8 @@ function setupAutoplay(carouselRef: Ref<CarouselInstance | undefined>, interval:
 
     if (carousel.page >= carousel.pages - 1) {
       carousel.select(0)
-    } else {
+    }
+    else {
       carousel.next()
     }
   }, interval)

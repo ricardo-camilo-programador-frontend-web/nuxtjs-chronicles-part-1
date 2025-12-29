@@ -3,7 +3,7 @@ interface IconConfig {
   purpose?: 'maskable' | 'any'
 }
 
-const ICON_SIZES: IconConfig[] = [
+const ICON_SIZES: Array<IconConfig> = [
   { size: '16x16' },
   { size: '20x20' },
   { size: '29x29' },
@@ -32,7 +32,7 @@ const ICON_SIZES: IconConfig[] = [
   { size: '1024x1024' },
 ]
 
-const MASKABLE_ICON_SIZES: IconConfig[] = [
+const MASKABLE_ICON_SIZES: Array<IconConfig> = [
   { size: '48x48', purpose: 'maskable' },
   { size: '72x72', purpose: 'maskable' },
   { size: '96x96', purpose: 'maskable' },
@@ -51,7 +51,8 @@ function generateIconPath(size: string, isMaskable = false): string {
       '192x192': 'android-launcher-icon-192-192.png',
       '512x512': 'android-launcher-icon-512-512.png',
     }
-    return `@/assets/images/icons/${maskableMap[size] || `${size.split('x')[0]}.png`}`
+    const fileName = maskableMap[size] || `${size.split('x')[0]}.png`
+    return `@/assets/images/icons/${fileName}`
   }
   return `@/assets/images/icons/${size.split('x')[0]}.png`
 }
@@ -72,4 +73,3 @@ export function generateManifestIcons() {
 
   return [...standardIcons, ...maskableIcons]
 }
-

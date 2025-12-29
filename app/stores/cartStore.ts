@@ -1,6 +1,6 @@
-import { ref } from 'vue'
-import type { Product, CartItem } from '~/types/product'
+import type { CartItem, Product } from '~/types/product'
 import { acceptHMRUpdate, defineStore, skipHydrate } from 'pinia'
+import { ref } from 'vue'
 
 export const useCartStore = defineStore('cartStore', () => {
   const cart = skipHydrate(ref<Array<CartItem>>([]))
@@ -39,7 +39,10 @@ export const useCartStore = defineStore('cartStore', () => {
   }
 
   function getCartTotal(): number {
-    return cart.value.reduce((total, item) => total + item.price * item.quantity, 0)
+    return cart.value.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0,
+    )
   }
 
   function getCartCount(): number {

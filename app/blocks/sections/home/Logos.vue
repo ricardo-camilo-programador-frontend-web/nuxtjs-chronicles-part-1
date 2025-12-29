@@ -2,8 +2,8 @@
 import dogFace from '~/assets/images/svg/dog-face.svg'
 import dogHeart from '~/assets/images/svg/dog-heart.svg'
 import dogHouse from '~/assets/images/svg/dog-house.svg'
-import paw from '~/assets/images/svg/paw.svg'
 import pawHeart from '~/assets/images/svg/paw-heart.svg'
+import paw from '~/assets/images/svg/paw.svg'
 
 interface LogoItem {
   id: string

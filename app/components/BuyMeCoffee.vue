@@ -13,7 +13,8 @@ const props = withDefaults(defineProps<Props>(), {
 const buttonClass = computed(() => ({
   'bg-[#FFDD00] text-black': props.theme === 'default',
   'border-2 border-[#FFDD00] text-[#FFDD00]': props.theme === 'outline',
-  'bg-gradient-to-r from-[#FFDD00] to-[#FFA500] text-black': props.theme === 'colored',
+  'bg-gradient-to-r from-[#FFDD00] to-[#FFA500] text-black':
+    props.theme === 'colored',
 }))
 </script>
 
