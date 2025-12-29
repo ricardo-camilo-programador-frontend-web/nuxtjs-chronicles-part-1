@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@pinia/nuxt',
     '@nuxt/ui',
+    '@netlify/nuxt',
   ],
 
   future: {
