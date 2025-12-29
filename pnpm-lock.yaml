@@ -78,9 +78,6 @@ importers:
       '@iconify-json/simple-icons':
         specifier: ^1.2.64
         version: 1.2.64
-      '@iconify/json':
-        specifier: ^2.2.422
-        version: 2.2.422
       '@nuxtjs/eslint-config-typescript':
         specifier: ^12.1.0
         version: 12.1.0(eslint-plugin-import-x@4.6.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
@@ -880,9 +877,6 @@ packages:
 
   '@iconify/collections@1.0.633':
     resolution: {integrity: sha512-4ZSkmNE27ACM0td+oAXid5hNql6niaPA3TlKgyNB+BnlGhT5fYWPk8AKSF5KYaInDswSGUyF1aulhhw+LfJF7A==}
-
-  '@iconify/json@2.2.422':
-    resolution: {integrity: sha512-HJ2xj4381CoXiSJaNv8uywVZJfSXMq2lR8WtI/eLPhAFLSoMsin74yhLlcd84xTPLn6xmzC6TGqL6EQLXHFSBQ==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -8530,11 +8524,6 @@ snapshots:
   '@iconify/collections@1.0.633':
     dependencies:
       '@iconify/types': 2.0.0
-
-  '@iconify/json@2.2.422':
-    dependencies:
-      '@iconify/types': 2.0.0
-      pathe: 2.0.3
 
   '@iconify/types@2.0.0': {}
 
