@@ -95,6 +95,9 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    output: {
+      publicDir: '.output/public',
+    },
     prerender: {
       crawlLinks: true,
       failOnError: false,
