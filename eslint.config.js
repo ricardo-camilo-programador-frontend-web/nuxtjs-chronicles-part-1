@@ -49,7 +49,7 @@ export default antfu({
       ],
       'vue/no-reserved-component-names': 0,
       'vue/no-mutating-props': 1,
-      curly: ['error', 'all'],
+      'curly': ['error', 'all'],
       'no-console': 'warn',
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-misleading-capturing-group': 'off',
@@ -63,7 +63,7 @@ export default antfu({
           default: 'generic',
         },
       ],
-      curly: ['error', 'all'],
+      'curly': ['error', 'all'],
     },
   },
   toml: {
@@ -79,5 +79,12 @@ export default antfu({
     },
   },
   overrides: [],
-  ignores: ['.gitlab/', 'README.md', '**/*.d.ts', 'node_modules', 'dev-dist/', '*.tsbuildinfo'],
+  ignores: [
+    '.gitlab/',
+    'README.md',
+    '**/*.d.ts',
+    'node_modules',
+    'dev-dist/',
+    '*.tsbuildinfo',
+  ],
 })

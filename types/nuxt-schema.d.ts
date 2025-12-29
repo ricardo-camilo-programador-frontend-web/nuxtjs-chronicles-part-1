@@ -1,4 +1,7 @@
-import type { NuxtConfig as _NuxtConfig, NuxtOptions as _NuxtOptions } from 'nuxt/schema'
+import type {
+  NuxtConfig as _NuxtConfig,
+  NuxtOptions as _NuxtOptions,
+} from 'nuxt/schema'
 
 // Extensões leves para permitir opções dos módulos instalados no arquivo nuxt.config.ts
 // sem depender dos arquivos gerados em .nuxt durante a checagem de tipos.
