@@ -21,6 +21,7 @@
     "@nuxt/icon": "^2.1.1",
     "@nuxt/ui": "4.3.0",
     "@nuxtjs/i18n": "^10.2.1",
+    "@oxc-minify/binding-linux-x64-gnu": "^0.106.0",
     "@oxc-parser/binding-linux-x64-gnu": "^0.106.0",
     "@oxc-transform/binding-linux-x64-gnu": "^0.106.0",
     "@pinia/nuxt": "^0.11.3",
