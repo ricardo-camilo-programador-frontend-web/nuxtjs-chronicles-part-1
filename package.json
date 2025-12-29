@@ -17,10 +17,12 @@
   },
   "dependencies": {
     "@intlify/message-compiler": "^11.2.7",
+    "@netlify/nuxt": "0.2.18",
     "@nuxt/icon": "^2.1.1",
     "@nuxt/ui": "4.3.0",
     "@nuxtjs/i18n": "^10.2.1",
     "@oxc-parser/binding-linux-x64-gnu": "^0.106.0",
+    "@oxc-transform/binding-linux-x64-gnu": "^0.106.0",
     "@pinia/nuxt": "^0.11.3",
     "nprogress": "^0.2.0",
     "nuxt": "^4.2.2",
