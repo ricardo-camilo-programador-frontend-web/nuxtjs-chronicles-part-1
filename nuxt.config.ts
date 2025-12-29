@@ -95,7 +95,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: process.env.NODE_ENV === 'production' ? 'netlify' : undefined,
     prerender: {
       crawlLinks: true,
       failOnError: false,
