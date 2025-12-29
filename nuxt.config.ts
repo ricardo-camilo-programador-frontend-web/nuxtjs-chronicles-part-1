@@ -72,6 +72,7 @@ export default defineNuxtConfig({
   },
 
   icon: {
+    mode: 'css',
     serverBundle: {
       collections: ['mdi', 'circle-flags', 'ph', 'simple-icons', 'cib'],
     },
