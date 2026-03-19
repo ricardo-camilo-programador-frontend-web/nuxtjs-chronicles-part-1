@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { useHead } from '#imports'
 import { computed, ref, onMounted } from 'vue'
-import { useTranslate } from '~/composables/i18n/utils'
 import { useCartStore } from '~/stores/cartStore'
 import { useCheckoutStore } from '~/stores/checkoutStore'
 import { formatCurrency } from '~/utils/formatCurrency'
 
-const { t } = useTranslate()
+const { t } = useI18n()
 const cartStore = useCartStore()
 const checkoutStore = useCheckoutStore()
 
