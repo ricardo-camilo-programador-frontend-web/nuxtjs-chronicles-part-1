@@ -1,11 +1,15 @@
+import type {
+  BillingAddress,
+  CheckoutFormData,
+  CheckoutState,
+  PaymentMethodType,
+} from '~/types/checkout'
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { ref, computed } from 'vue'
-import type { CheckoutFormData, CheckoutState, Order, PaymentMethodType } from '~/types/checkout'
-import type { CartItem } from '~/types/product'
+import { computed, ref } from 'vue'
 
 export const useCheckoutStore = defineStore('checkoutStore', () => {
   const cartStore = useCartStore()
-  
+
   // State
   const step = ref<CheckoutState['step']>('customer')
   const formData = ref<Partial<CheckoutFormData>>({
@@ -50,11 +54,23 @@ export const useCheckoutStore = defineStore('checkoutStore', () => {
 
   // Computed
   const currentStep = computed(() => step.value)
-  
+
   const steps = computed(() => [
-    { key: 'customer', label: 'Personal Info', completed: !!formData.value.customer },
-    { key: 'shipping', label: 'Shipping', completed: !!formData.value.shippingAddress },
-    { key: 'payment', label: 'Payment', completed: !!formData.value.paymentMethod },
+    {
+      key: 'customer',
+      label: 'Personal Info',
+      completed: !!formData.value.customer,
+    },
+    {
+      key: 'shipping',
+      label: 'Shipping',
+      completed: !!formData.value.shippingAddress,
+    },
+    {
+      key: 'payment',
+      label: 'Payment',
+      completed: !!formData.value.paymentMethod,
+    },
     { key: 'review', label: 'Review', completed: false },
   ])
 
@@ -62,26 +78,26 @@ export const useCheckoutStore = defineStore('checkoutStore', () => {
     switch (step.value) {
       case 'customer':
         return !!(
-          formData.value.customer?.email &&
-          formData.value.customer?.firstName &&
-          formData.value.customer?.lastName &&
-          formData.value.customer?.documentNumber
+          formData.value.customer?.email
+          && formData.value.customer?.firstName
+          && formData.value.customer?.lastName
+          && formData.value.customer?.documentNumber
         )
       case 'shipping':
         return !!(
-          formData.value.shippingAddress?.zipCode &&
-          formData.value.shippingAddress?.street &&
-          formData.value.shippingAddress?.number &&
-          formData.value.shippingAddress?.city &&
-          formData.value.shippingAddress?.state
+          formData.value.shippingAddress?.zipCode
+          && formData.value.shippingAddress?.street
+          && formData.value.shippingAddress?.number
+          && formData.value.shippingAddress?.city
+          && formData.value.shippingAddress?.state
         )
       case 'payment':
         if (formData.value.paymentMethod === 'credit_card') {
           return !!(
-            formData.value.creditCard?.number &&
-            formData.value.creditCard?.holderName &&
-            formData.value.creditCard?.expiryDate &&
-            formData.value.creditCard?.cvv
+            formData.value.creditCard?.number
+            && formData.value.creditCard?.holderName
+            && formData.value.creditCard?.expiryDate
+            && formData.value.creditCard?.cvv
           )
         }
         return !!formData.value.paymentMethod
@@ -130,7 +146,7 @@ export const useCheckoutStore = defineStore('checkoutStore', () => {
       ...formData.value.shippingAddress,
       ...address,
     } as CheckoutFormData['shippingAddress']
-    
+
     if (formData.value.sameAsBilling) {
       formData.value.billingAddress = formData.value.shippingAddress as BillingAddress
     }
@@ -158,7 +174,11 @@ export const useCheckoutStore = defineStore('checkoutStore', () => {
     }
   }
 
-  async function processPayment(): Promise<{ success: boolean; orderId?: string; error?: string }> {
+  async function processPayment(): Promise<{
+    success: boolean
+    orderId?: string
+    error?: string
+  }> {
     isProcessing.value = true
     error.value = undefined
 
