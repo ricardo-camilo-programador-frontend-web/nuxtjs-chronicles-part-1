@@ -27,3 +27,6 @@ logs
 # Sonar
 sonar-project.properties
 .scannerwork/
+
+# Test coverage
+coverage/
