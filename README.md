@@ -1,3 +1,4 @@
+[![CI](https://github.com/ricardo-camilo-programador-frontend-web/nuxtjs-chronicles-part-1/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardo-camilo-programador-frontend-web/nuxtjs-chronicles-part-1/actions)
 # 🦁 Savana - NuxtJS Chronicles
 
 <div align="center">
