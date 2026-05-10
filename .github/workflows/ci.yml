@@ -7,31 +7,118 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  validate:
+    name: Validar Linting e Formatacao
     runs-on: ubuntu-latest
-
+    timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: '20'
-          cache: 'npm'
+          version: 8.15.4
 
-      - name: Install dependencies
-        run: npm ci
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
 
-      - name: Type check
-        run: npm run lint
+      - name: Instalar dependencias
+        run: pnpm install
 
-      - name: Build
-        run: npm run build
+      - name: Limpar cache do Biome
+        run: rm -rf node_modules/.cache/biome || true
+
+      - name: Executar Biome (linting e formatacao)
+        run: pnpm run biome
+
+  build:
+    name: Build do Projeto
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+        env:
+          NUXT_PUBLIC_PROJECT_TITLE: ""
+          NUXT_PUBLIC_BASE_URL: ""
+          NUXT_PUBLIC_SITE_URL: ""
+          NUXT_PUBLIC_PORTFOLIO_URL: ""
+          NUXT_PUBLIC_GITHUB_USERNAME: ""
+          NUXT_PUBLIC_LINKEDIN_USERNAME: ""
+          NUXT_PUBLIC_X_USERNAME: ""
+          NUXT_PUBLIC_TWITTER_USERNAME: ""
+          NUXT_PUBLIC_WORKANA_USERNAME: ""
+          NUXT_PUBLIC_INSTAGRAM_USERNAME: ""
+          NUXT_PUBLIC_FACEBOOK_ID: ""
+          NUXT_PUBLIC_YOUTUBE_USERNAME: ""
+          NUXT_PUBLIC_BUYMEACOFFEE_USERNAME: ""
+          NUXT_PUBLIC_EMAIL: ""
+          NUXT_PUBLIC_FIGMA_USERNAME: ""
+          NUXT_PUBLIC_FIGMA_ORIGINAL_DESIGN: ""
+          NUXT_PUBLIC_GTM_ID: ""
+          NUXT_PUBLIC_ADSENSE_ID: ""
+          NUXT_PUBLIC_COUNTER_API_KEY: ""
+          NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ""
+          NUXT_PUBLIC_LIVE_DEMO_VIDEO_URL: ""
+          NUXT_PUBLIC_TREFLE_API_KEY: ""
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.15.4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+
+      - name: Instalar dependencias
+        run: pnpm install
+
+      - name: Build do projeto
+        run: pnpm run build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist
+          name: build-dist
           path: dist/
           retention-days: 7
+
+  security:
+    name: Auditoria de Seguranca
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.15.4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+
+      - name: Instalar dependencias
+        run: pnpm install
+
+      - name: Auditoria de vulnerabilidades
+        shell: bash
+        run: |
+          set -o pipefail
+          LOG_FILE="$(mktemp)"
+
+          pnpm audit --audit-level moderate 2>&1 | tee "$LOG_FILE"
+          status=${PIPESTATUS[0]}
+
+          if [ "$status" -eq 0 ]; then
+            exit 0
+          fi
+
+          if grep -q "ERR_PNPM_AUDIT_BAD_RESPONSE" "$LOG_FILE" && grep -Eq "responded with 5[0-9]{2}([^0-9]|$)|error \\(5[0-9]{2}\\)" "$LOG_FILE"; then
+            echo "::warning::pnpm audit falhou por erro 5xx do endpoint de auditoria da npm. Falha tratada como indisponibilidade transitória."
+            exit 0
+          fi
+
+          exit "$status"
