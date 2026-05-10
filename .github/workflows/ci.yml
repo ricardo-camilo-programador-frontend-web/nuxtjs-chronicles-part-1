@@ -9,7 +9,7 @@ on:
 jobs:
   validate:
     name: Validar Linting e Formatacao
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 10
     continue-on-error: true
     steps:
@@ -35,7 +35,7 @@ jobs:
 
   build:
     name: Build do Projeto
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 15
     env:
       NUXT_PUBLIC_PROJECT_TITLE: ""
@@ -87,7 +87,7 @@ jobs:
 
   security:
     name: Auditoria de Seguranca
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 10
     continue-on-error: true
     steps:
