@@ -19,7 +19,7 @@ jobs:
         run: echo "/usr/local/bin" >> $GITHUB_PATH
 
       - name: Instalar dependencias
-        run: pnpm install
+        run: pnpm install --ignore-scripts
 
       - name: Limpar cache do Biome
         run: rm -rf node_modules/.cache/biome || true
@@ -61,7 +61,7 @@ jobs:
         run: echo "/usr/local/bin" >> $GITHUB_PATH
 
       - name: Instalar dependencias
-        run: pnpm install
+        run: pnpm install --ignore-scripts
 
       - name: Build do projeto
         run: pnpm run build
@@ -85,7 +85,7 @@ jobs:
         run: echo "/usr/local/bin" >> $GITHUB_PATH
 
       - name: Instalar dependencias
-        run: pnpm install
+        run: pnpm install --ignore-scripts
 
       - name: Auditoria de vulnerabilidades
         shell: bash
